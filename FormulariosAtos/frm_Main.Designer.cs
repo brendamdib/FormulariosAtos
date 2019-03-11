@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.tab_Formularios = new System.Windows.Forms.TabControl();
             this.tab_RollOut = new System.Windows.Forms.TabPage();
+            this.rdo_NovoPonto = new System.Windows.Forms.RadioButton();
             this.btn_GerarRollout = new System.Windows.Forms.Button();
+            this.rdo_Rollout = new System.Windows.Forms.RadioButton();
             this.tab_InfoComplRoll = new System.Windows.Forms.GroupBox();
             this.lbl_MotivoExcRoll = new System.Windows.Forms.Label();
             this.txt_MotivoExcRoll = new System.Windows.Forms.TextBox();
@@ -104,11 +107,44 @@
             this.txt_EtiquetaCompRoll = new System.Windows.Forms.TextBox();
             this.lbl_EtiquetaCompRoll = new System.Windows.Forms.Label();
             this.tab_RetiraEquip = new System.Windows.Forms.TabPage();
-            this.tab_RepPeca = new System.Windows.Forms.TabPage();
-            this.tab_LaudoBat = new System.Windows.Forms.TabPage();
-            this.tab_LaudoTecnico = new System.Windows.Forms.TabPage();
-            this.rdo_NovoPonto = new System.Windows.Forms.RadioButton();
-            this.rdo_Rollout = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_AndarLocalEquipDev = new System.Windows.Forms.MaskedTextBox();
+            this.txt_SalaLocalEquipDev = new System.Windows.Forms.MaskedTextBox();
+            this.txt_PredioLocalEquipDev = new System.Windows.Forms.MaskedTextBox();
+            this.txt_EmpresaLocalEquipDev = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_AndarLocalEquipDev = new System.Windows.Forms.Label();
+            this.lbl_PredioLocalEquipDev = new System.Windows.Forms.Label();
+            this.lbl_SalaLocalEquipDev = new System.Windows.Forms.Label();
+            this.lbl_EmpresaLocalEquipDev = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_ChamadoDev = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_ChamadoDev = new System.Windows.Forms.Label();
+            this.lbl_DataDev = new System.Windows.Forms.Label();
+            this.txt_DataDev = new System.Windows.Forms.DateTimePicker();
+            this.txt_AnalRespDev = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_AnalRespDev = new System.Windows.Forms.Label();
+            this.btn_GerarDevolucao = new System.Windows.Forms.Button();
+            this.grp_EquipDev = new System.Windows.Forms.GroupBox();
+            this.rdo_PerifericoDev = new System.Windows.Forms.RadioButton();
+            this.rdo_MonitorDev = new System.Windows.Forms.RadioButton();
+            this.txt_Serial4Dev = new System.Windows.Forms.TextBox();
+            this.lbl_Serial4Dev = new System.Windows.Forms.Label();
+            this.txt_Etiqueta4Dev = new System.Windows.Forms.TextBox();
+            this.lbl_Etiqueta4Dev = new System.Windows.Forms.Label();
+            this.txt_Serial3Dev = new System.Windows.Forms.TextBox();
+            this.lbl_Serial3Dev = new System.Windows.Forms.Label();
+            this.txt_Etiqueta3Dev = new System.Windows.Forms.TextBox();
+            this.lbl_Etiqueta3Dev = new System.Windows.Forms.Label();
+            this.txt_Serial2Dev = new System.Windows.Forms.TextBox();
+            this.lbl_Serial2Dev = new System.Windows.Forms.Label();
+            this.txt_Etiqueta2Dev = new System.Windows.Forms.TextBox();
+            this.lbl_Etiqueta2Dev = new System.Windows.Forms.Label();
+            this.rdo_DesktopDev = new System.Windows.Forms.RadioButton();
+            this.rdo_NoteDev = new System.Windows.Forms.RadioButton();
+            this.txt_Serial1Dev = new System.Windows.Forms.TextBox();
+            this.lbl_Serial1Dev = new System.Windows.Forms.Label();
+            this.txt_Etiqueta1Dev = new System.Windows.Forms.TextBox();
+            this.lbl_Etiqueta1Dev = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_SetorRespEquipDev = new System.Windows.Forms.Label();
             this.txt_SetorRespEquipDev = new System.Windows.Forms.MaskedTextBox();
@@ -122,46 +158,32 @@
             this.txt_PnRespEquipDev = new System.Windows.Forms.MaskedTextBox();
             this.txt_NomeRespEquipDev = new System.Windows.Forms.MaskedTextBox();
             this.lbl_NomeRespEquipDev = new System.Windows.Forms.Label();
-            this.grp_EquipDev = new System.Windows.Forms.GroupBox();
-            this.rdo_DesktopDev = new System.Windows.Forms.RadioButton();
-            this.rdo_NoteDev = new System.Windows.Forms.RadioButton();
-            this.txt_Serial1Dev = new System.Windows.Forms.TextBox();
-            this.lbl_Serial1Dev = new System.Windows.Forms.Label();
-            this.txt_Etiqueta1Dev = new System.Windows.Forms.TextBox();
-            this.lbl_Etiqueta1Dev = new System.Windows.Forms.Label();
-            this.btn_GerarDevolucao = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txt_ChamadoDev = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_ChamadoDev = new System.Windows.Forms.Label();
-            this.lbl_DataDev = new System.Windows.Forms.Label();
-            this.txt_DataDev = new System.Windows.Forms.DateTimePicker();
-            this.txt_AnalRespDev = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_AnalRespDev = new System.Windows.Forms.Label();
-            this.txt_Serial2Dev = new System.Windows.Forms.TextBox();
-            this.lbl_Serial2Dev = new System.Windows.Forms.Label();
-            this.txt_Etiqueta2Dev = new System.Windows.Forms.TextBox();
-            this.lbl_Etiqueta2Dev = new System.Windows.Forms.Label();
-            this.txt_Serial3Dev = new System.Windows.Forms.TextBox();
-            this.lbl_Serial3Dev = new System.Windows.Forms.Label();
-            this.txt_Etiqueta3Dev = new System.Windows.Forms.TextBox();
-            this.lbl_Etiqueta3Dev = new System.Windows.Forms.Label();
-            this.txt_Serial4Dev = new System.Windows.Forms.TextBox();
-            this.lbl_Serial4Dev = new System.Windows.Forms.Label();
-            this.txt_Etiqueta4Dev = new System.Windows.Forms.TextBox();
-            this.lbl_Etiqueta4Dev = new System.Windows.Forms.Label();
-            this.rdo_MonitorDev = new System.Windows.Forms.RadioButton();
-            this.rdo_PerifericoDev = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_AndarLocalEquipDev = new System.Windows.Forms.MaskedTextBox();
-            this.txt_SalaLocalEquipDev = new System.Windows.Forms.MaskedTextBox();
-            this.txt_PredioLocalEquipDev = new System.Windows.Forms.MaskedTextBox();
-            this.txt_EmpresaLocalEquipDev = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_AndarLocalEquipDev = new System.Windows.Forms.Label();
-            this.lbl_PredioLocalEquipDev = new System.Windows.Forms.Label();
-            this.lbl_SalaLocalEquipDev = new System.Windows.Forms.Label();
-            this.lbl_EmpresaLocalEquipDev = new System.Windows.Forms.Label();
-            this.btn_GerarReqPeca = new System.Windows.Forms.Button();
+            this.tab_RepPeca = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_ValorReqPeca = new System.Windows.Forms.TextBox();
+            this.cbo_ValorReqPeca = new System.Windows.Forms.ComboBox();
+            this.tblreparosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.atosDataSet = new FormulariosAtos.AtosDataSet();
+            this.label17 = new System.Windows.Forms.Label();
+            this.grp_ObsReqPeca = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_GarantiaMaqReqPeca = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_GarantiaPeriReqPeca = new System.Windows.Forms.DateTimePicker();
+            this.txt_CausaReqPeca = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_SerialReqPeca = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_DataReqPeca = new System.Windows.Forms.DateTimePicker();
+            this.txt_ModeloReqPeca = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_PnUsuReqPeca = new System.Windows.Forms.MaskedTextBox();
+            this.txt_PnGerenteReqPeca = new System.Windows.Forms.MaskedTextBox();
+            this.txt_ChamadoReqPeca = new System.Windows.Forms.MaskedTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_RamalUsuReqPeca = new System.Windows.Forms.MaskedTextBox();
             this.txt_EtiquetaReqPeca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -175,28 +197,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_UsuarioReqPeca = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txt_RamalUsuReqPeca = new System.Windows.Forms.MaskedTextBox();
-            this.txt_ChamadoReqPeca = new System.Windows.Forms.MaskedTextBox();
-            this.txt_PnGerenteReqPeca = new System.Windows.Forms.MaskedTextBox();
-            this.txt_PnUsuReqPeca = new System.Windows.Forms.MaskedTextBox();
-            this.txt_ModeloReqPeca = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txt_DataReqPeca = new System.Windows.Forms.DateTimePicker();
-            this.txt_SerialReqPeca = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_CausaReqPeca = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txt_GarantiaMaqReqPeca = new System.Windows.Forms.DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txt_GarantiaPeriReqPeca = new System.Windows.Forms.DateTimePicker();
-            this.txt_ComponenteReqPeca = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.grp_ObsReqPeca = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cbo_ValorReqPeca = new System.Windows.Forms.ComboBox();
+            this.btn_GerarReqPeca = new System.Windows.Forms.Button();
+            this.tab_LaudoBat = new System.Windows.Forms.TabPage();
+            this.tab_LaudoTecnico = new System.Windows.Forms.TabPage();
+            this.tbl_reparosTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_reparosTableAdapter();
             this.tab_Formularios.SuspendLayout();
             this.tab_RollOut.SuspendLayout();
             this.tab_InfoComplRoll.SuspendLayout();
@@ -206,12 +210,14 @@
             this.grp_RespEquipRoll.SuspendLayout();
             this.grp_CompRoll.SuspendLayout();
             this.tab_RetiraEquip.SuspendLayout();
-            this.tab_RepPeca.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.grp_EquipDev.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.grp_EquipDev.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tab_RepPeca.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atosDataSet)).BeginInit();
             this.grp_ObsReqPeca.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -228,7 +234,7 @@
             this.tab_Formularios.Location = new System.Drawing.Point(12, 12);
             this.tab_Formularios.Name = "tab_Formularios";
             this.tab_Formularios.SelectedIndex = 0;
-            this.tab_Formularios.Size = new System.Drawing.Size(1137, 463);
+            this.tab_Formularios.Size = new System.Drawing.Size(1151, 476);
             this.tab_Formularios.TabIndex = 0;
             // 
             // tab_RollOut
@@ -245,10 +251,20 @@
             this.tab_RollOut.Location = new System.Drawing.Point(4, 22);
             this.tab_RollOut.Name = "tab_RollOut";
             this.tab_RollOut.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_RollOut.Size = new System.Drawing.Size(1129, 437);
+            this.tab_RollOut.Size = new System.Drawing.Size(1143, 450);
             this.tab_RollOut.TabIndex = 0;
             this.tab_RollOut.Text = "Rollout / Novo Ponto / Transferência";
             this.tab_RollOut.UseVisualStyleBackColor = true;
+            // 
+            // rdo_NovoPonto
+            // 
+            this.rdo_NovoPonto.AutoSize = true;
+            this.rdo_NovoPonto.Location = new System.Drawing.Point(126, 16);
+            this.rdo_NovoPonto.Name = "rdo_NovoPonto";
+            this.rdo_NovoPonto.Size = new System.Drawing.Size(158, 17);
+            this.rdo_NovoPonto.TabIndex = 1;
+            this.rdo_NovoPonto.Text = "Novo Ponto / Transferência";
+            this.rdo_NovoPonto.UseVisualStyleBackColor = true;
             // 
             // btn_GerarRollout
             // 
@@ -262,6 +278,18 @@
             this.btn_GerarRollout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_GerarRollout.UseVisualStyleBackColor = true;
             this.btn_GerarRollout.Click += new System.EventHandler(this.btn_GerarRollout_Click);
+            // 
+            // rdo_Rollout
+            // 
+            this.rdo_Rollout.AutoSize = true;
+            this.rdo_Rollout.Checked = true;
+            this.rdo_Rollout.Location = new System.Drawing.Point(16, 16);
+            this.rdo_Rollout.Name = "rdo_Rollout";
+            this.rdo_Rollout.Size = new System.Drawing.Size(58, 17);
+            this.rdo_Rollout.TabIndex = 0;
+            this.rdo_Rollout.TabStop = true;
+            this.rdo_Rollout.Text = "Rollout";
+            this.rdo_Rollout.UseVisualStyleBackColor = true;
             // 
             // tab_InfoComplRoll
             // 
@@ -988,63 +1016,397 @@
             this.tab_RetiraEquip.Location = new System.Drawing.Point(4, 22);
             this.tab_RetiraEquip.Name = "tab_RetiraEquip";
             this.tab_RetiraEquip.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_RetiraEquip.Size = new System.Drawing.Size(1129, 437);
+            this.tab_RetiraEquip.Size = new System.Drawing.Size(1143, 450);
             this.tab_RetiraEquip.TabIndex = 2;
             this.tab_RetiraEquip.Text = "Retirada de Equipamento";
             this.tab_RetiraEquip.UseVisualStyleBackColor = true;
             // 
-            // tab_RepPeca
+            // groupBox2
             // 
-            this.tab_RepPeca.Controls.Add(this.groupBox4);
-            this.tab_RepPeca.Controls.Add(this.btn_GerarReqPeca);
-            this.tab_RepPeca.Location = new System.Drawing.Point(4, 22);
-            this.tab_RepPeca.Name = "tab_RepPeca";
-            this.tab_RepPeca.Size = new System.Drawing.Size(1129, 437);
-            this.tab_RepPeca.TabIndex = 5;
-            this.tab_RepPeca.Text = "Reposição de Peça";
-            this.tab_RepPeca.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.txt_AndarLocalEquipDev);
+            this.groupBox2.Controls.Add(this.txt_SalaLocalEquipDev);
+            this.groupBox2.Controls.Add(this.txt_PredioLocalEquipDev);
+            this.groupBox2.Controls.Add(this.txt_EmpresaLocalEquipDev);
+            this.groupBox2.Controls.Add(this.lbl_AndarLocalEquipDev);
+            this.groupBox2.Controls.Add(this.lbl_PredioLocalEquipDev);
+            this.groupBox2.Controls.Add(this.lbl_SalaLocalEquipDev);
+            this.groupBox2.Controls.Add(this.lbl_EmpresaLocalEquipDev);
+            this.groupBox2.Location = new System.Drawing.Point(485, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(441, 109);
+            this.groupBox2.TabIndex = 802;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Localização Equipamento";
             // 
-            // tab_LaudoBat
+            // txt_AndarLocalEquipDev
             // 
-            this.tab_LaudoBat.Location = new System.Drawing.Point(4, 22);
-            this.tab_LaudoBat.Name = "tab_LaudoBat";
-            this.tab_LaudoBat.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_LaudoBat.Size = new System.Drawing.Size(1129, 437);
-            this.tab_LaudoBat.TabIndex = 3;
-            this.tab_LaudoBat.Text = "Laudo Bateria";
-            this.tab_LaudoBat.UseVisualStyleBackColor = true;
+            this.txt_AndarLocalEquipDev.Location = new System.Drawing.Point(242, 77);
+            this.txt_AndarLocalEquipDev.Mask = "00";
+            this.txt_AndarLocalEquipDev.Name = "txt_AndarLocalEquipDev";
+            this.txt_AndarLocalEquipDev.Size = new System.Drawing.Size(28, 20);
+            this.txt_AndarLocalEquipDev.TabIndex = 15;
+            this.txt_AndarLocalEquipDev.ValidatingType = typeof(int);
             // 
-            // tab_LaudoTecnico
+            // txt_SalaLocalEquipDev
             // 
-            this.tab_LaudoTecnico.Location = new System.Drawing.Point(4, 22);
-            this.tab_LaudoTecnico.Name = "tab_LaudoTecnico";
-            this.tab_LaudoTecnico.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_LaudoTecnico.Size = new System.Drawing.Size(1129, 437);
-            this.tab_LaudoTecnico.TabIndex = 4;
-            this.tab_LaudoTecnico.Text = "Laudo Técnico";
-            this.tab_LaudoTecnico.UseVisualStyleBackColor = true;
+            this.txt_SalaLocalEquipDev.Location = new System.Drawing.Point(68, 77);
+            this.txt_SalaLocalEquipDev.Mask = "LLLLLLLLLLLLLLLLLLLL";
+            this.txt_SalaLocalEquipDev.Name = "txt_SalaLocalEquipDev";
+            this.txt_SalaLocalEquipDev.Size = new System.Drawing.Size(131, 20);
+            this.txt_SalaLocalEquipDev.TabIndex = 14;
             // 
-            // rdo_NovoPonto
+            // txt_PredioLocalEquipDev
             // 
-            this.rdo_NovoPonto.AutoSize = true;
-            this.rdo_NovoPonto.Location = new System.Drawing.Point(126, 16);
-            this.rdo_NovoPonto.Name = "rdo_NovoPonto";
-            this.rdo_NovoPonto.Size = new System.Drawing.Size(158, 17);
-            this.rdo_NovoPonto.TabIndex = 1;
-            this.rdo_NovoPonto.Text = "Novo Ponto / Transferência";
-            this.rdo_NovoPonto.UseVisualStyleBackColor = true;
+            this.txt_PredioLocalEquipDev.Location = new System.Drawing.Point(68, 51);
+            this.txt_PredioLocalEquipDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
+            this.txt_PredioLocalEquipDev.Name = "txt_PredioLocalEquipDev";
+            this.txt_PredioLocalEquipDev.Size = new System.Drawing.Size(358, 20);
+            this.txt_PredioLocalEquipDev.TabIndex = 13;
             // 
-            // rdo_Rollout
+            // txt_EmpresaLocalEquipDev
             // 
-            this.rdo_Rollout.AutoSize = true;
-            this.rdo_Rollout.Checked = true;
-            this.rdo_Rollout.Location = new System.Drawing.Point(16, 16);
-            this.rdo_Rollout.Name = "rdo_Rollout";
-            this.rdo_Rollout.Size = new System.Drawing.Size(58, 17);
-            this.rdo_Rollout.TabIndex = 0;
-            this.rdo_Rollout.TabStop = true;
-            this.rdo_Rollout.Text = "Rollout";
-            this.rdo_Rollout.UseVisualStyleBackColor = true;
+            this.txt_EmpresaLocalEquipDev.Location = new System.Drawing.Point(68, 25);
+            this.txt_EmpresaLocalEquipDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
+            this.txt_EmpresaLocalEquipDev.Name = "txt_EmpresaLocalEquipDev";
+            this.txt_EmpresaLocalEquipDev.Size = new System.Drawing.Size(358, 20);
+            this.txt_EmpresaLocalEquipDev.TabIndex = 12;
+            // 
+            // lbl_AndarLocalEquipDev
+            // 
+            this.lbl_AndarLocalEquipDev.AutoSize = true;
+            this.lbl_AndarLocalEquipDev.Location = new System.Drawing.Point(205, 80);
+            this.lbl_AndarLocalEquipDev.Name = "lbl_AndarLocalEquipDev";
+            this.lbl_AndarLocalEquipDev.Size = new System.Drawing.Size(35, 13);
+            this.lbl_AndarLocalEquipDev.TabIndex = 22;
+            this.lbl_AndarLocalEquipDev.Text = "Andar";
+            // 
+            // lbl_PredioLocalEquipDev
+            // 
+            this.lbl_PredioLocalEquipDev.AutoSize = true;
+            this.lbl_PredioLocalEquipDev.Location = new System.Drawing.Point(6, 51);
+            this.lbl_PredioLocalEquipDev.Name = "lbl_PredioLocalEquipDev";
+            this.lbl_PredioLocalEquipDev.Size = new System.Drawing.Size(37, 13);
+            this.lbl_PredioLocalEquipDev.TabIndex = 20;
+            this.lbl_PredioLocalEquipDev.Text = "Prédio";
+            // 
+            // lbl_SalaLocalEquipDev
+            // 
+            this.lbl_SalaLocalEquipDev.AutoSize = true;
+            this.lbl_SalaLocalEquipDev.Location = new System.Drawing.Point(6, 77);
+            this.lbl_SalaLocalEquipDev.Name = "lbl_SalaLocalEquipDev";
+            this.lbl_SalaLocalEquipDev.Size = new System.Drawing.Size(28, 13);
+            this.lbl_SalaLocalEquipDev.TabIndex = 18;
+            this.lbl_SalaLocalEquipDev.Text = "Sala";
+            // 
+            // lbl_EmpresaLocalEquipDev
+            // 
+            this.lbl_EmpresaLocalEquipDev.AutoSize = true;
+            this.lbl_EmpresaLocalEquipDev.Location = new System.Drawing.Point(6, 25);
+            this.lbl_EmpresaLocalEquipDev.Name = "lbl_EmpresaLocalEquipDev";
+            this.lbl_EmpresaLocalEquipDev.Size = new System.Drawing.Size(48, 13);
+            this.lbl_EmpresaLocalEquipDev.TabIndex = 16;
+            this.lbl_EmpresaLocalEquipDev.Text = "Empresa";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txt_ChamadoDev);
+            this.groupBox3.Controls.Add(this.lbl_ChamadoDev);
+            this.groupBox3.Controls.Add(this.lbl_DataDev);
+            this.groupBox3.Controls.Add(this.txt_DataDev);
+            this.groupBox3.Controls.Add(this.txt_AnalRespDev);
+            this.groupBox3.Controls.Add(this.lbl_AnalRespDev);
+            this.groupBox3.Location = new System.Drawing.Point(6, 191);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(470, 80);
+            this.groupBox3.TabIndex = 801;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Informaçãoes Complementares";
+            // 
+            // txt_ChamadoDev
+            // 
+            this.txt_ChamadoDev.Location = new System.Drawing.Point(221, 51);
+            this.txt_ChamadoDev.Mask = "000000000000";
+            this.txt_ChamadoDev.Name = "txt_ChamadoDev";
+            this.txt_ChamadoDev.Size = new System.Drawing.Size(70, 20);
+            this.txt_ChamadoDev.TabIndex = 31;
+            this.txt_ChamadoDev.ValidatingType = typeof(int);
+            // 
+            // lbl_ChamadoDev
+            // 
+            this.lbl_ChamadoDev.AutoSize = true;
+            this.lbl_ChamadoDev.Location = new System.Drawing.Point(163, 54);
+            this.lbl_ChamadoDev.Name = "lbl_ChamadoDev";
+            this.lbl_ChamadoDev.Size = new System.Drawing.Size(52, 13);
+            this.lbl_ChamadoDev.TabIndex = 55;
+            this.lbl_ChamadoDev.Text = "Chamado";
+            // 
+            // lbl_DataDev
+            // 
+            this.lbl_DataDev.AutoSize = true;
+            this.lbl_DataDev.Location = new System.Drawing.Point(9, 54);
+            this.lbl_DataDev.Name = "lbl_DataDev";
+            this.lbl_DataDev.Size = new System.Drawing.Size(30, 13);
+            this.lbl_DataDev.TabIndex = 54;
+            this.lbl_DataDev.Text = "Data";
+            // 
+            // txt_DataDev
+            // 
+            this.txt_DataDev.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_DataDev.Location = new System.Drawing.Point(74, 51);
+            this.txt_DataDev.Name = "txt_DataDev";
+            this.txt_DataDev.Size = new System.Drawing.Size(83, 20);
+            this.txt_DataDev.TabIndex = 30;
+            // 
+            // txt_AnalRespDev
+            // 
+            this.txt_AnalRespDev.Location = new System.Drawing.Point(74, 25);
+            this.txt_AnalRespDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
+            this.txt_AnalRespDev.Name = "txt_AnalRespDev";
+            this.txt_AnalRespDev.Size = new System.Drawing.Size(292, 20);
+            this.txt_AnalRespDev.TabIndex = 29;
+            // 
+            // lbl_AnalRespDev
+            // 
+            this.lbl_AnalRespDev.AutoSize = true;
+            this.lbl_AnalRespDev.Location = new System.Drawing.Point(6, 28);
+            this.lbl_AnalRespDev.Name = "lbl_AnalRespDev";
+            this.lbl_AnalRespDev.Size = new System.Drawing.Size(62, 13);
+            this.lbl_AnalRespDev.TabIndex = 51;
+            this.lbl_AnalRespDev.Text = "Anal. Resp.";
+            // 
+            // btn_GerarDevolucao
+            // 
+            this.btn_GerarDevolucao.Image = ((System.Drawing.Image)(resources.GetObject("btn_GerarDevolucao.Image")));
+            this.btn_GerarDevolucao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_GerarDevolucao.Location = new System.Drawing.Point(846, 277);
+            this.btn_GerarDevolucao.Name = "btn_GerarDevolucao";
+            this.btn_GerarDevolucao.Size = new System.Drawing.Size(80, 43);
+            this.btn_GerarDevolucao.TabIndex = 403;
+            this.btn_GerarDevolucao.Text = "Gerar";
+            this.btn_GerarDevolucao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_GerarDevolucao.UseVisualStyleBackColor = true;
+            this.btn_GerarDevolucao.Click += new System.EventHandler(this.btn_GerarDevolucao_Click);
+            // 
+            // grp_EquipDev
+            // 
+            this.grp_EquipDev.Controls.Add(this.rdo_PerifericoDev);
+            this.grp_EquipDev.Controls.Add(this.rdo_MonitorDev);
+            this.grp_EquipDev.Controls.Add(this.txt_Serial4Dev);
+            this.grp_EquipDev.Controls.Add(this.lbl_Serial4Dev);
+            this.grp_EquipDev.Controls.Add(this.txt_Etiqueta4Dev);
+            this.grp_EquipDev.Controls.Add(this.lbl_Etiqueta4Dev);
+            this.grp_EquipDev.Controls.Add(this.txt_Serial3Dev);
+            this.grp_EquipDev.Controls.Add(this.lbl_Serial3Dev);
+            this.grp_EquipDev.Controls.Add(this.txt_Etiqueta3Dev);
+            this.grp_EquipDev.Controls.Add(this.lbl_Etiqueta3Dev);
+            this.grp_EquipDev.Controls.Add(this.txt_Serial2Dev);
+            this.grp_EquipDev.Controls.Add(this.lbl_Serial2Dev);
+            this.grp_EquipDev.Controls.Add(this.txt_Etiqueta2Dev);
+            this.grp_EquipDev.Controls.Add(this.lbl_Etiqueta2Dev);
+            this.grp_EquipDev.Controls.Add(this.rdo_DesktopDev);
+            this.grp_EquipDev.Controls.Add(this.rdo_NoteDev);
+            this.grp_EquipDev.Controls.Add(this.txt_Serial1Dev);
+            this.grp_EquipDev.Controls.Add(this.lbl_Serial1Dev);
+            this.grp_EquipDev.Controls.Add(this.txt_Etiqueta1Dev);
+            this.grp_EquipDev.Controls.Add(this.lbl_Etiqueta1Dev);
+            this.grp_EquipDev.Location = new System.Drawing.Point(6, 6);
+            this.grp_EquipDev.Name = "grp_EquipDev";
+            this.grp_EquipDev.Size = new System.Drawing.Size(470, 179);
+            this.grp_EquipDev.TabIndex = 402;
+            this.grp_EquipDev.TabStop = false;
+            this.grp_EquipDev.Text = "Equipamentos";
+            // 
+            // rdo_PerifericoDev
+            // 
+            this.rdo_PerifericoDev.AutoSize = true;
+            this.rdo_PerifericoDev.Location = new System.Drawing.Point(351, 24);
+            this.rdo_PerifericoDev.Name = "rdo_PerifericoDev";
+            this.rdo_PerifericoDev.Size = new System.Drawing.Size(104, 17);
+            this.rdo_PerifericoDev.TabIndex = 21;
+            this.rdo_PerifericoDev.TabStop = true;
+            this.rdo_PerifericoDev.Text = "Periférico Avulso";
+            this.rdo_PerifericoDev.UseVisualStyleBackColor = true;
+            // 
+            // rdo_MonitorDev
+            // 
+            this.rdo_MonitorDev.AutoSize = true;
+            this.rdo_MonitorDev.Location = new System.Drawing.Point(231, 24);
+            this.rdo_MonitorDev.Name = "rdo_MonitorDev";
+            this.rdo_MonitorDev.Size = new System.Drawing.Size(105, 17);
+            this.rdo_MonitorDev.TabIndex = 20;
+            this.rdo_MonitorDev.TabStop = true;
+            this.rdo_MonitorDev.Text = "Somente Monitor";
+            this.rdo_MonitorDev.UseVisualStyleBackColor = true;
+            // 
+            // txt_Serial4Dev
+            // 
+            this.txt_Serial4Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Serial4Dev.Location = new System.Drawing.Point(284, 145);
+            this.txt_Serial4Dev.MaxLength = 20;
+            this.txt_Serial4Dev.Name = "txt_Serial4Dev";
+            this.txt_Serial4Dev.Size = new System.Drawing.Size(146, 20);
+            this.txt_Serial4Dev.TabIndex = 19;
+            this.txt_Serial4Dev.WordWrap = false;
+            // 
+            // lbl_Serial4Dev
+            // 
+            this.lbl_Serial4Dev.AutoSize = true;
+            this.lbl_Serial4Dev.Location = new System.Drawing.Point(245, 148);
+            this.lbl_Serial4Dev.Name = "lbl_Serial4Dev";
+            this.lbl_Serial4Dev.Size = new System.Drawing.Size(33, 13);
+            this.lbl_Serial4Dev.TabIndex = 17;
+            this.lbl_Serial4Dev.Text = "Serial";
+            // 
+            // txt_Etiqueta4Dev
+            // 
+            this.txt_Etiqueta4Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Etiqueta4Dev.Location = new System.Drawing.Point(72, 145);
+            this.txt_Etiqueta4Dev.MaxLength = 8;
+            this.txt_Etiqueta4Dev.Name = "txt_Etiqueta4Dev";
+            this.txt_Etiqueta4Dev.Size = new System.Drawing.Size(130, 20);
+            this.txt_Etiqueta4Dev.TabIndex = 18;
+            // 
+            // lbl_Etiqueta4Dev
+            // 
+            this.lbl_Etiqueta4Dev.AutoSize = true;
+            this.lbl_Etiqueta4Dev.Location = new System.Drawing.Point(9, 148);
+            this.lbl_Etiqueta4Dev.Name = "lbl_Etiqueta4Dev";
+            this.lbl_Etiqueta4Dev.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Etiqueta4Dev.TabIndex = 16;
+            this.lbl_Etiqueta4Dev.Text = "Etiqueta";
+            // 
+            // txt_Serial3Dev
+            // 
+            this.txt_Serial3Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Serial3Dev.Location = new System.Drawing.Point(284, 119);
+            this.txt_Serial3Dev.MaxLength = 20;
+            this.txt_Serial3Dev.Name = "txt_Serial3Dev";
+            this.txt_Serial3Dev.Size = new System.Drawing.Size(146, 20);
+            this.txt_Serial3Dev.TabIndex = 15;
+            this.txt_Serial3Dev.WordWrap = false;
+            // 
+            // lbl_Serial3Dev
+            // 
+            this.lbl_Serial3Dev.AutoSize = true;
+            this.lbl_Serial3Dev.Location = new System.Drawing.Point(245, 122);
+            this.lbl_Serial3Dev.Name = "lbl_Serial3Dev";
+            this.lbl_Serial3Dev.Size = new System.Drawing.Size(33, 13);
+            this.lbl_Serial3Dev.TabIndex = 13;
+            this.lbl_Serial3Dev.Text = "Serial";
+            // 
+            // txt_Etiqueta3Dev
+            // 
+            this.txt_Etiqueta3Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Etiqueta3Dev.Location = new System.Drawing.Point(72, 119);
+            this.txt_Etiqueta3Dev.MaxLength = 8;
+            this.txt_Etiqueta3Dev.Name = "txt_Etiqueta3Dev";
+            this.txt_Etiqueta3Dev.Size = new System.Drawing.Size(130, 20);
+            this.txt_Etiqueta3Dev.TabIndex = 14;
+            // 
+            // lbl_Etiqueta3Dev
+            // 
+            this.lbl_Etiqueta3Dev.AutoSize = true;
+            this.lbl_Etiqueta3Dev.Location = new System.Drawing.Point(9, 122);
+            this.lbl_Etiqueta3Dev.Name = "lbl_Etiqueta3Dev";
+            this.lbl_Etiqueta3Dev.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Etiqueta3Dev.TabIndex = 12;
+            this.lbl_Etiqueta3Dev.Text = "Etiqueta";
+            // 
+            // txt_Serial2Dev
+            // 
+            this.txt_Serial2Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Serial2Dev.Location = new System.Drawing.Point(284, 93);
+            this.txt_Serial2Dev.MaxLength = 20;
+            this.txt_Serial2Dev.Name = "txt_Serial2Dev";
+            this.txt_Serial2Dev.Size = new System.Drawing.Size(146, 20);
+            this.txt_Serial2Dev.TabIndex = 11;
+            this.txt_Serial2Dev.WordWrap = false;
+            // 
+            // lbl_Serial2Dev
+            // 
+            this.lbl_Serial2Dev.AutoSize = true;
+            this.lbl_Serial2Dev.Location = new System.Drawing.Point(245, 96);
+            this.lbl_Serial2Dev.Name = "lbl_Serial2Dev";
+            this.lbl_Serial2Dev.Size = new System.Drawing.Size(33, 13);
+            this.lbl_Serial2Dev.TabIndex = 9;
+            this.lbl_Serial2Dev.Text = "Serial";
+            // 
+            // txt_Etiqueta2Dev
+            // 
+            this.txt_Etiqueta2Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Etiqueta2Dev.Location = new System.Drawing.Point(72, 93);
+            this.txt_Etiqueta2Dev.MaxLength = 8;
+            this.txt_Etiqueta2Dev.Name = "txt_Etiqueta2Dev";
+            this.txt_Etiqueta2Dev.Size = new System.Drawing.Size(130, 20);
+            this.txt_Etiqueta2Dev.TabIndex = 10;
+            // 
+            // lbl_Etiqueta2Dev
+            // 
+            this.lbl_Etiqueta2Dev.AutoSize = true;
+            this.lbl_Etiqueta2Dev.Location = new System.Drawing.Point(9, 96);
+            this.lbl_Etiqueta2Dev.Name = "lbl_Etiqueta2Dev";
+            this.lbl_Etiqueta2Dev.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Etiqueta2Dev.TabIndex = 8;
+            this.lbl_Etiqueta2Dev.Text = "Etiqueta";
+            // 
+            // rdo_DesktopDev
+            // 
+            this.rdo_DesktopDev.AutoSize = true;
+            this.rdo_DesktopDev.Location = new System.Drawing.Point(125, 24);
+            this.rdo_DesktopDev.Name = "rdo_DesktopDev";
+            this.rdo_DesktopDev.Size = new System.Drawing.Size(91, 17);
+            this.rdo_DesktopDev.TabIndex = 7;
+            this.rdo_DesktopDev.TabStop = true;
+            this.rdo_DesktopDev.Text = "Desktop (KIT)";
+            this.rdo_DesktopDev.UseVisualStyleBackColor = true;
+            // 
+            // rdo_NoteDev
+            // 
+            this.rdo_NoteDev.AutoSize = true;
+            this.rdo_NoteDev.Location = new System.Drawing.Point(12, 24);
+            this.rdo_NoteDev.Name = "rdo_NoteDev";
+            this.rdo_NoteDev.Size = new System.Drawing.Size(98, 17);
+            this.rdo_NoteDev.TabIndex = 6;
+            this.rdo_NoteDev.TabStop = true;
+            this.rdo_NoteDev.Text = "Notebook (KIT)";
+            this.rdo_NoteDev.UseVisualStyleBackColor = true;
+            // 
+            // txt_Serial1Dev
+            // 
+            this.txt_Serial1Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Serial1Dev.Location = new System.Drawing.Point(284, 67);
+            this.txt_Serial1Dev.MaxLength = 20;
+            this.txt_Serial1Dev.Name = "txt_Serial1Dev";
+            this.txt_Serial1Dev.Size = new System.Drawing.Size(146, 20);
+            this.txt_Serial1Dev.TabIndex = 3;
+            this.txt_Serial1Dev.WordWrap = false;
+            // 
+            // lbl_Serial1Dev
+            // 
+            this.lbl_Serial1Dev.AutoSize = true;
+            this.lbl_Serial1Dev.Location = new System.Drawing.Point(245, 70);
+            this.lbl_Serial1Dev.Name = "lbl_Serial1Dev";
+            this.lbl_Serial1Dev.Size = new System.Drawing.Size(33, 13);
+            this.lbl_Serial1Dev.TabIndex = 2;
+            this.lbl_Serial1Dev.Text = "Serial";
+            // 
+            // txt_Etiqueta1Dev
+            // 
+            this.txt_Etiqueta1Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Etiqueta1Dev.Location = new System.Drawing.Point(72, 67);
+            this.txt_Etiqueta1Dev.MaxLength = 8;
+            this.txt_Etiqueta1Dev.Name = "txt_Etiqueta1Dev";
+            this.txt_Etiqueta1Dev.Size = new System.Drawing.Size(130, 20);
+            this.txt_Etiqueta1Dev.TabIndex = 2;
+            // 
+            // lbl_Etiqueta1Dev
+            // 
+            this.lbl_Etiqueta1Dev.AutoSize = true;
+            this.lbl_Etiqueta1Dev.Location = new System.Drawing.Point(9, 70);
+            this.lbl_Etiqueta1Dev.Name = "lbl_Etiqueta1Dev";
+            this.lbl_Etiqueta1Dev.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Etiqueta1Dev.TabIndex = 0;
+            this.lbl_Etiqueta1Dev.Text = "Etiqueta";
             // 
             // groupBox1
             // 
@@ -1174,410 +1536,19 @@
             this.lbl_NomeRespEquipDev.TabIndex = 27;
             this.lbl_NomeRespEquipDev.Text = "Nome";
             // 
-            // grp_EquipDev
-            // 
-            this.grp_EquipDev.Controls.Add(this.rdo_PerifericoDev);
-            this.grp_EquipDev.Controls.Add(this.rdo_MonitorDev);
-            this.grp_EquipDev.Controls.Add(this.txt_Serial4Dev);
-            this.grp_EquipDev.Controls.Add(this.lbl_Serial4Dev);
-            this.grp_EquipDev.Controls.Add(this.txt_Etiqueta4Dev);
-            this.grp_EquipDev.Controls.Add(this.lbl_Etiqueta4Dev);
-            this.grp_EquipDev.Controls.Add(this.txt_Serial3Dev);
-            this.grp_EquipDev.Controls.Add(this.lbl_Serial3Dev);
-            this.grp_EquipDev.Controls.Add(this.txt_Etiqueta3Dev);
-            this.grp_EquipDev.Controls.Add(this.lbl_Etiqueta3Dev);
-            this.grp_EquipDev.Controls.Add(this.txt_Serial2Dev);
-            this.grp_EquipDev.Controls.Add(this.lbl_Serial2Dev);
-            this.grp_EquipDev.Controls.Add(this.txt_Etiqueta2Dev);
-            this.grp_EquipDev.Controls.Add(this.lbl_Etiqueta2Dev);
-            this.grp_EquipDev.Controls.Add(this.rdo_DesktopDev);
-            this.grp_EquipDev.Controls.Add(this.rdo_NoteDev);
-            this.grp_EquipDev.Controls.Add(this.txt_Serial1Dev);
-            this.grp_EquipDev.Controls.Add(this.lbl_Serial1Dev);
-            this.grp_EquipDev.Controls.Add(this.txt_Etiqueta1Dev);
-            this.grp_EquipDev.Controls.Add(this.lbl_Etiqueta1Dev);
-            this.grp_EquipDev.Location = new System.Drawing.Point(6, 6);
-            this.grp_EquipDev.Name = "grp_EquipDev";
-            this.grp_EquipDev.Size = new System.Drawing.Size(470, 179);
-            this.grp_EquipDev.TabIndex = 402;
-            this.grp_EquipDev.TabStop = false;
-            this.grp_EquipDev.Text = "Equipamentos";
-            // 
-            // rdo_DesktopDev
-            // 
-            this.rdo_DesktopDev.AutoSize = true;
-            this.rdo_DesktopDev.Location = new System.Drawing.Point(125, 24);
-            this.rdo_DesktopDev.Name = "rdo_DesktopDev";
-            this.rdo_DesktopDev.Size = new System.Drawing.Size(91, 17);
-            this.rdo_DesktopDev.TabIndex = 7;
-            this.rdo_DesktopDev.TabStop = true;
-            this.rdo_DesktopDev.Text = "Desktop (KIT)";
-            this.rdo_DesktopDev.UseVisualStyleBackColor = true;
-            // 
-            // rdo_NoteDev
-            // 
-            this.rdo_NoteDev.AutoSize = true;
-            this.rdo_NoteDev.Location = new System.Drawing.Point(12, 24);
-            this.rdo_NoteDev.Name = "rdo_NoteDev";
-            this.rdo_NoteDev.Size = new System.Drawing.Size(98, 17);
-            this.rdo_NoteDev.TabIndex = 6;
-            this.rdo_NoteDev.TabStop = true;
-            this.rdo_NoteDev.Text = "Notebook (KIT)";
-            this.rdo_NoteDev.UseVisualStyleBackColor = true;
-            // 
-            // txt_Serial1Dev
-            // 
-            this.txt_Serial1Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_Serial1Dev.Location = new System.Drawing.Point(284, 67);
-            this.txt_Serial1Dev.MaxLength = 20;
-            this.txt_Serial1Dev.Name = "txt_Serial1Dev";
-            this.txt_Serial1Dev.Size = new System.Drawing.Size(146, 20);
-            this.txt_Serial1Dev.TabIndex = 3;
-            this.txt_Serial1Dev.WordWrap = false;
-            // 
-            // lbl_Serial1Dev
-            // 
-            this.lbl_Serial1Dev.AutoSize = true;
-            this.lbl_Serial1Dev.Location = new System.Drawing.Point(245, 70);
-            this.lbl_Serial1Dev.Name = "lbl_Serial1Dev";
-            this.lbl_Serial1Dev.Size = new System.Drawing.Size(33, 13);
-            this.lbl_Serial1Dev.TabIndex = 2;
-            this.lbl_Serial1Dev.Text = "Serial";
-            // 
-            // txt_Etiqueta1Dev
-            // 
-            this.txt_Etiqueta1Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_Etiqueta1Dev.Location = new System.Drawing.Point(72, 67);
-            this.txt_Etiqueta1Dev.MaxLength = 8;
-            this.txt_Etiqueta1Dev.Name = "txt_Etiqueta1Dev";
-            this.txt_Etiqueta1Dev.Size = new System.Drawing.Size(130, 20);
-            this.txt_Etiqueta1Dev.TabIndex = 2;
-            // 
-            // lbl_Etiqueta1Dev
-            // 
-            this.lbl_Etiqueta1Dev.AutoSize = true;
-            this.lbl_Etiqueta1Dev.Location = new System.Drawing.Point(9, 70);
-            this.lbl_Etiqueta1Dev.Name = "lbl_Etiqueta1Dev";
-            this.lbl_Etiqueta1Dev.Size = new System.Drawing.Size(46, 13);
-            this.lbl_Etiqueta1Dev.TabIndex = 0;
-            this.lbl_Etiqueta1Dev.Text = "Etiqueta";
-            // 
-            // btn_GerarDevolucao
-            // 
-            this.btn_GerarDevolucao.Image = ((System.Drawing.Image)(resources.GetObject("btn_GerarDevolucao.Image")));
-            this.btn_GerarDevolucao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_GerarDevolucao.Location = new System.Drawing.Point(846, 277);
-            this.btn_GerarDevolucao.Name = "btn_GerarDevolucao";
-            this.btn_GerarDevolucao.Size = new System.Drawing.Size(80, 43);
-            this.btn_GerarDevolucao.TabIndex = 403;
-            this.btn_GerarDevolucao.Text = "Gerar";
-            this.btn_GerarDevolucao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_GerarDevolucao.UseVisualStyleBackColor = true;
-            this.btn_GerarDevolucao.Click += new System.EventHandler(this.btn_GerarDevolucao_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txt_ChamadoDev);
-            this.groupBox3.Controls.Add(this.lbl_ChamadoDev);
-            this.groupBox3.Controls.Add(this.lbl_DataDev);
-            this.groupBox3.Controls.Add(this.txt_DataDev);
-            this.groupBox3.Controls.Add(this.txt_AnalRespDev);
-            this.groupBox3.Controls.Add(this.lbl_AnalRespDev);
-            this.groupBox3.Location = new System.Drawing.Point(6, 191);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(470, 80);
-            this.groupBox3.TabIndex = 801;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Informaçãoes Complementares";
-            // 
-            // txt_ChamadoDev
-            // 
-            this.txt_ChamadoDev.Location = new System.Drawing.Point(221, 51);
-            this.txt_ChamadoDev.Mask = "000000000000";
-            this.txt_ChamadoDev.Name = "txt_ChamadoDev";
-            this.txt_ChamadoDev.Size = new System.Drawing.Size(70, 20);
-            this.txt_ChamadoDev.TabIndex = 31;
-            this.txt_ChamadoDev.ValidatingType = typeof(int);
-            // 
-            // lbl_ChamadoDev
-            // 
-            this.lbl_ChamadoDev.AutoSize = true;
-            this.lbl_ChamadoDev.Location = new System.Drawing.Point(163, 54);
-            this.lbl_ChamadoDev.Name = "lbl_ChamadoDev";
-            this.lbl_ChamadoDev.Size = new System.Drawing.Size(52, 13);
-            this.lbl_ChamadoDev.TabIndex = 55;
-            this.lbl_ChamadoDev.Text = "Chamado";
-            // 
-            // lbl_DataDev
-            // 
-            this.lbl_DataDev.AutoSize = true;
-            this.lbl_DataDev.Location = new System.Drawing.Point(9, 54);
-            this.lbl_DataDev.Name = "lbl_DataDev";
-            this.lbl_DataDev.Size = new System.Drawing.Size(30, 13);
-            this.lbl_DataDev.TabIndex = 54;
-            this.lbl_DataDev.Text = "Data";
-            // 
-            // txt_DataDev
-            // 
-            this.txt_DataDev.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_DataDev.Location = new System.Drawing.Point(74, 51);
-            this.txt_DataDev.Name = "txt_DataDev";
-            this.txt_DataDev.Size = new System.Drawing.Size(83, 20);
-            this.txt_DataDev.TabIndex = 30;
-            // 
-            // txt_AnalRespDev
-            // 
-            this.txt_AnalRespDev.Location = new System.Drawing.Point(74, 25);
-            this.txt_AnalRespDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.txt_AnalRespDev.Name = "txt_AnalRespDev";
-            this.txt_AnalRespDev.Size = new System.Drawing.Size(292, 20);
-            this.txt_AnalRespDev.TabIndex = 29;
-            // 
-            // lbl_AnalRespDev
-            // 
-            this.lbl_AnalRespDev.AutoSize = true;
-            this.lbl_AnalRespDev.Location = new System.Drawing.Point(6, 28);
-            this.lbl_AnalRespDev.Name = "lbl_AnalRespDev";
-            this.lbl_AnalRespDev.Size = new System.Drawing.Size(62, 13);
-            this.lbl_AnalRespDev.TabIndex = 51;
-            this.lbl_AnalRespDev.Text = "Anal. Resp.";
-            // 
-            // txt_Serial2Dev
-            // 
-            this.txt_Serial2Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_Serial2Dev.Location = new System.Drawing.Point(284, 93);
-            this.txt_Serial2Dev.MaxLength = 20;
-            this.txt_Serial2Dev.Name = "txt_Serial2Dev";
-            this.txt_Serial2Dev.Size = new System.Drawing.Size(146, 20);
-            this.txt_Serial2Dev.TabIndex = 11;
-            this.txt_Serial2Dev.WordWrap = false;
-            // 
-            // lbl_Serial2Dev
-            // 
-            this.lbl_Serial2Dev.AutoSize = true;
-            this.lbl_Serial2Dev.Location = new System.Drawing.Point(245, 96);
-            this.lbl_Serial2Dev.Name = "lbl_Serial2Dev";
-            this.lbl_Serial2Dev.Size = new System.Drawing.Size(33, 13);
-            this.lbl_Serial2Dev.TabIndex = 9;
-            this.lbl_Serial2Dev.Text = "Serial";
-            // 
-            // txt_Etiqueta2Dev
-            // 
-            this.txt_Etiqueta2Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_Etiqueta2Dev.Location = new System.Drawing.Point(72, 93);
-            this.txt_Etiqueta2Dev.MaxLength = 8;
-            this.txt_Etiqueta2Dev.Name = "txt_Etiqueta2Dev";
-            this.txt_Etiqueta2Dev.Size = new System.Drawing.Size(130, 20);
-            this.txt_Etiqueta2Dev.TabIndex = 10;
-            // 
-            // lbl_Etiqueta2Dev
-            // 
-            this.lbl_Etiqueta2Dev.AutoSize = true;
-            this.lbl_Etiqueta2Dev.Location = new System.Drawing.Point(9, 96);
-            this.lbl_Etiqueta2Dev.Name = "lbl_Etiqueta2Dev";
-            this.lbl_Etiqueta2Dev.Size = new System.Drawing.Size(46, 13);
-            this.lbl_Etiqueta2Dev.TabIndex = 8;
-            this.lbl_Etiqueta2Dev.Text = "Etiqueta";
-            // 
-            // txt_Serial3Dev
-            // 
-            this.txt_Serial3Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_Serial3Dev.Location = new System.Drawing.Point(284, 119);
-            this.txt_Serial3Dev.MaxLength = 20;
-            this.txt_Serial3Dev.Name = "txt_Serial3Dev";
-            this.txt_Serial3Dev.Size = new System.Drawing.Size(146, 20);
-            this.txt_Serial3Dev.TabIndex = 15;
-            this.txt_Serial3Dev.WordWrap = false;
-            // 
-            // lbl_Serial3Dev
-            // 
-            this.lbl_Serial3Dev.AutoSize = true;
-            this.lbl_Serial3Dev.Location = new System.Drawing.Point(245, 122);
-            this.lbl_Serial3Dev.Name = "lbl_Serial3Dev";
-            this.lbl_Serial3Dev.Size = new System.Drawing.Size(33, 13);
-            this.lbl_Serial3Dev.TabIndex = 13;
-            this.lbl_Serial3Dev.Text = "Serial";
-            // 
-            // txt_Etiqueta3Dev
-            // 
-            this.txt_Etiqueta3Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_Etiqueta3Dev.Location = new System.Drawing.Point(72, 119);
-            this.txt_Etiqueta3Dev.MaxLength = 8;
-            this.txt_Etiqueta3Dev.Name = "txt_Etiqueta3Dev";
-            this.txt_Etiqueta3Dev.Size = new System.Drawing.Size(130, 20);
-            this.txt_Etiqueta3Dev.TabIndex = 14;
-            // 
-            // lbl_Etiqueta3Dev
-            // 
-            this.lbl_Etiqueta3Dev.AutoSize = true;
-            this.lbl_Etiqueta3Dev.Location = new System.Drawing.Point(9, 122);
-            this.lbl_Etiqueta3Dev.Name = "lbl_Etiqueta3Dev";
-            this.lbl_Etiqueta3Dev.Size = new System.Drawing.Size(46, 13);
-            this.lbl_Etiqueta3Dev.TabIndex = 12;
-            this.lbl_Etiqueta3Dev.Text = "Etiqueta";
-            // 
-            // txt_Serial4Dev
-            // 
-            this.txt_Serial4Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_Serial4Dev.Location = new System.Drawing.Point(284, 145);
-            this.txt_Serial4Dev.MaxLength = 20;
-            this.txt_Serial4Dev.Name = "txt_Serial4Dev";
-            this.txt_Serial4Dev.Size = new System.Drawing.Size(146, 20);
-            this.txt_Serial4Dev.TabIndex = 19;
-            this.txt_Serial4Dev.WordWrap = false;
-            // 
-            // lbl_Serial4Dev
-            // 
-            this.lbl_Serial4Dev.AutoSize = true;
-            this.lbl_Serial4Dev.Location = new System.Drawing.Point(245, 148);
-            this.lbl_Serial4Dev.Name = "lbl_Serial4Dev";
-            this.lbl_Serial4Dev.Size = new System.Drawing.Size(33, 13);
-            this.lbl_Serial4Dev.TabIndex = 17;
-            this.lbl_Serial4Dev.Text = "Serial";
-            // 
-            // txt_Etiqueta4Dev
-            // 
-            this.txt_Etiqueta4Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_Etiqueta4Dev.Location = new System.Drawing.Point(72, 145);
-            this.txt_Etiqueta4Dev.MaxLength = 8;
-            this.txt_Etiqueta4Dev.Name = "txt_Etiqueta4Dev";
-            this.txt_Etiqueta4Dev.Size = new System.Drawing.Size(130, 20);
-            this.txt_Etiqueta4Dev.TabIndex = 18;
-            // 
-            // lbl_Etiqueta4Dev
-            // 
-            this.lbl_Etiqueta4Dev.AutoSize = true;
-            this.lbl_Etiqueta4Dev.Location = new System.Drawing.Point(9, 148);
-            this.lbl_Etiqueta4Dev.Name = "lbl_Etiqueta4Dev";
-            this.lbl_Etiqueta4Dev.Size = new System.Drawing.Size(46, 13);
-            this.lbl_Etiqueta4Dev.TabIndex = 16;
-            this.lbl_Etiqueta4Dev.Text = "Etiqueta";
-            // 
-            // rdo_MonitorDev
-            // 
-            this.rdo_MonitorDev.AutoSize = true;
-            this.rdo_MonitorDev.Location = new System.Drawing.Point(231, 24);
-            this.rdo_MonitorDev.Name = "rdo_MonitorDev";
-            this.rdo_MonitorDev.Size = new System.Drawing.Size(105, 17);
-            this.rdo_MonitorDev.TabIndex = 20;
-            this.rdo_MonitorDev.TabStop = true;
-            this.rdo_MonitorDev.Text = "Somente Monitor";
-            this.rdo_MonitorDev.UseVisualStyleBackColor = true;
-            // 
-            // rdo_PerifericoDev
-            // 
-            this.rdo_PerifericoDev.AutoSize = true;
-            this.rdo_PerifericoDev.Location = new System.Drawing.Point(351, 24);
-            this.rdo_PerifericoDev.Name = "rdo_PerifericoDev";
-            this.rdo_PerifericoDev.Size = new System.Drawing.Size(104, 17);
-            this.rdo_PerifericoDev.TabIndex = 21;
-            this.rdo_PerifericoDev.TabStop = true;
-            this.rdo_PerifericoDev.Text = "Periférico Avulso";
-            this.rdo_PerifericoDev.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txt_AndarLocalEquipDev);
-            this.groupBox2.Controls.Add(this.txt_SalaLocalEquipDev);
-            this.groupBox2.Controls.Add(this.txt_PredioLocalEquipDev);
-            this.groupBox2.Controls.Add(this.txt_EmpresaLocalEquipDev);
-            this.groupBox2.Controls.Add(this.lbl_AndarLocalEquipDev);
-            this.groupBox2.Controls.Add(this.lbl_PredioLocalEquipDev);
-            this.groupBox2.Controls.Add(this.lbl_SalaLocalEquipDev);
-            this.groupBox2.Controls.Add(this.lbl_EmpresaLocalEquipDev);
-            this.groupBox2.Location = new System.Drawing.Point(485, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(441, 109);
-            this.groupBox2.TabIndex = 802;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Localização Equipamento";
-            // 
-            // txt_AndarLocalEquipDev
-            // 
-            this.txt_AndarLocalEquipDev.Location = new System.Drawing.Point(242, 77);
-            this.txt_AndarLocalEquipDev.Mask = "00";
-            this.txt_AndarLocalEquipDev.Name = "txt_AndarLocalEquipDev";
-            this.txt_AndarLocalEquipDev.Size = new System.Drawing.Size(28, 20);
-            this.txt_AndarLocalEquipDev.TabIndex = 15;
-            this.txt_AndarLocalEquipDev.ValidatingType = typeof(int);
-            // 
-            // txt_SalaLocalEquipDev
-            // 
-            this.txt_SalaLocalEquipDev.Location = new System.Drawing.Point(68, 77);
-            this.txt_SalaLocalEquipDev.Mask = "LLLLLLLLLLLLLLLLLLLL";
-            this.txt_SalaLocalEquipDev.Name = "txt_SalaLocalEquipDev";
-            this.txt_SalaLocalEquipDev.Size = new System.Drawing.Size(131, 20);
-            this.txt_SalaLocalEquipDev.TabIndex = 14;
-            // 
-            // txt_PredioLocalEquipDev
-            // 
-            this.txt_PredioLocalEquipDev.Location = new System.Drawing.Point(68, 51);
-            this.txt_PredioLocalEquipDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.txt_PredioLocalEquipDev.Name = "txt_PredioLocalEquipDev";
-            this.txt_PredioLocalEquipDev.Size = new System.Drawing.Size(358, 20);
-            this.txt_PredioLocalEquipDev.TabIndex = 13;
-            // 
-            // txt_EmpresaLocalEquipDev
-            // 
-            this.txt_EmpresaLocalEquipDev.Location = new System.Drawing.Point(68, 25);
-            this.txt_EmpresaLocalEquipDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.txt_EmpresaLocalEquipDev.Name = "txt_EmpresaLocalEquipDev";
-            this.txt_EmpresaLocalEquipDev.Size = new System.Drawing.Size(358, 20);
-            this.txt_EmpresaLocalEquipDev.TabIndex = 12;
-            // 
-            // lbl_AndarLocalEquipDev
-            // 
-            this.lbl_AndarLocalEquipDev.AutoSize = true;
-            this.lbl_AndarLocalEquipDev.Location = new System.Drawing.Point(205, 80);
-            this.lbl_AndarLocalEquipDev.Name = "lbl_AndarLocalEquipDev";
-            this.lbl_AndarLocalEquipDev.Size = new System.Drawing.Size(35, 13);
-            this.lbl_AndarLocalEquipDev.TabIndex = 22;
-            this.lbl_AndarLocalEquipDev.Text = "Andar";
-            // 
-            // lbl_PredioLocalEquipDev
-            // 
-            this.lbl_PredioLocalEquipDev.AutoSize = true;
-            this.lbl_PredioLocalEquipDev.Location = new System.Drawing.Point(6, 51);
-            this.lbl_PredioLocalEquipDev.Name = "lbl_PredioLocalEquipDev";
-            this.lbl_PredioLocalEquipDev.Size = new System.Drawing.Size(37, 13);
-            this.lbl_PredioLocalEquipDev.TabIndex = 20;
-            this.lbl_PredioLocalEquipDev.Text = "Prédio";
-            // 
-            // lbl_SalaLocalEquipDev
-            // 
-            this.lbl_SalaLocalEquipDev.AutoSize = true;
-            this.lbl_SalaLocalEquipDev.Location = new System.Drawing.Point(6, 77);
-            this.lbl_SalaLocalEquipDev.Name = "lbl_SalaLocalEquipDev";
-            this.lbl_SalaLocalEquipDev.Size = new System.Drawing.Size(28, 13);
-            this.lbl_SalaLocalEquipDev.TabIndex = 18;
-            this.lbl_SalaLocalEquipDev.Text = "Sala";
-            // 
-            // lbl_EmpresaLocalEquipDev
-            // 
-            this.lbl_EmpresaLocalEquipDev.AutoSize = true;
-            this.lbl_EmpresaLocalEquipDev.Location = new System.Drawing.Point(6, 25);
-            this.lbl_EmpresaLocalEquipDev.Name = "lbl_EmpresaLocalEquipDev";
-            this.lbl_EmpresaLocalEquipDev.Size = new System.Drawing.Size(48, 13);
-            this.lbl_EmpresaLocalEquipDev.TabIndex = 16;
-            this.lbl_EmpresaLocalEquipDev.Text = "Empresa";
-            // 
-            // btn_GerarReqPeca
-            // 
-            this.btn_GerarReqPeca.Image = ((System.Drawing.Image)(resources.GetObject("btn_GerarReqPeca.Image")));
-            this.btn_GerarReqPeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_GerarReqPeca.Location = new System.Drawing.Point(623, 334);
-            this.btn_GerarReqPeca.Name = "btn_GerarReqPeca";
-            this.btn_GerarReqPeca.Size = new System.Drawing.Size(80, 43);
-            this.btn_GerarReqPeca.TabIndex = 404;
-            this.btn_GerarReqPeca.Text = "Gerar";
-            this.btn_GerarReqPeca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_GerarReqPeca.UseVisualStyleBackColor = true;
-            this.btn_GerarReqPeca.Click += new System.EventHandler(this.btn_GerarReqPeca_Click);
+            // tab_RepPeca
+            // 
+            this.tab_RepPeca.Controls.Add(this.groupBox4);
+            this.tab_RepPeca.Controls.Add(this.btn_GerarReqPeca);
+            this.tab_RepPeca.Location = new System.Drawing.Point(4, 22);
+            this.tab_RepPeca.Name = "tab_RepPeca";
+            this.tab_RepPeca.Size = new System.Drawing.Size(1143, 450);
+            this.tab_RepPeca.TabIndex = 5;
+            this.tab_RepPeca.Text = "Reposição de Peça";
+            this.tab_RepPeca.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cbo_ValorReqPeca);
-            this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.grp_ObsReqPeca);
             this.groupBox4.Controls.Add(this.txt_CausaReqPeca);
             this.groupBox4.Controls.Add(this.label13);
@@ -1612,14 +1583,231 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados para requisição";
             // 
+            // txt_ValorReqPeca
+            // 
+            this.txt_ValorReqPeca.Location = new System.Drawing.Point(214, 101);
+            this.txt_ValorReqPeca.Name = "txt_ValorReqPeca";
+            this.txt_ValorReqPeca.Size = new System.Drawing.Size(83, 20);
+            this.txt_ValorReqPeca.TabIndex = 17;
+            // 
+            // cbo_ValorReqPeca
+            // 
+            this.cbo_ValorReqPeca.DataSource = this.tblreparosBindingSource;
+            this.cbo_ValorReqPeca.DisplayMember = "Desc_reparo";
+            this.cbo_ValorReqPeca.FormattingEnabled = true;
+            this.cbo_ValorReqPeca.Location = new System.Drawing.Point(82, 22);
+            this.cbo_ValorReqPeca.Name = "cbo_ValorReqPeca";
+            this.cbo_ValorReqPeca.Size = new System.Drawing.Size(215, 21);
+            this.cbo_ValorReqPeca.TabIndex = 16;
+            this.cbo_ValorReqPeca.ValueMember = "Valor";
+            this.cbo_ValorReqPeca.SelectedIndexChanged += new System.EventHandler(this.cbo_ValorReqPeca_SelectedIndexChanged);
+            // 
+            // tblreparosBindingSource
+            // 
+            this.tblreparosBindingSource.DataMember = "tbl_reparos";
+            this.tblreparosBindingSource.DataSource = this.atosDataSet;
+            // 
+            // atosDataSet
+            // 
+            this.atosDataSet.DataSetName = "AtosDataSet";
+            this.atosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(11, 105);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(69, 13);
+            this.label17.TabIndex = 68;
+            this.label17.Text = "Valor Reparo";
+            // 
+            // grp_ObsReqPeca
+            // 
+            this.grp_ObsReqPeca.Controls.Add(this.txt_ValorReqPeca);
+            this.grp_ObsReqPeca.Controls.Add(this.label16);
+            this.grp_ObsReqPeca.Controls.Add(this.cbo_ValorReqPeca);
+            this.grp_ObsReqPeca.Controls.Add(this.txt_GarantiaMaqReqPeca);
+            this.grp_ObsReqPeca.Controls.Add(this.label17);
+            this.grp_ObsReqPeca.Controls.Add(this.label15);
+            this.grp_ObsReqPeca.Controls.Add(this.label14);
+            this.grp_ObsReqPeca.Controls.Add(this.txt_GarantiaPeriReqPeca);
+            this.grp_ObsReqPeca.Location = new System.Drawing.Point(352, 168);
+            this.grp_ObsReqPeca.Name = "grp_ObsReqPeca";
+            this.grp_ObsReqPeca.Size = new System.Drawing.Size(324, 141);
+            this.grp_ObsReqPeca.TabIndex = 67;
+            this.grp_ObsReqPeca.TabStop = false;
+            this.grp_ObsReqPeca.Text = "Observações";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(67, 13);
+            this.label16.TabIndex = 65;
+            this.label16.Text = "Componente";
+            // 
+            // txt_GarantiaMaqReqPeca
+            // 
+            this.txt_GarantiaMaqReqPeca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_GarantiaMaqReqPeca.Location = new System.Drawing.Point(214, 49);
+            this.txt_GarantiaMaqReqPeca.Name = "txt_GarantiaMaqReqPeca";
+            this.txt_GarantiaMaqReqPeca.Size = new System.Drawing.Size(83, 20);
+            this.txt_GarantiaMaqReqPeca.TabIndex = 14;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(9, 82);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(168, 13);
+            this.label15.TabIndex = 64;
+            this.label15.Text = "Vencimento Garantia do Periférico";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(9, 56);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(165, 13);
+            this.label14.TabIndex = 62;
+            this.label14.Text = "Vencimento Garantia da Máquina";
+            // 
+            // txt_GarantiaPeriReqPeca
+            // 
+            this.txt_GarantiaPeriReqPeca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_GarantiaPeriReqPeca.Location = new System.Drawing.Point(214, 75);
+            this.txt_GarantiaPeriReqPeca.Name = "txt_GarantiaPeriReqPeca";
+            this.txt_GarantiaPeriReqPeca.Size = new System.Drawing.Size(83, 20);
+            this.txt_GarantiaPeriReqPeca.TabIndex = 15;
+            // 
+            // txt_CausaReqPeca
+            // 
+            this.txt_CausaReqPeca.Location = new System.Drawing.Point(9, 168);
+            this.txt_CausaReqPeca.MaxLength = 250;
+            this.txt_CausaReqPeca.Multiline = true;
+            this.txt_CausaReqPeca.Name = "txt_CausaReqPeca";
+            this.txt_CausaReqPeca.Size = new System.Drawing.Size(333, 141);
+            this.txt_CausaReqPeca.TabIndex = 12;
+            this.txt_CausaReqPeca.WordWrap = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 152);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(133, 13);
+            this.label13.TabIndex = 59;
+            this.label13.Text = "Causa de reparo / extravio";
+            // 
+            // txt_SerialReqPeca
+            // 
+            this.txt_SerialReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_SerialReqPeca.Location = new System.Drawing.Point(497, 123);
+            this.txt_SerialReqPeca.MaxLength = 30;
+            this.txt_SerialReqPeca.Name = "txt_SerialReqPeca";
+            this.txt_SerialReqPeca.Size = new System.Drawing.Size(152, 20);
+            this.txt_SerialReqPeca.TabIndex = 11;
+            this.txt_SerialReqPeca.WordWrap = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(430, 126);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(33, 13);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Serial";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(205, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(30, 13);
+            this.label11.TabIndex = 56;
+            this.label11.Text = "Data";
+            // 
+            // txt_DataReqPeca
+            // 
+            this.txt_DataReqPeca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_DataReqPeca.Location = new System.Drawing.Point(272, 19);
+            this.txt_DataReqPeca.Name = "txt_DataReqPeca";
+            this.txt_DataReqPeca.Size = new System.Drawing.Size(83, 20);
+            this.txt_DataReqPeca.TabIndex = 1;
+            // 
+            // txt_ModeloReqPeca
+            // 
+            this.txt_ModeloReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_ModeloReqPeca.Location = new System.Drawing.Point(253, 123);
+            this.txt_ModeloReqPeca.MaxLength = 30;
+            this.txt_ModeloReqPeca.Name = "txt_ModeloReqPeca";
+            this.txt_ModeloReqPeca.Size = new System.Drawing.Size(172, 20);
+            this.txt_ModeloReqPeca.TabIndex = 10;
+            this.txt_ModeloReqPeca.WordWrap = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(205, 126);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "Modelo";
+            // 
+            // txt_PnUsuReqPeca
+            // 
+            this.txt_PnUsuReqPeca.Location = new System.Drawing.Point(497, 45);
+            this.txt_PnUsuReqPeca.Mask = "0000000000";
+            this.txt_PnUsuReqPeca.Name = "txt_PnUsuReqPeca";
+            this.txt_PnUsuReqPeca.Size = new System.Drawing.Size(70, 20);
+            this.txt_PnUsuReqPeca.TabIndex = 3;
+            this.txt_PnUsuReqPeca.ValidatingType = typeof(int);
+            // 
+            // txt_PnGerenteReqPeca
+            // 
+            this.txt_PnGerenteReqPeca.Location = new System.Drawing.Point(497, 71);
+            this.txt_PnGerenteReqPeca.Mask = "0000000000";
+            this.txt_PnGerenteReqPeca.Name = "txt_PnGerenteReqPeca";
+            this.txt_PnGerenteReqPeca.Size = new System.Drawing.Size(70, 20);
+            this.txt_PnGerenteReqPeca.TabIndex = 6;
+            this.txt_PnGerenteReqPeca.ValidatingType = typeof(int);
+            // 
+            // txt_ChamadoReqPeca
+            // 
+            this.txt_ChamadoReqPeca.Location = new System.Drawing.Point(69, 19);
+            this.txt_ChamadoReqPeca.Mask = "000000000000";
+            this.txt_ChamadoReqPeca.Name = "txt_ChamadoReqPeca";
+            this.txt_ChamadoReqPeca.Size = new System.Drawing.Size(70, 20);
+            this.txt_ChamadoReqPeca.TabIndex = 0;
+            this.txt_ChamadoReqPeca.ValidatingType = typeof(int);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(571, 48);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 46;
+            this.label10.Text = "Ramal";
+            // 
+            // txt_RamalUsuReqPeca
+            // 
+            this.txt_RamalUsuReqPeca.Location = new System.Drawing.Point(614, 45);
+            this.txt_RamalUsuReqPeca.Mask = "0000";
+            this.txt_RamalUsuReqPeca.Name = "txt_RamalUsuReqPeca";
+            this.txt_RamalUsuReqPeca.Size = new System.Drawing.Size(35, 20);
+            this.txt_RamalUsuReqPeca.TabIndex = 4;
+            this.txt_RamalUsuReqPeca.ValidatingType = typeof(int);
+            // 
             // txt_EtiquetaReqPeca
             // 
             this.txt_EtiquetaReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_EtiquetaReqPeca.Location = new System.Drawing.Point(69, 123);
-            this.txt_EtiquetaReqPeca.MaxLength = 8;
+            this.txt_EtiquetaReqPeca.MaxLength = 10;
             this.txt_EtiquetaReqPeca.Name = "txt_EtiquetaReqPeca";
             this.txt_EtiquetaReqPeca.Size = new System.Drawing.Size(130, 20);
-            this.txt_EtiquetaReqPeca.TabIndex = 19;
+            this.txt_EtiquetaReqPeca.TabIndex = 9;
             this.txt_EtiquetaReqPeca.WordWrap = false;
             // 
             // label1
@@ -1643,17 +1831,17 @@
             // txt_SetorReqPeca
             // 
             this.txt_SetorReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_SetorReqPeca.Location = new System.Drawing.Point(272, 97);
+            this.txt_SetorReqPeca.Location = new System.Drawing.Point(497, 97);
             this.txt_SetorReqPeca.MaxLength = 20;
             this.txt_SetorReqPeca.Name = "txt_SetorReqPeca";
             this.txt_SetorReqPeca.Size = new System.Drawing.Size(152, 20);
-            this.txt_SetorReqPeca.TabIndex = 15;
+            this.txt_SetorReqPeca.TabIndex = 8;
             this.txt_SetorReqPeca.WordWrap = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(205, 100);
+            this.label3.Location = new System.Drawing.Point(430, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 13;
@@ -1663,10 +1851,10 @@
             // 
             this.txt_LocalizacaoReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_LocalizacaoReqPeca.Location = new System.Drawing.Point(69, 97);
-            this.txt_LocalizacaoReqPeca.MaxLength = 8;
+            this.txt_LocalizacaoReqPeca.MaxLength = 90;
             this.txt_LocalizacaoReqPeca.Name = "txt_LocalizacaoReqPeca";
-            this.txt_LocalizacaoReqPeca.Size = new System.Drawing.Size(130, 20);
-            this.txt_LocalizacaoReqPeca.TabIndex = 14;
+            this.txt_LocalizacaoReqPeca.Size = new System.Drawing.Size(355, 20);
+            this.txt_LocalizacaoReqPeca.TabIndex = 7;
             // 
             // label4
             // 
@@ -1680,7 +1868,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(205, 74);
+            this.label5.Location = new System.Drawing.Point(430, 74);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 9;
@@ -1690,10 +1878,10 @@
             // 
             this.txt_GerenteReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_GerenteReqPeca.Location = new System.Drawing.Point(69, 71);
-            this.txt_GerenteReqPeca.MaxLength = 8;
+            this.txt_GerenteReqPeca.MaxLength = 90;
             this.txt_GerenteReqPeca.Name = "txt_GerenteReqPeca";
-            this.txt_GerenteReqPeca.Size = new System.Drawing.Size(130, 20);
-            this.txt_GerenteReqPeca.TabIndex = 10;
+            this.txt_GerenteReqPeca.Size = new System.Drawing.Size(355, 20);
+            this.txt_GerenteReqPeca.TabIndex = 5;
             // 
             // label6
             // 
@@ -1707,7 +1895,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(205, 48);
+            this.label7.Location = new System.Drawing.Point(430, 48);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 2;
@@ -1717,9 +1905,9 @@
             // 
             this.txt_UsuarioReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_UsuarioReqPeca.Location = new System.Drawing.Point(69, 45);
-            this.txt_UsuarioReqPeca.MaxLength = 8;
+            this.txt_UsuarioReqPeca.MaxLength = 90;
             this.txt_UsuarioReqPeca.Name = "txt_UsuarioReqPeca";
-            this.txt_UsuarioReqPeca.Size = new System.Drawing.Size(130, 20);
+            this.txt_UsuarioReqPeca.Size = new System.Drawing.Size(356, 20);
             this.txt_UsuarioReqPeca.TabIndex = 2;
             // 
             // label8
@@ -1731,217 +1919,49 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Usuário";
             // 
-            // label10
+            // btn_GerarReqPeca
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(348, 48);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
-            this.label10.TabIndex = 46;
-            this.label10.Text = "Ramal";
+            this.btn_GerarReqPeca.Image = ((System.Drawing.Image)(resources.GetObject("btn_GerarReqPeca.Image")));
+            this.btn_GerarReqPeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_GerarReqPeca.Location = new System.Drawing.Point(623, 334);
+            this.btn_GerarReqPeca.Name = "btn_GerarReqPeca";
+            this.btn_GerarReqPeca.Size = new System.Drawing.Size(80, 43);
+            this.btn_GerarReqPeca.TabIndex = 18;
+            this.btn_GerarReqPeca.Text = "Gerar";
+            this.btn_GerarReqPeca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_GerarReqPeca.UseVisualStyleBackColor = true;
+            this.btn_GerarReqPeca.Click += new System.EventHandler(this.btn_GerarReqPeca_Click);
             // 
-            // txt_RamalUsuReqPeca
+            // tab_LaudoBat
             // 
-            this.txt_RamalUsuReqPeca.Location = new System.Drawing.Point(389, 45);
-            this.txt_RamalUsuReqPeca.Mask = "0000";
-            this.txt_RamalUsuReqPeca.Name = "txt_RamalUsuReqPeca";
-            this.txt_RamalUsuReqPeca.Size = new System.Drawing.Size(35, 20);
-            this.txt_RamalUsuReqPeca.TabIndex = 45;
-            this.txt_RamalUsuReqPeca.ValidatingType = typeof(int);
+            this.tab_LaudoBat.Location = new System.Drawing.Point(4, 22);
+            this.tab_LaudoBat.Name = "tab_LaudoBat";
+            this.tab_LaudoBat.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_LaudoBat.Size = new System.Drawing.Size(1143, 450);
+            this.tab_LaudoBat.TabIndex = 3;
+            this.tab_LaudoBat.Text = "Laudo Bateria";
+            this.tab_LaudoBat.UseVisualStyleBackColor = true;
             // 
-            // txt_ChamadoReqPeca
+            // tab_LaudoTecnico
             // 
-            this.txt_ChamadoReqPeca.Location = new System.Drawing.Point(69, 19);
-            this.txt_ChamadoReqPeca.Mask = "000000000000";
-            this.txt_ChamadoReqPeca.Name = "txt_ChamadoReqPeca";
-            this.txt_ChamadoReqPeca.Size = new System.Drawing.Size(70, 20);
-            this.txt_ChamadoReqPeca.TabIndex = 47;
-            this.txt_ChamadoReqPeca.ValidatingType = typeof(int);
+            this.tab_LaudoTecnico.Location = new System.Drawing.Point(4, 22);
+            this.tab_LaudoTecnico.Name = "tab_LaudoTecnico";
+            this.tab_LaudoTecnico.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_LaudoTecnico.Size = new System.Drawing.Size(1143, 450);
+            this.tab_LaudoTecnico.TabIndex = 4;
+            this.tab_LaudoTecnico.Text = "Laudo Técnico";
+            this.tab_LaudoTecnico.UseVisualStyleBackColor = true;
             // 
-            // txt_PnGerenteReqPeca
+            // tbl_reparosTableAdapter
             // 
-            this.txt_PnGerenteReqPeca.Location = new System.Drawing.Point(272, 71);
-            this.txt_PnGerenteReqPeca.Mask = "0000000000";
-            this.txt_PnGerenteReqPeca.Name = "txt_PnGerenteReqPeca";
-            this.txt_PnGerenteReqPeca.Size = new System.Drawing.Size(70, 20);
-            this.txt_PnGerenteReqPeca.TabIndex = 48;
-            this.txt_PnGerenteReqPeca.ValidatingType = typeof(int);
-            // 
-            // txt_PnUsuReqPeca
-            // 
-            this.txt_PnUsuReqPeca.Location = new System.Drawing.Point(272, 45);
-            this.txt_PnUsuReqPeca.Mask = "0000000000";
-            this.txt_PnUsuReqPeca.Name = "txt_PnUsuReqPeca";
-            this.txt_PnUsuReqPeca.Size = new System.Drawing.Size(70, 20);
-            this.txt_PnUsuReqPeca.TabIndex = 49;
-            this.txt_PnUsuReqPeca.ValidatingType = typeof(int);
-            // 
-            // txt_ModeloReqPeca
-            // 
-            this.txt_ModeloReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_ModeloReqPeca.Location = new System.Drawing.Point(272, 123);
-            this.txt_ModeloReqPeca.MaxLength = 20;
-            this.txt_ModeloReqPeca.Name = "txt_ModeloReqPeca";
-            this.txt_ModeloReqPeca.Size = new System.Drawing.Size(152, 20);
-            this.txt_ModeloReqPeca.TabIndex = 51;
-            this.txt_ModeloReqPeca.WordWrap = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(205, 126);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
-            this.label9.TabIndex = 50;
-            this.label9.Text = "Modelo";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(205, 22);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 13);
-            this.label11.TabIndex = 56;
-            this.label11.Text = "Data";
-            // 
-            // txt_DataReqPeca
-            // 
-            this.txt_DataReqPeca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_DataReqPeca.Location = new System.Drawing.Point(272, 19);
-            this.txt_DataReqPeca.Name = "txt_DataReqPeca";
-            this.txt_DataReqPeca.Size = new System.Drawing.Size(83, 20);
-            this.txt_DataReqPeca.TabIndex = 55;
-            // 
-            // txt_SerialReqPeca
-            // 
-            this.txt_SerialReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_SerialReqPeca.Location = new System.Drawing.Point(469, 123);
-            this.txt_SerialReqPeca.MaxLength = 20;
-            this.txt_SerialReqPeca.Name = "txt_SerialReqPeca";
-            this.txt_SerialReqPeca.Size = new System.Drawing.Size(152, 20);
-            this.txt_SerialReqPeca.TabIndex = 58;
-            this.txt_SerialReqPeca.WordWrap = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(430, 126);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 13);
-            this.label12.TabIndex = 57;
-            this.label12.Text = "Serial";
-            // 
-            // txt_CausaReqPeca
-            // 
-            this.txt_CausaReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_CausaReqPeca.Location = new System.Drawing.Point(9, 168);
-            this.txt_CausaReqPeca.MaxLength = 250;
-            this.txt_CausaReqPeca.Multiline = true;
-            this.txt_CausaReqPeca.Name = "txt_CausaReqPeca";
-            this.txt_CausaReqPeca.Size = new System.Drawing.Size(333, 141);
-            this.txt_CausaReqPeca.TabIndex = 60;
-            this.txt_CausaReqPeca.WordWrap = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 152);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(133, 13);
-            this.label13.TabIndex = 59;
-            this.label13.Text = "Causa de reparo / extravio";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 48);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(165, 13);
-            this.label14.TabIndex = 62;
-            this.label14.Text = "Vencimento Garantia da Máquina";
-            // 
-            // txt_GarantiaMaqReqPeca
-            // 
-            this.txt_GarantiaMaqReqPeca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_GarantiaMaqReqPeca.Location = new System.Drawing.Point(177, 42);
-            this.txt_GarantiaMaqReqPeca.Name = "txt_GarantiaMaqReqPeca";
-            this.txt_GarantiaMaqReqPeca.Size = new System.Drawing.Size(83, 20);
-            this.txt_GarantiaMaqReqPeca.TabIndex = 61;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 74);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(168, 13);
-            this.label15.TabIndex = 64;
-            this.label15.Text = "Vencimento Garantia do Periférico";
-            // 
-            // txt_GarantiaPeriReqPeca
-            // 
-            this.txt_GarantiaPeriReqPeca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_GarantiaPeriReqPeca.Location = new System.Drawing.Point(177, 68);
-            this.txt_GarantiaPeriReqPeca.Name = "txt_GarantiaPeriReqPeca";
-            this.txt_GarantiaPeriReqPeca.Size = new System.Drawing.Size(83, 20);
-            this.txt_GarantiaPeriReqPeca.TabIndex = 63;
-            // 
-            // txt_ComponenteReqPeca
-            // 
-            this.txt_ComponenteReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_ComponenteReqPeca.Location = new System.Drawing.Point(74, 16);
-            this.txt_ComponenteReqPeca.MaxLength = 20;
-            this.txt_ComponenteReqPeca.Name = "txt_ComponenteReqPeca";
-            this.txt_ComponenteReqPeca.Size = new System.Drawing.Size(186, 20);
-            this.txt_ComponenteReqPeca.TabIndex = 66;
-            this.txt_ComponenteReqPeca.WordWrap = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 19);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 13);
-            this.label16.TabIndex = 65;
-            this.label16.Text = "Componente";
-            // 
-            // grp_ObsReqPeca
-            // 
-            this.grp_ObsReqPeca.Controls.Add(this.txt_ComponenteReqPeca);
-            this.grp_ObsReqPeca.Controls.Add(this.label16);
-            this.grp_ObsReqPeca.Controls.Add(this.txt_GarantiaMaqReqPeca);
-            this.grp_ObsReqPeca.Controls.Add(this.label15);
-            this.grp_ObsReqPeca.Controls.Add(this.label14);
-            this.grp_ObsReqPeca.Controls.Add(this.txt_GarantiaPeriReqPeca);
-            this.grp_ObsReqPeca.Location = new System.Drawing.Point(352, 168);
-            this.grp_ObsReqPeca.Name = "grp_ObsReqPeca";
-            this.grp_ObsReqPeca.Size = new System.Drawing.Size(324, 97);
-            this.grp_ObsReqPeca.TabIndex = 67;
-            this.grp_ObsReqPeca.TabStop = false;
-            this.grp_ObsReqPeca.Text = "Observações";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(350, 291);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 13);
-            this.label17.TabIndex = 68;
-            this.label17.Text = "Valor Reparo";
-            // 
-            // cbo_ValorReqPeca
-            // 
-            this.cbo_ValorReqPeca.FormattingEnabled = true;
-            this.cbo_ValorReqPeca.Location = new System.Drawing.Point(425, 288);
-            this.cbo_ValorReqPeca.Name = "cbo_ValorReqPeca";
-            this.cbo_ValorReqPeca.Size = new System.Drawing.Size(251, 21);
-            this.cbo_ValorReqPeca.TabIndex = 69;
+            this.tbl_reparosTableAdapter.ClearBeforeFill = true;
             // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1155, 482);
+            this.ClientSize = new System.Drawing.Size(1169, 495);
             this.Controls.Add(this.tab_Formularios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Main";
@@ -1963,17 +1983,19 @@
             this.grp_CompRoll.ResumeLayout(false);
             this.grp_CompRoll.PerformLayout();
             this.tab_RetiraEquip.ResumeLayout(false);
-            this.tab_RepPeca.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.grp_EquipDev.ResumeLayout(false);
-            this.grp_EquipDev.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.grp_EquipDev.ResumeLayout(false);
+            this.grp_EquipDev.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tab_RepPeca.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atosDataSet)).EndInit();
             this.grp_ObsReqPeca.ResumeLayout(false);
             this.grp_ObsReqPeca.PerformLayout();
             this.ResumeLayout(false);
@@ -2142,7 +2164,6 @@
         private System.Windows.Forms.MaskedTextBox txt_PnUsuReqPeca;
         private System.Windows.Forms.MaskedTextBox txt_PnGerenteReqPeca;
         private System.Windows.Forms.GroupBox grp_ObsReqPeca;
-        private System.Windows.Forms.TextBox txt_ComponenteReqPeca;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker txt_GarantiaMaqReqPeca;
         private System.Windows.Forms.Label label15;
@@ -2150,6 +2171,10 @@
         private System.Windows.Forms.DateTimePicker txt_GarantiaPeriReqPeca;
         private System.Windows.Forms.ComboBox cbo_ValorReqPeca;
         private System.Windows.Forms.Label label17;
+        private AtosDataSet atosDataSet;
+        private System.Windows.Forms.BindingSource tblreparosBindingSource;
+        private AtosDataSetTableAdapters.tbl_reparosTableAdapter tbl_reparosTableAdapter;
+        private System.Windows.Forms.TextBox txt_ValorReqPeca;
     }
 }
 

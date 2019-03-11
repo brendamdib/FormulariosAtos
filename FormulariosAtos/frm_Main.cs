@@ -10,8 +10,6 @@ using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
 using Word = Microsoft.Office.Interop.Word;
-using Excel = Microsoft.Office.Interop.Excel;
-
 
 namespace FormulariosAtos
 {
@@ -21,30 +19,8 @@ namespace FormulariosAtos
         {
             InitializeComponent();
             txt_EtiquetaCompRoll.Focus();
-            PopulaComboReparo();
-        }
-
-        private void PopulaComboReparo()
-        {
-            //Create COM Objects. Create a COM object for everything that is referenced
-            Excel.Application xlApp = new Excel.Application();
-            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"D:\Documentos ATOS\Arquivos XLS\ValorReparo.xlsx", CorruptLoad: true);
-            Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
-            Excel.Range xlRange = xlWorksheet.UsedRange;
-
-
-            int rowCount = xlRange.Rows.Count;
-            int colCount = xlRange.Columns.Count;
-
-            for (int i = 1; i <= rowCount; i++)
-            {
-                for (int j = 1; j <= colCount; j++)
-                {
-                    string temp = (string)(xlRange.Cells[i, j] as Excel.Range).Value2;
-                    MessageBox.Show(temp);
-                }
-            }
-        }
+            
+        }       
 
         private void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -326,8 +302,8 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@pnusuario", txt_PnUsuReqPeca.Text);
                 this.FindAndReplace(wordApp, "@ramal", txt_RamalUsuReqPeca.Text);
 
-                this.FindAndReplace(wordApp, "@usuarioresponsavel", txt_UsuRespRoll.Text.Trim().ToUpper());
-                this.FindAndReplace(wordApp, "@pngerente", txt_PnUsuRespRoll.Text);
+                this.FindAndReplace(wordApp, "@gerente", txt_GerenteReqPeca.Text.Trim().ToUpper());
+                this.FindAndReplace(wordApp, "@pngerente", txt_PnGerenteReqPeca.Text);
 
                 this.FindAndReplace(wordApp, "@setor", txt_SetorReqPeca.Text.Trim().ToUpper());
                 this.FindAndReplace(wordApp, "@localizacao", txt_LocalizacaoReqPeca.Text);
@@ -336,13 +312,14 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@numchamado", txt_ChamadoReqPeca.Text);
 
                 this.FindAndReplace(wordApp, "@motivoreparo", txt_CausaReqPeca.Text);
-                this.FindAndReplace(wordApp, "@valorreparo", txt_DataReqPeca.Text);
+                this.FindAndReplace(wordApp, "@valorreparo", txt_ValorReqPeca.Text);
 
                 this.FindAndReplace(wordApp, "@garantiamaq", txt_GarantiaMaqReqPeca.Text);
                 this.FindAndReplace(wordApp, "@garantiaperi", txt_GarantiaPeriReqPeca.Text);
-                this.FindAndReplace(wordApp, "@componente", txt_ComponenteReqPeca.Text);
+                this.FindAndReplace(wordApp, "@componente", cbo_ValorReqPeca.SelectedText.ToString());
 
-
+                this.FindAndReplace(wordApp, "@gerpn", txt_GerenteReqPeca.Text.Trim().ToUpper() + " - " + txt_PnGerenteReqPeca.Text);
+                this.FindAndReplace(wordApp, "@usuariopn", txt_UsuarioReqPeca.Text.Trim().ToUpper() + " - " + txt_PnUsuReqPeca.Text);
 
             }
             else
@@ -357,12 +334,14 @@ namespace FormulariosAtos
             //Fechar
             myWordDoc.Close();
             wordApp.Quit();
-            MessageBox.Show("Termo de responsabilidade gerado com sucesso!!!!");
+            MessageBox.Show("Formulário de reposição de peças gerado com sucesso!!!!");
         }
 
         private void frm_Main_Load(object sender, EventArgs e)
         {
-            txt_EtiquetaCompRoll.Focus();
+           // TODO: This line of code loads data into the 'atosDataSet.tbl_reparos' table. You can move, or remove it, as needed.
+            this.tbl_reparosTableAdapter.Fill(this.atosDataSet.tbl_reparos);
+            txt_ValorReqPeca.Text = "R$" + cbo_ValorReqPeca.SelectedValue.ToString() + ",00";
         }
 
         private void chk_DockstationRoll_CheckedChanged(object sender, EventArgs e)
@@ -419,7 +398,15 @@ namespace FormulariosAtos
 
         private void btn_GerarReqPeca_Click(object sender, EventArgs e)
         {
-            CriaReqPecas("D:\\Documentos ATOS\\Templates\\FORMULARIO REPOSIÇÃO DE PEÇAS.DOCX", "D:\\Documentos ATOS\\FORMULARIO REPOSIÇÃO DE PEÇAS " + txt_ChamadoDev.Text + ".DOCX");
+            CriaReqPecas("D:\\Documentos ATOS\\Templates\\FORMULARIO REPOSIÇÃO DE PEÇAS.DOCX", "D:\\Documentos ATOS\\FORMULARIO REPOSIÇÃO DE PEÇAS " + txt_ChamadoReqPeca.Text + ".DOCX");
+        }
+
+        private void cbo_ValorReqPeca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbo_ValorReqPeca.SelectedIndex != -1)
+            { 
+                txt_ValorReqPeca.Text = "R$" + cbo_ValorReqPeca.SelectedValue.ToString() + ",00";
+            }
         }
     }
 }
