@@ -35,7 +35,6 @@
             this.rdo_NovoPonto = new System.Windows.Forms.RadioButton();
             this.btn_GerarRollout = new System.Windows.Forms.Button();
             this.rdo_Rollout = new System.Windows.Forms.RadioButton();
-            this.tab_InfoComplRoll = new System.Windows.Forms.GroupBox();
             this.lbl_MotivoExcRoll = new System.Windows.Forms.Label();
             this.txt_MotivoExcRoll = new System.Windows.Forms.TextBox();
             this.chk_ExcFisicaRoll = new System.Windows.Forms.CheckBox();
@@ -63,7 +62,6 @@
             this.lbl_SerialMonitorRoll = new System.Windows.Forms.Label();
             this.txt_EtiquetaMonitorRoll = new System.Windows.Forms.TextBox();
             this.lbl_EtiquetaMonitorRoll = new System.Windows.Forms.Label();
-            this.grp_DadosTerceiroRoll = new System.Windows.Forms.GroupBox();
             this.lbl_SetorTercRoll = new System.Windows.Forms.Label();
             this.txt_SetorTercRoll = new System.Windows.Forms.MaskedTextBox();
             this.lbl_GerTercRoll = new System.Windows.Forms.Label();
@@ -203,10 +201,13 @@
             this.chk_EquipCompartilhadoRoll = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.tab_Formularios.SuspendLayout();
             this.tab_RollOut.SuspendLayout();
-            this.tab_InfoComplRoll.SuspendLayout();
-            this.grp_DadosTerceiroRoll.SuspendLayout();
             this.tab_RetiraEquip.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -217,6 +218,8 @@
             this.grp_ObsReqPeca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atosDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Formularios
@@ -237,16 +240,45 @@
             // 
             // tab_RollOut
             // 
+            this.tab_RollOut.Controls.Add(this.label22);
+            this.tab_RollOut.Controls.Add(this.label21);
+            this.tab_RollOut.Controls.Add(this.lbl_MotivoExcRoll);
+            this.tab_RollOut.Controls.Add(this.txt_FabCompRoll);
+            this.tab_RollOut.Controls.Add(this.txt_MotivoExcRoll);
+            this.tab_RollOut.Controls.Add(this.panel2);
+            this.tab_RollOut.Controls.Add(this.chk_ExcFisicaRoll);
+            this.tab_RollOut.Controls.Add(this.panel1);
+            this.tab_RollOut.Controls.Add(this.chk_ExcRedeRoll);
+            this.tab_RollOut.Controls.Add(this.label20);
+            this.tab_RollOut.Controls.Add(this.txt_ChamadoRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_SetorTercRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_ChamadoRoll);
             this.tab_RollOut.Controls.Add(this.progressBar1);
+            this.tab_RollOut.Controls.Add(this.chk_MaqExcRoll);
+            this.tab_RollOut.Controls.Add(this.txt_SetorTercRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_DateFillRoll);
             this.tab_RollOut.Controls.Add(this.label19);
+            this.tab_RollOut.Controls.Add(this.date_FillRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_GerTercRoll);
+            this.tab_RollOut.Controls.Add(this.txt_AnalRespRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_AnalRespRoll);
             this.tab_RollOut.Controls.Add(this.chk_EquipCompartilhadoRoll);
+            this.tab_RollOut.Controls.Add(this.txt_GerTercRoll);
             this.tab_RollOut.Controls.Add(this.lbl_LocEquipRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_SupTercRoll);
             this.tab_RollOut.Controls.Add(this.lbl_SetorUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.txt_SupTercRoll);
             this.tab_RollOut.Controls.Add(this.txt_AndarLocalEquip);
+            this.tab_RollOut.Controls.Add(this.lbl_RamalTercRoll);
             this.tab_RollOut.Controls.Add(this.txt_SetorUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.txt_RamalTercRoll);
             this.tab_RollOut.Controls.Add(this.label18);
+            this.tab_RollOut.Controls.Add(this.lbl_MatriculaTercRoll);
             this.tab_RollOut.Controls.Add(this.lbl_GerUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.txt_MatriculaTercRoll);
             this.tab_RollOut.Controls.Add(this.txt_SalaLocalEquip);
+            this.tab_RollOut.Controls.Add(this.txt_NomeTercRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_NomeTercRoll);
             this.tab_RollOut.Controls.Add(this.txt_GerUsuRespRoll);
             this.tab_RollOut.Controls.Add(this.txt_ModeloMonitorRoll);
             this.tab_RollOut.Controls.Add(this.lbl_SupUsuRespRoll);
@@ -271,20 +303,13 @@
             this.tab_RollOut.Controls.Add(this.lbl_FabMonitorRoll);
             this.tab_RollOut.Controls.Add(this.lbl_EtiquetaDockCompRoll);
             this.tab_RollOut.Controls.Add(this.txt_SerialMonitorRoll);
-            this.tab_RollOut.Controls.Add(this.rdo_NovoPonto);
             this.tab_RollOut.Controls.Add(this.lbl_SerialMonitorRoll);
             this.tab_RollOut.Controls.Add(this.chk_DockstationRoll);
             this.tab_RollOut.Controls.Add(this.txt_EtiquetaMonitorRoll);
             this.tab_RollOut.Controls.Add(this.btn_GerarRollout);
             this.tab_RollOut.Controls.Add(this.lbl_EtiquetaMonitorRoll);
-            this.tab_RollOut.Controls.Add(this.rdo_DesktopRoll);
-            this.tab_RollOut.Controls.Add(this.rdo_Rollout);
-            this.tab_RollOut.Controls.Add(this.rdo_NotebookRoll);
-            this.tab_RollOut.Controls.Add(this.tab_InfoComplRoll);
             this.tab_RollOut.Controls.Add(this.txt_ModeloCompRoll);
             this.tab_RollOut.Controls.Add(this.lbl_ModeloCompRoll);
-            this.tab_RollOut.Controls.Add(this.txt_FabCompRoll);
-            this.tab_RollOut.Controls.Add(this.grp_DadosTerceiroRoll);
             this.tab_RollOut.Controls.Add(this.lbl_FabricanteCompRoll);
             this.tab_RollOut.Controls.Add(this.txt_SerialCompRoll);
             this.tab_RollOut.Controls.Add(this.lbl_SerialCompRoll);
@@ -301,7 +326,7 @@
             // rdo_NovoPonto
             // 
             this.rdo_NovoPonto.AutoSize = true;
-            this.rdo_NovoPonto.Location = new System.Drawing.Point(126, 16);
+            this.rdo_NovoPonto.Location = new System.Drawing.Point(189, 9);
             this.rdo_NovoPonto.Name = "rdo_NovoPonto";
             this.rdo_NovoPonto.Size = new System.Drawing.Size(158, 17);
             this.rdo_NovoPonto.TabIndex = 1;
@@ -312,7 +337,7 @@
             // 
             this.btn_GerarRollout.Image = ((System.Drawing.Image)(resources.GetObject("btn_GerarRollout.Image")));
             this.btn_GerarRollout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_GerarRollout.Location = new System.Drawing.Point(1038, 384);
+            this.btn_GerarRollout.Location = new System.Drawing.Point(1042, 458);
             this.btn_GerarRollout.Name = "btn_GerarRollout";
             this.btn_GerarRollout.Size = new System.Drawing.Size(80, 43);
             this.btn_GerarRollout.TabIndex = 36;
@@ -324,38 +349,20 @@
             // rdo_Rollout
             // 
             this.rdo_Rollout.AutoSize = true;
-            this.rdo_Rollout.Location = new System.Drawing.Point(16, 16);
+            this.rdo_Rollout.Checked = true;
+            this.rdo_Rollout.Location = new System.Drawing.Point(3, 9);
             this.rdo_Rollout.Name = "rdo_Rollout";
             this.rdo_Rollout.Size = new System.Drawing.Size(58, 17);
             this.rdo_Rollout.TabIndex = 0;
+            this.rdo_Rollout.TabStop = true;
             this.rdo_Rollout.Text = "Rollout";
             this.rdo_Rollout.UseVisualStyleBackColor = true;
-            // 
-            // tab_InfoComplRoll
-            // 
-            this.tab_InfoComplRoll.Controls.Add(this.lbl_MotivoExcRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.txt_MotivoExcRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.chk_ExcFisicaRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.chk_ExcRedeRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.txt_ChamadoRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.lbl_ChamadoRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.chk_MaqExcRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.lbl_DateFillRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.date_FillRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.txt_AnalRespRoll);
-            this.tab_InfoComplRoll.Controls.Add(this.lbl_AnalRespRoll);
-            this.tab_InfoComplRoll.Location = new System.Drawing.Point(454, 250);
-            this.tab_InfoComplRoll.Name = "tab_InfoComplRoll";
-            this.tab_InfoComplRoll.Size = new System.Drawing.Size(664, 125);
-            this.tab_InfoComplRoll.TabIndex = 800;
-            this.tab_InfoComplRoll.TabStop = false;
-            this.tab_InfoComplRoll.Text = "Informaçãoes Complementares";
             // 
             // lbl_MotivoExcRoll
             // 
             this.lbl_MotivoExcRoll.AutoSize = true;
             this.lbl_MotivoExcRoll.Enabled = false;
-            this.lbl_MotivoExcRoll.Location = new System.Drawing.Point(6, 93);
+            this.lbl_MotivoExcRoll.Location = new System.Drawing.Point(456, 294);
             this.lbl_MotivoExcRoll.Name = "lbl_MotivoExcRoll";
             this.lbl_MotivoExcRoll.Size = new System.Drawing.Size(144, 13);
             this.lbl_MotivoExcRoll.TabIndex = 59;
@@ -364,17 +371,17 @@
             // txt_MotivoExcRoll
             // 
             this.txt_MotivoExcRoll.Enabled = false;
-            this.txt_MotivoExcRoll.Location = new System.Drawing.Point(156, 80);
+            this.txt_MotivoExcRoll.Location = new System.Drawing.Point(606, 281);
             this.txt_MotivoExcRoll.Multiline = true;
             this.txt_MotivoExcRoll.Name = "txt_MotivoExcRoll";
-            this.txt_MotivoExcRoll.Size = new System.Drawing.Size(497, 39);
+            this.txt_MotivoExcRoll.Size = new System.Drawing.Size(470, 39);
             this.txt_MotivoExcRoll.TabIndex = 35;
             // 
             // chk_ExcFisicaRoll
             // 
             this.chk_ExcFisicaRoll.AutoSize = true;
             this.chk_ExcFisicaRoll.Enabled = false;
-            this.chk_ExcFisicaRoll.Location = new System.Drawing.Point(185, 54);
+            this.chk_ExcFisicaRoll.Location = new System.Drawing.Point(635, 255);
             this.chk_ExcFisicaRoll.Name = "chk_ExcFisicaRoll";
             this.chk_ExcFisicaRoll.Size = new System.Drawing.Size(55, 17);
             this.chk_ExcFisicaRoll.TabIndex = 34;
@@ -385,7 +392,7 @@
             // 
             this.chk_ExcRedeRoll.AutoSize = true;
             this.chk_ExcRedeRoll.Enabled = false;
-            this.chk_ExcRedeRoll.Location = new System.Drawing.Point(127, 54);
+            this.chk_ExcRedeRoll.Location = new System.Drawing.Point(577, 255);
             this.chk_ExcRedeRoll.Name = "chk_ExcRedeRoll";
             this.chk_ExcRedeRoll.Size = new System.Drawing.Size(52, 17);
             this.chk_ExcRedeRoll.TabIndex = 33;
@@ -394,8 +401,8 @@
             // 
             // txt_ChamadoRoll
             // 
-            this.txt_ChamadoRoll.Location = new System.Drawing.Point(555, 25);
-            this.txt_ChamadoRoll.Mask = "000000000000";
+            this.txt_ChamadoRoll.Location = new System.Drawing.Point(1006, 361);
+            this.txt_ChamadoRoll.Mask = "0000000000";
             this.txt_ChamadoRoll.Name = "txt_ChamadoRoll";
             this.txt_ChamadoRoll.Size = new System.Drawing.Size(70, 20);
             this.txt_ChamadoRoll.TabIndex = 31;
@@ -404,7 +411,7 @@
             // lbl_ChamadoRoll
             // 
             this.lbl_ChamadoRoll.AutoSize = true;
-            this.lbl_ChamadoRoll.Location = new System.Drawing.Point(497, 28);
+            this.lbl_ChamadoRoll.Location = new System.Drawing.Point(948, 364);
             this.lbl_ChamadoRoll.Name = "lbl_ChamadoRoll";
             this.lbl_ChamadoRoll.Size = new System.Drawing.Size(52, 13);
             this.lbl_ChamadoRoll.TabIndex = 55;
@@ -413,7 +420,7 @@
             // chk_MaqExcRoll
             // 
             this.chk_MaqExcRoll.AutoSize = true;
-            this.chk_MaqExcRoll.Location = new System.Drawing.Point(9, 53);
+            this.chk_MaqExcRoll.Location = new System.Drawing.Point(459, 254);
             this.chk_MaqExcRoll.Name = "chk_MaqExcRoll";
             this.chk_MaqExcRoll.Size = new System.Drawing.Size(112, 17);
             this.chk_MaqExcRoll.TabIndex = 32;
@@ -424,7 +431,7 @@
             // lbl_DateFillRoll
             // 
             this.lbl_DateFillRoll.AutoSize = true;
-            this.lbl_DateFillRoll.Location = new System.Drawing.Point(372, 28);
+            this.lbl_DateFillRoll.Location = new System.Drawing.Point(823, 364);
             this.lbl_DateFillRoll.Name = "lbl_DateFillRoll";
             this.lbl_DateFillRoll.Size = new System.Drawing.Size(30, 13);
             this.lbl_DateFillRoll.TabIndex = 54;
@@ -433,14 +440,14 @@
             // date_FillRoll
             // 
             this.date_FillRoll.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_FillRoll.Location = new System.Drawing.Point(408, 25);
+            this.date_FillRoll.Location = new System.Drawing.Point(859, 361);
             this.date_FillRoll.Name = "date_FillRoll";
             this.date_FillRoll.Size = new System.Drawing.Size(83, 20);
             this.date_FillRoll.TabIndex = 30;
             // 
             // txt_AnalRespRoll
             // 
-            this.txt_AnalRespRoll.Location = new System.Drawing.Point(74, 25);
+            this.txt_AnalRespRoll.Location = new System.Drawing.Point(525, 361);
             this.txt_AnalRespRoll.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
             this.txt_AnalRespRoll.Name = "txt_AnalRespRoll";
             this.txt_AnalRespRoll.Size = new System.Drawing.Size(292, 20);
@@ -449,7 +456,7 @@
             // lbl_AnalRespRoll
             // 
             this.lbl_AnalRespRoll.AutoSize = true;
-            this.lbl_AnalRespRoll.Location = new System.Drawing.Point(6, 28);
+            this.lbl_AnalRespRoll.Location = new System.Drawing.Point(457, 364);
             this.lbl_AnalRespRoll.Name = "lbl_AnalRespRoll";
             this.lbl_AnalRespRoll.Size = new System.Drawing.Size(62, 13);
             this.lbl_AnalRespRoll.TabIndex = 51;
@@ -457,7 +464,7 @@
             // 
             // txt_AndarLocalEquip
             // 
-            this.txt_AndarLocalEquip.Location = new System.Drawing.Point(251, 330);
+            this.txt_AndarLocalEquip.Location = new System.Drawing.Point(248, 303);
             this.txt_AndarLocalEquip.Mask = "00";
             this.txt_AndarLocalEquip.Name = "txt_AndarLocalEquip";
             this.txt_AndarLocalEquip.Size = new System.Drawing.Size(28, 20);
@@ -466,7 +473,7 @@
             // 
             // txt_SalaLocalEquip
             // 
-            this.txt_SalaLocalEquip.Location = new System.Drawing.Point(77, 330);
+            this.txt_SalaLocalEquip.Location = new System.Drawing.Point(74, 303);
             this.txt_SalaLocalEquip.Mask = "LLLLLLLLLLLLLLLLLLLL";
             this.txt_SalaLocalEquip.Name = "txt_SalaLocalEquip";
             this.txt_SalaLocalEquip.Size = new System.Drawing.Size(131, 20);
@@ -474,7 +481,7 @@
             // 
             // txt_PredioLocalEquip
             // 
-            this.txt_PredioLocalEquip.Location = new System.Drawing.Point(77, 304);
+            this.txt_PredioLocalEquip.Location = new System.Drawing.Point(74, 277);
             this.txt_PredioLocalEquip.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
             this.txt_PredioLocalEquip.Name = "txt_PredioLocalEquip";
             this.txt_PredioLocalEquip.Size = new System.Drawing.Size(358, 20);
@@ -482,7 +489,7 @@
             // 
             // txt_EmpresaLocalEquip
             // 
-            this.txt_EmpresaLocalEquip.Location = new System.Drawing.Point(77, 278);
+            this.txt_EmpresaLocalEquip.Location = new System.Drawing.Point(74, 251);
             this.txt_EmpresaLocalEquip.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
             this.txt_EmpresaLocalEquip.Name = "txt_EmpresaLocalEquip";
             this.txt_EmpresaLocalEquip.Size = new System.Drawing.Size(358, 20);
@@ -491,7 +498,7 @@
             // lbl_AndarLocalEquip
             // 
             this.lbl_AndarLocalEquip.AutoSize = true;
-            this.lbl_AndarLocalEquip.Location = new System.Drawing.Point(214, 333);
+            this.lbl_AndarLocalEquip.Location = new System.Drawing.Point(211, 306);
             this.lbl_AndarLocalEquip.Name = "lbl_AndarLocalEquip";
             this.lbl_AndarLocalEquip.Size = new System.Drawing.Size(35, 13);
             this.lbl_AndarLocalEquip.TabIndex = 22;
@@ -500,7 +507,7 @@
             // lbl_PredioLocalEquip
             // 
             this.lbl_PredioLocalEquip.AutoSize = true;
-            this.lbl_PredioLocalEquip.Location = new System.Drawing.Point(15, 304);
+            this.lbl_PredioLocalEquip.Location = new System.Drawing.Point(12, 277);
             this.lbl_PredioLocalEquip.Name = "lbl_PredioLocalEquip";
             this.lbl_PredioLocalEquip.Size = new System.Drawing.Size(37, 13);
             this.lbl_PredioLocalEquip.TabIndex = 20;
@@ -509,7 +516,7 @@
             // lbl_SalaLocalEquip
             // 
             this.lbl_SalaLocalEquip.AutoSize = true;
-            this.lbl_SalaLocalEquip.Location = new System.Drawing.Point(15, 330);
+            this.lbl_SalaLocalEquip.Location = new System.Drawing.Point(12, 303);
             this.lbl_SalaLocalEquip.Name = "lbl_SalaLocalEquip";
             this.lbl_SalaLocalEquip.Size = new System.Drawing.Size(28, 13);
             this.lbl_SalaLocalEquip.TabIndex = 18;
@@ -518,7 +525,7 @@
             // lbl_EmpLocalEquip
             // 
             this.lbl_EmpLocalEquip.AutoSize = true;
-            this.lbl_EmpLocalEquip.Location = new System.Drawing.Point(15, 281);
+            this.lbl_EmpLocalEquip.Location = new System.Drawing.Point(12, 254);
             this.lbl_EmpLocalEquip.Name = "lbl_EmpLocalEquip";
             this.lbl_EmpLocalEquip.Size = new System.Drawing.Size(48, 13);
             this.lbl_EmpLocalEquip.TabIndex = 16;
@@ -564,7 +571,7 @@
             // 
             this.txt_SerialMonitorRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_SerialMonitorRoll.Location = new System.Drawing.Point(289, 173);
-            this.txt_SerialMonitorRoll.MaxLength = 20;
+            this.txt_SerialMonitorRoll.MaxLength = 7;
             this.txt_SerialMonitorRoll.Name = "txt_SerialMonitorRoll";
             this.txt_SerialMonitorRoll.Size = new System.Drawing.Size(146, 20);
             this.txt_SerialMonitorRoll.TabIndex = 10;
@@ -597,31 +604,10 @@
             this.lbl_EtiquetaMonitorRoll.TabIndex = 8;
             this.lbl_EtiquetaMonitorRoll.Text = "Etiqueta";
             // 
-            // grp_DadosTerceiroRoll
-            // 
-            this.grp_DadosTerceiroRoll.Controls.Add(this.lbl_SetorTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.txt_SetorTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.lbl_GerTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.txt_GerTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.lbl_SupTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.txt_SupTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.lbl_RamalTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.txt_RamalTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.lbl_MatriculaTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.txt_MatriculaTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.txt_NomeTercRoll);
-            this.grp_DadosTerceiroRoll.Controls.Add(this.lbl_NomeTercRoll);
-            this.grp_DadosTerceiroRoll.Location = new System.Drawing.Point(454, 158);
-            this.grp_DadosTerceiroRoll.Name = "grp_DadosTerceiroRoll";
-            this.grp_DadosTerceiroRoll.Size = new System.Drawing.Size(664, 86);
-            this.grp_DadosTerceiroRoll.TabIndex = 600;
-            this.grp_DadosTerceiroRoll.TabStop = false;
-            this.grp_DadosTerceiroRoll.Text = "Dados Usuário Terceiro";
-            // 
             // lbl_SetorTercRoll
             // 
             this.lbl_SetorTercRoll.AutoSize = true;
-            this.lbl_SetorTercRoll.Location = new System.Drawing.Point(154, 48);
+            this.lbl_SetorTercRoll.Location = new System.Drawing.Point(602, 202);
             this.lbl_SetorTercRoll.Name = "lbl_SetorTercRoll";
             this.lbl_SetorTercRoll.Size = new System.Drawing.Size(32, 13);
             this.lbl_SetorTercRoll.TabIndex = 50;
@@ -629,7 +615,7 @@
             // 
             // txt_SetorTercRoll
             // 
-            this.txt_SetorTercRoll.Location = new System.Drawing.Point(192, 45);
+            this.txt_SetorTercRoll.Location = new System.Drawing.Point(640, 199);
             this.txt_SetorTercRoll.Mask = "LLLLLLLLLLLLLLLLLLLL";
             this.txt_SetorTercRoll.Name = "txt_SetorTercRoll";
             this.txt_SetorTercRoll.Size = new System.Drawing.Size(135, 20);
@@ -639,7 +625,7 @@
             // lbl_GerTercRoll
             // 
             this.lbl_GerTercRoll.AutoSize = true;
-            this.lbl_GerTercRoll.Location = new System.Drawing.Point(77, 48);
+            this.lbl_GerTercRoll.Location = new System.Drawing.Point(525, 202);
             this.lbl_GerTercRoll.Name = "lbl_GerTercRoll";
             this.lbl_GerTercRoll.Size = new System.Drawing.Size(30, 13);
             this.lbl_GerTercRoll.TabIndex = 48;
@@ -647,7 +633,7 @@
             // 
             // txt_GerTercRoll
             // 
-            this.txt_GerTercRoll.Location = new System.Drawing.Point(113, 45);
+            this.txt_GerTercRoll.Location = new System.Drawing.Point(561, 199);
             this.txt_GerTercRoll.Mask = "LLLLL";
             this.txt_GerTercRoll.Name = "txt_GerTercRoll";
             this.txt_GerTercRoll.Size = new System.Drawing.Size(35, 20);
@@ -657,7 +643,7 @@
             // lbl_SupTercRoll
             // 
             this.lbl_SupTercRoll.AutoSize = true;
-            this.lbl_SupTercRoll.Location = new System.Drawing.Point(9, 48);
+            this.lbl_SupTercRoll.Location = new System.Drawing.Point(457, 202);
             this.lbl_SupTercRoll.Name = "lbl_SupTercRoll";
             this.lbl_SupTercRoll.Size = new System.Drawing.Size(29, 13);
             this.lbl_SupTercRoll.TabIndex = 46;
@@ -665,7 +651,7 @@
             // 
             // txt_SupTercRoll
             // 
-            this.txt_SupTercRoll.Location = new System.Drawing.Point(50, 45);
+            this.txt_SupTercRoll.Location = new System.Drawing.Point(498, 199);
             this.txt_SupTercRoll.Mask = "LL";
             this.txt_SupTercRoll.Name = "txt_SupTercRoll";
             this.txt_SupTercRoll.Size = new System.Drawing.Size(21, 20);
@@ -675,7 +661,7 @@
             // lbl_RamalTercRoll
             // 
             this.lbl_RamalTercRoll.AutoSize = true;
-            this.lbl_RamalTercRoll.Location = new System.Drawing.Point(506, 22);
+            this.lbl_RamalTercRoll.Location = new System.Drawing.Point(954, 176);
             this.lbl_RamalTercRoll.Name = "lbl_RamalTercRoll";
             this.lbl_RamalTercRoll.Size = new System.Drawing.Size(37, 13);
             this.lbl_RamalTercRoll.TabIndex = 44;
@@ -683,7 +669,7 @@
             // 
             // txt_RamalTercRoll
             // 
-            this.txt_RamalTercRoll.Location = new System.Drawing.Point(549, 19);
+            this.txt_RamalTercRoll.Location = new System.Drawing.Point(997, 173);
             this.txt_RamalTercRoll.Mask = "0000";
             this.txt_RamalTercRoll.Name = "txt_RamalTercRoll";
             this.txt_RamalTercRoll.Size = new System.Drawing.Size(35, 20);
@@ -693,7 +679,7 @@
             // lbl_MatriculaTercRoll
             // 
             this.lbl_MatriculaTercRoll.AutoSize = true;
-            this.lbl_MatriculaTercRoll.Location = new System.Drawing.Point(372, 22);
+            this.lbl_MatriculaTercRoll.Location = new System.Drawing.Point(820, 176);
             this.lbl_MatriculaTercRoll.Name = "lbl_MatriculaTercRoll";
             this.lbl_MatriculaTercRoll.Size = new System.Drawing.Size(52, 13);
             this.lbl_MatriculaTercRoll.TabIndex = 42;
@@ -701,7 +687,7 @@
             // 
             // txt_MatriculaTercRoll
             // 
-            this.txt_MatriculaTercRoll.Location = new System.Drawing.Point(430, 19);
+            this.txt_MatriculaTercRoll.Location = new System.Drawing.Point(878, 173);
             this.txt_MatriculaTercRoll.Mask = "0000000000";
             this.txt_MatriculaTercRoll.Name = "txt_MatriculaTercRoll";
             this.txt_MatriculaTercRoll.Size = new System.Drawing.Size(70, 20);
@@ -710,7 +696,7 @@
             // 
             // txt_NomeTercRoll
             // 
-            this.txt_NomeTercRoll.Location = new System.Drawing.Point(50, 19);
+            this.txt_NomeTercRoll.Location = new System.Drawing.Point(498, 173);
             this.txt_NomeTercRoll.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
             this.txt_NomeTercRoll.Name = "txt_NomeTercRoll";
             this.txt_NomeTercRoll.Size = new System.Drawing.Size(316, 20);
@@ -719,7 +705,7 @@
             // lbl_NomeTercRoll
             // 
             this.lbl_NomeTercRoll.AutoSize = true;
-            this.lbl_NomeTercRoll.Location = new System.Drawing.Point(9, 22);
+            this.lbl_NomeTercRoll.Location = new System.Drawing.Point(457, 176);
             this.lbl_NomeTercRoll.Name = "lbl_NomeTercRoll";
             this.lbl_NomeTercRoll.Size = new System.Drawing.Size(35, 13);
             this.lbl_NomeTercRoll.TabIndex = 39;
@@ -759,7 +745,7 @@
             // rdo_DesktopRoll
             // 
             this.rdo_DesktopRoll.AutoSize = true;
-            this.rdo_DesktopRoll.Location = new System.Drawing.Point(93, 120);
+            this.rdo_DesktopRoll.Location = new System.Drawing.Point(78, 10);
             this.rdo_DesktopRoll.Name = "rdo_DesktopRoll";
             this.rdo_DesktopRoll.Size = new System.Drawing.Size(65, 17);
             this.rdo_DesktopRoll.TabIndex = 7;
@@ -771,7 +757,7 @@
             // 
             this.rdo_NotebookRoll.AutoSize = true;
             this.rdo_NotebookRoll.Checked = true;
-            this.rdo_NotebookRoll.Location = new System.Drawing.Point(15, 119);
+            this.rdo_NotebookRoll.Location = new System.Drawing.Point(3, 9);
             this.rdo_NotebookRoll.Name = "rdo_NotebookRoll";
             this.rdo_NotebookRoll.Size = new System.Drawing.Size(72, 17);
             this.rdo_NotebookRoll.TabIndex = 6;
@@ -820,7 +806,7 @@
             // 
             this.txt_SerialCompRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_SerialCompRoll.Location = new System.Drawing.Point(288, 64);
-            this.txt_SerialCompRoll.MaxLength = 20;
+            this.txt_SerialCompRoll.MaxLength = 7;
             this.txt_SerialCompRoll.Name = "txt_SerialCompRoll";
             this.txt_SerialCompRoll.Size = new System.Drawing.Size(146, 20);
             this.txt_SerialCompRoll.TabIndex = 3;
@@ -843,6 +829,7 @@
             this.txt_EtiquetaCompRoll.Name = "txt_EtiquetaCompRoll";
             this.txt_EtiquetaCompRoll.Size = new System.Drawing.Size(130, 20);
             this.txt_EtiquetaCompRoll.TabIndex = 2;
+            this.txt_EtiquetaCompRoll.Text = "BSWL";
             // 
             // lbl_EtiquetaCompRoll
             // 
@@ -863,7 +850,7 @@
             this.tab_RetiraEquip.Location = new System.Drawing.Point(4, 22);
             this.tab_RetiraEquip.Name = "tab_RetiraEquip";
             this.tab_RetiraEquip.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_RetiraEquip.Size = new System.Drawing.Size(1143, 450);
+            this.tab_RetiraEquip.Size = new System.Drawing.Size(1143, 528);
             this.tab_RetiraEquip.TabIndex = 2;
             this.tab_RetiraEquip.Text = "Retirada de Equipamento";
             this.tab_RetiraEquip.UseVisualStyleBackColor = true;
@@ -972,7 +959,7 @@
             // txt_ChamadoDev
             // 
             this.txt_ChamadoDev.Location = new System.Drawing.Point(221, 51);
-            this.txt_ChamadoDev.Mask = "000000000000";
+            this.txt_ChamadoDev.Mask = "0000000000";
             this.txt_ChamadoDev.Name = "txt_ChamadoDev";
             this.txt_ChamadoDev.Size = new System.Drawing.Size(70, 20);
             this.txt_ChamadoDev.TabIndex = 31;
@@ -1009,7 +996,7 @@
             this.txt_AnalRespDev.Location = new System.Drawing.Point(74, 25);
             this.txt_AnalRespDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
             this.txt_AnalRespDev.Name = "txt_AnalRespDev";
-            this.txt_AnalRespDev.Size = new System.Drawing.Size(292, 20);
+            this.txt_AnalRespDev.Size = new System.Drawing.Size(356, 20);
             this.txt_AnalRespDev.TabIndex = 29;
             // 
             // lbl_AnalRespDev
@@ -1089,7 +1076,7 @@
             // 
             this.txt_Serial4Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Serial4Dev.Location = new System.Drawing.Point(284, 145);
-            this.txt_Serial4Dev.MaxLength = 20;
+            this.txt_Serial4Dev.MaxLength = 7;
             this.txt_Serial4Dev.Name = "txt_Serial4Dev";
             this.txt_Serial4Dev.Size = new System.Drawing.Size(146, 20);
             this.txt_Serial4Dev.TabIndex = 19;
@@ -1126,7 +1113,7 @@
             // 
             this.txt_Serial3Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Serial3Dev.Location = new System.Drawing.Point(284, 119);
-            this.txt_Serial3Dev.MaxLength = 20;
+            this.txt_Serial3Dev.MaxLength = 7;
             this.txt_Serial3Dev.Name = "txt_Serial3Dev";
             this.txt_Serial3Dev.Size = new System.Drawing.Size(146, 20);
             this.txt_Serial3Dev.TabIndex = 15;
@@ -1163,7 +1150,7 @@
             // 
             this.txt_Serial2Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Serial2Dev.Location = new System.Drawing.Point(284, 93);
-            this.txt_Serial2Dev.MaxLength = 20;
+            this.txt_Serial2Dev.MaxLength = 7;
             this.txt_Serial2Dev.Name = "txt_Serial2Dev";
             this.txt_Serial2Dev.Size = new System.Drawing.Size(146, 20);
             this.txt_Serial2Dev.TabIndex = 11;
@@ -1222,7 +1209,7 @@
             // 
             this.txt_Serial1Dev.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Serial1Dev.Location = new System.Drawing.Point(284, 67);
-            this.txt_Serial1Dev.MaxLength = 20;
+            this.txt_Serial1Dev.MaxLength = 7;
             this.txt_Serial1Dev.Name = "txt_Serial1Dev";
             this.txt_Serial1Dev.Size = new System.Drawing.Size(146, 20);
             this.txt_Serial1Dev.TabIndex = 3;
@@ -1389,7 +1376,7 @@
             this.tab_RepPeca.Controls.Add(this.btn_GerarReqPeca);
             this.tab_RepPeca.Location = new System.Drawing.Point(4, 22);
             this.tab_RepPeca.Name = "tab_RepPeca";
-            this.tab_RepPeca.Size = new System.Drawing.Size(1143, 450);
+            this.tab_RepPeca.Size = new System.Drawing.Size(1143, 528);
             this.tab_RepPeca.TabIndex = 5;
             this.tab_RepPeca.Text = "Reposição de Peça";
             this.tab_RepPeca.UseVisualStyleBackColor = true;
@@ -1551,7 +1538,7 @@
             // 
             this.txt_SerialReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_SerialReqPeca.Location = new System.Drawing.Point(497, 123);
-            this.txt_SerialReqPeca.MaxLength = 30;
+            this.txt_SerialReqPeca.MaxLength = 7;
             this.txt_SerialReqPeca.Name = "txt_SerialReqPeca";
             this.txt_SerialReqPeca.Size = new System.Drawing.Size(152, 20);
             this.txt_SerialReqPeca.TabIndex = 11;
@@ -1623,7 +1610,7 @@
             // txt_ChamadoReqPeca
             // 
             this.txt_ChamadoReqPeca.Location = new System.Drawing.Point(69, 19);
-            this.txt_ChamadoReqPeca.Mask = "000000000000";
+            this.txt_ChamadoReqPeca.Mask = "0000000000";
             this.txt_ChamadoReqPeca.Name = "txt_ChamadoReqPeca";
             this.txt_ChamadoReqPeca.Size = new System.Drawing.Size(70, 20);
             this.txt_ChamadoReqPeca.TabIndex = 0;
@@ -1807,7 +1794,7 @@
             // 
             this.btn_LimparRoll.Image = global::FormulariosAtos.Properties.Resources.apagar;
             this.btn_LimparRoll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimparRoll.Location = new System.Drawing.Point(898, 384);
+            this.btn_LimparRoll.Location = new System.Drawing.Point(895, 458);
             this.btn_LimparRoll.Name = "btn_LimparRoll";
             this.btn_LimparRoll.Size = new System.Drawing.Size(125, 43);
             this.btn_LimparRoll.TabIndex = 801;
@@ -1840,7 +1827,7 @@
             // 
             this.lbl_LocEquipRoll.AutoSize = true;
             this.lbl_LocEquipRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LocEquipRoll.Location = new System.Drawing.Point(15, 262);
+            this.lbl_LocEquipRoll.Location = new System.Drawing.Point(12, 235);
             this.lbl_LocEquipRoll.Name = "lbl_LocEquipRoll";
             this.lbl_LocEquipRoll.Size = new System.Drawing.Size(170, 13);
             this.lbl_LocEquipRoll.TabIndex = 804;
@@ -1980,6 +1967,54 @@
             this.progressBar1.Size = new System.Drawing.Size(100, 23);
             this.progressBar1.TabIndex = 806;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(457, 157);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(159, 13);
+            this.label20.TabIndex = 807;
+            this.label20.Text = "Dados do Usuário Terceiro";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rdo_NovoPonto);
+            this.panel1.Controls.Add(this.rdo_Rollout);
+            this.panel1.Location = new System.Drawing.Point(15, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(350, 29);
+            this.panel1.TabIndex = 808;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rdo_NotebookRoll);
+            this.panel2.Controls.Add(this.rdo_DesktopRoll);
+            this.panel2.Location = new System.Drawing.Point(15, 109);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(143, 28);
+            this.panel2.TabIndex = 809;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(456, 235);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 13);
+            this.label21.TabIndex = 810;
+            this.label21.Text = "Exceção";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(457, 342);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(138, 13);
+            this.label22.TabIndex = 811;
+            this.label22.Text = "Informações Adicionais";
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1994,10 +2029,6 @@
             this.tab_Formularios.ResumeLayout(false);
             this.tab_RollOut.ResumeLayout(false);
             this.tab_RollOut.PerformLayout();
-            this.tab_InfoComplRoll.ResumeLayout(false);
-            this.tab_InfoComplRoll.PerformLayout();
-            this.grp_DadosTerceiroRoll.ResumeLayout(false);
-            this.grp_DadosTerceiroRoll.PerformLayout();
             this.tab_RetiraEquip.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -2014,6 +2045,10 @@
             this.grp_ObsReqPeca.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atosDataSet)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2027,8 +2062,6 @@
         private System.Windows.Forms.TabPage tab_LaudoTecnico;
         private System.Windows.Forms.TabPage tab_RepPeca;
         private System.Windows.Forms.Button btn_GerarRollout;
-        private System.Windows.Forms.GroupBox tab_InfoComplRoll;
-        private System.Windows.Forms.GroupBox grp_DadosTerceiroRoll;
         private System.Windows.Forms.TextBox txt_SerialCompRoll;
         private System.Windows.Forms.Label lbl_SerialCompRoll;
         private System.Windows.Forms.TextBox txt_EtiquetaCompRoll;
@@ -2193,6 +2226,11 @@
         private System.Windows.Forms.MaskedTextBox txt_PnUsuRespRoll;
         private System.Windows.Forms.MaskedTextBox txt_UsuRespRoll;
         private System.Windows.Forms.Label lbl_UsuRespRoll;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
     }
 }
 

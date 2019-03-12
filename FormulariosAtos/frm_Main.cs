@@ -19,7 +19,18 @@ namespace FormulariosAtos
         {
             InitializeComponent();
             txt_EtiquetaCompRoll.Focus();
-            
+
+            //Desabilita os campos de monitor
+            lbl_FabMonitorRoll.Enabled = false;
+            lbl_ModeloMonitorRoll.Enabled = false;
+            lbl_SerialMonitorRoll.Enabled = false;
+            lbl_EtiquetaMonitorRoll.Enabled = false;
+
+            txt_FabMonitorRoll.Enabled = false;
+            txt_ModeloMonitorRoll.Enabled = false;
+            txt_SerialMonitorRoll.Enabled = false;
+            txt_EtiquetaMonitorRoll.Enabled = false;
+
         }       
 
         private void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
@@ -77,17 +88,17 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@modelocomputador", txt_ModeloCompRoll.Text.ToUpper());
                 this.FindAndReplace(wordApp, "@dock", txt_EtiquetaDockCompRoll.Text.ToUpper());
 
-                if (rdo_DesktopDev.Checked)
+                if (rdo_DesktopDev.Checked == true)
                 {                    
-                    this.FindAndReplace(wordApp, "@tipoequip", "TIPO DE EQUIPAMENTO: [ X ]DESKTOP [  ]NOTEBOOK      DOCKSTATION: [  ]NÃO [  ]SIM - ETIQUETA: ");
+                    this.FindAndReplace(wordApp, "@tipoequip", "TIPO DE EQUIPAMENTO: [ X ] DESKTOP [  ] NOTEBOOK      DOCKSTATION: [  ] NÃO [  ] SIM - ETIQUETA: ");
                 }
                 else if (rdo_NotebookRoll.Checked == true || chk_DockstationRoll.Checked == true)
                 {
-                    this.FindAndReplace(wordApp, "@tipoequip", "[  ]DESKTOP [ X ]NOTEBOOK      DOCKSTATION: [  ]NÃO [ X ]SIM - ETIQUETA: " + txt_EtiquetaDockCompRoll.Text);
+                    this.FindAndReplace(wordApp, "@tipoequip", "[  ] DESKTOP [ X ] NOTEBOOK      DOCKSTATION: [  ] NÃO [ X ] SIM - ETIQUETA: " + txt_EtiquetaDockCompRoll.Text);
                 }
                 else if (rdo_NotebookRoll.Checked == true || chk_DockstationRoll.Checked == false)
                 {
-                    this.FindAndReplace(wordApp, "@tipoequip", "[  ]DESKTOP [ X ]NOTEBOOK      DOCKSTATION: [  ]NÃO [ X ]SIM - ETIQUETA: ");
+                    this.FindAndReplace(wordApp, "@tipoequip", "[  ] DESKTOP [ X ] NOTEBOOK      DOCKSTATION: [  ] NÃO [ X ] SIM - ETIQUETA: ");
                 }
 
                 //Preenchimento Monitor
@@ -100,13 +111,20 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@usuarioresponsavel", txt_UsuRespRoll.Text.Trim());
                 this.FindAndReplace(wordApp, "@superger", txt_SupUsuRespRoll.Text.ToUpper() + " - " + txt_GerUsuRespRoll.Text.ToUpper() + " - " + txt_SetorUsuRespRoll.Text.ToUpper());
                 this.FindAndReplace(wordApp, "@pn", txt_PnUsuRespRoll.Text);
-                this.FindAndReplace(wordApp, "@ramal", txt_RamalUsuRespRoll.Text);
-
+                this.FindAndReplace(wordApp, "@ramalusuresp", txt_RamalUsuRespRoll.Text);
 
                 //Preenchimento Dados de Terceiro
+                if (chk_EquipCompartilhadoRoll.Checked == true)
+                {
+                    this.FindAndReplace(wordApp, "@equipcompart", "[ X ] SIM [   ] NÃO");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "@equipcompart", "[  ] SIM [ X ] NÃO");
+                }
                 this.FindAndReplace(wordApp, "@nometerceiro", txt_NomeTercRoll.Text.ToUpper());
                 this.FindAndReplace(wordApp, "@supergerterceiro", txt_SupTercRoll.Text.ToUpper() + " - " + txt_GerTercRoll.Text.ToUpper() + " - " + txt_SetorTercRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@ramal", txt_RamalTercRoll.Text);
+                this.FindAndReplace(wordApp, "@ramalterceiro", txt_RamalTercRoll.Text);
                 this.FindAndReplace(wordApp, "@matricul", txt_MatriculaTercRoll.Text);
 
                 //Preenchimento Localização do Computador
@@ -121,7 +139,32 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@numchamado", txt_ChamadoRoll.Text);
                 this.FindAndReplace(wordApp, "@motivoex", txt_MotivoExcRoll.Text);
 
+                if (chk_MaqExcRoll.Checked == true)
+                {
+                    this.FindAndReplace(wordApp, "@excecao", "[ X ] SIM [   ] NÃO");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "@excecao", "[  ] SIM [ X ] NÃO");
+                }
 
+                if (chk_ExcRedeRoll.Checked == true)
+                {
+                    this.FindAndReplace(wordApp, "@rede", "[ X ] Rede");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "@rede", "[  ] Rede");
+                }
+
+                if (chk_ExcFisicaRoll.Checked == true)
+                {
+                    this.FindAndReplace(wordApp, "@fisica", "[ X ] Física");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "@fisica", "[  ] Física");
+                }
             }
             else
             {
@@ -160,11 +203,11 @@ namespace FormulariosAtos
                 //Preenchimento 
                 if (rdo_NotebookRoll.Checked == true)
                 {
-                    this.FindAndReplace(wordApp, "@etiquetaequip", txt_EtiquetaCompRoll.Text.ToUpper() + " / " + txt_EtiquetaMonitorRoll.Text.ToUpper());
+                    this.FindAndReplace(wordApp, "@etiquetaequip", txt_EtiquetaCompRoll.Text.ToUpper());
                 }
                 else if (rdo_DesktopRoll.Checked == true)
                 {
-                    this.FindAndReplace(wordApp, "@etiquetacomputador", txt_EtiquetaCompRoll.Text.ToUpper());
+                    this.FindAndReplace(wordApp, "@etiquetaequip", txt_EtiquetaCompRoll.Text.ToUpper() + " / " + txt_EtiquetaMonitorRoll.Text.ToUpper());
                 }                
                 this.FindAndReplace(wordApp, "@empresa", txt_EmpresaLocalEquip.Text.Trim().ToUpper());
                 this.FindAndReplace(wordApp, "@usuarioresponsavel", txt_UsuRespRoll.Text.Trim().ToUpper());
@@ -423,11 +466,6 @@ namespace FormulariosAtos
             }
         }
 
-        private void btn_LimparRoll_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void rdo_NotebookRoll_CheckedChanged(object sender, EventArgs e)
         {
             chk_DockstationRoll.Enabled =       true;
@@ -443,6 +481,8 @@ namespace FormulariosAtos
             txt_ModeloMonitorRoll.Enabled =     false;
             txt_SerialMonitorRoll.Enabled =     false;
             txt_EtiquetaMonitorRoll.Enabled =   false;
+
+            txt_EtiquetaCompRoll.Text = "BSWL";
         }
 
         private void rdo_DesktopRoll_CheckedChanged(object sender, EventArgs e)
@@ -461,6 +501,13 @@ namespace FormulariosAtos
             txt_ModeloMonitorRoll.Enabled =     true;
             txt_SerialMonitorRoll.Enabled =     true;
             txt_EtiquetaMonitorRoll.Enabled =   true;
+
+            txt_EtiquetaCompRoll.Text = "BSWD";
+        }
+
+        private void btn_LimparRoll_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
