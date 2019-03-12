@@ -8,8 +8,9 @@ using System.Windows.Forms;
 
 namespace FormulariosAtos.Classes
 {
-    class Utilidades
+    public partial class Utilidades : frm_Main
     {
+        frm_Main Princ = new frm_Main();
         
     }
 }

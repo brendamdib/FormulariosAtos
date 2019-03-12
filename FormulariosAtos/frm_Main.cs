@@ -90,15 +90,15 @@ namespace FormulariosAtos
 
                 if (rdo_DesktopDev.Checked == true)
                 {                    
-                    this.FindAndReplace(wordApp, "@tipoequip", "TIPO DE EQUIPAMENTO: [ X ] DESKTOP [  ] NOTEBOOK      DOCKSTATION: [  ] NÃO [  ] SIM - ETIQUETA: ");
+                    this.FindAndReplace(wordApp, "@tipoequip", "TIPO DE EQUIPAMENTO: [ X ] DESKTOP [  ] NOTEBOOK          DOCKSTATION: [  ] NÃO [  ] SIM - ETIQUETA: ");
                 }
                 else if (rdo_NotebookRoll.Checked == true || chk_DockstationRoll.Checked == true)
                 {
-                    this.FindAndReplace(wordApp, "@tipoequip", "[  ] DESKTOP [ X ] NOTEBOOK      DOCKSTATION: [  ] NÃO [ X ] SIM - ETIQUETA: " + txt_EtiquetaDockCompRoll.Text);
+                    this.FindAndReplace(wordApp, "@tipoequip", "[  ] DESKTOP [ X ] NOTEBOOK          DOCKSTATION: [  ] NÃO [ X ] SIM - ETIQUETA: " + txt_EtiquetaDockCompRoll.Text);
                 }
                 else if (rdo_NotebookRoll.Checked == true || chk_DockstationRoll.Checked == false)
                 {
-                    this.FindAndReplace(wordApp, "@tipoequip", "[  ] DESKTOP [ X ] NOTEBOOK      DOCKSTATION: [  ] NÃO [ X ] SIM - ETIQUETA: ");
+                    this.FindAndReplace(wordApp, "@tipoequip", "[  ] DESKTOP [ X ] NOTEBOOK          DOCKSTATION: [  ] NÃO [ X ] SIM - ETIQUETA: ");
                 }
 
                 //Preenchimento Monitor
@@ -437,25 +437,25 @@ namespace FormulariosAtos
         {
             if (rdo_Rollout.Checked == true)
             {
-                CriaFichaInventario("D:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "D:\\Documentos ATOS\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
-                CriaTermoResp("D:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "D:\\Documentos ATOS\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");
-                CriaFormularioDevolucao("D:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO.DOCX", "D:\\Documentos ATOS\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoRoll.Text + ".DOCX", 0);
+                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
+                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");
+                CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO.DOCX", "C:\\Documentos ATOS\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoRoll.Text + ".DOCX", 0);
             }
             else
             {
-                CriaFichaInventario("D:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "D:\\Documentos ATOS\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
-                CriaTermoResp("D:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "D:\\Documentos ATOS\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");                
+                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
+                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");                
             }
         }
 
         private void btn_GerarDevolucao_Click(object sender, EventArgs e)
         {
-            CriaFormularioDevolucao("D:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO-2.DOCX", "D:\\Documentos ATOS\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoDev.Text + ".DOCX", 1);
+            CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO-2.DOCX", "C:\\Documentos ATOS\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoDev.Text + ".DOCX", 1);
         }
 
         private void btn_GerarReqPeca_Click(object sender, EventArgs e)
         {
-            CriaReqPecas("D:\\Documentos ATOS\\Templates\\FORMULARIO REPOSIÇÃO DE PEÇAS.DOCX", "D:\\Documentos ATOS\\FORMULARIO REPOSIÇÃO DE PEÇAS " + txt_ChamadoReqPeca.Text + ".DOCX");
+            CriaReqPecas("C:\\Documentos ATOS\\Templates\\FORMULARIO REPOSIÇÃO DE PEÇAS.DOCX", "C:\\Documentos ATOS\\FORMULARIO REPOSIÇÃO DE PEÇAS " + txt_ChamadoReqPeca.Text + ".DOCX");
         }
 
         private void cbo_ValorReqPeca_SelectedIndexChanged(object sender, EventArgs e)
@@ -507,7 +507,7 @@ namespace FormulariosAtos
 
         private void btn_LimparRoll_Click(object sender, EventArgs e)
         {
-
+            Application.Restart();
         }
     }
 }
