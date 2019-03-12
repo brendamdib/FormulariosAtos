@@ -57,6 +57,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AtosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Classes\PreencherWord.cs" />
+    <Compile Include="Classes\Utilidades.cs" />
     <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AtosDataSet.xsc">
       <DependentUpon>AtosDataSet.xsd</DependentUpon>
@@ -107,6 +110,7 @@
     <Content Include="Atos.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\apagar.ico" />
     <Content Include="Images\Atos icon.ico" />
     <Content Include="Images\LogoAtos.jpg" />
   </ItemGroup>

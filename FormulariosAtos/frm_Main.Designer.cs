@@ -47,7 +47,6 @@
             this.date_FillRoll = new System.Windows.Forms.DateTimePicker();
             this.txt_AnalRespRoll = new System.Windows.Forms.MaskedTextBox();
             this.lbl_AnalRespRoll = new System.Windows.Forms.Label();
-            this.grp_LocalEquipRoll = new System.Windows.Forms.GroupBox();
             this.txt_AndarLocalEquip = new System.Windows.Forms.MaskedTextBox();
             this.txt_SalaLocalEquip = new System.Windows.Forms.MaskedTextBox();
             this.txt_PredioLocalEquip = new System.Windows.Forms.MaskedTextBox();
@@ -56,9 +55,8 @@
             this.lbl_PredioLocalEquip = new System.Windows.Forms.Label();
             this.lbl_SalaLocalEquip = new System.Windows.Forms.Label();
             this.lbl_EmpLocalEquip = new System.Windows.Forms.Label();
-            this.grp_MonitorRoll = new System.Windows.Forms.GroupBox();
             this.txt_ModeloMonitorRoll = new System.Windows.Forms.TextBox();
-            this.lbl_ModelMonitorRoll = new System.Windows.Forms.Label();
+            this.lbl_ModeloMonitorRoll = new System.Windows.Forms.Label();
             this.txt_FabMonitorRoll = new System.Windows.Forms.TextBox();
             this.lbl_FabMonitorRoll = new System.Windows.Forms.Label();
             this.txt_SerialMonitorRoll = new System.Windows.Forms.TextBox();
@@ -78,21 +76,6 @@
             this.txt_MatriculaTercRoll = new System.Windows.Forms.MaskedTextBox();
             this.txt_NomeTercRoll = new System.Windows.Forms.MaskedTextBox();
             this.lbl_NomeTercRoll = new System.Windows.Forms.Label();
-            this.grp_RespEquipRoll = new System.Windows.Forms.GroupBox();
-            this.chk_EquipCompartilhadoRoll = new System.Windows.Forms.CheckBox();
-            this.lbl_SetorUsuRespRoll = new System.Windows.Forms.Label();
-            this.txt_SetorUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_GerUsuRespRoll = new System.Windows.Forms.Label();
-            this.txt_GerUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_SupUsuRespRoll = new System.Windows.Forms.Label();
-            this.txt_SupUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_RamalUsuRespRoll = new System.Windows.Forms.Label();
-            this.txt_RamalUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_PnUsuRespRoll = new System.Windows.Forms.Label();
-            this.txt_PnUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
-            this.txt_UsuRespRoll = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_UsuRespRoll = new System.Windows.Forms.Label();
-            this.grp_CompRoll = new System.Windows.Forms.GroupBox();
             this.txt_EtiquetaDockCompRoll = new System.Windows.Forms.TextBox();
             this.lbl_EtiquetaDockCompRoll = new System.Windows.Forms.Label();
             this.chk_DockstationRoll = new System.Windows.Forms.CheckBox();
@@ -160,14 +143,14 @@
             this.lbl_NomeRespEquipDev = new System.Windows.Forms.Label();
             this.tab_RepPeca = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.grp_ObsReqPeca = new System.Windows.Forms.GroupBox();
             this.txt_ValorReqPeca = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.cbo_ValorReqPeca = new System.Windows.Forms.ComboBox();
             this.tblreparosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.atosDataSet = new FormulariosAtos.AtosDataSet();
-            this.label17 = new System.Windows.Forms.Label();
-            this.grp_ObsReqPeca = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.txt_GarantiaMaqReqPeca = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_GarantiaPeriReqPeca = new System.Windows.Forms.DateTimePicker();
@@ -201,14 +184,29 @@
             this.tab_LaudoBat = new System.Windows.Forms.TabPage();
             this.tab_LaudoTecnico = new System.Windows.Forms.TabPage();
             this.tbl_reparosTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_reparosTableAdapter();
+            this.btn_LimparRoll = new System.Windows.Forms.Button();
+            this.lbl_ComputadorRoll = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lbl_LocEquipRoll = new System.Windows.Forms.Label();
+            this.lbl_UsuRespRoll = new System.Windows.Forms.Label();
+            this.txt_UsuRespRoll = new System.Windows.Forms.MaskedTextBox();
+            this.txt_PnUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_PnUsuRespRoll = new System.Windows.Forms.Label();
+            this.txt_RamalUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_RamalUsuRespRoll = new System.Windows.Forms.Label();
+            this.txt_SupUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_SupUsuRespRoll = new System.Windows.Forms.Label();
+            this.txt_GerUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_GerUsuRespRoll = new System.Windows.Forms.Label();
+            this.txt_SetorUsuRespRoll = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_SetorUsuRespRoll = new System.Windows.Forms.Label();
+            this.chk_EquipCompartilhadoRoll = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.tab_Formularios.SuspendLayout();
             this.tab_RollOut.SuspendLayout();
             this.tab_InfoComplRoll.SuspendLayout();
-            this.grp_LocalEquipRoll.SuspendLayout();
-            this.grp_MonitorRoll.SuspendLayout();
             this.grp_DadosTerceiroRoll.SuspendLayout();
-            this.grp_RespEquipRoll.SuspendLayout();
-            this.grp_CompRoll.SuspendLayout();
             this.tab_RetiraEquip.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -216,9 +214,9 @@
             this.groupBox1.SuspendLayout();
             this.tab_RepPeca.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.grp_ObsReqPeca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atosDataSet)).BeginInit();
-            this.grp_ObsReqPeca.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Formularios
@@ -234,24 +232,68 @@
             this.tab_Formularios.Location = new System.Drawing.Point(12, 12);
             this.tab_Formularios.Name = "tab_Formularios";
             this.tab_Formularios.SelectedIndex = 0;
-            this.tab_Formularios.Size = new System.Drawing.Size(1151, 476);
+            this.tab_Formularios.Size = new System.Drawing.Size(1151, 554);
             this.tab_Formularios.TabIndex = 0;
             // 
             // tab_RollOut
             // 
+            this.tab_RollOut.Controls.Add(this.progressBar1);
+            this.tab_RollOut.Controls.Add(this.label19);
+            this.tab_RollOut.Controls.Add(this.chk_EquipCompartilhadoRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_LocEquipRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_SetorUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.txt_AndarLocalEquip);
+            this.tab_RollOut.Controls.Add(this.txt_SetorUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.label18);
+            this.tab_RollOut.Controls.Add(this.lbl_GerUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.txt_SalaLocalEquip);
+            this.tab_RollOut.Controls.Add(this.txt_GerUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.txt_ModeloMonitorRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_SupUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.txt_PredioLocalEquip);
+            this.tab_RollOut.Controls.Add(this.txt_SupUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_ComputadorRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_RamalUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.txt_EmpresaLocalEquip);
+            this.tab_RollOut.Controls.Add(this.txt_RamalUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_ModeloMonitorRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_PnUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_AndarLocalEquip);
+            this.tab_RollOut.Controls.Add(this.txt_PnUsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.txt_EtiquetaDockCompRoll);
+            this.tab_RollOut.Controls.Add(this.txt_UsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_UsuRespRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_PredioLocalEquip);
+            this.tab_RollOut.Controls.Add(this.txt_FabMonitorRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_SalaLocalEquip);
+            this.tab_RollOut.Controls.Add(this.btn_LimparRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_EmpLocalEquip);
+            this.tab_RollOut.Controls.Add(this.lbl_FabMonitorRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_EtiquetaDockCompRoll);
+            this.tab_RollOut.Controls.Add(this.txt_SerialMonitorRoll);
             this.tab_RollOut.Controls.Add(this.rdo_NovoPonto);
+            this.tab_RollOut.Controls.Add(this.lbl_SerialMonitorRoll);
+            this.tab_RollOut.Controls.Add(this.chk_DockstationRoll);
+            this.tab_RollOut.Controls.Add(this.txt_EtiquetaMonitorRoll);
             this.tab_RollOut.Controls.Add(this.btn_GerarRollout);
+            this.tab_RollOut.Controls.Add(this.lbl_EtiquetaMonitorRoll);
+            this.tab_RollOut.Controls.Add(this.rdo_DesktopRoll);
             this.tab_RollOut.Controls.Add(this.rdo_Rollout);
+            this.tab_RollOut.Controls.Add(this.rdo_NotebookRoll);
             this.tab_RollOut.Controls.Add(this.tab_InfoComplRoll);
-            this.tab_RollOut.Controls.Add(this.grp_LocalEquipRoll);
-            this.tab_RollOut.Controls.Add(this.grp_MonitorRoll);
+            this.tab_RollOut.Controls.Add(this.txt_ModeloCompRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_ModeloCompRoll);
+            this.tab_RollOut.Controls.Add(this.txt_FabCompRoll);
             this.tab_RollOut.Controls.Add(this.grp_DadosTerceiroRoll);
-            this.tab_RollOut.Controls.Add(this.grp_RespEquipRoll);
-            this.tab_RollOut.Controls.Add(this.grp_CompRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_FabricanteCompRoll);
+            this.tab_RollOut.Controls.Add(this.txt_SerialCompRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_SerialCompRoll);
+            this.tab_RollOut.Controls.Add(this.txt_EtiquetaCompRoll);
+            this.tab_RollOut.Controls.Add(this.lbl_EtiquetaCompRoll);
             this.tab_RollOut.Location = new System.Drawing.Point(4, 22);
             this.tab_RollOut.Name = "tab_RollOut";
             this.tab_RollOut.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_RollOut.Size = new System.Drawing.Size(1143, 450);
+            this.tab_RollOut.Size = new System.Drawing.Size(1143, 528);
             this.tab_RollOut.TabIndex = 0;
             this.tab_RollOut.Text = "Rollout / Novo Ponto / Transferência";
             this.tab_RollOut.UseVisualStyleBackColor = true;
@@ -282,12 +324,10 @@
             // rdo_Rollout
             // 
             this.rdo_Rollout.AutoSize = true;
-            this.rdo_Rollout.Checked = true;
             this.rdo_Rollout.Location = new System.Drawing.Point(16, 16);
             this.rdo_Rollout.Name = "rdo_Rollout";
             this.rdo_Rollout.Size = new System.Drawing.Size(58, 17);
             this.rdo_Rollout.TabIndex = 0;
-            this.rdo_Rollout.TabStop = true;
             this.rdo_Rollout.Text = "Rollout";
             this.rdo_Rollout.UseVisualStyleBackColor = true;
             // 
@@ -415,26 +455,9 @@
             this.lbl_AnalRespRoll.TabIndex = 51;
             this.lbl_AnalRespRoll.Text = "Anal. Resp.";
             // 
-            // grp_LocalEquipRoll
-            // 
-            this.grp_LocalEquipRoll.Controls.Add(this.txt_AndarLocalEquip);
-            this.grp_LocalEquipRoll.Controls.Add(this.txt_SalaLocalEquip);
-            this.grp_LocalEquipRoll.Controls.Add(this.txt_PredioLocalEquip);
-            this.grp_LocalEquipRoll.Controls.Add(this.txt_EmpresaLocalEquip);
-            this.grp_LocalEquipRoll.Controls.Add(this.lbl_AndarLocalEquip);
-            this.grp_LocalEquipRoll.Controls.Add(this.lbl_PredioLocalEquip);
-            this.grp_LocalEquipRoll.Controls.Add(this.lbl_SalaLocalEquip);
-            this.grp_LocalEquipRoll.Controls.Add(this.lbl_EmpLocalEquip);
-            this.grp_LocalEquipRoll.Location = new System.Drawing.Point(7, 250);
-            this.grp_LocalEquipRoll.Name = "grp_LocalEquipRoll";
-            this.grp_LocalEquipRoll.Size = new System.Drawing.Size(441, 125);
-            this.grp_LocalEquipRoll.TabIndex = 700;
-            this.grp_LocalEquipRoll.TabStop = false;
-            this.grp_LocalEquipRoll.Text = "Localização Equipamento";
-            // 
             // txt_AndarLocalEquip
             // 
-            this.txt_AndarLocalEquip.Location = new System.Drawing.Point(242, 77);
+            this.txt_AndarLocalEquip.Location = new System.Drawing.Point(251, 330);
             this.txt_AndarLocalEquip.Mask = "00";
             this.txt_AndarLocalEquip.Name = "txt_AndarLocalEquip";
             this.txt_AndarLocalEquip.Size = new System.Drawing.Size(28, 20);
@@ -443,7 +466,7 @@
             // 
             // txt_SalaLocalEquip
             // 
-            this.txt_SalaLocalEquip.Location = new System.Drawing.Point(68, 77);
+            this.txt_SalaLocalEquip.Location = new System.Drawing.Point(77, 330);
             this.txt_SalaLocalEquip.Mask = "LLLLLLLLLLLLLLLLLLLL";
             this.txt_SalaLocalEquip.Name = "txt_SalaLocalEquip";
             this.txt_SalaLocalEquip.Size = new System.Drawing.Size(131, 20);
@@ -451,7 +474,7 @@
             // 
             // txt_PredioLocalEquip
             // 
-            this.txt_PredioLocalEquip.Location = new System.Drawing.Point(68, 51);
+            this.txt_PredioLocalEquip.Location = new System.Drawing.Point(77, 304);
             this.txt_PredioLocalEquip.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
             this.txt_PredioLocalEquip.Name = "txt_PredioLocalEquip";
             this.txt_PredioLocalEquip.Size = new System.Drawing.Size(358, 20);
@@ -459,7 +482,7 @@
             // 
             // txt_EmpresaLocalEquip
             // 
-            this.txt_EmpresaLocalEquip.Location = new System.Drawing.Point(68, 25);
+            this.txt_EmpresaLocalEquip.Location = new System.Drawing.Point(77, 278);
             this.txt_EmpresaLocalEquip.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
             this.txt_EmpresaLocalEquip.Name = "txt_EmpresaLocalEquip";
             this.txt_EmpresaLocalEquip.Size = new System.Drawing.Size(358, 20);
@@ -468,7 +491,7 @@
             // lbl_AndarLocalEquip
             // 
             this.lbl_AndarLocalEquip.AutoSize = true;
-            this.lbl_AndarLocalEquip.Location = new System.Drawing.Point(205, 80);
+            this.lbl_AndarLocalEquip.Location = new System.Drawing.Point(214, 333);
             this.lbl_AndarLocalEquip.Name = "lbl_AndarLocalEquip";
             this.lbl_AndarLocalEquip.Size = new System.Drawing.Size(35, 13);
             this.lbl_AndarLocalEquip.TabIndex = 22;
@@ -477,7 +500,7 @@
             // lbl_PredioLocalEquip
             // 
             this.lbl_PredioLocalEquip.AutoSize = true;
-            this.lbl_PredioLocalEquip.Location = new System.Drawing.Point(6, 51);
+            this.lbl_PredioLocalEquip.Location = new System.Drawing.Point(15, 304);
             this.lbl_PredioLocalEquip.Name = "lbl_PredioLocalEquip";
             this.lbl_PredioLocalEquip.Size = new System.Drawing.Size(37, 13);
             this.lbl_PredioLocalEquip.TabIndex = 20;
@@ -486,7 +509,7 @@
             // lbl_SalaLocalEquip
             // 
             this.lbl_SalaLocalEquip.AutoSize = true;
-            this.lbl_SalaLocalEquip.Location = new System.Drawing.Point(6, 77);
+            this.lbl_SalaLocalEquip.Location = new System.Drawing.Point(15, 330);
             this.lbl_SalaLocalEquip.Name = "lbl_SalaLocalEquip";
             this.lbl_SalaLocalEquip.Size = new System.Drawing.Size(28, 13);
             this.lbl_SalaLocalEquip.TabIndex = 18;
@@ -495,51 +518,34 @@
             // lbl_EmpLocalEquip
             // 
             this.lbl_EmpLocalEquip.AutoSize = true;
-            this.lbl_EmpLocalEquip.Location = new System.Drawing.Point(6, 25);
+            this.lbl_EmpLocalEquip.Location = new System.Drawing.Point(15, 281);
             this.lbl_EmpLocalEquip.Name = "lbl_EmpLocalEquip";
             this.lbl_EmpLocalEquip.Size = new System.Drawing.Size(48, 13);
             this.lbl_EmpLocalEquip.TabIndex = 16;
             this.lbl_EmpLocalEquip.Text = "Empresa";
             // 
-            // grp_MonitorRoll
-            // 
-            this.grp_MonitorRoll.Controls.Add(this.txt_ModeloMonitorRoll);
-            this.grp_MonitorRoll.Controls.Add(this.lbl_ModelMonitorRoll);
-            this.grp_MonitorRoll.Controls.Add(this.txt_FabMonitorRoll);
-            this.grp_MonitorRoll.Controls.Add(this.lbl_FabMonitorRoll);
-            this.grp_MonitorRoll.Controls.Add(this.txt_SerialMonitorRoll);
-            this.grp_MonitorRoll.Controls.Add(this.lbl_SerialMonitorRoll);
-            this.grp_MonitorRoll.Controls.Add(this.txt_EtiquetaMonitorRoll);
-            this.grp_MonitorRoll.Controls.Add(this.lbl_EtiquetaMonitorRoll);
-            this.grp_MonitorRoll.Location = new System.Drawing.Point(7, 158);
-            this.grp_MonitorRoll.Name = "grp_MonitorRoll";
-            this.grp_MonitorRoll.Size = new System.Drawing.Size(441, 86);
-            this.grp_MonitorRoll.TabIndex = 500;
-            this.grp_MonitorRoll.TabStop = false;
-            this.grp_MonitorRoll.Text = "Monitor";
-            // 
             // txt_ModeloMonitorRoll
             // 
             this.txt_ModeloMonitorRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_ModeloMonitorRoll.Location = new System.Drawing.Point(281, 52);
+            this.txt_ModeloMonitorRoll.Location = new System.Drawing.Point(289, 199);
             this.txt_ModeloMonitorRoll.MaxLength = 20;
             this.txt_ModeloMonitorRoll.Name = "txt_ModeloMonitorRoll";
             this.txt_ModeloMonitorRoll.Size = new System.Drawing.Size(146, 20);
             this.txt_ModeloMonitorRoll.TabIndex = 12;
             // 
-            // lbl_ModelMonitorRoll
+            // lbl_ModeloMonitorRoll
             // 
-            this.lbl_ModelMonitorRoll.AutoSize = true;
-            this.lbl_ModelMonitorRoll.Location = new System.Drawing.Point(229, 55);
-            this.lbl_ModelMonitorRoll.Name = "lbl_ModelMonitorRoll";
-            this.lbl_ModelMonitorRoll.Size = new System.Drawing.Size(42, 13);
-            this.lbl_ModelMonitorRoll.TabIndex = 14;
-            this.lbl_ModelMonitorRoll.Text = "Modelo";
+            this.lbl_ModeloMonitorRoll.AutoSize = true;
+            this.lbl_ModeloMonitorRoll.Location = new System.Drawing.Point(237, 202);
+            this.lbl_ModeloMonitorRoll.Name = "lbl_ModeloMonitorRoll";
+            this.lbl_ModeloMonitorRoll.Size = new System.Drawing.Size(42, 13);
+            this.lbl_ModeloMonitorRoll.TabIndex = 14;
+            this.lbl_ModeloMonitorRoll.Text = "Modelo";
             // 
             // txt_FabMonitorRoll
             // 
             this.txt_FabMonitorRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_FabMonitorRoll.Location = new System.Drawing.Point(69, 52);
+            this.txt_FabMonitorRoll.Location = new System.Drawing.Point(77, 199);
             this.txt_FabMonitorRoll.MaxLength = 20;
             this.txt_FabMonitorRoll.Name = "txt_FabMonitorRoll";
             this.txt_FabMonitorRoll.Size = new System.Drawing.Size(130, 20);
@@ -548,7 +554,7 @@
             // lbl_FabMonitorRoll
             // 
             this.lbl_FabMonitorRoll.AutoSize = true;
-            this.lbl_FabMonitorRoll.Location = new System.Drawing.Point(6, 55);
+            this.lbl_FabMonitorRoll.Location = new System.Drawing.Point(14, 202);
             this.lbl_FabMonitorRoll.Name = "lbl_FabMonitorRoll";
             this.lbl_FabMonitorRoll.Size = new System.Drawing.Size(57, 13);
             this.lbl_FabMonitorRoll.TabIndex = 12;
@@ -557,7 +563,7 @@
             // txt_SerialMonitorRoll
             // 
             this.txt_SerialMonitorRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_SerialMonitorRoll.Location = new System.Drawing.Point(281, 26);
+            this.txt_SerialMonitorRoll.Location = new System.Drawing.Point(289, 173);
             this.txt_SerialMonitorRoll.MaxLength = 20;
             this.txt_SerialMonitorRoll.Name = "txt_SerialMonitorRoll";
             this.txt_SerialMonitorRoll.Size = new System.Drawing.Size(146, 20);
@@ -567,7 +573,7 @@
             // lbl_SerialMonitorRoll
             // 
             this.lbl_SerialMonitorRoll.AutoSize = true;
-            this.lbl_SerialMonitorRoll.Location = new System.Drawing.Point(242, 29);
+            this.lbl_SerialMonitorRoll.Location = new System.Drawing.Point(250, 176);
             this.lbl_SerialMonitorRoll.Name = "lbl_SerialMonitorRoll";
             this.lbl_SerialMonitorRoll.Size = new System.Drawing.Size(33, 13);
             this.lbl_SerialMonitorRoll.TabIndex = 10;
@@ -576,7 +582,7 @@
             // txt_EtiquetaMonitorRoll
             // 
             this.txt_EtiquetaMonitorRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_EtiquetaMonitorRoll.Location = new System.Drawing.Point(69, 26);
+            this.txt_EtiquetaMonitorRoll.Location = new System.Drawing.Point(77, 173);
             this.txt_EtiquetaMonitorRoll.MaxLength = 8;
             this.txt_EtiquetaMonitorRoll.Name = "txt_EtiquetaMonitorRoll";
             this.txt_EtiquetaMonitorRoll.Size = new System.Drawing.Size(130, 20);
@@ -585,7 +591,7 @@
             // lbl_EtiquetaMonitorRoll
             // 
             this.lbl_EtiquetaMonitorRoll.AutoSize = true;
-            this.lbl_EtiquetaMonitorRoll.Location = new System.Drawing.Point(6, 29);
+            this.lbl_EtiquetaMonitorRoll.Location = new System.Drawing.Point(14, 176);
             this.lbl_EtiquetaMonitorRoll.Name = "lbl_EtiquetaMonitorRoll";
             this.lbl_EtiquetaMonitorRoll.Size = new System.Drawing.Size(46, 13);
             this.lbl_EtiquetaMonitorRoll.TabIndex = 8;
@@ -719,172 +725,11 @@
             this.lbl_NomeTercRoll.TabIndex = 39;
             this.lbl_NomeTercRoll.Text = "Nome";
             // 
-            // grp_RespEquipRoll
-            // 
-            this.grp_RespEquipRoll.Controls.Add(this.chk_EquipCompartilhadoRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.lbl_SetorUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.txt_SetorUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.lbl_GerUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.txt_GerUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.lbl_SupUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.txt_SupUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.lbl_RamalUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.txt_RamalUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.lbl_PnUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.txt_PnUsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.txt_UsuRespRoll);
-            this.grp_RespEquipRoll.Controls.Add(this.lbl_UsuRespRoll);
-            this.grp_RespEquipRoll.Location = new System.Drawing.Point(454, 42);
-            this.grp_RespEquipRoll.Name = "grp_RespEquipRoll";
-            this.grp_RespEquipRoll.Size = new System.Drawing.Size(664, 110);
-            this.grp_RespEquipRoll.TabIndex = 400;
-            this.grp_RespEquipRoll.TabStop = false;
-            this.grp_RespEquipRoll.Text = "Responsável pelo Equipamento";
-            // 
-            // chk_EquipCompartilhadoRoll
-            // 
-            this.chk_EquipCompartilhadoRoll.AutoSize = true;
-            this.chk_EquipCompartilhadoRoll.Location = new System.Drawing.Point(12, 80);
-            this.chk_EquipCompartilhadoRoll.Name = "chk_EquipCompartilhadoRoll";
-            this.chk_EquipCompartilhadoRoll.Size = new System.Drawing.Size(158, 17);
-            this.chk_EquipCompartilhadoRoll.TabIndex = 22;
-            this.chk_EquipCompartilhadoRoll.Text = "Equipamento Compartilhado";
-            this.chk_EquipCompartilhadoRoll.UseVisualStyleBackColor = true;
-            // 
-            // lbl_SetorUsuRespRoll
-            // 
-            this.lbl_SetorUsuRespRoll.AutoSize = true;
-            this.lbl_SetorUsuRespRoll.Location = new System.Drawing.Point(154, 51);
-            this.lbl_SetorUsuRespRoll.Name = "lbl_SetorUsuRespRoll";
-            this.lbl_SetorUsuRespRoll.Size = new System.Drawing.Size(32, 13);
-            this.lbl_SetorUsuRespRoll.TabIndex = 38;
-            this.lbl_SetorUsuRespRoll.Text = "Setor";
-            // 
-            // txt_SetorUsuRespRoll
-            // 
-            this.txt_SetorUsuRespRoll.Location = new System.Drawing.Point(192, 48);
-            this.txt_SetorUsuRespRoll.Mask = "LLLLLLLLLLLLLLLLLLLL";
-            this.txt_SetorUsuRespRoll.Name = "txt_SetorUsuRespRoll";
-            this.txt_SetorUsuRespRoll.Size = new System.Drawing.Size(135, 20);
-            this.txt_SetorUsuRespRoll.TabIndex = 21;
-            this.txt_SetorUsuRespRoll.ValidatingType = typeof(int);
-            // 
-            // lbl_GerUsuRespRoll
-            // 
-            this.lbl_GerUsuRespRoll.AutoSize = true;
-            this.lbl_GerUsuRespRoll.Location = new System.Drawing.Point(77, 51);
-            this.lbl_GerUsuRespRoll.Name = "lbl_GerUsuRespRoll";
-            this.lbl_GerUsuRespRoll.Size = new System.Drawing.Size(30, 13);
-            this.lbl_GerUsuRespRoll.TabIndex = 36;
-            this.lbl_GerUsuRespRoll.Text = "GER";
-            // 
-            // txt_GerUsuRespRoll
-            // 
-            this.txt_GerUsuRespRoll.Location = new System.Drawing.Point(113, 48);
-            this.txt_GerUsuRespRoll.Mask = "LLLLL";
-            this.txt_GerUsuRespRoll.Name = "txt_GerUsuRespRoll";
-            this.txt_GerUsuRespRoll.Size = new System.Drawing.Size(35, 20);
-            this.txt_GerUsuRespRoll.TabIndex = 20;
-            this.txt_GerUsuRespRoll.ValidatingType = typeof(int);
-            // 
-            // lbl_SupUsuRespRoll
-            // 
-            this.lbl_SupUsuRespRoll.AutoSize = true;
-            this.lbl_SupUsuRespRoll.Location = new System.Drawing.Point(9, 51);
-            this.lbl_SupUsuRespRoll.Name = "lbl_SupUsuRespRoll";
-            this.lbl_SupUsuRespRoll.Size = new System.Drawing.Size(29, 13);
-            this.lbl_SupUsuRespRoll.TabIndex = 34;
-            this.lbl_SupUsuRespRoll.Text = "SUP";
-            // 
-            // txt_SupUsuRespRoll
-            // 
-            this.txt_SupUsuRespRoll.Location = new System.Drawing.Point(50, 48);
-            this.txt_SupUsuRespRoll.Mask = "LL";
-            this.txt_SupUsuRespRoll.Name = "txt_SupUsuRespRoll";
-            this.txt_SupUsuRespRoll.Size = new System.Drawing.Size(21, 20);
-            this.txt_SupUsuRespRoll.TabIndex = 19;
-            this.txt_SupUsuRespRoll.ValidatingType = typeof(int);
-            // 
-            // lbl_RamalUsuRespRoll
-            // 
-            this.lbl_RamalUsuRespRoll.AutoSize = true;
-            this.lbl_RamalUsuRespRoll.Location = new System.Drawing.Point(476, 25);
-            this.lbl_RamalUsuRespRoll.Name = "lbl_RamalUsuRespRoll";
-            this.lbl_RamalUsuRespRoll.Size = new System.Drawing.Size(37, 13);
-            this.lbl_RamalUsuRespRoll.TabIndex = 32;
-            this.lbl_RamalUsuRespRoll.Text = "Ramal";
-            // 
-            // txt_RamalUsuRespRoll
-            // 
-            this.txt_RamalUsuRespRoll.Location = new System.Drawing.Point(519, 22);
-            this.txt_RamalUsuRespRoll.Mask = "0000";
-            this.txt_RamalUsuRespRoll.Name = "txt_RamalUsuRespRoll";
-            this.txt_RamalUsuRespRoll.Size = new System.Drawing.Size(35, 20);
-            this.txt_RamalUsuRespRoll.TabIndex = 18;
-            this.txt_RamalUsuRespRoll.ValidatingType = typeof(int);
-            // 
-            // lbl_PnUsuRespRoll
-            // 
-            this.lbl_PnUsuRespRoll.AutoSize = true;
-            this.lbl_PnUsuRespRoll.Location = new System.Drawing.Point(372, 25);
-            this.lbl_PnUsuRespRoll.Name = "lbl_PnUsuRespRoll";
-            this.lbl_PnUsuRespRoll.Size = new System.Drawing.Size(22, 13);
-            this.lbl_PnUsuRespRoll.TabIndex = 30;
-            this.lbl_PnUsuRespRoll.Text = "PN";
-            // 
-            // txt_PnUsuRespRoll
-            // 
-            this.txt_PnUsuRespRoll.Location = new System.Drawing.Point(400, 22);
-            this.txt_PnUsuRespRoll.Mask = "0000000000";
-            this.txt_PnUsuRespRoll.Name = "txt_PnUsuRespRoll";
-            this.txt_PnUsuRespRoll.Size = new System.Drawing.Size(70, 20);
-            this.txt_PnUsuRespRoll.TabIndex = 17;
-            this.txt_PnUsuRespRoll.ValidatingType = typeof(int);
-            // 
-            // txt_UsuRespRoll
-            // 
-            this.txt_UsuRespRoll.Location = new System.Drawing.Point(50, 22);
-            this.txt_UsuRespRoll.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.txt_UsuRespRoll.Name = "txt_UsuRespRoll";
-            this.txt_UsuRespRoll.Size = new System.Drawing.Size(316, 20);
-            this.txt_UsuRespRoll.TabIndex = 16;
-            // 
-            // lbl_UsuRespRoll
-            // 
-            this.lbl_UsuRespRoll.AutoSize = true;
-            this.lbl_UsuRespRoll.Location = new System.Drawing.Point(9, 25);
-            this.lbl_UsuRespRoll.Name = "lbl_UsuRespRoll";
-            this.lbl_UsuRespRoll.Size = new System.Drawing.Size(35, 13);
-            this.lbl_UsuRespRoll.TabIndex = 27;
-            this.lbl_UsuRespRoll.Text = "Nome";
-            // 
-            // grp_CompRoll
-            // 
-            this.grp_CompRoll.Controls.Add(this.txt_EtiquetaDockCompRoll);
-            this.grp_CompRoll.Controls.Add(this.lbl_EtiquetaDockCompRoll);
-            this.grp_CompRoll.Controls.Add(this.chk_DockstationRoll);
-            this.grp_CompRoll.Controls.Add(this.rdo_DesktopRoll);
-            this.grp_CompRoll.Controls.Add(this.rdo_NotebookRoll);
-            this.grp_CompRoll.Controls.Add(this.txt_ModeloCompRoll);
-            this.grp_CompRoll.Controls.Add(this.lbl_ModeloCompRoll);
-            this.grp_CompRoll.Controls.Add(this.txt_FabCompRoll);
-            this.grp_CompRoll.Controls.Add(this.lbl_FabricanteCompRoll);
-            this.grp_CompRoll.Controls.Add(this.txt_SerialCompRoll);
-            this.grp_CompRoll.Controls.Add(this.lbl_SerialCompRoll);
-            this.grp_CompRoll.Controls.Add(this.txt_EtiquetaCompRoll);
-            this.grp_CompRoll.Controls.Add(this.lbl_EtiquetaCompRoll);
-            this.grp_CompRoll.Location = new System.Drawing.Point(7, 42);
-            this.grp_CompRoll.Name = "grp_CompRoll";
-            this.grp_CompRoll.Size = new System.Drawing.Size(441, 110);
-            this.grp_CompRoll.TabIndex = 300;
-            this.grp_CompRoll.TabStop = false;
-            this.grp_CompRoll.Text = "Computador";
-            // 
             // txt_EtiquetaDockCompRoll
             // 
             this.txt_EtiquetaDockCompRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_EtiquetaDockCompRoll.Enabled = false;
-            this.txt_EtiquetaDockCompRoll.Location = new System.Drawing.Point(297, 79);
+            this.txt_EtiquetaDockCompRoll.Location = new System.Drawing.Point(305, 118);
             this.txt_EtiquetaDockCompRoll.MaxLength = 8;
             this.txt_EtiquetaDockCompRoll.Name = "txt_EtiquetaDockCompRoll";
             this.txt_EtiquetaDockCompRoll.Size = new System.Drawing.Size(130, 20);
@@ -894,7 +739,7 @@
             // 
             this.lbl_EtiquetaDockCompRoll.AutoSize = true;
             this.lbl_EtiquetaDockCompRoll.Enabled = false;
-            this.lbl_EtiquetaDockCompRoll.Location = new System.Drawing.Point(245, 82);
+            this.lbl_EtiquetaDockCompRoll.Location = new System.Drawing.Point(253, 121);
             this.lbl_EtiquetaDockCompRoll.Name = "lbl_EtiquetaDockCompRoll";
             this.lbl_EtiquetaDockCompRoll.Size = new System.Drawing.Size(46, 13);
             this.lbl_EtiquetaDockCompRoll.TabIndex = 11;
@@ -903,7 +748,7 @@
             // chk_DockstationRoll
             // 
             this.chk_DockstationRoll.AutoSize = true;
-            this.chk_DockstationRoll.Location = new System.Drawing.Point(156, 81);
+            this.chk_DockstationRoll.Location = new System.Drawing.Point(164, 120);
             this.chk_DockstationRoll.Name = "chk_DockstationRoll";
             this.chk_DockstationRoll.Size = new System.Drawing.Size(83, 17);
             this.chk_DockstationRoll.TabIndex = 8;
@@ -914,29 +759,31 @@
             // rdo_DesktopRoll
             // 
             this.rdo_DesktopRoll.AutoSize = true;
-            this.rdo_DesktopRoll.Location = new System.Drawing.Point(85, 81);
+            this.rdo_DesktopRoll.Location = new System.Drawing.Point(93, 120);
             this.rdo_DesktopRoll.Name = "rdo_DesktopRoll";
             this.rdo_DesktopRoll.Size = new System.Drawing.Size(65, 17);
             this.rdo_DesktopRoll.TabIndex = 7;
-            this.rdo_DesktopRoll.TabStop = true;
             this.rdo_DesktopRoll.Text = "Desktop";
             this.rdo_DesktopRoll.UseVisualStyleBackColor = true;
+            this.rdo_DesktopRoll.CheckedChanged += new System.EventHandler(this.rdo_DesktopRoll_CheckedChanged);
             // 
             // rdo_NotebookRoll
             // 
             this.rdo_NotebookRoll.AutoSize = true;
-            this.rdo_NotebookRoll.Location = new System.Drawing.Point(7, 80);
+            this.rdo_NotebookRoll.Checked = true;
+            this.rdo_NotebookRoll.Location = new System.Drawing.Point(15, 119);
             this.rdo_NotebookRoll.Name = "rdo_NotebookRoll";
             this.rdo_NotebookRoll.Size = new System.Drawing.Size(72, 17);
             this.rdo_NotebookRoll.TabIndex = 6;
             this.rdo_NotebookRoll.TabStop = true;
             this.rdo_NotebookRoll.Text = "Notebook";
             this.rdo_NotebookRoll.UseVisualStyleBackColor = true;
+            this.rdo_NotebookRoll.CheckedChanged += new System.EventHandler(this.rdo_NotebookRoll_CheckedChanged);
             // 
             // txt_ModeloCompRoll
             // 
             this.txt_ModeloCompRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_ModeloCompRoll.Location = new System.Drawing.Point(280, 51);
+            this.txt_ModeloCompRoll.Location = new System.Drawing.Point(288, 90);
             this.txt_ModeloCompRoll.MaxLength = 20;
             this.txt_ModeloCompRoll.Name = "txt_ModeloCompRoll";
             this.txt_ModeloCompRoll.Size = new System.Drawing.Size(146, 20);
@@ -945,7 +792,7 @@
             // lbl_ModeloCompRoll
             // 
             this.lbl_ModeloCompRoll.AutoSize = true;
-            this.lbl_ModeloCompRoll.Location = new System.Drawing.Point(228, 54);
+            this.lbl_ModeloCompRoll.Location = new System.Drawing.Point(236, 93);
             this.lbl_ModeloCompRoll.Name = "lbl_ModeloCompRoll";
             this.lbl_ModeloCompRoll.Size = new System.Drawing.Size(42, 13);
             this.lbl_ModeloCompRoll.TabIndex = 6;
@@ -954,7 +801,7 @@
             // txt_FabCompRoll
             // 
             this.txt_FabCompRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_FabCompRoll.Location = new System.Drawing.Point(68, 51);
+            this.txt_FabCompRoll.Location = new System.Drawing.Point(76, 90);
             this.txt_FabCompRoll.MaxLength = 20;
             this.txt_FabCompRoll.Name = "txt_FabCompRoll";
             this.txt_FabCompRoll.Size = new System.Drawing.Size(130, 20);
@@ -963,7 +810,7 @@
             // lbl_FabricanteCompRoll
             // 
             this.lbl_FabricanteCompRoll.AutoSize = true;
-            this.lbl_FabricanteCompRoll.Location = new System.Drawing.Point(5, 54);
+            this.lbl_FabricanteCompRoll.Location = new System.Drawing.Point(13, 93);
             this.lbl_FabricanteCompRoll.Name = "lbl_FabricanteCompRoll";
             this.lbl_FabricanteCompRoll.Size = new System.Drawing.Size(57, 13);
             this.lbl_FabricanteCompRoll.TabIndex = 4;
@@ -972,7 +819,7 @@
             // txt_SerialCompRoll
             // 
             this.txt_SerialCompRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_SerialCompRoll.Location = new System.Drawing.Point(280, 25);
+            this.txt_SerialCompRoll.Location = new System.Drawing.Point(288, 64);
             this.txt_SerialCompRoll.MaxLength = 20;
             this.txt_SerialCompRoll.Name = "txt_SerialCompRoll";
             this.txt_SerialCompRoll.Size = new System.Drawing.Size(146, 20);
@@ -982,7 +829,7 @@
             // lbl_SerialCompRoll
             // 
             this.lbl_SerialCompRoll.AutoSize = true;
-            this.lbl_SerialCompRoll.Location = new System.Drawing.Point(241, 28);
+            this.lbl_SerialCompRoll.Location = new System.Drawing.Point(249, 67);
             this.lbl_SerialCompRoll.Name = "lbl_SerialCompRoll";
             this.lbl_SerialCompRoll.Size = new System.Drawing.Size(33, 13);
             this.lbl_SerialCompRoll.TabIndex = 2;
@@ -991,7 +838,7 @@
             // txt_EtiquetaCompRoll
             // 
             this.txt_EtiquetaCompRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_EtiquetaCompRoll.Location = new System.Drawing.Point(68, 25);
+            this.txt_EtiquetaCompRoll.Location = new System.Drawing.Point(76, 64);
             this.txt_EtiquetaCompRoll.MaxLength = 8;
             this.txt_EtiquetaCompRoll.Name = "txt_EtiquetaCompRoll";
             this.txt_EtiquetaCompRoll.Size = new System.Drawing.Size(130, 20);
@@ -1000,7 +847,7 @@
             // lbl_EtiquetaCompRoll
             // 
             this.lbl_EtiquetaCompRoll.AutoSize = true;
-            this.lbl_EtiquetaCompRoll.Location = new System.Drawing.Point(5, 28);
+            this.lbl_EtiquetaCompRoll.Location = new System.Drawing.Point(13, 67);
             this.lbl_EtiquetaCompRoll.Name = "lbl_EtiquetaCompRoll";
             this.lbl_EtiquetaCompRoll.Size = new System.Drawing.Size(46, 13);
             this.lbl_EtiquetaCompRoll.TabIndex = 0;
@@ -1583,12 +1430,38 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados para requisição";
             // 
+            // grp_ObsReqPeca
+            // 
+            this.grp_ObsReqPeca.Controls.Add(this.txt_ValorReqPeca);
+            this.grp_ObsReqPeca.Controls.Add(this.label16);
+            this.grp_ObsReqPeca.Controls.Add(this.cbo_ValorReqPeca);
+            this.grp_ObsReqPeca.Controls.Add(this.txt_GarantiaMaqReqPeca);
+            this.grp_ObsReqPeca.Controls.Add(this.label17);
+            this.grp_ObsReqPeca.Controls.Add(this.label15);
+            this.grp_ObsReqPeca.Controls.Add(this.label14);
+            this.grp_ObsReqPeca.Controls.Add(this.txt_GarantiaPeriReqPeca);
+            this.grp_ObsReqPeca.Location = new System.Drawing.Point(352, 168);
+            this.grp_ObsReqPeca.Name = "grp_ObsReqPeca";
+            this.grp_ObsReqPeca.Size = new System.Drawing.Size(324, 141);
+            this.grp_ObsReqPeca.TabIndex = 67;
+            this.grp_ObsReqPeca.TabStop = false;
+            this.grp_ObsReqPeca.Text = "Observações";
+            // 
             // txt_ValorReqPeca
             // 
             this.txt_ValorReqPeca.Location = new System.Drawing.Point(214, 101);
             this.txt_ValorReqPeca.Name = "txt_ValorReqPeca";
             this.txt_ValorReqPeca.Size = new System.Drawing.Size(83, 20);
             this.txt_ValorReqPeca.TabIndex = 17;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(67, 13);
+            this.label16.TabIndex = 65;
+            this.label16.Text = "Componente";
             // 
             // cbo_ValorReqPeca
             // 
@@ -1612,6 +1485,14 @@
             this.atosDataSet.DataSetName = "AtosDataSet";
             this.atosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // txt_GarantiaMaqReqPeca
+            // 
+            this.txt_GarantiaMaqReqPeca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_GarantiaMaqReqPeca.Location = new System.Drawing.Point(214, 49);
+            this.txt_GarantiaMaqReqPeca.Name = "txt_GarantiaMaqReqPeca";
+            this.txt_GarantiaMaqReqPeca.Size = new System.Drawing.Size(83, 20);
+            this.txt_GarantiaMaqReqPeca.TabIndex = 14;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -1620,40 +1501,6 @@
             this.label17.Size = new System.Drawing.Size(69, 13);
             this.label17.TabIndex = 68;
             this.label17.Text = "Valor Reparo";
-            // 
-            // grp_ObsReqPeca
-            // 
-            this.grp_ObsReqPeca.Controls.Add(this.txt_ValorReqPeca);
-            this.grp_ObsReqPeca.Controls.Add(this.label16);
-            this.grp_ObsReqPeca.Controls.Add(this.cbo_ValorReqPeca);
-            this.grp_ObsReqPeca.Controls.Add(this.txt_GarantiaMaqReqPeca);
-            this.grp_ObsReqPeca.Controls.Add(this.label17);
-            this.grp_ObsReqPeca.Controls.Add(this.label15);
-            this.grp_ObsReqPeca.Controls.Add(this.label14);
-            this.grp_ObsReqPeca.Controls.Add(this.txt_GarantiaPeriReqPeca);
-            this.grp_ObsReqPeca.Location = new System.Drawing.Point(352, 168);
-            this.grp_ObsReqPeca.Name = "grp_ObsReqPeca";
-            this.grp_ObsReqPeca.Size = new System.Drawing.Size(324, 141);
-            this.grp_ObsReqPeca.TabIndex = 67;
-            this.grp_ObsReqPeca.TabStop = false;
-            this.grp_ObsReqPeca.Text = "Observações";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(9, 27);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 13);
-            this.label16.TabIndex = 65;
-            this.label16.Text = "Componente";
-            // 
-            // txt_GarantiaMaqReqPeca
-            // 
-            this.txt_GarantiaMaqReqPeca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_GarantiaMaqReqPeca.Location = new System.Drawing.Point(214, 49);
-            this.txt_GarantiaMaqReqPeca.Name = "txt_GarantiaMaqReqPeca";
-            this.txt_GarantiaMaqReqPeca.Size = new System.Drawing.Size(83, 20);
-            this.txt_GarantiaMaqReqPeca.TabIndex = 14;
             // 
             // label15
             // 
@@ -1956,12 +1803,189 @@
             // 
             this.tbl_reparosTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_LimparRoll
+            // 
+            this.btn_LimparRoll.Image = global::FormulariosAtos.Properties.Resources.apagar;
+            this.btn_LimparRoll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LimparRoll.Location = new System.Drawing.Point(898, 384);
+            this.btn_LimparRoll.Name = "btn_LimparRoll";
+            this.btn_LimparRoll.Size = new System.Drawing.Size(125, 43);
+            this.btn_LimparRoll.TabIndex = 801;
+            this.btn_LimparRoll.Text = "Apagar Dados";
+            this.btn_LimparRoll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_LimparRoll.UseVisualStyleBackColor = true;
+            this.btn_LimparRoll.Click += new System.EventHandler(this.btn_LimparRoll_Click);
+            // 
+            // lbl_ComputadorRoll
+            // 
+            this.lbl_ComputadorRoll.AutoSize = true;
+            this.lbl_ComputadorRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ComputadorRoll.Location = new System.Drawing.Point(12, 48);
+            this.lbl_ComputadorRoll.Name = "lbl_ComputadorRoll";
+            this.lbl_ComputadorRoll.Size = new System.Drawing.Size(74, 13);
+            this.lbl_ComputadorRoll.TabIndex = 802;
+            this.lbl_ComputadorRoll.Text = "Computador";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(14, 157);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(49, 13);
+            this.label18.TabIndex = 803;
+            this.label18.Text = "Monitor";
+            // 
+            // lbl_LocEquipRoll
+            // 
+            this.lbl_LocEquipRoll.AutoSize = true;
+            this.lbl_LocEquipRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_LocEquipRoll.Location = new System.Drawing.Point(15, 262);
+            this.lbl_LocEquipRoll.Name = "lbl_LocEquipRoll";
+            this.lbl_LocEquipRoll.Size = new System.Drawing.Size(170, 13);
+            this.lbl_LocEquipRoll.TabIndex = 804;
+            this.lbl_LocEquipRoll.Text = "Localização do Equipamento";
+            // 
+            // lbl_UsuRespRoll
+            // 
+            this.lbl_UsuRespRoll.AutoSize = true;
+            this.lbl_UsuRespRoll.Location = new System.Drawing.Point(457, 67);
+            this.lbl_UsuRespRoll.Name = "lbl_UsuRespRoll";
+            this.lbl_UsuRespRoll.Size = new System.Drawing.Size(35, 13);
+            this.lbl_UsuRespRoll.TabIndex = 27;
+            this.lbl_UsuRespRoll.Text = "Nome";
+            // 
+            // txt_UsuRespRoll
+            // 
+            this.txt_UsuRespRoll.Location = new System.Drawing.Point(498, 64);
+            this.txt_UsuRespRoll.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
+            this.txt_UsuRespRoll.Name = "txt_UsuRespRoll";
+            this.txt_UsuRespRoll.Size = new System.Drawing.Size(316, 20);
+            this.txt_UsuRespRoll.TabIndex = 16;
+            // 
+            // txt_PnUsuRespRoll
+            // 
+            this.txt_PnUsuRespRoll.Location = new System.Drawing.Point(848, 64);
+            this.txt_PnUsuRespRoll.Mask = "0000000000";
+            this.txt_PnUsuRespRoll.Name = "txt_PnUsuRespRoll";
+            this.txt_PnUsuRespRoll.Size = new System.Drawing.Size(70, 20);
+            this.txt_PnUsuRespRoll.TabIndex = 17;
+            this.txt_PnUsuRespRoll.ValidatingType = typeof(int);
+            // 
+            // lbl_PnUsuRespRoll
+            // 
+            this.lbl_PnUsuRespRoll.AutoSize = true;
+            this.lbl_PnUsuRespRoll.Location = new System.Drawing.Point(820, 67);
+            this.lbl_PnUsuRespRoll.Name = "lbl_PnUsuRespRoll";
+            this.lbl_PnUsuRespRoll.Size = new System.Drawing.Size(22, 13);
+            this.lbl_PnUsuRespRoll.TabIndex = 30;
+            this.lbl_PnUsuRespRoll.Text = "PN";
+            // 
+            // txt_RamalUsuRespRoll
+            // 
+            this.txt_RamalUsuRespRoll.Location = new System.Drawing.Point(967, 64);
+            this.txt_RamalUsuRespRoll.Mask = "0000";
+            this.txt_RamalUsuRespRoll.Name = "txt_RamalUsuRespRoll";
+            this.txt_RamalUsuRespRoll.Size = new System.Drawing.Size(35, 20);
+            this.txt_RamalUsuRespRoll.TabIndex = 18;
+            this.txt_RamalUsuRespRoll.ValidatingType = typeof(int);
+            // 
+            // lbl_RamalUsuRespRoll
+            // 
+            this.lbl_RamalUsuRespRoll.AutoSize = true;
+            this.lbl_RamalUsuRespRoll.Location = new System.Drawing.Point(924, 67);
+            this.lbl_RamalUsuRespRoll.Name = "lbl_RamalUsuRespRoll";
+            this.lbl_RamalUsuRespRoll.Size = new System.Drawing.Size(37, 13);
+            this.lbl_RamalUsuRespRoll.TabIndex = 32;
+            this.lbl_RamalUsuRespRoll.Text = "Ramal";
+            // 
+            // txt_SupUsuRespRoll
+            // 
+            this.txt_SupUsuRespRoll.Location = new System.Drawing.Point(498, 90);
+            this.txt_SupUsuRespRoll.Mask = "LL";
+            this.txt_SupUsuRespRoll.Name = "txt_SupUsuRespRoll";
+            this.txt_SupUsuRespRoll.Size = new System.Drawing.Size(21, 20);
+            this.txt_SupUsuRespRoll.TabIndex = 19;
+            this.txt_SupUsuRespRoll.ValidatingType = typeof(int);
+            // 
+            // lbl_SupUsuRespRoll
+            // 
+            this.lbl_SupUsuRespRoll.AutoSize = true;
+            this.lbl_SupUsuRespRoll.Location = new System.Drawing.Point(457, 93);
+            this.lbl_SupUsuRespRoll.Name = "lbl_SupUsuRespRoll";
+            this.lbl_SupUsuRespRoll.Size = new System.Drawing.Size(29, 13);
+            this.lbl_SupUsuRespRoll.TabIndex = 34;
+            this.lbl_SupUsuRespRoll.Text = "SUP";
+            // 
+            // txt_GerUsuRespRoll
+            // 
+            this.txt_GerUsuRespRoll.Location = new System.Drawing.Point(561, 90);
+            this.txt_GerUsuRespRoll.Mask = "LLLLL";
+            this.txt_GerUsuRespRoll.Name = "txt_GerUsuRespRoll";
+            this.txt_GerUsuRespRoll.Size = new System.Drawing.Size(35, 20);
+            this.txt_GerUsuRespRoll.TabIndex = 20;
+            this.txt_GerUsuRespRoll.ValidatingType = typeof(int);
+            // 
+            // lbl_GerUsuRespRoll
+            // 
+            this.lbl_GerUsuRespRoll.AutoSize = true;
+            this.lbl_GerUsuRespRoll.Location = new System.Drawing.Point(525, 93);
+            this.lbl_GerUsuRespRoll.Name = "lbl_GerUsuRespRoll";
+            this.lbl_GerUsuRespRoll.Size = new System.Drawing.Size(30, 13);
+            this.lbl_GerUsuRespRoll.TabIndex = 36;
+            this.lbl_GerUsuRespRoll.Text = "GER";
+            // 
+            // txt_SetorUsuRespRoll
+            // 
+            this.txt_SetorUsuRespRoll.Location = new System.Drawing.Point(640, 90);
+            this.txt_SetorUsuRespRoll.Mask = "LLLLLLLLLLLLLLLLLLLL";
+            this.txt_SetorUsuRespRoll.Name = "txt_SetorUsuRespRoll";
+            this.txt_SetorUsuRespRoll.Size = new System.Drawing.Size(135, 20);
+            this.txt_SetorUsuRespRoll.TabIndex = 21;
+            this.txt_SetorUsuRespRoll.ValidatingType = typeof(int);
+            // 
+            // lbl_SetorUsuRespRoll
+            // 
+            this.lbl_SetorUsuRespRoll.AutoSize = true;
+            this.lbl_SetorUsuRespRoll.Location = new System.Drawing.Point(602, 93);
+            this.lbl_SetorUsuRespRoll.Name = "lbl_SetorUsuRespRoll";
+            this.lbl_SetorUsuRespRoll.Size = new System.Drawing.Size(32, 13);
+            this.lbl_SetorUsuRespRoll.TabIndex = 38;
+            this.lbl_SetorUsuRespRoll.Text = "Setor";
+            // 
+            // chk_EquipCompartilhadoRoll
+            // 
+            this.chk_EquipCompartilhadoRoll.AutoSize = true;
+            this.chk_EquipCompartilhadoRoll.Location = new System.Drawing.Point(460, 122);
+            this.chk_EquipCompartilhadoRoll.Name = "chk_EquipCompartilhadoRoll";
+            this.chk_EquipCompartilhadoRoll.Size = new System.Drawing.Size(158, 17);
+            this.chk_EquipCompartilhadoRoll.TabIndex = 22;
+            this.chk_EquipCompartilhadoRoll.Text = "Equipamento Compartilhado";
+            this.chk_EquipCompartilhadoRoll.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(457, 48);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(185, 13);
+            this.label19.TabIndex = 805;
+            this.label19.Text = "Responsável pelo Equipamento";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(6, 502);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 806;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1169, 495);
+            this.ClientSize = new System.Drawing.Size(1169, 573);
             this.Controls.Add(this.tab_Formularios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Main";
@@ -1972,16 +1996,8 @@
             this.tab_RollOut.PerformLayout();
             this.tab_InfoComplRoll.ResumeLayout(false);
             this.tab_InfoComplRoll.PerformLayout();
-            this.grp_LocalEquipRoll.ResumeLayout(false);
-            this.grp_LocalEquipRoll.PerformLayout();
-            this.grp_MonitorRoll.ResumeLayout(false);
-            this.grp_MonitorRoll.PerformLayout();
             this.grp_DadosTerceiroRoll.ResumeLayout(false);
             this.grp_DadosTerceiroRoll.PerformLayout();
-            this.grp_RespEquipRoll.ResumeLayout(false);
-            this.grp_RespEquipRoll.PerformLayout();
-            this.grp_CompRoll.ResumeLayout(false);
-            this.grp_CompRoll.PerformLayout();
             this.tab_RetiraEquip.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1994,10 +2010,10 @@
             this.tab_RepPeca.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atosDataSet)).EndInit();
             this.grp_ObsReqPeca.ResumeLayout(false);
             this.grp_ObsReqPeca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atosDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2012,11 +2028,7 @@
         private System.Windows.Forms.TabPage tab_RepPeca;
         private System.Windows.Forms.Button btn_GerarRollout;
         private System.Windows.Forms.GroupBox tab_InfoComplRoll;
-        private System.Windows.Forms.GroupBox grp_LocalEquipRoll;
-        private System.Windows.Forms.GroupBox grp_MonitorRoll;
         private System.Windows.Forms.GroupBox grp_DadosTerceiroRoll;
-        private System.Windows.Forms.GroupBox grp_RespEquipRoll;
-        private System.Windows.Forms.GroupBox grp_CompRoll;
         private System.Windows.Forms.TextBox txt_SerialCompRoll;
         private System.Windows.Forms.Label lbl_SerialCompRoll;
         private System.Windows.Forms.TextBox txt_EtiquetaCompRoll;
@@ -2030,7 +2042,7 @@
         private System.Windows.Forms.Label lbl_SalaLocalEquip;
         private System.Windows.Forms.Label lbl_EmpLocalEquip;
         private System.Windows.Forms.TextBox txt_ModeloMonitorRoll;
-        private System.Windows.Forms.Label lbl_ModelMonitorRoll;
+        private System.Windows.Forms.Label lbl_ModeloMonitorRoll;
         private System.Windows.Forms.TextBox txt_FabMonitorRoll;
         private System.Windows.Forms.Label lbl_FabMonitorRoll;
         private System.Windows.Forms.TextBox txt_SerialMonitorRoll;
@@ -2049,25 +2061,12 @@
         private System.Windows.Forms.MaskedTextBox txt_MatriculaTercRoll;
         private System.Windows.Forms.MaskedTextBox txt_NomeTercRoll;
         private System.Windows.Forms.Label lbl_NomeTercRoll;
-        private System.Windows.Forms.Label lbl_SetorUsuRespRoll;
-        private System.Windows.Forms.MaskedTextBox txt_SetorUsuRespRoll;
-        private System.Windows.Forms.Label lbl_GerUsuRespRoll;
-        private System.Windows.Forms.MaskedTextBox txt_GerUsuRespRoll;
-        private System.Windows.Forms.Label lbl_SupUsuRespRoll;
-        private System.Windows.Forms.MaskedTextBox txt_SupUsuRespRoll;
-        private System.Windows.Forms.Label lbl_RamalUsuRespRoll;
-        private System.Windows.Forms.MaskedTextBox txt_RamalUsuRespRoll;
-        private System.Windows.Forms.Label lbl_PnUsuRespRoll;
-        private System.Windows.Forms.MaskedTextBox txt_PnUsuRespRoll;
-        private System.Windows.Forms.MaskedTextBox txt_UsuRespRoll;
-        private System.Windows.Forms.Label lbl_UsuRespRoll;
         private System.Windows.Forms.TextBox txt_ModeloCompRoll;
         private System.Windows.Forms.Label lbl_ModeloCompRoll;
         private System.Windows.Forms.TextBox txt_FabCompRoll;
         private System.Windows.Forms.Label lbl_FabricanteCompRoll;
         private System.Windows.Forms.MaskedTextBox txt_AnalRespRoll;
         private System.Windows.Forms.Label lbl_AnalRespRoll;
-        private System.Windows.Forms.CheckBox chk_EquipCompartilhadoRoll;
         private System.Windows.Forms.TextBox txt_EtiquetaDockCompRoll;
         private System.Windows.Forms.Label lbl_EtiquetaDockCompRoll;
         private System.Windows.Forms.CheckBox chk_DockstationRoll;
@@ -2175,6 +2174,25 @@
         private System.Windows.Forms.BindingSource tblreparosBindingSource;
         private AtosDataSetTableAdapters.tbl_reparosTableAdapter tbl_reparosTableAdapter;
         private System.Windows.Forms.TextBox txt_ValorReqPeca;
+        private System.Windows.Forms.Button btn_LimparRoll;
+        private System.Windows.Forms.Label lbl_LocEquipRoll;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbl_ComputadorRoll;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.CheckBox chk_EquipCompartilhadoRoll;
+        private System.Windows.Forms.Label lbl_SetorUsuRespRoll;
+        private System.Windows.Forms.MaskedTextBox txt_SetorUsuRespRoll;
+        private System.Windows.Forms.Label lbl_GerUsuRespRoll;
+        private System.Windows.Forms.MaskedTextBox txt_GerUsuRespRoll;
+        private System.Windows.Forms.Label lbl_SupUsuRespRoll;
+        private System.Windows.Forms.MaskedTextBox txt_SupUsuRespRoll;
+        private System.Windows.Forms.Label lbl_RamalUsuRespRoll;
+        private System.Windows.Forms.MaskedTextBox txt_RamalUsuRespRoll;
+        private System.Windows.Forms.Label lbl_PnUsuRespRoll;
+        private System.Windows.Forms.MaskedTextBox txt_PnUsuRespRoll;
+        private System.Windows.Forms.MaskedTextBox txt_UsuRespRoll;
+        private System.Windows.Forms.Label lbl_UsuRespRoll;
     }
 }
 

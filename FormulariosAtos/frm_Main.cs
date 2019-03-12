@@ -75,8 +75,21 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@serialcomputador", txt_SerialCompRoll.Text.ToUpper());
                 this.FindAndReplace(wordApp, "@fabricantecomputador", txt_FabCompRoll.Text.ToUpper());
                 this.FindAndReplace(wordApp, "@modelocomputador", txt_ModeloCompRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@etiquetadock", txt_EtiquetaDockCompRoll.Text.ToUpper());
-                
+                this.FindAndReplace(wordApp, "@dock", txt_EtiquetaDockCompRoll.Text.ToUpper());
+
+                if (rdo_DesktopDev.Checked)
+                {                    
+                    this.FindAndReplace(wordApp, "@tipoequip", "TIPO DE EQUIPAMENTO: [ X ]DESKTOP [  ]NOTEBOOK      DOCKSTATION: [  ]NÃO [  ]SIM - ETIQUETA: ");
+                }
+                else if (rdo_NotebookRoll.Checked == true || chk_DockstationRoll.Checked == true)
+                {
+                    this.FindAndReplace(wordApp, "@tipoequip", "[  ]DESKTOP [ X ]NOTEBOOK      DOCKSTATION: [  ]NÃO [ X ]SIM - ETIQUETA: " + txt_EtiquetaDockCompRoll.Text);
+                }
+                else if (rdo_NotebookRoll.Checked == true || chk_DockstationRoll.Checked == false)
+                {
+                    this.FindAndReplace(wordApp, "@tipoequip", "[  ]DESKTOP [ X ]NOTEBOOK      DOCKSTATION: [  ]NÃO [ X ]SIM - ETIQUETA: ");
+                }
+
                 //Preenchimento Monitor
                 this.FindAndReplace(wordApp, "@etiquetamonitor", txt_EtiquetaMonitorRoll.Text.ToUpper());
                 this.FindAndReplace(wordApp, "@serialmonitor", txt_SerialMonitorRoll.Text.ToUpper());
@@ -107,6 +120,8 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@analresp", txt_AnalRespRoll.Text.ToUpper());
                 this.FindAndReplace(wordApp, "@numchamado", txt_ChamadoRoll.Text);
                 this.FindAndReplace(wordApp, "@motivoex", txt_MotivoExcRoll.Text);
+
+
             }
             else
             {
@@ -162,7 +177,7 @@ namespace FormulariosAtos
 
             //Salvar
             myWordDoc.SaveAs2(ref SaveAs, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
-                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
+                              ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
 
             //Fechar
             myWordDoc.Close();
@@ -172,7 +187,6 @@ namespace FormulariosAtos
 
         private void CriaFormularioDevolucao(object filename, object SaveAs, int tipo)
         {
-
             //Tipo 0 preenchimento Rollout
             //Tipo 1 preenchimento Devolução
 
@@ -195,7 +209,7 @@ namespace FormulariosAtos
 
                 if (tipo == 0)
                 {
-                    //Preenchimento 
+                    //Preenchimento Rollout
                     this.FindAndReplace(wordApp, "@chamado", txt_ChamadoRoll.Text);
                     this.FindAndReplace(wordApp, "@analresp", txt_AnalRespRoll.Text.Trim().ToUpper());
                     this.FindAndReplace(wordApp, "@data", date_FillRoll.Text);
@@ -208,7 +222,7 @@ namespace FormulariosAtos
                 }
                 else
                 {
-                    //Preenchimento 
+                    //Preenchimento Devolução
                     this.FindAndReplace(wordApp, "@chamado", txt_ChamadoDev.Text);
                     this.FindAndReplace(wordApp, "@analresp", txt_AnalRespDev.Text.Trim().ToUpper());
                     this.FindAndReplace(wordApp, "@data", txt_DataDev.Text);
@@ -407,6 +421,46 @@ namespace FormulariosAtos
             { 
                 txt_ValorReqPeca.Text = "R$" + cbo_ValorReqPeca.SelectedValue.ToString() + ",00";
             }
+        }
+
+        private void btn_LimparRoll_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdo_NotebookRoll_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_DockstationRoll.Enabled =       true;
+            chk_DockstationRoll.Checked =       false;
+
+            //Desabilita os campos de monitor
+            lbl_FabMonitorRoll.Enabled =        false;
+            lbl_ModeloMonitorRoll.Enabled =     false;
+            lbl_SerialMonitorRoll.Enabled =     false;
+            lbl_EtiquetaMonitorRoll.Enabled =   false;
+
+            txt_FabMonitorRoll.Enabled =        false;
+            txt_ModeloMonitorRoll.Enabled =     false;
+            txt_SerialMonitorRoll.Enabled =     false;
+            txt_EtiquetaMonitorRoll.Enabled =   false;
+        }
+
+        private void rdo_DesktopRoll_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_DockstationRoll.Enabled =       false;
+            txt_EtiquetaDockCompRoll.Enabled =  false;
+            lbl_EtiquetaDockCompRoll.Enabled =  false;
+
+            //Habilita os campos de monitor
+            lbl_FabMonitorRoll.Enabled =        true;
+            lbl_ModeloMonitorRoll.Enabled =     true;
+            lbl_SerialMonitorRoll.Enabled =     true;
+            lbl_EtiquetaMonitorRoll.Enabled =   true;
+                                                
+            txt_FabMonitorRoll.Enabled =        true;
+            txt_ModeloMonitorRoll.Enabled =     true;
+            txt_SerialMonitorRoll.Enabled =     true;
+            txt_EtiquetaMonitorRoll.Enabled =   true;
         }
     }
 }
