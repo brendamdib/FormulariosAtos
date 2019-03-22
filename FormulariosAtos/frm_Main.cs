@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
 using Word = Microsoft.Office.Interop.Word;
+using System.Text.RegularExpressions;
 
 namespace FormulariosAtos
 {
@@ -19,19 +20,7 @@ namespace FormulariosAtos
         {
             InitializeComponent();
             txt_EtiquetaCompRoll.Focus();
-
-            //Desabilita os campos de monitor
-            lbl_FabMonitorRoll.Enabled = false;
-            lbl_ModeloMonitorRoll.Enabled = false;
-            lbl_SerialMonitorRoll.Enabled = false;
-            lbl_EtiquetaMonitorRoll.Enabled = false;
-
-            txt_FabMonitorRoll.Enabled = false;
-            txt_ModeloMonitorRoll.Enabled = false;
-            txt_SerialMonitorRoll.Enabled = false;
-            txt_EtiquetaMonitorRoll.Enabled = false;
-
-        }       
+        }
 
         private void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -82,36 +71,36 @@ namespace FormulariosAtos
                 myWordDoc.Activate();
 
                 //Preenchimento Computador
-                this.FindAndReplace(wordApp, "@etiquetacomputador", txt_EtiquetaCompRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@serialcomputador", txt_SerialCompRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@fabricantecomputador", txt_FabCompRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@modelocomputador", txt_ModeloCompRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@dock", txt_EtiquetaDockCompRoll.Text.ToUpper());
+                this.FindAndReplace(wordApp, "@etiquetacomputador", txt_EtiquetaCompRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@serialcomputador", txt_SerialCompRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@fabricantecomputador", txt_FabCompRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@modelocomputador", txt_ModeloCompRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@dock", txt_EtiquetaDockCompRoll.Text.ToUpper().Trim());
 
-                if (rdo_DesktopDev.Checked == true)
-                {                    
-                    this.FindAndReplace(wordApp, "@tipoequip", "TIPO DE EQUIPAMENTO: [ X ] DESKTOP [  ] NOTEBOOK          DOCKSTATION: [  ] NÃO [  ] SIM - ETIQUETA: ");
+                if (rdo_DesktopRoll.Checked == true)
+                {
+                    this.FindAndReplace(wordApp, "@tipoequip", "[ X ] DESKTOP [  ] NOTEBOOK          DOCKSTATION: [ X ] NÃO [  ] SIM - ETIQUETA: ");
                 }
-                else if (rdo_NotebookRoll.Checked == true || chk_DockstationRoll.Checked == true)
+                else if (rdo_NotebookRoll.Checked == true && chk_DockstationRoll.Checked == true)
                 {
                     this.FindAndReplace(wordApp, "@tipoequip", "[  ] DESKTOP [ X ] NOTEBOOK          DOCKSTATION: [  ] NÃO [ X ] SIM - ETIQUETA: " + txt_EtiquetaDockCompRoll.Text);
                 }
-                else if (rdo_NotebookRoll.Checked == true || chk_DockstationRoll.Checked == false)
+                else if (rdo_NotebookRoll.Checked == true && chk_DockstationRoll.Checked == false)
                 {
-                    this.FindAndReplace(wordApp, "@tipoequip", "[  ] DESKTOP [ X ] NOTEBOOK          DOCKSTATION: [  ] NÃO [ X ] SIM - ETIQUETA: ");
+                    this.FindAndReplace(wordApp, "@tipoequip", "[  ] DESKTOP [ X ] NOTEBOOK          DOCKSTATION: [ X ] NÃO [  ] SIM - ETIQUETA: ");
                 }
 
                 //Preenchimento Monitor
-                this.FindAndReplace(wordApp, "@etiquetamonitor", txt_EtiquetaMonitorRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@serialmonitor", txt_SerialMonitorRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@marcamonitor", txt_FabMonitorRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@modelomonitor", txt_ModeloMonitorRoll.Text.ToUpper());
+                this.FindAndReplace(wordApp, "@etiquetamonitor", txt_EtiquetaMonitorRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@serialmonitor", txt_SerialMonitorRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@marcamonitor", txt_FabMonitorRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@modelomonitor", txt_ModeloMonitorRoll.Text.ToUpper().Trim());
 
                 //Preenchimento Responsável pelo Equip.
                 this.FindAndReplace(wordApp, "@usuarioresponsavel", txt_UsuRespRoll.Text.Trim());
-                this.FindAndReplace(wordApp, "@superger", txt_SupUsuRespRoll.Text.ToUpper() + " - " + txt_GerUsuRespRoll.Text.ToUpper() + " - " + txt_SetorUsuRespRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@pn", txt_PnUsuRespRoll.Text);
-                this.FindAndReplace(wordApp, "@ramalusuresp", txt_RamalUsuRespRoll.Text);
+                this.FindAndReplace(wordApp, "@superger", txt_SupUsuRespRoll.Text.ToUpper().Trim() + " - " + txt_GerUsuRespRoll.Text.ToUpper().Trim() + " - " + txt_SetorUsuRespRoll.Text.ToUpper());
+                this.FindAndReplace(wordApp, "@pn", txt_PnUsuRespRoll.Text.Trim());
+                this.FindAndReplace(wordApp, "@ramalusuresp", txt_RamalUsuRespRoll.Text.Trim());
 
                 //Preenchimento Dados de Terceiro
                 if (chk_EquipCompartilhadoRoll.Checked == true)
@@ -122,22 +111,22 @@ namespace FormulariosAtos
                 {
                     this.FindAndReplace(wordApp, "@equipcompart", "[  ] SIM [ X ] NÃO");
                 }
-                this.FindAndReplace(wordApp, "@nometerceiro", txt_NomeTercRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@supergerterceiro", txt_SupTercRoll.Text.ToUpper() + " - " + txt_GerTercRoll.Text.ToUpper() + " - " + txt_SetorTercRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@ramalterceiro", txt_RamalTercRoll.Text);
-                this.FindAndReplace(wordApp, "@matricul", txt_MatriculaTercRoll.Text);
+                this.FindAndReplace(wordApp, "@tern", txt_NomeTercRoll.Text.ToUpper().Trim()); //nome
+                this.FindAndReplace(wordApp, "@terset", txt_SupTercRoll.Text.ToUpper().Trim() + " - " + txt_GerTercRoll.Text.ToUpper().Trim() + " - " + txt_SetorTercRoll.Text.ToUpper().Trim()); //setor
+                this.FindAndReplace(wordApp, "@terra", txt_RamalTercRoll.Text.Trim()); //ramal
+                this.FindAndReplace(wordApp, "@matt", txt_MatriculaTercRoll.Text.Trim()); //matricula
 
                 //Preenchimento Localização do Computador
-                this.FindAndReplace(wordApp, "@empresa", txt_EmpresaLocalEquip.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@predio", txt_PredioLocalEquip.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@sala", txt_SalaLocalEquip.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@andar", txt_AndarLocalEquip.Text + "º" );
-                
+                this.FindAndReplace(wordApp, "@empresa", cbo_EmpresaRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@predio", txt_PredioLocalEquip.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@sala", txt_SalaLocalEquip.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@andar", txt_AndarLocalEquip.Text.Trim() + "º");
+
                 //Preenchimento Informações Complementares
-                this.FindAndReplace(wordApp, "@datager", date_FillRoll.Text);
-                this.FindAndReplace(wordApp, "@analresp", txt_AnalRespRoll.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@numchamado", txt_ChamadoRoll.Text);
-                this.FindAndReplace(wordApp, "@motivoex", txt_MotivoExcRoll.Text);
+                this.FindAndReplace(wordApp, "@datager", date_FillRoll.Text.Trim());
+                this.FindAndReplace(wordApp, "@analresp", txt_AnalRespRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@numchamado", txt_ChamadoRoll.Text.Trim());
+                this.FindAndReplace(wordApp, "@motivoex", txt_MotivoExcRoll.Text.Trim());
 
                 if (chk_MaqExcRoll.Checked == true)
                 {
@@ -203,15 +192,15 @@ namespace FormulariosAtos
                 //Preenchimento 
                 if (rdo_NotebookRoll.Checked == true)
                 {
-                    this.FindAndReplace(wordApp, "@etiquetaequip", txt_EtiquetaCompRoll.Text.ToUpper());
+                    this.FindAndReplace(wordApp, "@etiquetaequip", txt_EtiquetaCompRoll.Text.ToUpper().Trim());
                 }
                 else if (rdo_DesktopRoll.Checked == true)
                 {
-                    this.FindAndReplace(wordApp, "@etiquetaequip", txt_EtiquetaCompRoll.Text.ToUpper() + " / " + txt_EtiquetaMonitorRoll.Text.ToUpper());
-                }                
-                this.FindAndReplace(wordApp, "@empresa", txt_EmpresaLocalEquip.Text.Trim().ToUpper());
-                this.FindAndReplace(wordApp, "@usuarioresponsavel", txt_UsuRespRoll.Text.Trim().ToUpper());
-                this.FindAndReplace(wordApp, "@pn", txt_PnUsuRespRoll.Text);
+                    this.FindAndReplace(wordApp, "@etiquetaequip", txt_EtiquetaCompRoll.Text.ToUpper().Trim() + " / " + txt_EtiquetaMonitorRoll.Text.ToUpper().Trim());
+                }
+                this.FindAndReplace(wordApp, "@empresa", cbo_EmpresaRoll.Text.Trim().ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@usuarioresponsavel", txt_UsuRespRoll.Text.Trim().ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@pn", txt_PnUsuRespRoll.Text.Trim());
             }
             else
             {
@@ -253,38 +242,38 @@ namespace FormulariosAtos
                 if (tipo == 0)
                 {
                     //Preenchimento Rollout
-                    this.FindAndReplace(wordApp, "@chamado", txt_ChamadoRoll.Text);
+                    this.FindAndReplace(wordApp, "@chamado", txt_ChamadoRoll.Text.Trim());
                     this.FindAndReplace(wordApp, "@analresp", txt_AnalRespRoll.Text.Trim().ToUpper());
-                    this.FindAndReplace(wordApp, "@data", date_FillRoll.Text);
-                    this.FindAndReplace(wordApp, "@nome", txt_UsuRespRoll.Text);
-                    this.FindAndReplace(wordApp, "@pn", txt_PnUsuRespRoll.Text);
-                    this.FindAndReplace(wordApp, "@ramal", txt_RamalUsuRespRoll.Text);
-                    this.FindAndReplace(wordApp, "@gerencia", txt_GerUsuRespRoll.Text);
-                    this.FindAndReplace(wordApp, "@prediosala", txt_PredioLocalEquip.Text + " / " + txt_SalaLocalEquip.Text);
-                    this.FindAndReplace(wordApp, "@empresa", txt_EmpresaLocalEquip.Text.ToUpper());
+                    this.FindAndReplace(wordApp, "@data", date_FillRoll.Text.Trim());
+                    this.FindAndReplace(wordApp, "@nome", txt_UsuRespRoll.Text.Trim());
+                    this.FindAndReplace(wordApp, "@pn", txt_PnUsuRespRoll.Text.Trim());
+                    this.FindAndReplace(wordApp, "@ramal", txt_RamalUsuRespRoll.Text.Trim());
+                    this.FindAndReplace(wordApp, "@gerencia", txt_GerUsuRespRoll.Text.Trim());
+                    this.FindAndReplace(wordApp, "@prediosala", txt_PredioLocalEquip.Text.Trim() + " / " + txt_SalaLocalEquip.Text.Trim());
+                    this.FindAndReplace(wordApp, "@empresa", cbo_EmpresaDev.Text.ToUpper().Trim());
                 }
                 else
                 {
                     //Preenchimento Devolução
-                    this.FindAndReplace(wordApp, "@chamado", txt_ChamadoDev.Text);
+                    this.FindAndReplace(wordApp, "@chamado", txt_ChamadoDev.Text.Trim());
                     this.FindAndReplace(wordApp, "@analresp", txt_AnalRespDev.Text.Trim().ToUpper());
-                    this.FindAndReplace(wordApp, "@data", txt_DataDev.Text);
-                    this.FindAndReplace(wordApp, "@nome", txt_NomeRespEquipDev.Text);
-                    this.FindAndReplace(wordApp, "@pn", txt_PnRespEquipDev.Text);
-                    this.FindAndReplace(wordApp, "@ramal", txt_RamalRespEquipDev.Text);
-                    this.FindAndReplace(wordApp, "@gerencia", txt_GerRespEquipDev.Text);
-                    this.FindAndReplace(wordApp, "@prediosala", txt_PredioLocalEquipDev.Text + " / " + txt_SalaLocalEquipDev.Text);
-                    this.FindAndReplace(wordApp, "@empresa", txt_EmpresaLocalEquipDev.Text.ToUpper());
+                    this.FindAndReplace(wordApp, "@data", txt_DataDev.Text.Trim());
+                    this.FindAndReplace(wordApp, "@nome", txt_NomeRespEquipDev.Text.Trim());
+                    this.FindAndReplace(wordApp, "@pn", txt_PnRespEquipDev.Text.Trim());
+                    this.FindAndReplace(wordApp, "@ramal", txt_RamalRespEquipDev.Text.Trim());
+                    this.FindAndReplace(wordApp, "@gerencia", txt_GerRespEquipDev.Text.Trim());
+                    this.FindAndReplace(wordApp, "@prediosala", txt_PredioLocalEquipDev.Text.Trim() + " / " + txt_SalaLocalEquipDev.Text.Trim());
+                    this.FindAndReplace(wordApp, "@empresa", cbo_EmpresaDev.Text.ToUpper().Trim());
 
-                    this.FindAndReplace(wordApp, "@etiqueta1", txt_Etiqueta1Dev.Text.ToUpper());
-                    this.FindAndReplace(wordApp, "@etiqueta2", txt_Etiqueta2Dev.Text.ToUpper());
-                    this.FindAndReplace(wordApp, "@etiqueta3", txt_Etiqueta3Dev.Text.ToUpper());
-                    this.FindAndReplace(wordApp, "@etiqueta4", txt_Etiqueta4Dev.Text.ToUpper());                    
+                    this.FindAndReplace(wordApp, "@etiqueta1", txt_Etiqueta1Dev.Text.ToUpper().Trim());
+                    this.FindAndReplace(wordApp, "@etiqueta2", txt_Etiqueta2Dev.Text.ToUpper().Trim());
+                    this.FindAndReplace(wordApp, "@etiqueta3", txt_Etiqueta3Dev.Text.ToUpper().Trim());
+                    this.FindAndReplace(wordApp, "@etiqueta4", txt_Etiqueta4Dev.Text.ToUpper().Trim());
 
-                    this.FindAndReplace(wordApp, "@serial1", txt_Serial1Dev.Text.ToUpper());
-                    this.FindAndReplace(wordApp, "@serial2", txt_Serial2Dev.Text.ToUpper());
-                    this.FindAndReplace(wordApp, "@serial3", txt_Serial3Dev.Text.ToUpper());
-                    this.FindAndReplace(wordApp, "@serial4", txt_Serial4Dev.Text.ToUpper());                    
+                    this.FindAndReplace(wordApp, "@serial1", txt_Serial1Dev.Text.ToUpper().Trim());
+                    this.FindAndReplace(wordApp, "@serial2", txt_Serial2Dev.Text.ToUpper().Trim());
+                    this.FindAndReplace(wordApp, "@serial3", txt_Serial3Dev.Text.ToUpper().Trim());
+                    this.FindAndReplace(wordApp, "@serial4", txt_Serial4Dev.Text.ToUpper().Trim());
 
                     if (rdo_DesktopDev.Checked == true)
                     {
@@ -351,33 +340,32 @@ namespace FormulariosAtos
                 myWordDoc.Activate();
 
                 //Preenchimento 
-                this.FindAndReplace(wordApp, "@etiqueta", txt_EtiquetaReqPeca.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@modelo", txt_ModeloReqPeca.Text.ToUpper());
-                this.FindAndReplace(wordApp, "@numserie", txt_SerialReqPeca.Text.ToUpper());
+                this.FindAndReplace(wordApp, "@etiqueta", txt_EtiquetaReqPeca.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@modelo", txt_ModeloReqPeca.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@numserie", txt_SerialReqPeca.Text.ToUpper().Trim());
 
-                this.FindAndReplace(wordApp, "@usuarioresp", txt_UsuarioReqPeca.Text.Trim().ToUpper());
-                this.FindAndReplace(wordApp, "@pnusuario", txt_PnUsuReqPeca.Text);
-                this.FindAndReplace(wordApp, "@ramal", txt_RamalUsuReqPeca.Text);
+                this.FindAndReplace(wordApp, "@usuarioresp", txt_UsuarioReqPeca.Text.Trim().ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@pnusuario", txt_PnUsuReqPeca.Text.Trim());
+                this.FindAndReplace(wordApp, "@ramal", txt_RamalUsuReqPeca.Text.Trim());
 
-                this.FindAndReplace(wordApp, "@gerente", txt_GerenteReqPeca.Text.Trim().ToUpper());
-                this.FindAndReplace(wordApp, "@pngerente", txt_PnGerenteReqPeca.Text);
+                this.FindAndReplace(wordApp, "@gerente", txt_GerenteReqPeca.Text.Trim().ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@pngerente", txt_PnGerenteReqPeca.Text.Trim());
 
-                this.FindAndReplace(wordApp, "@setor", txt_SetorReqPeca.Text.Trim().ToUpper());
-                this.FindAndReplace(wordApp, "@localizacao", txt_LocalizacaoReqPeca.Text);
+                this.FindAndReplace(wordApp, "@setor", txt_SetorReqPeca.Text.Trim().ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@localizacao", cbo_EmpresaRepPeca.Text.Trim());
 
-                this.FindAndReplace(wordApp, "@data", txt_DataReqPeca.Text);
-                this.FindAndReplace(wordApp, "@numchamado", txt_ChamadoReqPeca.Text);
+                this.FindAndReplace(wordApp, "@data", txt_DataReqPeca.Text.Trim());
+                this.FindAndReplace(wordApp, "@numchamado", txt_ChamadoReqPeca.Text.Trim());
 
-                this.FindAndReplace(wordApp, "@motivoreparo", txt_CausaReqPeca.Text);
-                this.FindAndReplace(wordApp, "@valorreparo", txt_ValorReqPeca.Text);
+                this.FindAndReplace(wordApp, "@motivoreparo", txt_CausaReqPeca.Text.Trim());
+                this.FindAndReplace(wordApp, "@valorreparo", txt_ValorReqPeca.Text.Trim());
 
-                this.FindAndReplace(wordApp, "@garantiamaq", txt_GarantiaMaqReqPeca.Text);
-                this.FindAndReplace(wordApp, "@garantiaperi", txt_GarantiaPeriReqPeca.Text);
-                this.FindAndReplace(wordApp, "@componente", cbo_ValorReqPeca.SelectedText.ToString());
+                this.FindAndReplace(wordApp, "@garantiamaq", txt_GarantiaMaqReqPeca.Text.Trim());
+                this.FindAndReplace(wordApp, "@garantiaperi", txt_GarantiaPeriReqPeca.Text.Trim());
+                this.FindAndReplace(wordApp, "@componente", cbo_ValorReqPeca.Text.ToString().Trim());
 
-                this.FindAndReplace(wordApp, "@gerpn", txt_GerenteReqPeca.Text.Trim().ToUpper() + " - " + txt_PnGerenteReqPeca.Text);
-                this.FindAndReplace(wordApp, "@usuariopn", txt_UsuarioReqPeca.Text.Trim().ToUpper() + " - " + txt_PnUsuReqPeca.Text);
-
+                this.FindAndReplace(wordApp, "@gerpn", txt_GerenteReqPeca.Text.Trim().ToUpper().Trim() + " - " + txt_PnGerenteReqPeca.Text.Trim());
+                this.FindAndReplace(wordApp, "@usuariopn", txt_UsuarioReqPeca.Text.Trim().ToUpper().Trim() + " - " + txt_PnUsuReqPeca.Text.Trim());
             }
             else
             {
@@ -385,18 +373,106 @@ namespace FormulariosAtos
             }
 
             //Salvar
-            myWordDoc.SaveAs2(ref SaveAs, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
-                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
-
+            myWordDoc.SaveAs2(  ref SaveAs, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, 
+                                ref missing, ref missing);
             //Fechar
             myWordDoc.Close();
             wordApp.Quit();
             MessageBox.Show("Formulário de reposição de peças gerado com sucesso!!!!");
         }
 
+        private void ImportaDadosGrafico(string caminho)
+        {
+            DataTable dt = new DataTable();
+            var lines = File.ReadAllLines(caminho);
+            string[] columns = null;
+            Regex regex = new Regex(@"^[1-9][0-9]{0,3}$");
+            
+            // assuming the first row contains the columns information
+            if (lines.Count() > 0)
+            {                
+                columns = lines[3].Split(new char[] { ',' });
+
+                foreach (var column in columns)
+                    dt.Columns.Add(column.Trim().ToString().Replace("%",""));
+            }            
+
+            columns = lines[0].Split(new char[] { ',' });
+            
+            // Lendo os dados
+            for (int i = 4; i < lines.Count(); i++)
+            {                
+                DataRow dr = dt.NewRow();
+                string[] values = lines[i].Split(new char[] { ',' });
+
+                for (int j = 0; j < values.Count() && j < columns.Count(); j++)
+                    if (j == 3)
+                    {
+                        dr[j] = values[j].Replace("%","");                       
+                    }
+                    else
+                    {
+                        dr[j] = values[j];
+                        //TimeSpan TempoBat = 
+                        //txt_DuracLaudoBat.Text = sum.TotalMinutes.ToString();
+                    }               
+                dt.Rows.Add(dr);             
+            }
+
+            //Exibe no gráfico
+            this.grafico_laudobat.DataSource = dt;           
+            this.grafico_laudobat.Series["Series1"].XValueMember = "Time";
+            this.grafico_laudobat.Series["Series1"].YValueMembers = "Charge";            
+            this.grafico_laudobat.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = true;
+            this.grafico_laudobat.ChartAreas["ChartArea1"].AxisX.Interval = 4;
+            //this.grafico_laudobat.ChartAreas["ChartArea1"].AxisY.Interval = 20;
+            //this.grafico_laudobat.Series["Series1"].IsValueShownAsLabel = true;
+            this.grafico_laudobat.DataBind();
+            this.grafico_laudobat.Show();
+        }
+
+        private void ImportaDadosBateria(string caminho)
+        {
+            DataTable dt = new DataTable();
+            var lines = File.ReadAllLines(caminho);
+            string[] columns = null;
+
+            // Considera a primeira linha como cabeçalho
+            if (lines.Count() > 0)
+            {
+                columns = lines[0].Split(new char[] { ',' });
+
+                foreach (var column in columns)
+                    dt.Columns.Add(column);
+            }
+
+            //Lê os dados da bateria
+            for (int i = 0; i < 3; i++)
+            {
+                DataRow dr = dt.NewRow();
+                string[] values = lines[i].Split(new char[] { ',' });
+
+                for (int j = 0; j < values.Count() && j < columns.Count(); j++)
+                    dr[j] = values[j];
+
+                dt.Rows.Add(dr);
+            }
+            ////Atualiza os dados da bateria
+            txt_SerialBatLaudoBat.Text = dt.Rows[1]["Unique ID"].ToString().Trim();
+            txt_FabBatLaudoBat.Text = dt.Rows[1][" Manufacturer"].ToString().Trim();
+            txt_QuimicaLaudoBat.Text = dt.Rows[1][" Chemistry"].ToString().Trim();
+            txt_VoltsLaudoBat.Text = dt.Rows[1][" Voltage (Volts)"].ToString().Trim();
+
+        }
+
         private void frm_Main_Load(object sender, EventArgs e)
         {
-           // TODO: This line of code loads data into the 'atosDataSet.tbl_reparos' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'atosDataSet.tbl_teste_bateria' table. You can move, or remove it, as needed.
+            this.tbl_teste_bateriaTableAdapter.Fill(this.atosDataSet.tbl_teste_bateria);
+            // TODO: esta linha de código carrega dados na tabela 'atosDataSet.tbl_empresas'. Você pode movê-la ou removê-la conforme necessário.
+            this.tbl_empresasTableAdapter.Fill(this.atosDataSet.tbl_empresas);
+            // TODO: This line of code loads data into the 'atosDataSet.tbl_reparos' table. You can move, or remove it, as needed.
             this.tbl_reparosTableAdapter.Fill(this.atosDataSet.tbl_reparos);
             txt_ValorReqPeca.Text = "R$" + cbo_ValorReqPeca.SelectedValue.ToString() + ",00";
         }
@@ -470,19 +546,6 @@ namespace FormulariosAtos
         {
             chk_DockstationRoll.Enabled =       true;
             chk_DockstationRoll.Checked =       false;
-
-            //Desabilita os campos de monitor
-            lbl_FabMonitorRoll.Enabled =        false;
-            lbl_ModeloMonitorRoll.Enabled =     false;
-            lbl_SerialMonitorRoll.Enabled =     false;
-            lbl_EtiquetaMonitorRoll.Enabled =   false;
-
-            txt_FabMonitorRoll.Enabled =        false;
-            txt_ModeloMonitorRoll.Enabled =     false;
-            txt_SerialMonitorRoll.Enabled =     false;
-            txt_EtiquetaMonitorRoll.Enabled =   false;
-
-            txt_EtiquetaCompRoll.Text = "BSWL";
         }
 
         private void rdo_DesktopRoll_CheckedChanged(object sender, EventArgs e)
@@ -490,24 +553,44 @@ namespace FormulariosAtos
             chk_DockstationRoll.Enabled =       false;
             txt_EtiquetaDockCompRoll.Enabled =  false;
             lbl_EtiquetaDockCompRoll.Enabled =  false;
-
-            //Habilita os campos de monitor
-            lbl_FabMonitorRoll.Enabled =        true;
-            lbl_ModeloMonitorRoll.Enabled =     true;
-            lbl_SerialMonitorRoll.Enabled =     true;
-            lbl_EtiquetaMonitorRoll.Enabled =   true;
-                                                
-            txt_FabMonitorRoll.Enabled =        true;
-            txt_ModeloMonitorRoll.Enabled =     true;
-            txt_SerialMonitorRoll.Enabled =     true;
-            txt_EtiquetaMonitorRoll.Enabled =   true;
-
-            txt_EtiquetaCompRoll.Text = "BSWD";
         }
 
         private void btn_LimparRoll_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void btn_LimparRep_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void btn_LimparDev_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void btn_OpenFileLaudoBat_Click(object sender, EventArgs e)
+        {
+            // open file dialog
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            //open.Filter = "image files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                //preview_laudobat.image = new bitmap(open.filename);
+                // image file path  
+                txt_FileLocationLaudoBat.Text = open.FileName;
+
+                ImportaDadosGrafico(txt_FileLocationLaudoBat.Text);
+                ImportaDadosBateria(txt_FileLocationLaudoBat.Text);
+            }
+        }
+
+        private void btn_GerarLaudoBat_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
