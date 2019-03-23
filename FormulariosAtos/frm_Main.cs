@@ -16,6 +16,8 @@ namespace FormulariosAtos
 {
     public partial class frm_Main : Form
     {
+        public string str_extArquivo = Path.GetExtension(txt_FileLocationLaudoBat.Text);
+
         public frm_Main()
         {
             InitializeComponent();
@@ -373,8 +375,8 @@ namespace FormulariosAtos
             }
 
             //Salvar
-            myWordDoc.SaveAs2(  ref SaveAs, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
-                                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, 
+            myWordDoc.SaveAs2(ref SaveAs, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
                                 ref missing, ref missing);
             //Fechar
             myWordDoc.Close();
@@ -382,58 +384,123 @@ namespace FormulariosAtos
             MessageBox.Show("Formulário de reposição de peças gerado com sucesso!!!!");
         }
 
-        private void ImportaDadosGrafico(string caminho)
+        public void CriaLaudoBat(object filename, object SaveAs, string ArqExt)
         {
+            Word.Application wordApp = new Word.Application();
+            object missing = Missing.Value;
+            Word.Document myWordDoc = null;
+
+            if (File.Exists((string)filename))
+            {
+                object readOnly = false;
+                object isVisible = false;
+                wordApp.Visible = false;
+
+                myWordDoc = wordApp.Documents.Open(ref filename, ref missing, ref readOnly,
+                                                   ref missing, ref missing, ref missing,
+                                                   ref missing, ref missing, ref missing,
+                                                   ref missing, ref missing, ref missing,
+                                                   ref missing, ref missing, ref missing, ref missing);
+                myWordDoc.Activate();
+
+                //Preenchimento 
+                this.FindAndReplace(wordApp, "@usuarioresp", txt_AnalRespLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@etiqueta", txt_EtiquetaLaudoBat.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@modelo", txt_ModeloLaudoBat.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@numserie", txt_SerialMaqLaudoBat.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@serialbat", txt_SerialBatLaudoBat.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@data", date_DataLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@numchamado", txt_NumChamadoLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@usuarioresp", txt_UsuarioLaudoBat.Text.Trim().ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@pnusuario", txt_PnUsuLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@ramal", txt_RamalUsuLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@garantiaequip", date_GarantiaEquipLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@garantiabat", date_GarantiaBatLaudoBat.Text.Trim());
+
+
+                if (str_extArquivo == ".TXT")
+                {
+                    this.FindAndReplace(wordApp, "@evidencia", grafico_laudobat.Printing.);
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "@evidencia", txt_SetorLaudoBat.Text.Trim().ToUpper().Trim());
+                }
+                
+
+
+                this.FindAndReplace(wordApp, "@diaglaudo", txt_DiagLaudoBat.Text.Trim().ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@solulaudo", txt_SolucaoLaudoBat.Text.Trim().ToUpper().Trim());
+
+                this.FindAndReplace(wordApp, "@dataExtenso", txt_SolucaoLaudoBat.Text.Trim().ToUpper().Trim());
+            }        
+            else
+            {
+                MessageBox.Show("Arquivo não encontrado");
+            }
+
+            //Salvar
+            myWordDoc.SaveAs2(ref SaveAs, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                        ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                        ref missing, ref missing);
+            //Fechar
+            myWordDoc.Close();
+            wordApp.Quit();
+            MessageBox.Show("Formulário de reposição de peças gerado com sucesso!!!!");
+        }
+
+        private void ImportaDadosGrafico(string caminho, string tipoarquivo)
+        {            
             DataTable dt = new DataTable();
             var lines = File.ReadAllLines(caminho);
             string[] columns = null;
             Regex regex = new Regex(@"^[1-9][0-9]{0,3}$");
-            
+
             // assuming the first row contains the columns information
             if (lines.Count() > 0)
-            {                
+            {
                 columns = lines[3].Split(new char[] { ',' });
 
                 foreach (var column in columns)
-                    dt.Columns.Add(column.Trim().ToString().Replace("%",""));
-            }            
+                    dt.Columns.Add(column.Trim().ToString().Replace("%", ""));
+            }
 
             columns = lines[0].Split(new char[] { ',' });
-            
+
             // Lendo os dados
             for (int i = 4; i < lines.Count(); i++)
-            {                
+            {
                 DataRow dr = dt.NewRow();
                 string[] values = lines[i].Split(new char[] { ',' });
 
                 for (int j = 0; j < values.Count() && j < columns.Count(); j++)
                     if (j == 3)
                     {
-                        dr[j] = values[j].Replace("%","");                       
+                        dr[j] = values[j].Replace("%", "");
                     }
                     else
                     {
                         dr[j] = values[j];
                         //TimeSpan TempoBat = 
                         //txt_DuracLaudoBat.Text = sum.TotalMinutes.ToString();
-                    }               
-                dt.Rows.Add(dr);             
+                    }
+                dt.Rows.Add(dr);
             }
 
             //Exibe no gráfico
-            this.grafico_laudobat.DataSource = dt;           
+            this.grafico_laudobat.DataSource = dt;
             this.grafico_laudobat.Series["Series1"].XValueMember = "Time";
-            this.grafico_laudobat.Series["Series1"].YValueMembers = "Charge";            
+            this.grafico_laudobat.Series["Series1"].YValueMembers = "Charge";
             this.grafico_laudobat.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = true;
             this.grafico_laudobat.ChartAreas["ChartArea1"].AxisX.Interval = 4;
             //this.grafico_laudobat.ChartAreas["ChartArea1"].AxisY.Interval = 20;
             //this.grafico_laudobat.Series["Series1"].IsValueShownAsLabel = true;
             this.grafico_laudobat.DataBind();
-            this.grafico_laudobat.Show();
+            this.grafico_laudobat.Show();            
         }
 
-        private void ImportaDadosBateria(string caminho)
-        {
+        private void ImportaDadosBateria(string caminho , string tipoarquivo)
+    {           
             DataTable dt = new DataTable();
             var lines = File.ReadAllLines(caminho);
             string[] columns = null;
@@ -462,14 +529,19 @@ namespace FormulariosAtos
             txt_SerialBatLaudoBat.Text = dt.Rows[1]["Unique ID"].ToString().Trim();
             txt_FabBatLaudoBat.Text = dt.Rows[1][" Manufacturer"].ToString().Trim();
             txt_QuimicaLaudoBat.Text = dt.Rows[1][" Chemistry"].ToString().Trim();
-            txt_VoltsLaudoBat.Text = dt.Rows[1][" Voltage (Volts)"].ToString().Trim();
+            txt_VoltsLaudoBat.Text = dt.Rows[1][" Voltage (Volts)"].ToString().Trim();            
+        }
 
+        private void CarregaImagem(string arquivo)
+        {
+            // display image in picture box  
+            pic_LaudoBat.Image = new Bitmap(arquivo);
+            // image file path  
+            txt_FileLocationLaudoBat.Text = arquivo;
         }
 
         private void frm_Main_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'atosDataSet.tbl_teste_bateria' table. You can move, or remove it, as needed.
-            this.tbl_teste_bateriaTableAdapter.Fill(this.atosDataSet.tbl_teste_bateria);
+        {           
             // TODO: esta linha de código carrega dados na tabela 'atosDataSet.tbl_empresas'. Você pode movê-la ou removê-la conforme necessário.
             this.tbl_empresasTableAdapter.Fill(this.atosDataSet.tbl_empresas);
             // TODO: This line of code loads data into the 'atosDataSet.tbl_reparos' table. You can move, or remove it, as needed.
@@ -534,6 +606,12 @@ namespace FormulariosAtos
             CriaReqPecas("C:\\Documentos ATOS\\Templates\\FORMULARIO REPOSIÇÃO DE PEÇAS.DOCX", "C:\\Documentos ATOS\\FORMULARIO REPOSIÇÃO DE PEÇAS " + txt_ChamadoReqPeca.Text + ".DOCX");
         }
 
+        private void btn_GerarLaudoBat_Click(object sender, EventArgs e)
+        {
+            str_ext
+            CriaLaudoBat("C:\\Documentos ATOS\\Templates\\LAUDO TÉCNICO-BATERIA.DOCX", "C:\\Documentos ATOS\\LAUDO TÉCNICO-BATERIA " + txt_NumChamadoLaudoBat.Text + ".DOCX", );
+        }
+
         private void cbo_ValorReqPeca_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbo_ValorReqPeca.SelectedIndex != -1)
@@ -570,27 +648,40 @@ namespace FormulariosAtos
             Application.Restart();
         }
 
-        private void btn_OpenFileLaudoBat_Click(object sender, EventArgs e)
+        public void btn_OpenFileLaudoBat_Click(object sender, EventArgs e)
         {
             // open file dialog
             OpenFileDialog open = new OpenFileDialog();
-            // image filters  
-            //open.Filter = "image files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            
+            // Filtro de imagens
+            open.Filter = "Arquivos de Imagens(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp" +
+                "|Arquivos de Texto(*.txt;)|*.txt";
+
+
             if (open.ShowDialog() == DialogResult.OK)
-            {
-                // display image in picture box  
-                //preview_laudobat.image = new bitmap(open.filename);
-                // image file path  
+            {                
                 txt_FileLocationLaudoBat.Text = open.FileName;
 
-                ImportaDadosGrafico(txt_FileLocationLaudoBat.Text);
-                ImportaDadosBateria(txt_FileLocationLaudoBat.Text);
+               
+                if (str_extArquivo == ".TXT")
+                {
+                    grafico_laudobat.Visible = true;
+                    pic_LaudoBat.Visible = false;
+                    ImportaDadosGrafico(txt_FileLocationLaudoBat.Text, str_extArquivo);
+                    ImportaDadosBateria(txt_FileLocationLaudoBat.Text, str_extArquivo);
+                }
+                else if (str_extArquivo == ".JPG" || str_extArquivo == ".JPEG" || str_extArquivo == ".GIF" || str_extArquivo == ".BMP")
+                {
+                    grafico_laudobat.Visible = false;
+                    pic_LaudoBat.Visible = true;
+                    CarregaImagem(open.FileName);                
+                }
             }
-        }
+        }        
 
-        private void btn_GerarLaudoBat_Click(object sender, EventArgs e)
+        private void btn_apagaLaudoBat_Click(object sender, EventArgs e)
         {
-           
+            Application.Restart();
         }
     }
 }
