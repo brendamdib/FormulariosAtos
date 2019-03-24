@@ -16,14 +16,14 @@ namespace FormulariosAtos
 {
     public partial class frm_Main : Form
     {
-        public string str_extArquivo = Path.GetExtension(txt_FileLocationLaudoBat.Text);
+        public string str_extArquivo; 
 
         public frm_Main()
         {
             InitializeComponent();
             txt_EtiquetaCompRoll.Focus();
         }
-
+        
         private void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
             object matchCase = true;
@@ -389,7 +389,7 @@ namespace FormulariosAtos
             Word.Application wordApp = new Word.Application();
             object missing = Missing.Value;
             Word.Document myWordDoc = null;
-
+                        
             if (File.Exists((string)filename))
             {
                 object readOnly = false;
@@ -420,11 +420,11 @@ namespace FormulariosAtos
 
                 if (str_extArquivo == ".TXT")
                 {
-                    this.FindAndReplace(wordApp, "@evidencia", grafico_laudobat.Printing.);
+                    //this.FindAndReplace(wordApp, "@evidencia", grafico_laudobat.Printing.);
                 }
                 else
                 {
-                    this.FindAndReplace(wordApp, "@evidencia", txt_SetorLaudoBat.Text.Trim().ToUpper().Trim());
+                    //this.FindAndReplace(wordApp, "@evidencia", pic_LaudoBat.);
                 }
                 
 
@@ -607,9 +607,8 @@ namespace FormulariosAtos
         }
 
         private void btn_GerarLaudoBat_Click(object sender, EventArgs e)
-        {
-            str_ext
-            CriaLaudoBat("C:\\Documentos ATOS\\Templates\\LAUDO TÉCNICO-BATERIA.DOCX", "C:\\Documentos ATOS\\LAUDO TÉCNICO-BATERIA " + txt_NumChamadoLaudoBat.Text + ".DOCX", );
+        {            
+            CriaLaudoBat("C:\\Documentos ATOS\\Templates\\LAUDO TÉCNICO-BATERIA.DOCX", "C:\\Documentos ATOS\\LAUDO TÉCNICO-BATERIA " + txt_NumChamadoLaudoBat.Text + ".DOCX", str_extArquivo);
         }
 
         private void cbo_ValorReqPeca_SelectedIndexChanged(object sender, EventArgs e)
@@ -661,8 +660,8 @@ namespace FormulariosAtos
             if (open.ShowDialog() == DialogResult.OK)
             {                
                 txt_FileLocationLaudoBat.Text = open.FileName;
+                str_extArquivo = Path.GetExtension(txt_FileLocationLaudoBat.Text);
 
-               
                 if (str_extArquivo == ".TXT")
                 {
                     grafico_laudobat.Visible = true;
