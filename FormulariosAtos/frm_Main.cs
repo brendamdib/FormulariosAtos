@@ -53,7 +53,7 @@ namespace FormulariosAtos
                ref matchControl);
         }
 
-        private void CriaFichaInventario(object filename, object SaveAs)
+        public void CriaFichaInventario(object filename, object SaveAs)
         {
             Word.Application wordApp = new Word.Application();
             object missing = Missing.Value;
@@ -456,13 +456,18 @@ namespace FormulariosAtos
             string[] columns = null;
             Regex regex = new Regex(@"^[1-9][0-9]{0,3}$");
 
+            Classes.DataBaseClass ClasseDB = new Classes.DataBaseClass();
+            ClasseDB.ConectaAccess();
+            ClasseDB.ExecutaQuery("Delete from tbl_laudobat");
+
             // assuming the first row contains the columns information
             if (lines.Count() > 0)
             {
                 columns = lines[3].Split(new char[] { ',' });
 
-                foreach (var column in columns)
-                    dt.Columns.Add(column.Trim().ToString().Replace("%", ""));
+               foreach (var column in columns)
+                    if (dt.Columns.Count < 4)
+                        dt.Columns.Add(column.Trim().ToString().Replace("%", ""));                               
             }
 
             columns = lines[0].Split(new char[] { ',' });
@@ -473,19 +478,23 @@ namespace FormulariosAtos
                 DataRow dr = dt.NewRow();
                 string[] values = lines[i].Split(new char[] { ',' });
 
-                for (int j = 0; j < values.Count() && j < columns.Count(); j++)
+                for (int j = 0; j < values.Count() && j < columns.Count(); j++)                
                     if (j == 3)
                     {
-                        dr[j] = values[j].Replace("%", "");
+                        dr[j] = values[j].Replace("%", "");                        
                     }
                     else
                     {
-                        dr[j] = values[j];
+                        dr[j] = values[j];                       
                         //TimeSpan TempoBat = 
                         //txt_DuracLaudoBat.Text = sum.TotalMinutes.ToString();
                     }
-                dt.Rows.Add(dr);
+                dt.Rows.Add(dr);                
+                ClasseDB.ExecutaQuery("Insert Into tbl_laudobat (datateste_laudobat, horateste_laudobat, status_laudobat, percentual_laudobat) values ('" + values[0].ToString() + "', '" + values[1].ToString() + "', '" + values[2].ToString() + "'," + values[3].Replace("%", ")"));
             }
+
+            ClasseDB.FechaConexao();
+                      
 
             //Exibe no gráfico
             this.grafico_laudobat.DataSource = dt;
@@ -546,7 +555,7 @@ namespace FormulariosAtos
             this.tbl_empresasTableAdapter.Fill(this.atosDataSet.tbl_empresas);
             // TODO: This line of code loads data into the 'atosDataSet.tbl_reparos' table. You can move, or remove it, as needed.
             this.tbl_reparosTableAdapter.Fill(this.atosDataSet.tbl_reparos);
-            txt_ValorReqPeca.Text = "R$" + cbo_ValorReqPeca.SelectedValue.ToString() + ",00";
+            txt_ValorReqPeca.Text = "R$" + cbo_ValorReqPeca.SelectedValue.ToString() + ",00";            
         }
 
         private void chk_DockstationRoll_CheckedChanged(object sender, EventArgs e)
@@ -668,6 +677,7 @@ namespace FormulariosAtos
                     pic_LaudoBat.Visible = false;
                     ImportaDadosGrafico(txt_FileLocationLaudoBat.Text, str_extArquivo);
                     ImportaDadosBateria(txt_FileLocationLaudoBat.Text, str_extArquivo);
+                    
                 }
                 else if (str_extArquivo == ".JPG" || str_extArquivo == ".JPEG" || str_extArquivo == ".GIF" || str_extArquivo == ".BMP")
                 {

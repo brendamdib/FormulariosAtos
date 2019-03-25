@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tab_Formularios = new System.Windows.Forms.TabControl();
             this.tab_RollOut = new System.Windows.Forms.TabPage();
             this.txt_SetorTercRoll = new System.Windows.Forms.TextBox();
@@ -209,6 +209,7 @@
             this.btn_LimparRep = new System.Windows.Forms.Button();
             this.btn_GerarReqPeca = new System.Windows.Forms.Button();
             this.tab_LaudoBat = new System.Windows.Forms.TabPage();
+            this.pic_LaudoBat = new System.Windows.Forms.PictureBox();
             this.txt_VoltsLaudoBat = new System.Windows.Forms.TextBox();
             this.lbl_VoltsLaudoBat = new System.Windows.Forms.Label();
             this.txt_QuimicaLaudoBat = new System.Windows.Forms.TextBox();
@@ -267,8 +268,8 @@
             this.tbl_reparosTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_reparosTableAdapter();
             this.tbl_empresasTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_empresasTableAdapter();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.tbltestebateriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pic_LaudoBat = new System.Windows.Forms.PictureBox();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.LaudoBat1 = new FormulariosAtos.Reports.LaudoBat();
             this.tab_Formularios.SuspendLayout();
             this.tab_RollOut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource)).BeginInit();
@@ -279,9 +280,8 @@
             this.tab_RepPeca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).BeginInit();
             this.tab_LaudoBat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbltestebateriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LaudoBat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Formularios
@@ -2104,6 +2104,7 @@
             // 
             // tab_LaudoBat
             // 
+            this.tab_LaudoBat.Controls.Add(this.crystalReportViewer1);
             this.tab_LaudoBat.Controls.Add(this.pic_LaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_VoltsLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_VoltsLaudoBat);
@@ -2166,6 +2167,17 @@
             this.tab_LaudoBat.TabIndex = 3;
             this.tab_LaudoBat.Text = "Laudo Bateria";
             this.tab_LaudoBat.UseVisualStyleBackColor = true;
+            // 
+            // pic_LaudoBat
+            // 
+            this.pic_LaudoBat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_LaudoBat.Location = new System.Drawing.Point(514, 316);
+            this.pic_LaudoBat.Name = "pic_LaudoBat";
+            this.pic_LaudoBat.Size = new System.Drawing.Size(210, 199);
+            this.pic_LaudoBat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_LaudoBat.TabIndex = 906;
+            this.pic_LaudoBat.TabStop = false;
+            this.pic_LaudoBat.Visible = false;
             // 
             // txt_VoltsLaudoBat
             // 
@@ -2230,40 +2242,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grafico_laudobat.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             this.grafico_laudobat.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Sunken;
-            chartArea4.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea4.AxisX.MaximumAutoSize = 100F;
-            chartArea4.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea4.AxisX2.MaximumAutoSize = 100F;
-            chartArea4.AxisX2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea4.AxisY.Interval = 20D;
-            chartArea4.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea4.AxisY.MaximumAutoSize = 100F;
-            chartArea4.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea4.AxisY2.Crossing = 1.7976931348623157E+308D;
-            chartArea4.AxisY2.Interval = 20D;
-            chartArea4.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea4.AxisY2.LineWidth = 2;
-            chartArea4.AxisY2.MaximumAutoSize = 100F;
-            chartArea4.AxisY2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea4.IsSameFontSizeForAllAxes = true;
-            chartArea4.Name = "ChartArea1";
-            this.grafico_laudobat.ChartAreas.Add(chartArea4);
+            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea1.AxisX.MaximumAutoSize = 100F;
+            chartArea1.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea1.AxisX2.MaximumAutoSize = 100F;
+            chartArea1.AxisX2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea1.AxisY.Interval = 20D;
+            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY.MaximumAutoSize = 100F;
+            chartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea1.AxisY2.Crossing = 1.7976931348623157E+308D;
+            chartArea1.AxisY2.Interval = 20D;
+            chartArea1.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY2.LineWidth = 2;
+            chartArea1.AxisY2.MaximumAutoSize = 100F;
+            chartArea1.AxisY2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea1.IsSameFontSizeForAllAxes = true;
+            chartArea1.Name = "ChartArea1";
+            this.grafico_laudobat.ChartAreas.Add(chartArea1);
             this.grafico_laudobat.Location = new System.Drawing.Point(9, 316);
             this.grafico_laudobat.Margin = new System.Windows.Forms.Padding(1);
             this.grafico_laudobat.Name = "grafico_laudobat";
             this.grafico_laudobat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.MarkerSize = 10;
-            series4.Name = "Series1";
-            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.grafico_laudobat.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.MarkerSize = 10;
+            series1.Name = "Series1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.grafico_laudobat.Series.Add(series1);
             this.grafico_laudobat.Size = new System.Drawing.Size(1080, 240);
             this.grafico_laudobat.TabIndex = 898;
-            title4.Name = "Titulo";
-            title4.Text = "Autonomia de Bateria";
-            this.grafico_laudobat.Titles.Add(title4);
+            title1.Name = "Titulo";
+            title1.Text = "Autonomia de Bateria";
+            this.grafico_laudobat.Titles.Add(title1);
             this.grafico_laudobat.Visible = false;
             // 
             // label43
@@ -2744,21 +2756,16 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // tbltestebateriaBindingSource
+            // crystalReportViewer1
             // 
-            this.tbltestebateriaBindingSource.DataMember = "tbl_teste_bateria";
-            this.tbltestebateriaBindingSource.DataSource = this.atosDataSet;
-            // 
-            // pic_LaudoBat
-            // 
-            this.pic_LaudoBat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_LaudoBat.Location = new System.Drawing.Point(514, 316);
-            this.pic_LaudoBat.Name = "pic_LaudoBat";
-            this.pic_LaudoBat.Size = new System.Drawing.Size(210, 199);
-            this.pic_LaudoBat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_LaudoBat.TabIndex = 906;
-            this.pic_LaudoBat.TabStop = false;
-            this.pic_LaudoBat.Visible = false;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(49, 316);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.LaudoBat1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(938, 327);
+            this.crystalReportViewer1.TabIndex = 907;
             // 
             // frm_Main
             // 
@@ -2787,8 +2794,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).EndInit();
             this.tab_LaudoBat.ResumeLayout(false);
             this.tab_LaudoBat.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).EndInit();            
             ((System.ComponentModel.ISupportInitialize)(this.pic_LaudoBat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3029,8 +3036,9 @@
         private System.Windows.Forms.Label lbl_QuimicaLaudoBat;
         private System.Windows.Forms.TextBox txt_FabBatLaudoBat;
         private System.Windows.Forms.Label lbl_FabBatLaudoBat;
-        private System.Windows.Forms.BindingSource tbltestebateriaBindingSource;
         private System.Windows.Forms.PictureBox pic_LaudoBat;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private Reports.LaudoBat LaudoBat1;
     }
 }
 
