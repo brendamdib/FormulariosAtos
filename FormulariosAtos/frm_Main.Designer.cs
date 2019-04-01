@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tab_Formularios = new System.Windows.Forms.TabControl();
             this.tab_RollOut = new System.Windows.Forms.TabPage();
             this.txt_SetorTercRoll = new System.Windows.Forms.TextBox();
@@ -146,7 +146,7 @@
             this.txt_Serial4Dev = new System.Windows.Forms.TextBox();
             this.txt_PnRespEquipDev = new System.Windows.Forms.MaskedTextBox();
             this.txt_AnalRespDev = new System.Windows.Forms.MaskedTextBox();
-            this.txt_NomeRespEquipDev = new System.Windows.Forms.MaskedTextBox();
+            this.txt_UsuRespEquipDev = new System.Windows.Forms.MaskedTextBox();
             this.lbl_NomeRespEquipDev = new System.Windows.Forms.Label();
             this.lbl_AnalRespDev = new System.Windows.Forms.Label();
             this.lbl_Serial4Dev = new System.Windows.Forms.Label();
@@ -204,7 +204,7 @@
             this.txt_GerenteReqPeca = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_UsuarioReqPeca = new System.Windows.Forms.TextBox();
+            this.txt_UsuReqPeca = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_LimparRep = new System.Windows.Forms.Button();
             this.btn_GerarReqPeca = new System.Windows.Forms.Button();
@@ -235,17 +235,17 @@
             this.chk_BatSemProblemaLaudoBat = new System.Windows.Forms.CheckBox();
             this.txt_SerialBatLaudoBat = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.cbo_EmpresaLaudoBat = new System.Windows.Forms.ComboBox();
-            this.date_GarantiaEquipLaudoBat = new System.Windows.Forms.DateTimePicker();
+            this.cbo_LocalLaudoBat = new System.Windows.Forms.ComboBox();
+            this.tblempresasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txt_GarantiaEquipLaudoBat = new System.Windows.Forms.DateTimePicker();
             this.lbl_GarantiaBatLaudoBat = new System.Windows.Forms.Label();
             this.lbl_ProblemaApresLaudoBat = new System.Windows.Forms.Label();
             this.lbl_GarantiaEquipLaudoBat = new System.Windows.Forms.Label();
             this.txt_SerialMaqLaudoBat = new System.Windows.Forms.TextBox();
-            this.date_GarantiaBatLaudoBat = new System.Windows.Forms.DateTimePicker();
+            this.txt_GarantiaBatLaudoBat = new System.Windows.Forms.DateTimePicker();
             this.lbl_SerialMaqLaudoBat = new System.Windows.Forms.Label();
             this.txt_ModeloLaudoBat = new System.Windows.Forms.TextBox();
             this.lbl_ModeloLaudoBat = new System.Windows.Forms.Label();
-            this.txt_PnUsuLaudoBat = new System.Windows.Forms.MaskedTextBox();
             this.lbl_RamalUsuLaudoBat = new System.Windows.Forms.Label();
             this.txt_RamalUsuLaudoBat = new System.Windows.Forms.MaskedTextBox();
             this.txt_EtiquetaLaudoBat = new System.Windows.Forms.TextBox();
@@ -255,21 +255,18 @@
             this.lbl_EmpresaLaudoBat = new System.Windows.Forms.Label();
             this.txt_DiagLaudoBat = new System.Windows.Forms.TextBox();
             this.lbl_DiagLaudoBat = new System.Windows.Forms.Label();
-            this.lbl_PnUsuLaudoBat = new System.Windows.Forms.Label();
-            this.txt_UsuarioLaudoBat = new System.Windows.Forms.TextBox();
+            this.txt_UsuRespLaudoBat = new System.Windows.Forms.TextBox();
             this.lbl_NomeUsuLaudoBat = new System.Windows.Forms.Label();
             this.btn_apagaLaudoBat = new System.Windows.Forms.Button();
             this.btn_GerarLaudoBat = new System.Windows.Forms.Button();
             this.lbl_DataLaudoBat = new System.Windows.Forms.Label();
-            this.date_DataLaudoBat = new System.Windows.Forms.DateTimePicker();
+            this.txt_DataLaudoBat = new System.Windows.Forms.DateTimePicker();
             this.txt_NumChamadoLaudoBat = new System.Windows.Forms.MaskedTextBox();
             this.lbl_NumChamadoLaudoBat = new System.Windows.Forms.Label();
             this.tab_LaudoTecnico = new System.Windows.Forms.TabPage();
             this.tbl_reparosTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_reparosTableAdapter();
             this.tbl_empresasTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_empresasTableAdapter();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.LaudoBat1 = new FormulariosAtos.Reports.LaudoBat();
             this.tab_Formularios.SuspendLayout();
             this.tab_RollOut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource)).BeginInit();
@@ -282,6 +279,7 @@
             this.tab_LaudoBat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LaudoBat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Formularios
@@ -1167,7 +1165,7 @@
             this.tab_RetiraEquip.Controls.Add(this.txt_Serial4Dev);
             this.tab_RetiraEquip.Controls.Add(this.txt_PnRespEquipDev);
             this.tab_RetiraEquip.Controls.Add(this.txt_AnalRespDev);
-            this.tab_RetiraEquip.Controls.Add(this.txt_NomeRespEquipDev);
+            this.tab_RetiraEquip.Controls.Add(this.txt_UsuRespEquipDev);
             this.tab_RetiraEquip.Controls.Add(this.lbl_NomeRespEquipDev);
             this.tab_RetiraEquip.Controls.Add(this.lbl_AnalRespDev);
             this.tab_RetiraEquip.Controls.Add(this.lbl_Serial4Dev);
@@ -1477,13 +1475,13 @@
             this.txt_AnalRespDev.Size = new System.Drawing.Size(353, 20);
             this.txt_AnalRespDev.TabIndex = 29;
             // 
-            // txt_NomeRespEquipDev
+            // txt_UsuRespEquipDev
             // 
-            this.txt_NomeRespEquipDev.Location = new System.Drawing.Point(534, 130);
-            this.txt_NomeRespEquipDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.txt_NomeRespEquipDev.Name = "txt_NomeRespEquipDev";
-            this.txt_NomeRespEquipDev.Size = new System.Drawing.Size(316, 20);
-            this.txt_NomeRespEquipDev.TabIndex = 16;
+            this.txt_UsuRespEquipDev.Location = new System.Drawing.Point(534, 130);
+            this.txt_UsuRespEquipDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
+            this.txt_UsuRespEquipDev.Name = "txt_UsuRespEquipDev";
+            this.txt_UsuRespEquipDev.Size = new System.Drawing.Size(316, 20);
+            this.txt_UsuRespEquipDev.TabIndex = 16;
             // 
             // lbl_NomeRespEquipDev
             // 
@@ -1725,7 +1723,7 @@
             this.tab_RepPeca.Controls.Add(this.txt_GerenteReqPeca);
             this.tab_RepPeca.Controls.Add(this.label6);
             this.tab_RepPeca.Controls.Add(this.label7);
-            this.tab_RepPeca.Controls.Add(this.txt_UsuarioReqPeca);
+            this.tab_RepPeca.Controls.Add(this.txt_UsuReqPeca);
             this.tab_RepPeca.Controls.Add(this.label8);
             this.tab_RepPeca.Controls.Add(this.btn_LimparRep);
             this.tab_RepPeca.Controls.Add(this.btn_GerarReqPeca);
@@ -2058,14 +2056,14 @@
             this.label7.TabIndex = 819;
             this.label7.Text = "PN Usuário";
             // 
-            // txt_UsuarioReqPeca
+            // txt_UsuReqPeca
             // 
-            this.txt_UsuarioReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_UsuarioReqPeca.Location = new System.Drawing.Point(65, 58);
-            this.txt_UsuarioReqPeca.MaxLength = 90;
-            this.txt_UsuarioReqPeca.Name = "txt_UsuarioReqPeca";
-            this.txt_UsuarioReqPeca.Size = new System.Drawing.Size(356, 20);
-            this.txt_UsuarioReqPeca.TabIndex = 820;
+            this.txt_UsuReqPeca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_UsuReqPeca.Location = new System.Drawing.Point(65, 58);
+            this.txt_UsuReqPeca.MaxLength = 90;
+            this.txt_UsuReqPeca.Name = "txt_UsuReqPeca";
+            this.txt_UsuReqPeca.Size = new System.Drawing.Size(356, 20);
+            this.txt_UsuReqPeca.TabIndex = 820;
             // 
             // label8
             // 
@@ -2104,7 +2102,6 @@
             // 
             // tab_LaudoBat
             // 
-            this.tab_LaudoBat.Controls.Add(this.crystalReportViewer1);
             this.tab_LaudoBat.Controls.Add(this.pic_LaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_VoltsLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_VoltsLaudoBat);
@@ -2131,17 +2128,16 @@
             this.tab_LaudoBat.Controls.Add(this.chk_BatSemProblemaLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_SerialBatLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.label47);
-            this.tab_LaudoBat.Controls.Add(this.cbo_EmpresaLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.date_GarantiaEquipLaudoBat);
+            this.tab_LaudoBat.Controls.Add(this.cbo_LocalLaudoBat);
+            this.tab_LaudoBat.Controls.Add(this.txt_GarantiaEquipLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_GarantiaBatLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_ProblemaApresLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_GarantiaEquipLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_SerialMaqLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.date_GarantiaBatLaudoBat);
+            this.tab_LaudoBat.Controls.Add(this.txt_GarantiaBatLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_SerialMaqLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_ModeloLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_ModeloLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.txt_PnUsuLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_RamalUsuLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_RamalUsuLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_EtiquetaLaudoBat);
@@ -2151,13 +2147,12 @@
             this.tab_LaudoBat.Controls.Add(this.lbl_EmpresaLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_DiagLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_DiagLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.lbl_PnUsuLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.txt_UsuarioLaudoBat);
+            this.tab_LaudoBat.Controls.Add(this.txt_UsuRespLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_NomeUsuLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.btn_apagaLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.btn_GerarLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_DataLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.date_DataLaudoBat);
+            this.tab_LaudoBat.Controls.Add(this.txt_DataLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_NumChamadoLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_NumChamadoLaudoBat);
             this.tab_LaudoBat.Location = new System.Drawing.Point(4, 22);
@@ -2182,11 +2177,13 @@
             // txt_VoltsLaudoBat
             // 
             this.txt_VoltsLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_VoltsLaudoBat.Enabled = false;
             this.txt_VoltsLaudoBat.Location = new System.Drawing.Point(804, 147);
             this.txt_VoltsLaudoBat.MaxLength = 8;
             this.txt_VoltsLaudoBat.Name = "txt_VoltsLaudoBat";
+            this.txt_VoltsLaudoBat.ReadOnly = true;
             this.txt_VoltsLaudoBat.Size = new System.Drawing.Size(65, 20);
-            this.txt_VoltsLaudoBat.TabIndex = 905;
+            this.txt_VoltsLaudoBat.TabIndex = 24;
             this.txt_VoltsLaudoBat.WordWrap = false;
             // 
             // lbl_VoltsLaudoBat
@@ -2201,11 +2198,13 @@
             // txt_QuimicaLaudoBat
             // 
             this.txt_QuimicaLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_QuimicaLaudoBat.Enabled = false;
             this.txt_QuimicaLaudoBat.Location = new System.Drawing.Point(661, 147);
             this.txt_QuimicaLaudoBat.MaxLength = 8;
             this.txt_QuimicaLaudoBat.Name = "txt_QuimicaLaudoBat";
+            this.txt_QuimicaLaudoBat.ReadOnly = true;
             this.txt_QuimicaLaudoBat.Size = new System.Drawing.Size(101, 20);
-            this.txt_QuimicaLaudoBat.TabIndex = 903;
+            this.txt_QuimicaLaudoBat.TabIndex = 23;
             this.txt_QuimicaLaudoBat.WordWrap = false;
             // 
             // lbl_QuimicaLaudoBat
@@ -2220,11 +2219,13 @@
             // txt_FabBatLaudoBat
             // 
             this.txt_FabBatLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_FabBatLaudoBat.Enabled = false;
             this.txt_FabBatLaudoBat.Location = new System.Drawing.Point(514, 146);
             this.txt_FabBatLaudoBat.MaxLength = 8;
             this.txt_FabBatLaudoBat.Name = "txt_FabBatLaudoBat";
+            this.txt_FabBatLaudoBat.ReadOnly = true;
             this.txt_FabBatLaudoBat.Size = new System.Drawing.Size(70, 20);
-            this.txt_FabBatLaudoBat.TabIndex = 901;
+            this.txt_FabBatLaudoBat.TabIndex = 22;
             this.txt_FabBatLaudoBat.WordWrap = false;
             // 
             // lbl_FabBatLaudoBat
@@ -2242,46 +2243,46 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grafico_laudobat.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             this.grafico_laudobat.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Sunken;
-            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea1.AxisX.MaximumAutoSize = 100F;
-            chartArea1.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea1.AxisX2.MaximumAutoSize = 100F;
-            chartArea1.AxisX2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea1.AxisY.Interval = 20D;
-            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisY.MaximumAutoSize = 100F;
-            chartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea1.AxisY2.Crossing = 1.7976931348623157E+308D;
-            chartArea1.AxisY2.Interval = 20D;
-            chartArea1.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisY2.LineWidth = 2;
-            chartArea1.AxisY2.MaximumAutoSize = 100F;
-            chartArea1.AxisY2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea1.IsSameFontSizeForAllAxes = true;
-            chartArea1.Name = "ChartArea1";
-            this.grafico_laudobat.ChartAreas.Add(chartArea1);
+            chartArea2.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea2.AxisX.MaximumAutoSize = 100F;
+            chartArea2.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea2.AxisX2.MaximumAutoSize = 100F;
+            chartArea2.AxisX2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea2.AxisY.Interval = 20D;
+            chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.AxisY.MaximumAutoSize = 100F;
+            chartArea2.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea2.AxisY2.Crossing = 1.7976931348623157E+308D;
+            chartArea2.AxisY2.Interval = 20D;
+            chartArea2.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.AxisY2.LineWidth = 2;
+            chartArea2.AxisY2.MaximumAutoSize = 100F;
+            chartArea2.AxisY2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea2.IsSameFontSizeForAllAxes = true;
+            chartArea2.Name = "ChartArea1";
+            this.grafico_laudobat.ChartAreas.Add(chartArea2);
             this.grafico_laudobat.Location = new System.Drawing.Point(9, 316);
             this.grafico_laudobat.Margin = new System.Windows.Forms.Padding(1);
             this.grafico_laudobat.Name = "grafico_laudobat";
             this.grafico_laudobat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.MarkerSize = 10;
-            series1.Name = "Series1";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.grafico_laudobat.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.MarkerSize = 10;
+            series2.Name = "Series1";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.grafico_laudobat.Series.Add(series2);
             this.grafico_laudobat.Size = new System.Drawing.Size(1080, 240);
             this.grafico_laudobat.TabIndex = 898;
-            title1.Name = "Titulo";
-            title1.Text = "Autonomia de Bateria";
-            this.grafico_laudobat.Titles.Add(title1);
+            title2.Name = "Titulo";
+            title2.Text = "Autonomia de Bateria";
+            this.grafico_laudobat.Titles.Add(title2);
             this.grafico_laudobat.Visible = false;
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(431, 293);
+            this.label43.Location = new System.Drawing.Point(15, 268);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(62, 13);
             this.label43.TabIndex = 897;
@@ -2290,11 +2291,11 @@
             // txt_AnalRespLaudoBat
             // 
             this.txt_AnalRespLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_AnalRespLaudoBat.Location = new System.Drawing.Point(514, 290);
+            this.txt_AnalRespLaudoBat.Location = new System.Drawing.Point(96, 264);
             this.txt_AnalRespLaudoBat.MaxLength = 40;
             this.txt_AnalRespLaudoBat.Name = "txt_AnalRespLaudoBat";
             this.txt_AnalRespLaudoBat.Size = new System.Drawing.Size(355, 20);
-            this.txt_AnalRespLaudoBat.TabIndex = 896;
+            this.txt_AnalRespLaudoBat.TabIndex = 18;
             this.txt_AnalRespLaudoBat.WordWrap = false;
             // 
             // txt_SolucaoLaudoBat
@@ -2305,7 +2306,7 @@
             this.txt_SolucaoLaudoBat.Multiline = true;
             this.txt_SolucaoLaudoBat.Name = "txt_SolucaoLaudoBat";
             this.txt_SolucaoLaudoBat.Size = new System.Drawing.Size(210, 111);
-            this.txt_SolucaoLaudoBat.TabIndex = 894;
+            this.txt_SolucaoLaudoBat.TabIndex = 26;
             // 
             // lbl_SolucaoLaudoBat
             // 
@@ -2346,36 +2347,36 @@
             this.txt_FileLocationLaudoBat.MaxLength = 8;
             this.txt_FileLocationLaudoBat.Name = "txt_FileLocationLaudoBat";
             this.txt_FileLocationLaudoBat.Size = new System.Drawing.Size(152, 20);
-            this.txt_FileLocationLaudoBat.TabIndex = 890;
+            this.txt_FileLocationLaudoBat.TabIndex = 19;
             this.txt_FileLocationLaudoBat.WordWrap = false;
             // 
             // chk_BateriaCargaInsufLaudoBat
             // 
             this.chk_BateriaCargaInsufLaudoBat.AutoSize = true;
-            this.chk_BateriaCargaInsufLaudoBat.Location = new System.Drawing.Point(147, 264);
+            this.chk_BateriaCargaInsufLaudoBat.Location = new System.Drawing.Point(144, 231);
             this.chk_BateriaCargaInsufLaudoBat.Name = "chk_BateriaCargaInsufLaudoBat";
             this.chk_BateriaCargaInsufLaudoBat.Size = new System.Drawing.Size(198, 17);
-            this.chk_BateriaCargaInsufLaudoBat.TabIndex = 889;
+            this.chk_BateriaCargaInsufLaudoBat.TabIndex = 17;
             this.chk_BateriaCargaInsufLaudoBat.Text = "Bateria não mantém carga suficiente";
             this.chk_BateriaCargaInsufLaudoBat.UseVisualStyleBackColor = true;
             // 
             // chk_BatCondenadaLaudoBat
             // 
             this.chk_BatCondenadaLaudoBat.AutoSize = true;
-            this.chk_BatCondenadaLaudoBat.Location = new System.Drawing.Point(147, 241);
+            this.chk_BatCondenadaLaudoBat.Location = new System.Drawing.Point(144, 208);
             this.chk_BatCondenadaLaudoBat.Name = "chk_BatCondenadaLaudoBat";
             this.chk_BatCondenadaLaudoBat.Size = new System.Drawing.Size(211, 17);
-            this.chk_BatCondenadaLaudoBat.TabIndex = 888;
+            this.chk_BatCondenadaLaudoBat.TabIndex = 16;
             this.chk_BatCondenadaLaudoBat.Text = "Bateria chegou ao final de sua vida últil";
             this.chk_BatCondenadaLaudoBat.UseVisualStyleBackColor = true;
             // 
             // rdo_TestePsaLaudoBat
             // 
             this.rdo_TestePsaLaudoBat.AutoSize = true;
-            this.rdo_TestePsaLaudoBat.Location = new System.Drawing.Point(126, 172);
+            this.rdo_TestePsaLaudoBat.Location = new System.Drawing.Point(123, 139);
             this.rdo_TestePsaLaudoBat.Name = "rdo_TestePsaLaudoBat";
             this.rdo_TestePsaLaudoBat.Size = new System.Drawing.Size(266, 17);
-            this.rdo_TestePsaLaudoBat.TabIndex = 887;
+            this.rdo_TestePsaLaudoBat.TabIndex = 13;
             this.rdo_TestePsaLaudoBat.TabStop = true;
             this.rdo_TestePsaLaudoBat.Text = "Teste de Bateria usando PSA (Diagnóstico da Dell)";
             this.rdo_TestePsaLaudoBat.UseVisualStyleBackColor = true;
@@ -2383,10 +2384,10 @@
             // rdo_MantemCargaLaudoBat
             // 
             this.rdo_MantemCargaLaudoBat.AutoSize = true;
-            this.rdo_MantemCargaLaudoBat.Location = new System.Drawing.Point(126, 149);
+            this.rdo_MantemCargaLaudoBat.Location = new System.Drawing.Point(123, 116);
             this.rdo_MantemCargaLaudoBat.Name = "rdo_MantemCargaLaudoBat";
             this.rdo_MantemCargaLaudoBat.Size = new System.Drawing.Size(143, 17);
-            this.rdo_MantemCargaLaudoBat.TabIndex = 886;
+            this.rdo_MantemCargaLaudoBat.TabIndex = 11;
             this.rdo_MantemCargaLaudoBat.TabStop = true;
             this.rdo_MantemCargaLaudoBat.Text = "Mantém carga - Informar ";
             this.rdo_MantemCargaLaudoBat.UseVisualStyleBackColor = true;
@@ -2394,10 +2395,10 @@
             // rdo_SemCargaLaudoBat
             // 
             this.rdo_SemCargaLaudoBat.AutoSize = true;
-            this.rdo_SemCargaLaudoBat.Location = new System.Drawing.Point(126, 127);
+            this.rdo_SemCargaLaudoBat.Location = new System.Drawing.Point(123, 94);
             this.rdo_SemCargaLaudoBat.Name = "rdo_SemCargaLaudoBat";
             this.rdo_SemCargaLaudoBat.Size = new System.Drawing.Size(147, 17);
-            this.rdo_SemCargaLaudoBat.TabIndex = 885;
+            this.rdo_SemCargaLaudoBat.TabIndex = 10;
             this.rdo_SemCargaLaudoBat.TabStop = true;
             this.rdo_SemCargaLaudoBat.Text = "Não segura carga alguma";
             this.rdo_SemCargaLaudoBat.UseVisualStyleBackColor = true;
@@ -2405,7 +2406,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(322, 151);
+            this.label31.Location = new System.Drawing.Point(319, 118);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(35, 13);
             this.label31.TabIndex = 883;
@@ -2413,30 +2414,31 @@
             // 
             // txt_DuracaoBatLaudoBat
             // 
-            this.txt_DuracaoBatLaudoBat.Location = new System.Drawing.Point(274, 148);
+            this.txt_DuracaoBatLaudoBat.Location = new System.Drawing.Point(271, 115);
             this.txt_DuracaoBatLaudoBat.Mask = "00:00";
             this.txt_DuracaoBatLaudoBat.Name = "txt_DuracaoBatLaudoBat";
             this.txt_DuracaoBatLaudoBat.Size = new System.Drawing.Size(42, 20);
-            this.txt_DuracaoBatLaudoBat.TabIndex = 882;
+            this.txt_DuracaoBatLaudoBat.TabIndex = 12;
+            this.txt_DuracaoBatLaudoBat.Text = "0000";
             this.txt_DuracaoBatLaudoBat.ValidatingType = typeof(System.DateTime);
             // 
             // chk_BatNaoLocalizadaLaudoBat
             // 
             this.chk_BatNaoLocalizadaLaudoBat.AutoSize = true;
-            this.chk_BatNaoLocalizadaLaudoBat.Location = new System.Drawing.Point(147, 218);
+            this.chk_BatNaoLocalizadaLaudoBat.Location = new System.Drawing.Point(144, 185);
             this.chk_BatNaoLocalizadaLaudoBat.Name = "chk_BatNaoLocalizadaLaudoBat";
             this.chk_BatNaoLocalizadaLaudoBat.Size = new System.Drawing.Size(263, 17);
-            this.chk_BatNaoLocalizadaLaudoBat.TabIndex = 881;
+            this.chk_BatNaoLocalizadaLaudoBat.TabIndex = 15;
             this.chk_BatNaoLocalizadaLaudoBat.Text = "Bateria não localizada usando o diagnóstico (N/A)";
             this.chk_BatNaoLocalizadaLaudoBat.UseVisualStyleBackColor = true;
             // 
             // chk_BatSemProblemaLaudoBat
             // 
             this.chk_BatSemProblemaLaudoBat.AutoSize = true;
-            this.chk_BatSemProblemaLaudoBat.Location = new System.Drawing.Point(147, 195);
+            this.chk_BatSemProblemaLaudoBat.Location = new System.Drawing.Point(144, 162);
             this.chk_BatSemProblemaLaudoBat.Name = "chk_BatSemProblemaLaudoBat";
             this.chk_BatSemProblemaLaudoBat.Size = new System.Drawing.Size(190, 17);
-            this.chk_BatSemProblemaLaudoBat.TabIndex = 880;
+            this.chk_BatSemProblemaLaudoBat.TabIndex = 14;
             this.chk_BatSemProblemaLaudoBat.Text = "Bateria não apresentou problemas ";
             this.chk_BatSemProblemaLaudoBat.UseVisualStyleBackColor = true;
             // 
@@ -2447,7 +2449,7 @@
             this.txt_SerialBatLaudoBat.MaxLength = 8;
             this.txt_SerialBatLaudoBat.Name = "txt_SerialBatLaudoBat";
             this.txt_SerialBatLaudoBat.Size = new System.Drawing.Size(152, 20);
-            this.txt_SerialBatLaudoBat.TabIndex = 879;
+            this.txt_SerialBatLaudoBat.TabIndex = 20;
             this.txt_SerialBatLaudoBat.WordWrap = false;
             // 
             // label47
@@ -2459,26 +2461,31 @@
             this.label47.TabIndex = 878;
             this.label47.Text = "Serial Bateria:";
             // 
-            // cbo_EmpresaLaudoBat
+            // cbo_LocalLaudoBat
             // 
-            this.cbo_EmpresaLaudoBat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbo_EmpresaLaudoBat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbo_EmpresaLaudoBat.DataSource = this.tblempresasBindingSource;
-            this.cbo_EmpresaLaudoBat.DisplayMember = "nome_empresa";
-            this.cbo_EmpresaLaudoBat.FormattingEnabled = true;
-            this.cbo_EmpresaLaudoBat.Location = new System.Drawing.Point(69, 68);
-            this.cbo_EmpresaLaudoBat.Name = "cbo_EmpresaLaudoBat";
-            this.cbo_EmpresaLaudoBat.Size = new System.Drawing.Size(355, 21);
-            this.cbo_EmpresaLaudoBat.TabIndex = 876;
-            this.cbo_EmpresaLaudoBat.ValueMember = "id_empresa";
+            this.cbo_LocalLaudoBat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_LocalLaudoBat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbo_LocalLaudoBat.DataSource = this.tblempresasBindingSource1;
+            this.cbo_LocalLaudoBat.DisplayMember = "nome_empresa";
+            this.cbo_LocalLaudoBat.FormattingEnabled = true;
+            this.cbo_LocalLaudoBat.Location = new System.Drawing.Point(779, 42);
+            this.cbo_LocalLaudoBat.Name = "cbo_LocalLaudoBat";
+            this.cbo_LocalLaudoBat.Size = new System.Drawing.Size(229, 21);
+            this.cbo_LocalLaudoBat.TabIndex = 5;
+            this.cbo_LocalLaudoBat.ValueMember = "cidade_empresa";
             // 
-            // date_GarantiaEquipLaudoBat
+            // tblempresasBindingSource1
             // 
-            this.date_GarantiaEquipLaudoBat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_GarantiaEquipLaudoBat.Location = new System.Drawing.Point(843, 68);
-            this.date_GarantiaEquipLaudoBat.Name = "date_GarantiaEquipLaudoBat";
-            this.date_GarantiaEquipLaudoBat.Size = new System.Drawing.Size(83, 20);
-            this.date_GarantiaEquipLaudoBat.TabIndex = 845;
+            this.tblempresasBindingSource1.DataMember = "tbl_empresas";
+            this.tblempresasBindingSource1.DataSource = this.atosDataSet;
+            // 
+            // txt_GarantiaEquipLaudoBat
+            // 
+            this.txt_GarantiaEquipLaudoBat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_GarantiaEquipLaudoBat.Location = new System.Drawing.Point(843, 68);
+            this.txt_GarantiaEquipLaudoBat.Name = "txt_GarantiaEquipLaudoBat";
+            this.txt_GarantiaEquipLaudoBat.Size = new System.Drawing.Size(83, 20);
+            this.txt_GarantiaEquipLaudoBat.TabIndex = 9;
             // 
             // lbl_GarantiaBatLaudoBat
             // 
@@ -2492,7 +2499,7 @@
             // lbl_ProblemaApresLaudoBat
             // 
             this.lbl_ProblemaApresLaudoBat.AutoSize = true;
-            this.lbl_ProblemaApresLaudoBat.Location = new System.Drawing.Point(6, 127);
+            this.lbl_ProblemaApresLaudoBat.Location = new System.Drawing.Point(3, 94);
             this.lbl_ProblemaApresLaudoBat.Name = "lbl_ProblemaApresLaudoBat";
             this.lbl_ProblemaApresLaudoBat.Size = new System.Drawing.Size(114, 13);
             this.lbl_ProblemaApresLaudoBat.TabIndex = 875;
@@ -2514,16 +2521,16 @@
             this.txt_SerialMaqLaudoBat.MaxLength = 8;
             this.txt_SerialMaqLaudoBat.Name = "txt_SerialMaqLaudoBat";
             this.txt_SerialMaqLaudoBat.Size = new System.Drawing.Size(152, 20);
-            this.txt_SerialMaqLaudoBat.TabIndex = 867;
+            this.txt_SerialMaqLaudoBat.TabIndex = 8;
             this.txt_SerialMaqLaudoBat.WordWrap = false;
             // 
-            // date_GarantiaBatLaudoBat
+            // txt_GarantiaBatLaudoBat
             // 
-            this.date_GarantiaBatLaudoBat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_GarantiaBatLaudoBat.Location = new System.Drawing.Point(843, 120);
-            this.date_GarantiaBatLaudoBat.Name = "date_GarantiaBatLaudoBat";
-            this.date_GarantiaBatLaudoBat.Size = new System.Drawing.Size(83, 20);
-            this.date_GarantiaBatLaudoBat.TabIndex = 846;
+            this.txt_GarantiaBatLaudoBat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_GarantiaBatLaudoBat.Location = new System.Drawing.Point(843, 120);
+            this.txt_GarantiaBatLaudoBat.Name = "txt_GarantiaBatLaudoBat";
+            this.txt_GarantiaBatLaudoBat.Size = new System.Drawing.Size(83, 20);
+            this.txt_GarantiaBatLaudoBat.TabIndex = 21;
             // 
             // lbl_SerialMaqLaudoBat
             // 
@@ -2537,35 +2544,26 @@
             // txt_ModeloLaudoBat
             // 
             this.txt_ModeloLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_ModeloLaudoBat.Location = new System.Drawing.Point(253, 94);
+            this.txt_ModeloLaudoBat.Location = new System.Drawing.Point(253, 68);
             this.txt_ModeloLaudoBat.MaxLength = 30;
             this.txt_ModeloLaudoBat.Name = "txt_ModeloLaudoBat";
             this.txt_ModeloLaudoBat.Size = new System.Drawing.Size(172, 20);
-            this.txt_ModeloLaudoBat.TabIndex = 866;
+            this.txt_ModeloLaudoBat.TabIndex = 7;
             this.txt_ModeloLaudoBat.WordWrap = false;
             // 
             // lbl_ModeloLaudoBat
             // 
             this.lbl_ModeloLaudoBat.AutoSize = true;
-            this.lbl_ModeloLaudoBat.Location = new System.Drawing.Point(205, 97);
+            this.lbl_ModeloLaudoBat.Location = new System.Drawing.Point(205, 71);
             this.lbl_ModeloLaudoBat.Name = "lbl_ModeloLaudoBat";
             this.lbl_ModeloLaudoBat.Size = new System.Drawing.Size(42, 13);
             this.lbl_ModeloLaudoBat.TabIndex = 873;
             this.lbl_ModeloLaudoBat.Text = "Modelo";
             // 
-            // txt_PnUsuLaudoBat
-            // 
-            this.txt_PnUsuLaudoBat.Location = new System.Drawing.Point(514, 16);
-            this.txt_PnUsuLaudoBat.Mask = "0000000000";
-            this.txt_PnUsuLaudoBat.Name = "txt_PnUsuLaudoBat";
-            this.txt_PnUsuLaudoBat.Size = new System.Drawing.Size(70, 20);
-            this.txt_PnUsuLaudoBat.TabIndex = 858;
-            this.txt_PnUsuLaudoBat.ValidatingType = typeof(int);
-            // 
             // lbl_RamalUsuLaudoBat
             // 
             this.lbl_RamalUsuLaudoBat.AutoSize = true;
-            this.lbl_RamalUsuLaudoBat.Location = new System.Drawing.Point(588, 19);
+            this.lbl_RamalUsuLaudoBat.Location = new System.Drawing.Point(431, 45);
             this.lbl_RamalUsuLaudoBat.Name = "lbl_RamalUsuLaudoBat";
             this.lbl_RamalUsuLaudoBat.Size = new System.Drawing.Size(37, 13);
             this.lbl_RamalUsuLaudoBat.TabIndex = 872;
@@ -2573,27 +2571,27 @@
             // 
             // txt_RamalUsuLaudoBat
             // 
-            this.txt_RamalUsuLaudoBat.Location = new System.Drawing.Point(631, 16);
+            this.txt_RamalUsuLaudoBat.Location = new System.Drawing.Point(514, 42);
             this.txt_RamalUsuLaudoBat.Mask = "0000";
             this.txt_RamalUsuLaudoBat.Name = "txt_RamalUsuLaudoBat";
             this.txt_RamalUsuLaudoBat.Size = new System.Drawing.Size(35, 20);
-            this.txt_RamalUsuLaudoBat.TabIndex = 859;
+            this.txt_RamalUsuLaudoBat.TabIndex = 3;
             this.txt_RamalUsuLaudoBat.ValidatingType = typeof(int);
             // 
             // txt_EtiquetaLaudoBat
             // 
             this.txt_EtiquetaLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_EtiquetaLaudoBat.Location = new System.Drawing.Point(69, 94);
+            this.txt_EtiquetaLaudoBat.Location = new System.Drawing.Point(69, 68);
             this.txt_EtiquetaLaudoBat.MaxLength = 20;
             this.txt_EtiquetaLaudoBat.Name = "txt_EtiquetaLaudoBat";
             this.txt_EtiquetaLaudoBat.Size = new System.Drawing.Size(130, 20);
-            this.txt_EtiquetaLaudoBat.TabIndex = 864;
+            this.txt_EtiquetaLaudoBat.TabIndex = 6;
             this.txt_EtiquetaLaudoBat.WordWrap = false;
             // 
             // lbl_EtiquetaLaudoBat
             // 
             this.lbl_EtiquetaLaudoBat.AutoSize = true;
-            this.lbl_EtiquetaLaudoBat.Location = new System.Drawing.Point(6, 97);
+            this.lbl_EtiquetaLaudoBat.Location = new System.Drawing.Point(6, 71);
             this.lbl_EtiquetaLaudoBat.Name = "lbl_EtiquetaLaudoBat";
             this.lbl_EtiquetaLaudoBat.Size = new System.Drawing.Size(46, 13);
             this.lbl_EtiquetaLaudoBat.TabIndex = 871;
@@ -2602,17 +2600,17 @@
             // txt_SetorLaudoBat
             // 
             this.txt_SetorLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_SetorLaudoBat.Location = new System.Drawing.Point(514, 42);
+            this.txt_SetorLaudoBat.Location = new System.Drawing.Point(593, 42);
             this.txt_SetorLaudoBat.MaxLength = 20;
             this.txt_SetorLaudoBat.Name = "txt_SetorLaudoBat";
-            this.txt_SetorLaudoBat.Size = new System.Drawing.Size(152, 20);
-            this.txt_SetorLaudoBat.TabIndex = 863;
+            this.txt_SetorLaudoBat.Size = new System.Drawing.Size(107, 20);
+            this.txt_SetorLaudoBat.TabIndex = 4;
             this.txt_SetorLaudoBat.WordWrap = false;
             // 
             // lbl_SetorLaudoBat
             // 
             this.lbl_SetorLaudoBat.AutoSize = true;
-            this.lbl_SetorLaudoBat.Location = new System.Drawing.Point(431, 45);
+            this.lbl_SetorLaudoBat.Location = new System.Drawing.Point(555, 45);
             this.lbl_SetorLaudoBat.Name = "lbl_SetorLaudoBat";
             this.lbl_SetorLaudoBat.Size = new System.Drawing.Size(32, 13);
             this.lbl_SetorLaudoBat.TabIndex = 870;
@@ -2621,7 +2619,7 @@
             // lbl_EmpresaLaudoBat
             // 
             this.lbl_EmpresaLaudoBat.AutoSize = true;
-            this.lbl_EmpresaLaudoBat.Location = new System.Drawing.Point(6, 71);
+            this.lbl_EmpresaLaudoBat.Location = new System.Drawing.Point(716, 45);
             this.lbl_EmpresaLaudoBat.Name = "lbl_EmpresaLaudoBat";
             this.lbl_EmpresaLaudoBat.Size = new System.Drawing.Size(64, 13);
             this.lbl_EmpresaLaudoBat.TabIndex = 868;
@@ -2635,7 +2633,7 @@
             this.txt_DiagLaudoBat.Multiline = true;
             this.txt_DiagLaudoBat.Name = "txt_DiagLaudoBat";
             this.txt_DiagLaudoBat.Size = new System.Drawing.Size(210, 111);
-            this.txt_DiagLaudoBat.TabIndex = 860;
+            this.txt_DiagLaudoBat.TabIndex = 25;
             // 
             // lbl_DiagLaudoBat
             // 
@@ -2646,23 +2644,14 @@
             this.lbl_DiagLaudoBat.TabIndex = 862;
             this.lbl_DiagLaudoBat.Text = "Diagnóstico";
             // 
-            // lbl_PnUsuLaudoBat
+            // txt_UsuRespLaudoBat
             // 
-            this.lbl_PnUsuLaudoBat.AutoSize = true;
-            this.lbl_PnUsuLaudoBat.Location = new System.Drawing.Point(431, 19);
-            this.lbl_PnUsuLaudoBat.Name = "lbl_PnUsuLaudoBat";
-            this.lbl_PnUsuLaudoBat.Size = new System.Drawing.Size(61, 13);
-            this.lbl_PnUsuLaudoBat.TabIndex = 856;
-            this.lbl_PnUsuLaudoBat.Text = "PN Usuário";
-            // 
-            // txt_UsuarioLaudoBat
-            // 
-            this.txt_UsuarioLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_UsuarioLaudoBat.Location = new System.Drawing.Point(69, 42);
-            this.txt_UsuarioLaudoBat.MaxLength = 90;
-            this.txt_UsuarioLaudoBat.Name = "txt_UsuarioLaudoBat";
-            this.txt_UsuarioLaudoBat.Size = new System.Drawing.Size(356, 20);
-            this.txt_UsuarioLaudoBat.TabIndex = 857;
+            this.txt_UsuRespLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_UsuRespLaudoBat.Location = new System.Drawing.Point(69, 42);
+            this.txt_UsuRespLaudoBat.MaxLength = 90;
+            this.txt_UsuRespLaudoBat.Name = "txt_UsuRespLaudoBat";
+            this.txt_UsuRespLaudoBat.Size = new System.Drawing.Size(356, 20);
+            this.txt_UsuRespLaudoBat.TabIndex = 2;
             // 
             // lbl_NomeUsuLaudoBat
             // 
@@ -2708,13 +2697,13 @@
             this.lbl_DataLaudoBat.TabIndex = 842;
             this.lbl_DataLaudoBat.Text = "Data";
             // 
-            // date_DataLaudoBat
+            // txt_DataLaudoBat
             // 
-            this.date_DataLaudoBat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_DataLaudoBat.Location = new System.Drawing.Point(342, 16);
-            this.date_DataLaudoBat.Name = "date_DataLaudoBat";
-            this.date_DataLaudoBat.Size = new System.Drawing.Size(83, 20);
-            this.date_DataLaudoBat.TabIndex = 840;
+            this.txt_DataLaudoBat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_DataLaudoBat.Location = new System.Drawing.Point(342, 16);
+            this.txt_DataLaudoBat.Name = "txt_DataLaudoBat";
+            this.txt_DataLaudoBat.Size = new System.Drawing.Size(83, 20);
+            this.txt_DataLaudoBat.TabIndex = 1;
             // 
             // txt_NumChamadoLaudoBat
             // 
@@ -2722,7 +2711,7 @@
             this.txt_NumChamadoLaudoBat.Mask = "0000000000";
             this.txt_NumChamadoLaudoBat.Name = "txt_NumChamadoLaudoBat";
             this.txt_NumChamadoLaudoBat.Size = new System.Drawing.Size(70, 20);
-            this.txt_NumChamadoLaudoBat.TabIndex = 839;
+            this.txt_NumChamadoLaudoBat.TabIndex = 0;
             this.txt_NumChamadoLaudoBat.ValidatingType = typeof(int);
             // 
             // lbl_NumChamadoLaudoBat
@@ -2756,17 +2745,6 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(49, 316);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.LaudoBat1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(938, 327);
-            this.crystalReportViewer1.TabIndex = 907;
-            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2796,6 +2774,7 @@
             this.tab_LaudoBat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LaudoBat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2867,7 +2846,7 @@
         private System.Windows.Forms.MaskedTextBox txt_RamalRespEquipDev;
         private System.Windows.Forms.Label lbl_PnRespEquipDev;
         private System.Windows.Forms.MaskedTextBox txt_PnRespEquipDev;
-        private System.Windows.Forms.MaskedTextBox txt_NomeRespEquipDev;
+        private System.Windows.Forms.MaskedTextBox txt_UsuRespEquipDev;
         private System.Windows.Forms.Label lbl_NomeRespEquipDev;
         private System.Windows.Forms.MaskedTextBox txt_ChamadoDev;
         private System.Windows.Forms.Label lbl_ChamadoDev;
@@ -2979,7 +2958,7 @@
         private System.Windows.Forms.TextBox txt_GerenteReqPeca;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_UsuarioReqPeca;
+        private System.Windows.Forms.TextBox txt_UsuReqPeca;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton rdo_TestePsaLaudoBat;
         private System.Windows.Forms.RadioButton rdo_MantemCargaLaudoBat;
@@ -2990,17 +2969,16 @@
         private System.Windows.Forms.CheckBox chk_BatSemProblemaLaudoBat;
         private System.Windows.Forms.TextBox txt_SerialBatLaudoBat;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.ComboBox cbo_EmpresaLaudoBat;
-        private System.Windows.Forms.DateTimePicker date_GarantiaEquipLaudoBat;
+        private System.Windows.Forms.ComboBox cbo_LocalLaudoBat;
+        private System.Windows.Forms.DateTimePicker txt_GarantiaEquipLaudoBat;
         private System.Windows.Forms.Label lbl_GarantiaBatLaudoBat;
         private System.Windows.Forms.Label lbl_ProblemaApresLaudoBat;
         private System.Windows.Forms.Label lbl_GarantiaEquipLaudoBat;
         private System.Windows.Forms.TextBox txt_SerialMaqLaudoBat;
-        private System.Windows.Forms.DateTimePicker date_GarantiaBatLaudoBat;
+        private System.Windows.Forms.DateTimePicker txt_GarantiaBatLaudoBat;
         private System.Windows.Forms.Label lbl_SerialMaqLaudoBat;
         private System.Windows.Forms.TextBox txt_ModeloLaudoBat;
         private System.Windows.Forms.Label lbl_ModeloLaudoBat;
-        private System.Windows.Forms.MaskedTextBox txt_PnUsuLaudoBat;
         private System.Windows.Forms.Label lbl_RamalUsuLaudoBat;
         private System.Windows.Forms.MaskedTextBox txt_RamalUsuLaudoBat;
         private System.Windows.Forms.TextBox txt_EtiquetaLaudoBat;
@@ -3010,13 +2988,12 @@
         private System.Windows.Forms.Label lbl_EmpresaLaudoBat;
         private System.Windows.Forms.TextBox txt_DiagLaudoBat;
         private System.Windows.Forms.Label lbl_DiagLaudoBat;
-        private System.Windows.Forms.Label lbl_PnUsuLaudoBat;
-        private System.Windows.Forms.TextBox txt_UsuarioLaudoBat;
+        private System.Windows.Forms.TextBox txt_UsuRespLaudoBat;
         private System.Windows.Forms.Label lbl_NomeUsuLaudoBat;
         private System.Windows.Forms.Button btn_apagaLaudoBat;
         private System.Windows.Forms.Button btn_GerarLaudoBat;
         private System.Windows.Forms.Label lbl_DataLaudoBat;
-        private System.Windows.Forms.DateTimePicker date_DataLaudoBat;
+        private System.Windows.Forms.DateTimePicker txt_DataLaudoBat;
         private System.Windows.Forms.MaskedTextBox txt_NumChamadoLaudoBat;
         private System.Windows.Forms.Label lbl_NumChamadoLaudoBat;
         private System.Windows.Forms.CheckBox chk_BateriaCargaInsufLaudoBat;
@@ -3037,8 +3014,7 @@
         private System.Windows.Forms.TextBox txt_FabBatLaudoBat;
         private System.Windows.Forms.Label lbl_FabBatLaudoBat;
         private System.Windows.Forms.PictureBox pic_LaudoBat;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private Reports.LaudoBat LaudoBat1;
+        private System.Windows.Forms.BindingSource tblempresasBindingSource1;
     }
 }
 

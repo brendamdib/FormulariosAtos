@@ -11,12 +11,23 @@ using System.IO;
 using System.Reflection;
 using Word = Microsoft.Office.Interop.Word;
 using System.Text.RegularExpressions;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace FormulariosAtos
 {
     public partial class frm_Main : Form
     {
-        public string str_extArquivo; 
+        public string str_extArquivo;
+        public string str_RdoNaoSeguraCarga;
+        public string str_RdoMantemCarga;
+        public string str_RdoDellPsa;
+        public string str_ChkNaoApresProblemas;
+        public string str_ChkBatNaoLocalizada;
+        public string str_ChkBatFimVida;
+        public string str_ChkBatCargaInsuf;
+        public string str_ChkBatSemProblema;
+        public string str_InsertTblDadosLaudoBat;
+        public string str_InsertTblLaudoBat;      
 
         public frm_Main()
         {
@@ -260,7 +271,7 @@ namespace FormulariosAtos
                     this.FindAndReplace(wordApp, "@chamado", txt_ChamadoDev.Text.Trim());
                     this.FindAndReplace(wordApp, "@analresp", txt_AnalRespDev.Text.Trim().ToUpper());
                     this.FindAndReplace(wordApp, "@data", txt_DataDev.Text.Trim());
-                    this.FindAndReplace(wordApp, "@nome", txt_NomeRespEquipDev.Text.Trim());
+                    this.FindAndReplace(wordApp, "@nome", txt_UsuRespEquipDev.Text.Trim());
                     this.FindAndReplace(wordApp, "@pn", txt_PnRespEquipDev.Text.Trim());
                     this.FindAndReplace(wordApp, "@ramal", txt_RamalRespEquipDev.Text.Trim());
                     this.FindAndReplace(wordApp, "@gerencia", txt_GerRespEquipDev.Text.Trim());
@@ -346,7 +357,7 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@modelo", txt_ModeloReqPeca.Text.ToUpper().Trim());
                 this.FindAndReplace(wordApp, "@numserie", txt_SerialReqPeca.Text.ToUpper().Trim());
 
-                this.FindAndReplace(wordApp, "@usuarioresp", txt_UsuarioReqPeca.Text.Trim().ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@usuarioresp", txt_UsuReqPeca.Text.Trim().ToUpper().Trim());
                 this.FindAndReplace(wordApp, "@pnusuario", txt_PnUsuReqPeca.Text.Trim());
                 this.FindAndReplace(wordApp, "@ramal", txt_RamalUsuReqPeca.Text.Trim());
 
@@ -367,7 +378,7 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@componente", cbo_ValorReqPeca.Text.ToString().Trim());
 
                 this.FindAndReplace(wordApp, "@gerpn", txt_GerenteReqPeca.Text.Trim().ToUpper().Trim() + " - " + txt_PnGerenteReqPeca.Text.Trim());
-                this.FindAndReplace(wordApp, "@usuariopn", txt_UsuarioReqPeca.Text.Trim().ToUpper().Trim() + " - " + txt_PnUsuReqPeca.Text.Trim());
+                this.FindAndReplace(wordApp, "@usuariopn", txt_UsuReqPeca.Text.Trim().ToUpper().Trim() + " - " + txt_PnUsuReqPeca.Text.Trim());
             }
             else
             {
@@ -409,18 +420,17 @@ namespace FormulariosAtos
                 this.FindAndReplace(wordApp, "@modelo", txt_ModeloLaudoBat.Text.ToUpper().Trim());
                 this.FindAndReplace(wordApp, "@numserie", txt_SerialMaqLaudoBat.Text.ToUpper().Trim());
                 this.FindAndReplace(wordApp, "@serialbat", txt_SerialBatLaudoBat.Text.ToUpper().Trim());
-                this.FindAndReplace(wordApp, "@data", date_DataLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@data", txt_DataLaudoBat.Text.Trim());
                 this.FindAndReplace(wordApp, "@numchamado", txt_NumChamadoLaudoBat.Text.Trim());
-                this.FindAndReplace(wordApp, "@usuarioresp", txt_UsuarioLaudoBat.Text.Trim().ToUpper().Trim());
-                this.FindAndReplace(wordApp, "@pnusuario", txt_PnUsuLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@usuarioresp", txt_UsuRespLaudoBat.Text.Trim().ToUpper().Trim());                
                 this.FindAndReplace(wordApp, "@ramal", txt_RamalUsuLaudoBat.Text.Trim());
-                this.FindAndReplace(wordApp, "@garantiaequip", date_GarantiaEquipLaudoBat.Text.Trim());
-                this.FindAndReplace(wordApp, "@garantiabat", date_GarantiaBatLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@garantiaequip", txt_GarantiaEquipLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@garantiabat", txt_GarantiaBatLaudoBat.Text.Trim());
 
 
                 if (str_extArquivo == ".TXT")
                 {
-                    //this.FindAndReplace(wordApp, "@evidencia", grafico_laudobat.Printing.);
+                   //this.FindAndReplace(wordApp, "@evidencia", grafico_laudobat.SaveImage("C:\\Documentos ATOS\\Laudobat.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg));
                 }
                 else
                 {
@@ -458,7 +468,8 @@ namespace FormulariosAtos
 
             Classes.DataBaseClass ClasseDB = new Classes.DataBaseClass();
             ClasseDB.ConectaAccess();
-            ClasseDB.ExecutaQuery("Delete from tbl_laudobat");
+            ClasseDB.ExecutaQuery("Delete from tbl_laudobat");           
+           
 
             // assuming the first row contains the columns information
             if (lines.Count() > 0)
@@ -478,8 +489,8 @@ namespace FormulariosAtos
                 DataRow dr = dt.NewRow();
                 string[] values = lines[i].Split(new char[] { ',' });
 
-                for (int j = 0; j < values.Count() && j < columns.Count(); j++)                
-                    if (j == 3)
+                for (int j = 0; j < values.Count() && j < columns.Count(); j++)
+                   if (j == 3)
                     {
                         dr[j] = values[j].Replace("%", "");                        
                     }
@@ -489,23 +500,24 @@ namespace FormulariosAtos
                         //TimeSpan TempoBat = 
                         //txt_DuracLaudoBat.Text = sum.TotalMinutes.ToString();
                     }
-                dt.Rows.Add(dr);                
-                ClasseDB.ExecutaQuery("Insert Into tbl_laudobat (datateste_laudobat, horateste_laudobat, status_laudobat, percentual_laudobat) values ('" + values[0].ToString() + "', '" + values[1].ToString() + "', '" + values[2].ToString() + "'," + values[3].Replace("%", ")"));
-            }
+                dt.Rows.Add(dr);
 
-            ClasseDB.FechaConexao();
-                      
+                str_InsertTblLaudoBat = "Insert Into tbl_laudobat (datateste_laudobat, horateste_laudobat, status_laudobat, percentual_laudobat) values ('" + values[0].ToString() + "', '" + values[1].ToString() + "', '" + values[2].ToString() + "'," + values[3].Replace("%", "") + ")";
 
+                ClasseDB.ExecutaQuery(str_InsertTblLaudoBat);
+            }           
+                       
             //Exibe no gráfico
+
             this.grafico_laudobat.DataSource = dt;
             this.grafico_laudobat.Series["Series1"].XValueMember = "Time";
             this.grafico_laudobat.Series["Series1"].YValueMembers = "Charge";
             this.grafico_laudobat.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = true;
             this.grafico_laudobat.ChartAreas["ChartArea1"].AxisX.Interval = 4;
-            //this.grafico_laudobat.ChartAreas["ChartArea1"].AxisY.Interval = 20;
+            this.grafico_laudobat.ChartAreas["ChartArea1"].AxisY.Interval = 20;
             //this.grafico_laudobat.Series["Series1"].IsValueShownAsLabel = true;
             this.grafico_laudobat.DataBind();
-            this.grafico_laudobat.Show();            
+            this.grafico_laudobat.Show();
         }
 
         private void ImportaDadosBateria(string caminho , string tipoarquivo)
@@ -555,7 +567,7 @@ namespace FormulariosAtos
             this.tbl_empresasTableAdapter.Fill(this.atosDataSet.tbl_empresas);
             // TODO: This line of code loads data into the 'atosDataSet.tbl_reparos' table. You can move, or remove it, as needed.
             this.tbl_reparosTableAdapter.Fill(this.atosDataSet.tbl_reparos);
-            txt_ValorReqPeca.Text = "R$" + cbo_ValorReqPeca.SelectedValue.ToString() + ",00";            
+            txt_ValorReqPeca.Text = "R$" + cbo_ValorReqPeca.SelectedValue.ToString() + ",00";           
         }
 
         private void chk_DockstationRoll_CheckedChanged(object sender, EventArgs e)
@@ -616,8 +628,89 @@ namespace FormulariosAtos
         }
 
         private void btn_GerarLaudoBat_Click(object sender, EventArgs e)
-        {            
-            CriaLaudoBat("C:\\Documentos ATOS\\Templates\\LAUDO TÉCNICO-BATERIA.DOCX", "C:\\Documentos ATOS\\LAUDO TÉCNICO-BATERIA " + txt_NumChamadoLaudoBat.Text + ".DOCX", str_extArquivo);
+        {
+            if (txt_NumChamadoLaudoBat.Text == "")
+            {
+                MessageBox.Show("Favor preencher o número do chamado");
+            }
+            else
+            {
+                if (rdo_SemCargaLaudoBat.Checked == true)
+                {
+                    str_RdoNaoSeguraCarga = "[ x ]";
+                }
+                else
+                {
+                    str_RdoNaoSeguraCarga = "[    ]";
+                }
+
+                if (rdo_TestePsaLaudoBat.Checked == true)
+                {
+                    str_RdoDellPsa = "[ x ]";
+                }
+                else
+                {
+                    str_RdoDellPsa = "[    ]";
+                }
+
+                if (rdo_MantemCargaLaudoBat.Checked == true)
+                {
+                    str_RdoMantemCarga = "[ x ]";
+                }
+                else
+                {
+                    str_RdoMantemCarga = "[    ]";
+                }
+
+                if (chk_BateriaCargaInsufLaudoBat.Checked == true)
+                {
+                    str_ChkBatCargaInsuf = "[ x ]";
+                }
+                else
+                {
+                    str_ChkBatCargaInsuf = "[    ]";
+                }
+
+                if (chk_BatNaoLocalizadaLaudoBat.Checked == true)
+                {
+                    str_ChkBatNaoLocalizada = "[ x ]";
+                }
+                else
+                {
+                    str_ChkBatNaoLocalizada = "[    ]";
+                }
+
+                if (chk_BatCondenadaLaudoBat.Checked == true)
+                {
+                    str_ChkBatFimVida = "[ x ]";
+                }
+                else
+                {
+                    str_ChkBatFimVida = "[    ]";
+                }
+
+                if (chk_BatSemProblemaLaudoBat.Checked == true)
+                {
+                    str_ChkBatSemProblema = "[ x ]";
+                }
+                else
+                {
+                    str_ChkBatSemProblema = "[    ]";
+                }
+
+
+                str_InsertTblDadosLaudoBat = "Insert Into tbl_dadoslaudobat(numchamado, usuarioresp, localizacao, etiqueta, numserie, serialbat, ramal, datateste, modeloequip, garantiaequip, garantiabat, naoseguracarga, mantemcarga, tempocarga, dellpsa, bateriaok, baterianloc, bateriafimvida, baterianmantem, diagnostico, solucao, analistaresp, cidade) values('" + txt_NumChamadoLaudoBat.Text + "', '" + txt_UsuRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.Text + "', '" + txt_EtiquetaLaudoBat.Text + "', '" + txt_SerialMaqLaudoBat.Text + "', '" + txt_SerialBatLaudoBat.Text + "', '" + txt_RamalUsuLaudoBat.Text + "', '" + txt_DataLaudoBat.Text + "', '" + txt_ModeloLaudoBat.Text + "', '" + txt_GarantiaEquipLaudoBat.Text + "', '" + txt_GarantiaBatLaudoBat.Text + "', '" + str_RdoNaoSeguraCarga + "', '" + str_RdoMantemCarga + "', '" + txt_DuracaoBatLaudoBat.Text + "', '" + str_RdoDellPsa + "', '" + str_ChkBatSemProblema + "', '" + str_ChkBatNaoLocalizada + "', '" + str_ChkBatFimVida + "', '" + str_ChkBatCargaInsuf + "', '" + txt_DiagLaudoBat.Text + "', '" + txt_SolucaoLaudoBat.Text + "', '" + txt_AnalRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.SelectedValue.ToString() + "')";
+
+                Classes.DataBaseClass ClasseDB = new Classes.DataBaseClass();
+                ClasseDB.ConectaAccess();
+                ClasseDB.ExecutaQuery("Delete from tbl_dadoslaudobat");
+                ClasseDB.ExecutaQuery(str_InsertTblDadosLaudoBat);
+                ClasseDB.FechaConexao();
+
+                //CriaLaudoBat("C:\\Documentos ATOS\\Templates\\LAUDO TÉCNICO-BATERIA.DOCX", "C:\\Documentos ATOS\\LAUDO TÉCNICO-BATERIA " +txt_NumChamadoLaudoBat.Text + ".DOCX", str_extArquivo);
+                frm_CrystalReport FrmRelatorio = new frm_CrystalReport();
+                FrmRelatorio.Show();
+            }            
         }
 
         private void cbo_ValorReqPeca_SelectedIndexChanged(object sender, EventArgs e)
@@ -660,10 +753,10 @@ namespace FormulariosAtos
         {
             // open file dialog
             OpenFileDialog open = new OpenFileDialog();
-            
+
             // Filtro de imagens
-            open.Filter = "Arquivos de Imagens(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp" +
-                "|Arquivos de Texto(*.txt;)|*.txt";
+            open.Filter = "Arquivos de Texto(*.txt;)|*.txt" +
+                "|Arquivos de Imagens(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
 
 
             if (open.ShowDialog() == DialogResult.OK)

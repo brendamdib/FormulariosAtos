@@ -87,6 +87,12 @@
       <DependentUpon>AtosDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Classes\DataBaseClass.cs" />
+    <Compile Include="frm_CrystalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CrystalReport.Designer.cs">
+      <DependentUpon>frm_CrystalReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,13 +101,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\LaudoBat.cs">
+    <Compile Include="Reports\LaudoBatChart.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LaudoBat.rpt</DependentUpon>
+      <DependentUpon>LaudoBatChart.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LaudoBatPic.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaudoBatPic.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frm_CrystalReport.resx">
+      <DependentUpon>frm_CrystalReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,10 +130,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports\LaudoBat.rdlc" />
-    <EmbeddedResource Include="Reports\LaudoBat.rpt">
+    <EmbeddedResource Include="Reports\LaudoBatChart.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>LaudoBat.cs</LastGenOutput>
+      <LastGenOutput>LaudoBatChart.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LaudoBatPic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaudoBatPic.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="AtosDataSet.xsc">
       <DependentUpon>AtosDataSet.xsd</DependentUpon>

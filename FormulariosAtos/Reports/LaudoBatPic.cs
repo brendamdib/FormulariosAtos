@@ -16,14 +16,14 @@ namespace FormulariosAtos.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class LaudoBat : ReportClass {
+    public class LaudoBatPic : ReportClass {
         
-        public LaudoBat() {
+        public LaudoBatPic() {
         }
         
         public override string ResourceName {
             get {
-                return "LaudoBat.rpt";
+                return "LaudoBatPic.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace FormulariosAtos.Reports {
         
         public override string FullResourceName {
             get {
-                return "FormulariosAtos.Reports.LaudoBat.rpt";
+                return "FormulariosAtos.Reports.LaudoBatPic.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace FormulariosAtos.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedLaudoBat : Component, ICachedReport {
+    public class CachedLaudoBatPic : Component, ICachedReport {
         
-        public CachedLaudoBat() {
+        public CachedLaudoBatPic() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace FormulariosAtos.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            LaudoBat rpt = new LaudoBat();
+            LaudoBatPic rpt = new LaudoBatPic();
             rpt.Site = this.Site;
             return rpt;
         }
