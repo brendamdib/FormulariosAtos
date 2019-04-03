@@ -17,12 +17,7 @@ namespace FormulariosAtos
             InitializeComponent();           
         }
 
-        public void frm_CrystalReport_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        public void GeraRelatorioBateria (int Valor)
+               public void GeraRelatorioBateria (int Valor)
         {
             
             if (Valor == 0)
