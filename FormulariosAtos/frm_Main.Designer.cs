@@ -214,7 +214,6 @@
             this.chk_TestePsaLaudoBat = new System.Windows.Forms.CheckBox();
             this.chk_MantemCargaLaudoBat = new System.Windows.Forms.CheckBox();
             this.chk_SemCargaLaudoBat = new System.Windows.Forms.CheckBox();
-            this.pic_LaudoBat = new System.Windows.Forms.PictureBox();
             this.txt_VoltsLaudoBat = new System.Windows.Forms.TextBox();
             this.lbl_VoltsLaudoBat = new System.Windows.Forms.Label();
             this.txt_QuimicaLaudoBat = new System.Windows.Forms.TextBox();
@@ -279,7 +278,6 @@
             this.tab_RepPeca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).BeginInit();
             this.tab_LaudoBat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_LaudoBat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -2109,7 +2107,6 @@
             this.tab_LaudoBat.Controls.Add(this.chk_TestePsaLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.chk_MantemCargaLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.chk_SemCargaLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.pic_LaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_VoltsLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_VoltsLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_QuimicaLaudoBat);
@@ -2221,17 +2218,6 @@
             this.chk_SemCargaLaudoBat.Text = "Não segura carga alguma";
             this.chk_SemCargaLaudoBat.UseVisualStyleBackColor = true;
             this.chk_SemCargaLaudoBat.CheckedChanged += new System.EventHandler(this.chk_SemCargaLaudoBat_CheckedChanged);
-            // 
-            // pic_LaudoBat
-            // 
-            this.pic_LaudoBat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_LaudoBat.Location = new System.Drawing.Point(514, 316);
-            this.pic_LaudoBat.Name = "pic_LaudoBat";
-            this.pic_LaudoBat.Size = new System.Drawing.Size(210, 199);
-            this.pic_LaudoBat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_LaudoBat.TabIndex = 906;
-            this.pic_LaudoBat.TabStop = false;
-            this.pic_LaudoBat.Visible = false;
             // 
             // txt_VoltsLaudoBat
             // 
@@ -2475,7 +2461,7 @@
             // 
             this.txt_SerialBatLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_SerialBatLaudoBat.Location = new System.Drawing.Point(514, 120);
-            this.txt_SerialBatLaudoBat.MaxLength = 8;
+            this.txt_SerialBatLaudoBat.MaxLength = 40;
             this.txt_SerialBatLaudoBat.Name = "txt_SerialBatLaudoBat";
             this.txt_SerialBatLaudoBat.Size = new System.Drawing.Size(152, 20);
             this.txt_SerialBatLaudoBat.TabIndex = 20;
@@ -2801,7 +2787,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblreparosBindingSource)).EndInit();
             this.tab_LaudoBat.ResumeLayout(false);
             this.tab_LaudoBat.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_LaudoBat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -3039,7 +3024,6 @@
         private System.Windows.Forms.Label lbl_QuimicaLaudoBat;
         private System.Windows.Forms.TextBox txt_FabBatLaudoBat;
         private System.Windows.Forms.Label lbl_FabBatLaudoBat;
-        private System.Windows.Forms.PictureBox pic_LaudoBat;
         private System.Windows.Forms.BindingSource tblempresasBindingSource1;
         private System.Windows.Forms.CheckBox chk_SemCargaLaudoBat;
         private System.Windows.Forms.CheckBox chk_TestePsaLaudoBat;

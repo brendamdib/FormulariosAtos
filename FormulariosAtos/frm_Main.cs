@@ -551,15 +551,7 @@ namespace FormulariosAtos
             txt_FabBatLaudoBat.Text = dt.Rows[1][" Manufacturer"].ToString().Trim();
             txt_QuimicaLaudoBat.Text = dt.Rows[1][" Chemistry"].ToString().Trim();
             txt_VoltsLaudoBat.Text = dt.Rows[1][" Voltage (Volts)"].ToString().Trim();            
-        }
-
-        private void CarregaImagem(string arquivo)
-        {
-            // display image in picture box  
-            pic_LaudoBat.Image = new Bitmap(arquivo);
-            // image file path  
-            txt_FileLocationLaudoBat.Text = arquivo;
-        }
+        }       
 
         private void frm_Main_Load(object sender, EventArgs e)
         {           
@@ -700,7 +692,7 @@ namespace FormulariosAtos
 
                 //DateTime DataTeste = DateTime.ParseExact(txt_DataLaudoBat.Text,"dd/MM/yyyy", null);
 
-                string str_msgTesteImpossivel = "Não foi realizado o print screen pelo fato da bateria não manter carga,retirado o carregador e logo em seguida a máquina desliga.";
+                string str_msgTesteImpossivel = "Não foi inserido o gráfico com a duração da bateria, pois a bateria do equipamento não está retendo carga suficiente para a realização do teste. Assim que a fonte é desconectada, o notebook desliga em seguida.";
 
                 if (rdo_AnexaArqLaudoBat.Checked == true)
                 {
@@ -716,10 +708,19 @@ namespace FormulariosAtos
                 ClasseDB.ExecutaQuery("Delete from tbl_dadoslaudobat");
                 ClasseDB.ExecutaQuery(str_InsertTblDadosLaudoBat);
                 ClasseDB.FechaConexao();
-
-                //CriaLaudoBat("C:\\Documentos ATOS\\Templates\\LAUDO TÉCNICO-BATERIA.DOCX", "C:\\Documentos ATOS\\LAUDO TÉCNICO-BATERIA " +txt_NumChamadoLaudoBat.Text + ".DOCX", str_extArquivo);
+                
                 frm_CrystalReport FrmRelatorio = new frm_CrystalReport();
-                FrmRelatorio.Show();
+
+                if (rdo_AnexaArqLaudoBat.Checked == true)
+                {
+                    FrmRelatorio.GeraRelatorioBateria(1);
+                    FrmRelatorio.Show();
+                }
+                else
+                {
+                    FrmRelatorio.GeraRelatorioBateria(0);
+                    FrmRelatorio.Show();
+                }
             }            
         }
 
@@ -765,29 +766,18 @@ namespace FormulariosAtos
             OpenFileDialog open = new OpenFileDialog();
 
             // Filtro de imagens
-            open.Filter = "Arquivos de Texto(*.txt;)|*.txt" +
-                "|Arquivos de Imagens(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            open.Filter = "Arquivos de Texto(*.txt;)|*.txt"; 
+                //+ "|Arquivos de Imagens(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
 
 
             if (open.ShowDialog() == DialogResult.OK)
             {                
                 txt_FileLocationLaudoBat.Text = open.FileName;
                 str_extArquivo = Path.GetExtension(txt_FileLocationLaudoBat.Text);
-
-                if (str_extArquivo == ".TXT")
-                {
-                    grafico_laudobat.Visible = true;
-                    pic_LaudoBat.Visible = false;
-                    ImportaDadosGrafico(txt_FileLocationLaudoBat.Text, str_extArquivo);
-                    ImportaDadosBateria(txt_FileLocationLaudoBat.Text, str_extArquivo);
-                    
-                }
-                else if (str_extArquivo == ".JPG" || str_extArquivo == ".JPEG" || str_extArquivo == ".GIF" || str_extArquivo == ".BMP")
-                {
-                    grafico_laudobat.Visible = false;
-                    pic_LaudoBat.Visible = true;
-                    CarregaImagem(open.FileName);                
-                }
+                grafico_laudobat.Visible = true;
+                
+                ImportaDadosGrafico(txt_FileLocationLaudoBat.Text, str_extArquivo);
+                ImportaDadosBateria(txt_FileLocationLaudoBat.Text, str_extArquivo);
             }
         }        
 
@@ -842,12 +832,13 @@ namespace FormulariosAtos
         {
             if(rdo_FalhaTesteLaudoBat.Checked == true)
             {                
-                btn_OpenFileLaudoBat.Enabled = false;                
+                btn_OpenFileLaudoBat.Enabled =  false;
+                grafico_laudobat.Visible =      false;
             }
             else
             {
                 rdo_FalhaTesteLaudoBat.Enabled = true;
-                btn_OpenFileLaudoBat.Enabled = true;
+                btn_OpenFileLaudoBat.Enabled =   true;                
             }
         }
     }
