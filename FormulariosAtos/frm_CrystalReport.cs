@@ -14,8 +14,27 @@ namespace FormulariosAtos
     {
         public frm_CrystalReport()
         {
-            InitializeComponent();
-            crystalReportViewer1.RefreshReport();
+            InitializeComponent();           
+        }
+
+        public void frm_CrystalReport_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void GeraRelatorioBateria (int Valor)
+        {
+            
+            if (Valor == 0)
+            {
+                CrystalReportViewer.ReportSource = LaudoBatText1;
+                CrystalReportViewer.RefreshReport();
+            }
+            else
+            {
+                CrystalReportViewer.ReportSource = LaudoBatChart1;
+                CrystalReportViewer.RefreshReport();
+            }
         }
     }
 }

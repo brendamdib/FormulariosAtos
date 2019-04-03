@@ -28,43 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.CrystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.LaudoBatChart1 = new FormulariosAtos.Reports.LaudoBatChart();
-            this.LaudoBatChart2 = new FormulariosAtos.Reports.LaudoBatChart();
+            this.LaudoBatText1 = new FormulariosAtos.Reports.LaudoBatText();
             this.SuspendLayout();
             // 
-            // crystalReportViewer1
+            // CrystalReportViewer
             // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CrystalReportViewer.ActiveViewIndex = 0;
+            this.CrystalReportViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.crystalReportViewer1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.LaudoBatChart2;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1086, 657);
-            this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.CrystalReportViewer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CrystalReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CrystalReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CrystalReportViewer.Location = new System.Drawing.Point(0, 0);
+            this.CrystalReportViewer.Name = "CrystalReportViewer";
+            this.CrystalReportViewer.ReportSource = this.LaudoBatText1;
+            this.CrystalReportViewer.Size = new System.Drawing.Size(1086, 657);
+            this.CrystalReportViewer.TabIndex = 0;
+            this.CrystalReportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // frm_CrystalReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 657);
-            this.Controls.Add(this.crystalReportViewer1);
+            this.Controls.Add(this.CrystalReportViewer);
             this.Name = "frm_CrystalReport";
-            this.Text = "frm_CrystalReport";
+            this.Text = "Geração de Laudos";
+            this.Load += new System.EventHandler(this.frm_CrystalReport_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer CrystalReportViewer;
         private Reports.LaudoBatChart LaudoBatChart1;
-        private Reports.LaudoBatChart LaudoBatChart2;
+        private Reports.LaudoBatText LaudoBatText1;
     }
 }

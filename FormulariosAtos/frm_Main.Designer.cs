@@ -209,6 +209,11 @@
             this.btn_LimparRep = new System.Windows.Forms.Button();
             this.btn_GerarReqPeca = new System.Windows.Forms.Button();
             this.tab_LaudoBat = new System.Windows.Forms.TabPage();
+            this.rdo_AnexaArqLaudoBat = new System.Windows.Forms.RadioButton();
+            this.rdo_FalhaTesteLaudoBat = new System.Windows.Forms.RadioButton();
+            this.chk_TestePsaLaudoBat = new System.Windows.Forms.CheckBox();
+            this.chk_MantemCargaLaudoBat = new System.Windows.Forms.CheckBox();
+            this.chk_SemCargaLaudoBat = new System.Windows.Forms.CheckBox();
             this.pic_LaudoBat = new System.Windows.Forms.PictureBox();
             this.txt_VoltsLaudoBat = new System.Windows.Forms.TextBox();
             this.lbl_VoltsLaudoBat = new System.Windows.Forms.Label();
@@ -226,9 +231,6 @@
             this.txt_FileLocationLaudoBat = new System.Windows.Forms.TextBox();
             this.chk_BateriaCargaInsufLaudoBat = new System.Windows.Forms.CheckBox();
             this.chk_BatCondenadaLaudoBat = new System.Windows.Forms.CheckBox();
-            this.rdo_TestePsaLaudoBat = new System.Windows.Forms.RadioButton();
-            this.rdo_MantemCargaLaudoBat = new System.Windows.Forms.RadioButton();
-            this.rdo_SemCargaLaudoBat = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
             this.txt_DuracaoBatLaudoBat = new System.Windows.Forms.MaskedTextBox();
             this.chk_BatNaoLocalizadaLaudoBat = new System.Windows.Forms.CheckBox();
@@ -2102,6 +2104,11 @@
             // 
             // tab_LaudoBat
             // 
+            this.tab_LaudoBat.Controls.Add(this.rdo_AnexaArqLaudoBat);
+            this.tab_LaudoBat.Controls.Add(this.rdo_FalhaTesteLaudoBat);
+            this.tab_LaudoBat.Controls.Add(this.chk_TestePsaLaudoBat);
+            this.tab_LaudoBat.Controls.Add(this.chk_MantemCargaLaudoBat);
+            this.tab_LaudoBat.Controls.Add(this.chk_SemCargaLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.pic_LaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_VoltsLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_VoltsLaudoBat);
@@ -2119,9 +2126,6 @@
             this.tab_LaudoBat.Controls.Add(this.txt_FileLocationLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.chk_BateriaCargaInsufLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.chk_BatCondenadaLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.rdo_TestePsaLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.rdo_MantemCargaLaudoBat);
-            this.tab_LaudoBat.Controls.Add(this.rdo_SemCargaLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.label31);
             this.tab_LaudoBat.Controls.Add(this.txt_DuracaoBatLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.chk_BatNaoLocalizadaLaudoBat);
@@ -2162,6 +2166,61 @@
             this.tab_LaudoBat.TabIndex = 3;
             this.tab_LaudoBat.Text = "Laudo Bateria";
             this.tab_LaudoBat.UseVisualStyleBackColor = true;
+            // 
+            // rdo_AnexaArqLaudoBat
+            // 
+            this.rdo_AnexaArqLaudoBat.AutoSize = true;
+            this.rdo_AnexaArqLaudoBat.Checked = true;
+            this.rdo_AnexaArqLaudoBat.Location = new System.Drawing.Point(652, 97);
+            this.rdo_AnexaArqLaudoBat.Name = "rdo_AnexaArqLaudoBat";
+            this.rdo_AnexaArqLaudoBat.Size = new System.Drawing.Size(97, 17);
+            this.rdo_AnexaArqLaudoBat.TabIndex = 911;
+            this.rdo_AnexaArqLaudoBat.TabStop = true;
+            this.rdo_AnexaArqLaudoBat.Text = "Anexar Arquivo";
+            this.rdo_AnexaArqLaudoBat.UseVisualStyleBackColor = true;
+            // 
+            // rdo_FalhaTesteLaudoBat
+            // 
+            this.rdo_FalhaTesteLaudoBat.AutoSize = true;
+            this.rdo_FalhaTesteLaudoBat.Location = new System.Drawing.Point(514, 97);
+            this.rdo_FalhaTesteLaudoBat.Name = "rdo_FalhaTesteLaudoBat";
+            this.rdo_FalhaTesteLaudoBat.Size = new System.Drawing.Size(118, 17);
+            this.rdo_FalhaTesteLaudoBat.TabIndex = 910;
+            this.rdo_FalhaTesteLaudoBat.Text = "Teste não realizado";
+            this.rdo_FalhaTesteLaudoBat.UseVisualStyleBackColor = true;
+            this.rdo_FalhaTesteLaudoBat.CheckedChanged += new System.EventHandler(this.rdo_FalhaTesteLaudoBat_CheckedChanged);
+            // 
+            // chk_TestePsaLaudoBat
+            // 
+            this.chk_TestePsaLaudoBat.AutoSize = true;
+            this.chk_TestePsaLaudoBat.Location = new System.Drawing.Point(123, 139);
+            this.chk_TestePsaLaudoBat.Name = "chk_TestePsaLaudoBat";
+            this.chk_TestePsaLaudoBat.Size = new System.Drawing.Size(267, 17);
+            this.chk_TestePsaLaudoBat.TabIndex = 909;
+            this.chk_TestePsaLaudoBat.Text = "Teste de Bateria usando PSA (Diagnóstico da Dell)";
+            this.chk_TestePsaLaudoBat.UseVisualStyleBackColor = true;
+            this.chk_TestePsaLaudoBat.CheckedChanged += new System.EventHandler(this.chk_TestePsaLaudoBat_CheckedChanged);
+            // 
+            // chk_MantemCargaLaudoBat
+            // 
+            this.chk_MantemCargaLaudoBat.AutoSize = true;
+            this.chk_MantemCargaLaudoBat.Location = new System.Drawing.Point(123, 117);
+            this.chk_MantemCargaLaudoBat.Name = "chk_MantemCargaLaudoBat";
+            this.chk_MantemCargaLaudoBat.Size = new System.Drawing.Size(148, 17);
+            this.chk_MantemCargaLaudoBat.TabIndex = 908;
+            this.chk_MantemCargaLaudoBat.Text = "Mantem carga - informar | ";
+            this.chk_MantemCargaLaudoBat.UseVisualStyleBackColor = true;
+            // 
+            // chk_SemCargaLaudoBat
+            // 
+            this.chk_SemCargaLaudoBat.AutoSize = true;
+            this.chk_SemCargaLaudoBat.Location = new System.Drawing.Point(123, 94);
+            this.chk_SemCargaLaudoBat.Name = "chk_SemCargaLaudoBat";
+            this.chk_SemCargaLaudoBat.Size = new System.Drawing.Size(148, 17);
+            this.chk_SemCargaLaudoBat.TabIndex = 907;
+            this.chk_SemCargaLaudoBat.Text = "Não segura carga alguma";
+            this.chk_SemCargaLaudoBat.UseVisualStyleBackColor = true;
+            this.chk_SemCargaLaudoBat.CheckedChanged += new System.EventHandler(this.chk_SemCargaLaudoBat_CheckedChanged);
             // 
             // pic_LaudoBat
             // 
@@ -2294,7 +2353,7 @@
             this.txt_AnalRespLaudoBat.Location = new System.Drawing.Point(96, 264);
             this.txt_AnalRespLaudoBat.MaxLength = 40;
             this.txt_AnalRespLaudoBat.Name = "txt_AnalRespLaudoBat";
-            this.txt_AnalRespLaudoBat.Size = new System.Drawing.Size(355, 20);
+            this.txt_AnalRespLaudoBat.Size = new System.Drawing.Size(311, 20);
             this.txt_AnalRespLaudoBat.TabIndex = 18;
             this.txt_AnalRespLaudoBat.WordWrap = false;
             // 
@@ -2302,7 +2361,7 @@
             // 
             this.txt_SolucaoLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_SolucaoLaudoBat.Location = new System.Drawing.Point(798, 173);
-            this.txt_SolucaoLaudoBat.MaxLength = 300;
+            this.txt_SolucaoLaudoBat.MaxLength = 500;
             this.txt_SolucaoLaudoBat.Multiline = true;
             this.txt_SolucaoLaudoBat.Name = "txt_SolucaoLaudoBat";
             this.txt_SolucaoLaudoBat.Size = new System.Drawing.Size(210, 111);
@@ -2330,7 +2389,7 @@
             // 
             this.btn_OpenFileLaudoBat.Image = ((System.Drawing.Image)(resources.GetObject("btn_OpenFileLaudoBat.Image")));
             this.btn_OpenFileLaudoBat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_OpenFileLaudoBat.Location = new System.Drawing.Point(672, 90);
+            this.btn_OpenFileLaudoBat.Location = new System.Drawing.Point(913, 92);
             this.btn_OpenFileLaudoBat.Name = "btn_OpenFileLaudoBat";
             this.btn_OpenFileLaudoBat.Size = new System.Drawing.Size(95, 26);
             this.btn_OpenFileLaudoBat.TabIndex = 891;
@@ -2342,8 +2401,7 @@
             // txt_FileLocationLaudoBat
             // 
             this.txt_FileLocationLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_FileLocationLaudoBat.Enabled = false;
-            this.txt_FileLocationLaudoBat.Location = new System.Drawing.Point(514, 94);
+            this.txt_FileLocationLaudoBat.Location = new System.Drawing.Point(755, 95);
             this.txt_FileLocationLaudoBat.MaxLength = 8;
             this.txt_FileLocationLaudoBat.Name = "txt_FileLocationLaudoBat";
             this.txt_FileLocationLaudoBat.Size = new System.Drawing.Size(152, 20);
@@ -2353,6 +2411,7 @@
             // chk_BateriaCargaInsufLaudoBat
             // 
             this.chk_BateriaCargaInsufLaudoBat.AutoSize = true;
+            this.chk_BateriaCargaInsufLaudoBat.Enabled = false;
             this.chk_BateriaCargaInsufLaudoBat.Location = new System.Drawing.Point(144, 231);
             this.chk_BateriaCargaInsufLaudoBat.Name = "chk_BateriaCargaInsufLaudoBat";
             this.chk_BateriaCargaInsufLaudoBat.Size = new System.Drawing.Size(198, 17);
@@ -2363,45 +2422,13 @@
             // chk_BatCondenadaLaudoBat
             // 
             this.chk_BatCondenadaLaudoBat.AutoSize = true;
+            this.chk_BatCondenadaLaudoBat.Enabled = false;
             this.chk_BatCondenadaLaudoBat.Location = new System.Drawing.Point(144, 208);
             this.chk_BatCondenadaLaudoBat.Name = "chk_BatCondenadaLaudoBat";
             this.chk_BatCondenadaLaudoBat.Size = new System.Drawing.Size(211, 17);
             this.chk_BatCondenadaLaudoBat.TabIndex = 16;
             this.chk_BatCondenadaLaudoBat.Text = "Bateria chegou ao final de sua vida últil";
             this.chk_BatCondenadaLaudoBat.UseVisualStyleBackColor = true;
-            // 
-            // rdo_TestePsaLaudoBat
-            // 
-            this.rdo_TestePsaLaudoBat.AutoSize = true;
-            this.rdo_TestePsaLaudoBat.Location = new System.Drawing.Point(123, 139);
-            this.rdo_TestePsaLaudoBat.Name = "rdo_TestePsaLaudoBat";
-            this.rdo_TestePsaLaudoBat.Size = new System.Drawing.Size(266, 17);
-            this.rdo_TestePsaLaudoBat.TabIndex = 13;
-            this.rdo_TestePsaLaudoBat.TabStop = true;
-            this.rdo_TestePsaLaudoBat.Text = "Teste de Bateria usando PSA (Diagnóstico da Dell)";
-            this.rdo_TestePsaLaudoBat.UseVisualStyleBackColor = true;
-            // 
-            // rdo_MantemCargaLaudoBat
-            // 
-            this.rdo_MantemCargaLaudoBat.AutoSize = true;
-            this.rdo_MantemCargaLaudoBat.Location = new System.Drawing.Point(123, 116);
-            this.rdo_MantemCargaLaudoBat.Name = "rdo_MantemCargaLaudoBat";
-            this.rdo_MantemCargaLaudoBat.Size = new System.Drawing.Size(143, 17);
-            this.rdo_MantemCargaLaudoBat.TabIndex = 11;
-            this.rdo_MantemCargaLaudoBat.TabStop = true;
-            this.rdo_MantemCargaLaudoBat.Text = "Mantém carga - Informar ";
-            this.rdo_MantemCargaLaudoBat.UseVisualStyleBackColor = true;
-            // 
-            // rdo_SemCargaLaudoBat
-            // 
-            this.rdo_SemCargaLaudoBat.AutoSize = true;
-            this.rdo_SemCargaLaudoBat.Location = new System.Drawing.Point(123, 94);
-            this.rdo_SemCargaLaudoBat.Name = "rdo_SemCargaLaudoBat";
-            this.rdo_SemCargaLaudoBat.Size = new System.Drawing.Size(147, 17);
-            this.rdo_SemCargaLaudoBat.TabIndex = 10;
-            this.rdo_SemCargaLaudoBat.TabStop = true;
-            this.rdo_SemCargaLaudoBat.Text = "Não segura carga alguma";
-            this.rdo_SemCargaLaudoBat.UseVisualStyleBackColor = true;
             // 
             // label31
             // 
@@ -2425,6 +2452,7 @@
             // chk_BatNaoLocalizadaLaudoBat
             // 
             this.chk_BatNaoLocalizadaLaudoBat.AutoSize = true;
+            this.chk_BatNaoLocalizadaLaudoBat.Enabled = false;
             this.chk_BatNaoLocalizadaLaudoBat.Location = new System.Drawing.Point(144, 185);
             this.chk_BatNaoLocalizadaLaudoBat.Name = "chk_BatNaoLocalizadaLaudoBat";
             this.chk_BatNaoLocalizadaLaudoBat.Size = new System.Drawing.Size(263, 17);
@@ -2435,6 +2463,7 @@
             // chk_BatSemProblemaLaudoBat
             // 
             this.chk_BatSemProblemaLaudoBat.AutoSize = true;
+            this.chk_BatSemProblemaLaudoBat.Enabled = false;
             this.chk_BatSemProblemaLaudoBat.Location = new System.Drawing.Point(144, 162);
             this.chk_BatSemProblemaLaudoBat.Name = "chk_BatSemProblemaLaudoBat";
             this.chk_BatSemProblemaLaudoBat.Size = new System.Drawing.Size(190, 17);
@@ -2629,7 +2658,7 @@
             // 
             this.txt_DiagLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_DiagLaudoBat.Location = new System.Drawing.Point(514, 173);
-            this.txt_DiagLaudoBat.MaxLength = 300;
+            this.txt_DiagLaudoBat.MaxLength = 500;
             this.txt_DiagLaudoBat.Multiline = true;
             this.txt_DiagLaudoBat.Name = "txt_DiagLaudoBat";
             this.txt_DiagLaudoBat.Size = new System.Drawing.Size(210, 111);
@@ -2960,9 +2989,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_UsuReqPeca;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton rdo_TestePsaLaudoBat;
-        private System.Windows.Forms.RadioButton rdo_MantemCargaLaudoBat;
-        private System.Windows.Forms.RadioButton rdo_SemCargaLaudoBat;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.MaskedTextBox txt_DuracaoBatLaudoBat;
         private System.Windows.Forms.CheckBox chk_BatNaoLocalizadaLaudoBat;
@@ -3015,6 +3041,11 @@
         private System.Windows.Forms.Label lbl_FabBatLaudoBat;
         private System.Windows.Forms.PictureBox pic_LaudoBat;
         private System.Windows.Forms.BindingSource tblempresasBindingSource1;
+        private System.Windows.Forms.CheckBox chk_SemCargaLaudoBat;
+        private System.Windows.Forms.CheckBox chk_TestePsaLaudoBat;
+        private System.Windows.Forms.CheckBox chk_MantemCargaLaudoBat;
+        private System.Windows.Forms.RadioButton rdo_AnexaArqLaudoBat;
+        private System.Windows.Forms.RadioButton rdo_FalhaTesteLaudoBat;
     }
 }
 

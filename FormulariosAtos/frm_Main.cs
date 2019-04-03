@@ -606,25 +606,25 @@ namespace FormulariosAtos
         {
             if (rdo_Rollout.Checked == true)
             {
-                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
-                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");
-                CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO.DOCX", "C:\\Documentos ATOS\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoRoll.Text + ".DOCX", 0);
+                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
+                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\FormulariosGerados\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");
+                CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoRoll.Text + ".DOCX", 0);
             }
             else
             {
-                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
-                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");                
+                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
+                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\FormulariosGerados\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");                
             }
         }
 
         private void btn_GerarDevolucao_Click(object sender, EventArgs e)
         {
-            CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO-2.DOCX", "C:\\Documentos ATOS\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoDev.Text + ".DOCX", 1);
+            CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO-2.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoDev.Text + ".DOCX", 1);
         }
 
         private void btn_GerarReqPeca_Click(object sender, EventArgs e)
         {
-            CriaReqPecas("C:\\Documentos ATOS\\Templates\\FORMULARIO REPOSIÇÃO DE PEÇAS.DOCX", "C:\\Documentos ATOS\\FORMULARIO REPOSIÇÃO DE PEÇAS " + txt_ChamadoReqPeca.Text + ".DOCX");
+            CriaReqPecas("C:\\Documentos ATOS\\Templates\\FORMULARIO REPOSIÇÃO DE PEÇAS.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\FORMULARIO REPOSIÇÃO DE PEÇAS " + txt_ChamadoReqPeca.Text + ".DOCX");
         }
 
         private void btn_GerarLaudoBat_Click(object sender, EventArgs e)
@@ -635,7 +635,7 @@ namespace FormulariosAtos
             }
             else
             {
-                if (rdo_SemCargaLaudoBat.Checked == true)
+                if (chk_SemCargaLaudoBat.Checked == true)
                 {
                     str_RdoNaoSeguraCarga = "[ x ]";
                 }
@@ -644,7 +644,7 @@ namespace FormulariosAtos
                     str_RdoNaoSeguraCarga = "[    ]";
                 }
 
-                if (rdo_TestePsaLaudoBat.Checked == true)
+                if (chk_TestePsaLaudoBat.Checked == true)
                 {
                     str_RdoDellPsa = "[ x ]";
                 }
@@ -653,7 +653,7 @@ namespace FormulariosAtos
                     str_RdoDellPsa = "[    ]";
                 }
 
-                if (rdo_MantemCargaLaudoBat.Checked == true)
+                if (chk_MantemCargaLaudoBat.Checked == true)
                 {
                     str_RdoMantemCarga = "[ x ]";
                 }
@@ -698,8 +698,18 @@ namespace FormulariosAtos
                     str_ChkBatSemProblema = "[    ]";
                 }
 
+                //DateTime DataTeste = DateTime.ParseExact(txt_DataLaudoBat.Text,"dd/MM/yyyy", null);
 
-                str_InsertTblDadosLaudoBat = "Insert Into tbl_dadoslaudobat(numchamado, usuarioresp, localizacao, etiqueta, numserie, serialbat, ramal, datateste, modeloequip, garantiaequip, garantiabat, naoseguracarga, mantemcarga, tempocarga, dellpsa, bateriaok, baterianloc, bateriafimvida, baterianmantem, diagnostico, solucao, analistaresp, cidade) values('" + txt_NumChamadoLaudoBat.Text + "', '" + txt_UsuRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.Text + "', '" + txt_EtiquetaLaudoBat.Text + "', '" + txt_SerialMaqLaudoBat.Text + "', '" + txt_SerialBatLaudoBat.Text + "', '" + txt_RamalUsuLaudoBat.Text + "', '" + txt_DataLaudoBat.Text + "', '" + txt_ModeloLaudoBat.Text + "', '" + txt_GarantiaEquipLaudoBat.Text + "', '" + txt_GarantiaBatLaudoBat.Text + "', '" + str_RdoNaoSeguraCarga + "', '" + str_RdoMantemCarga + "', '" + txt_DuracaoBatLaudoBat.Text + "', '" + str_RdoDellPsa + "', '" + str_ChkBatSemProblema + "', '" + str_ChkBatNaoLocalizada + "', '" + str_ChkBatFimVida + "', '" + str_ChkBatCargaInsuf + "', '" + txt_DiagLaudoBat.Text + "', '" + txt_SolucaoLaudoBat.Text + "', '" + txt_AnalRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.SelectedValue.ToString() + "')";
+                string str_msgTesteImpossivel = "Não foi realizado o print screen pelo fato da bateria não manter carga,retirado o carregador e logo em seguida a máquina desliga.";
+
+                if (rdo_AnexaArqLaudoBat.Checked == true)
+                {
+                    str_InsertTblDadosLaudoBat = "Insert Into tbl_dadoslaudobat(numchamado, usuarioresp, localizacao, etiqueta, numserie, serialbat, ramal, datateste, modeloequip, garantiaequip, garantiabat, naoseguracarga, mantemcarga, tempocarga, dellpsa, bateriaok, baterianloc, bateriafimvida, baterianmantem, diagnostico, solucao, analistaresp, cidade, laudo) values('" + txt_NumChamadoLaudoBat.Text + "', '" + txt_UsuRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.Text + "', '" + txt_EtiquetaLaudoBat.Text + "', '" + txt_SerialMaqLaudoBat.Text + "', '" + txt_SerialBatLaudoBat.Text + "', '" + txt_RamalUsuLaudoBat.Text + "', '" + Convert.ToDateTime(txt_DataLaudoBat.Text) + "', '" + txt_ModeloLaudoBat.Text + "', '" + Convert.ToDateTime(txt_GarantiaEquipLaudoBat.Text) + "', '" + Convert.ToDateTime(txt_GarantiaBatLaudoBat.Text) + "', '" + str_RdoNaoSeguraCarga + "', '" + str_RdoMantemCarga + "', '" + txt_DuracaoBatLaudoBat.Text + "', '" + str_RdoDellPsa + "', '" + str_ChkBatSemProblema + "', '" + str_ChkBatNaoLocalizada + "', '" + str_ChkBatFimVida + "', '" + str_ChkBatCargaInsuf + "', '" + txt_DiagLaudoBat.Text + "', '" + txt_SolucaoLaudoBat.Text + "', '" + txt_AnalRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.SelectedValue.ToString() + "', '')";
+                }
+                else
+                {
+                    str_InsertTblDadosLaudoBat = "Insert Into tbl_dadoslaudobat(numchamado, usuarioresp, localizacao, etiqueta, numserie, serialbat, ramal, datateste, modeloequip, garantiaequip, garantiabat, naoseguracarga, mantemcarga, tempocarga, dellpsa, bateriaok, baterianloc, bateriafimvida, baterianmantem, diagnostico, solucao, analistaresp, cidade, laudo) values('" + txt_NumChamadoLaudoBat.Text + "', '" + txt_UsuRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.Text + "', '" + txt_EtiquetaLaudoBat.Text + "', '" + txt_SerialMaqLaudoBat.Text + "', '" + txt_SerialBatLaudoBat.Text + "', '" + txt_RamalUsuLaudoBat.Text + "', '" + Convert.ToDateTime(txt_DataLaudoBat.Text) + "', '" + txt_ModeloLaudoBat.Text + "', '" + Convert.ToDateTime(txt_GarantiaEquipLaudoBat.Text) + "', '" + Convert.ToDateTime(txt_GarantiaBatLaudoBat.Text) + "', '" + str_RdoNaoSeguraCarga + "', '" + str_RdoMantemCarga + "', '" + txt_DuracaoBatLaudoBat.Text + "', '" + str_RdoDellPsa + "', '" + str_ChkBatSemProblema + "', '" + str_ChkBatNaoLocalizada + "', '" + str_ChkBatFimVida + "', '" + str_ChkBatCargaInsuf + "', '" + txt_DiagLaudoBat.Text + "', '" + txt_SolucaoLaudoBat.Text + "', '" + txt_AnalRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.SelectedValue.ToString() + "', '" + str_msgTesteImpossivel + "')";
+                }                
 
                 Classes.DataBaseClass ClasseDB = new Classes.DataBaseClass();
                 ClasseDB.ConectaAccess();
@@ -784,6 +794,61 @@ namespace FormulariosAtos
         private void btn_apagaLaudoBat_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void chk_TestePsaLaudoBat_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chk_TestePsaLaudoBat.Checked == true)
+            {
+                chk_BatSemProblemaLaudoBat.Enabled =    true;
+                chk_BatNaoLocalizadaLaudoBat.Enabled =  true;
+                chk_BatCondenadaLaudoBat.Enabled =      true;
+                chk_BateriaCargaInsufLaudoBat.Enabled = true;
+            }
+            else
+            {
+                chk_BatSemProblemaLaudoBat.Enabled =    false;
+                chk_BatNaoLocalizadaLaudoBat.Enabled =  false;
+                chk_BatCondenadaLaudoBat.Enabled =      false;
+                chk_BateriaCargaInsufLaudoBat.Enabled = false;
+            }
+        }
+
+        private void chk_SemCargaLaudoBat_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_SemCargaLaudoBat.Checked == true)
+            {
+                chk_MantemCargaLaudoBat.Enabled =       false;
+                chk_TestePsaLaudoBat.Enabled =          false;
+                chk_BatSemProblemaLaudoBat.Enabled =    false;
+                chk_BatNaoLocalizadaLaudoBat.Enabled =  false;
+                chk_BatCondenadaLaudoBat.Enabled =      false;
+                chk_BateriaCargaInsufLaudoBat.Enabled = false;
+                txt_DuracaoBatLaudoBat.Enabled =        false;
+            }
+            else
+            {
+                chk_MantemCargaLaudoBat.Enabled =       true;
+                chk_TestePsaLaudoBat.Enabled =          true;
+                chk_BatSemProblemaLaudoBat.Enabled =    true;
+                chk_BatNaoLocalizadaLaudoBat.Enabled =  true;
+                chk_BatCondenadaLaudoBat.Enabled =      true;
+                chk_BateriaCargaInsufLaudoBat.Enabled = true;
+                txt_DuracaoBatLaudoBat.Enabled =        true;
+            }
+        }
+
+        private void rdo_FalhaTesteLaudoBat_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rdo_FalhaTesteLaudoBat.Checked == true)
+            {                
+                btn_OpenFileLaudoBat.Enabled = false;                
+            }
+            else
+            {
+                rdo_FalhaTesteLaudoBat.Enabled = true;
+                btn_OpenFileLaudoBat.Enabled = true;
+            }
         }
     }
 }
