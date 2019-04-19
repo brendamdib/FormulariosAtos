@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tab_Formularios = new System.Windows.Forms.TabControl();
             this.tab_RollOut = new System.Windows.Forms.TabPage();
             this.txt_SetorTercRoll = new System.Windows.Forms.TextBox();
@@ -66,7 +66,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.date_FillRoll = new System.Windows.Forms.DateTimePicker();
             this.lbl_GerTercRoll = new System.Windows.Forms.Label();
-            this.txt_AnalRespRoll = new System.Windows.Forms.MaskedTextBox();
             this.lbl_AnalRespRoll = new System.Windows.Forms.Label();
             this.chk_EquipCompartilhadoRoll = new System.Windows.Forms.CheckBox();
             this.lbl_LocEquipRoll = new System.Windows.Forms.Label();
@@ -145,7 +144,6 @@
             this.lbl_PnRespEquipDev = new System.Windows.Forms.Label();
             this.txt_Serial4Dev = new System.Windows.Forms.TextBox();
             this.txt_PnRespEquipDev = new System.Windows.Forms.MaskedTextBox();
-            this.txt_AnalRespDev = new System.Windows.Forms.MaskedTextBox();
             this.txt_UsuRespEquipDev = new System.Windows.Forms.MaskedTextBox();
             this.lbl_NomeRespEquipDev = new System.Windows.Forms.Label();
             this.lbl_AnalRespDev = new System.Windows.Forms.Label();
@@ -222,7 +220,6 @@
             this.lbl_FabBatLaudoBat = new System.Windows.Forms.Label();
             this.grafico_laudobat = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label43 = new System.Windows.Forms.Label();
-            this.txt_AnalRespLaudoBat = new System.Windows.Forms.TextBox();
             this.txt_SolucaoLaudoBat = new System.Windows.Forms.TextBox();
             this.lbl_SolucaoLaudoBat = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -265,9 +262,67 @@
             this.txt_NumChamadoLaudoBat = new System.Windows.Forms.MaskedTextBox();
             this.lbl_NumChamadoLaudoBat = new System.Windows.Forms.Label();
             this.tab_LaudoTecnico = new System.Windows.Forms.TabPage();
+            this.cbo_AnalRespLaudoTec = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label53 = new System.Windows.Forms.Label();
             this.tbl_reparosTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_reparosTableAdapter();
             this.tbl_empresasTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_empresasTableAdapter();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.tblcolaboradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_colaboradoresTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_colaboradoresTableAdapter();
+            this.cbo_AnalRespLaudoBat = new System.Windows.Forms.ComboBox();
+            this.cbo_AnalRespDev = new System.Windows.Forms.ComboBox();
+            this.cbo_AnalRespRoll = new System.Windows.Forms.ComboBox();
             this.tab_Formularios.SuspendLayout();
             this.tab_RollOut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource)).BeginInit();
@@ -280,6 +335,8 @@
             this.tab_LaudoBat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource1)).BeginInit();
+            this.tab_LaudoTecnico.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblcolaboradoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Formularios
@@ -300,6 +357,7 @@
             // 
             // tab_RollOut
             // 
+            this.tab_RollOut.Controls.Add(this.cbo_AnalRespRoll);
             this.tab_RollOut.Controls.Add(this.txt_SetorTercRoll);
             this.tab_RollOut.Controls.Add(this.txt_GerTercRoll);
             this.tab_RollOut.Controls.Add(this.txt_SetorUsuRespRoll);
@@ -325,7 +383,6 @@
             this.tab_RollOut.Controls.Add(this.label19);
             this.tab_RollOut.Controls.Add(this.date_FillRoll);
             this.tab_RollOut.Controls.Add(this.lbl_GerTercRoll);
-            this.tab_RollOut.Controls.Add(this.txt_AnalRespRoll);
             this.tab_RollOut.Controls.Add(this.lbl_AnalRespRoll);
             this.tab_RollOut.Controls.Add(this.chk_EquipCompartilhadoRoll);
             this.tab_RollOut.Controls.Add(this.lbl_LocEquipRoll);
@@ -676,14 +733,6 @@
             this.lbl_GerTercRoll.Size = new System.Drawing.Size(30, 13);
             this.lbl_GerTercRoll.TabIndex = 48;
             this.lbl_GerTercRoll.Text = "GER";
-            // 
-            // txt_AnalRespRoll
-            // 
-            this.txt_AnalRespRoll.Location = new System.Drawing.Point(525, 361);
-            this.txt_AnalRespRoll.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.txt_AnalRespRoll.Name = "txt_AnalRespRoll";
-            this.txt_AnalRespRoll.Size = new System.Drawing.Size(292, 20);
-            this.txt_AnalRespRoll.TabIndex = 34;
             // 
             // lbl_AnalRespRoll
             // 
@@ -1135,6 +1184,7 @@
             // 
             // tab_RetiraEquip
             // 
+            this.tab_RetiraEquip.Controls.Add(this.cbo_AnalRespDev);
             this.tab_RetiraEquip.Controls.Add(this.label26);
             this.tab_RetiraEquip.Controls.Add(this.txt_SalaLocalEquipDev);
             this.tab_RetiraEquip.Controls.Add(this.label25);
@@ -1164,7 +1214,6 @@
             this.tab_RetiraEquip.Controls.Add(this.lbl_PnRespEquipDev);
             this.tab_RetiraEquip.Controls.Add(this.txt_Serial4Dev);
             this.tab_RetiraEquip.Controls.Add(this.txt_PnRespEquipDev);
-            this.tab_RetiraEquip.Controls.Add(this.txt_AnalRespDev);
             this.tab_RetiraEquip.Controls.Add(this.txt_UsuRespEquipDev);
             this.tab_RetiraEquip.Controls.Add(this.lbl_NomeRespEquipDev);
             this.tab_RetiraEquip.Controls.Add(this.lbl_AnalRespDev);
@@ -1226,6 +1275,7 @@
             // 
             // cbo_EmpresaDev
             // 
+            this.cbo_EmpresaDev.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbo_EmpresaDev.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbo_EmpresaDev.DataSource = this.tblempresasBindingSource;
             this.cbo_EmpresaDev.DisplayMember = "nome_empresa";
@@ -1466,14 +1516,6 @@
             this.txt_PnRespEquipDev.Size = new System.Drawing.Size(70, 20);
             this.txt_PnRespEquipDev.TabIndex = 17;
             this.txt_PnRespEquipDev.ValidatingType = typeof(int);
-            // 
-            // txt_AnalRespDev
-            // 
-            this.txt_AnalRespDev.Location = new System.Drawing.Point(85, 192);
-            this.txt_AnalRespDev.Mask = "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL";
-            this.txt_AnalRespDev.Name = "txt_AnalRespDev";
-            this.txt_AnalRespDev.Size = new System.Drawing.Size(353, 20);
-            this.txt_AnalRespDev.TabIndex = 29;
             // 
             // txt_UsuRespEquipDev
             // 
@@ -2102,6 +2144,7 @@
             // 
             // tab_LaudoBat
             // 
+            this.tab_LaudoBat.Controls.Add(this.cbo_AnalRespLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.rdo_AnexaArqLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.rdo_FalhaTesteLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.chk_TestePsaLaudoBat);
@@ -2115,7 +2158,6 @@
             this.tab_LaudoBat.Controls.Add(this.lbl_FabBatLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.grafico_laudobat);
             this.tab_LaudoBat.Controls.Add(this.label43);
-            this.tab_LaudoBat.Controls.Add(this.txt_AnalRespLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.txt_SolucaoLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.lbl_SolucaoLaudoBat);
             this.tab_LaudoBat.Controls.Add(this.label32);
@@ -2288,40 +2330,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grafico_laudobat.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             this.grafico_laudobat.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Sunken;
-            chartArea2.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea2.AxisX.MaximumAutoSize = 100F;
-            chartArea2.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea2.AxisX2.MaximumAutoSize = 100F;
-            chartArea2.AxisX2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea2.AxisY.Interval = 20D;
-            chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisY.MaximumAutoSize = 100F;
-            chartArea2.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea2.AxisY2.Crossing = 1.7976931348623157E+308D;
-            chartArea2.AxisY2.Interval = 20D;
-            chartArea2.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisY2.LineWidth = 2;
-            chartArea2.AxisY2.MaximumAutoSize = 100F;
-            chartArea2.AxisY2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
-            chartArea2.IsSameFontSizeForAllAxes = true;
-            chartArea2.Name = "ChartArea1";
-            this.grafico_laudobat.ChartAreas.Add(chartArea2);
+            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea1.AxisX.MaximumAutoSize = 100F;
+            chartArea1.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea1.AxisX2.MaximumAutoSize = 100F;
+            chartArea1.AxisX2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea1.AxisY.Interval = 20D;
+            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY.MaximumAutoSize = 100F;
+            chartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea1.AxisY2.Crossing = 1.7976931348623157E+308D;
+            chartArea1.AxisY2.Interval = 20D;
+            chartArea1.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY2.LineWidth = 2;
+            chartArea1.AxisY2.MaximumAutoSize = 100F;
+            chartArea1.AxisY2.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
+            chartArea1.IsSameFontSizeForAllAxes = true;
+            chartArea1.Name = "ChartArea1";
+            this.grafico_laudobat.ChartAreas.Add(chartArea1);
             this.grafico_laudobat.Location = new System.Drawing.Point(9, 316);
             this.grafico_laudobat.Margin = new System.Windows.Forms.Padding(1);
             this.grafico_laudobat.Name = "grafico_laudobat";
             this.grafico_laudobat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.MarkerSize = 10;
-            series2.Name = "Series1";
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.grafico_laudobat.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.MarkerSize = 10;
+            series1.Name = "Series1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.grafico_laudobat.Series.Add(series1);
             this.grafico_laudobat.Size = new System.Drawing.Size(1080, 240);
             this.grafico_laudobat.TabIndex = 898;
-            title2.Name = "Titulo";
-            title2.Text = "Autonomia de Bateria";
-            this.grafico_laudobat.Titles.Add(title2);
+            title1.Name = "Titulo";
+            title1.Text = "Autonomia de Bateria";
+            this.grafico_laudobat.Titles.Add(title1);
             this.grafico_laudobat.Visible = false;
             // 
             // label43
@@ -2332,16 +2374,6 @@
             this.label43.Size = new System.Drawing.Size(62, 13);
             this.label43.TabIndex = 897;
             this.label43.Text = "Anal. Resp.";
-            // 
-            // txt_AnalRespLaudoBat
-            // 
-            this.txt_AnalRespLaudoBat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_AnalRespLaudoBat.Location = new System.Drawing.Point(96, 264);
-            this.txt_AnalRespLaudoBat.MaxLength = 40;
-            this.txt_AnalRespLaudoBat.Name = "txt_AnalRespLaudoBat";
-            this.txt_AnalRespLaudoBat.Size = new System.Drawing.Size(311, 20);
-            this.txt_AnalRespLaudoBat.TabIndex = 18;
-            this.txt_AnalRespLaudoBat.WordWrap = false;
             // 
             // txt_SolucaoLaudoBat
             // 
@@ -2740,6 +2772,59 @@
             // 
             // tab_LaudoTecnico
             // 
+            this.tab_LaudoTecnico.Controls.Add(this.cbo_AnalRespLaudoTec);
+            this.tab_LaudoTecnico.Controls.Add(this.button2);
+            this.tab_LaudoTecnico.Controls.Add(this.button3);
+            this.tab_LaudoTecnico.Controls.Add(this.radioButton1);
+            this.tab_LaudoTecnico.Controls.Add(this.radioButton2);
+            this.tab_LaudoTecnico.Controls.Add(this.checkBox1);
+            this.tab_LaudoTecnico.Controls.Add(this.checkBox2);
+            this.tab_LaudoTecnico.Controls.Add(this.checkBox3);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox1);
+            this.tab_LaudoTecnico.Controls.Add(this.label29);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox2);
+            this.tab_LaudoTecnico.Controls.Add(this.label30);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox3);
+            this.tab_LaudoTecnico.Controls.Add(this.label33);
+            this.tab_LaudoTecnico.Controls.Add(this.label34);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox5);
+            this.tab_LaudoTecnico.Controls.Add(this.label35);
+            this.tab_LaudoTecnico.Controls.Add(this.label36);
+            this.tab_LaudoTecnico.Controls.Add(this.button1);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox6);
+            this.tab_LaudoTecnico.Controls.Add(this.checkBox4);
+            this.tab_LaudoTecnico.Controls.Add(this.checkBox5);
+            this.tab_LaudoTecnico.Controls.Add(this.label37);
+            this.tab_LaudoTecnico.Controls.Add(this.maskedTextBox1);
+            this.tab_LaudoTecnico.Controls.Add(this.checkBox6);
+            this.tab_LaudoTecnico.Controls.Add(this.checkBox7);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox7);
+            this.tab_LaudoTecnico.Controls.Add(this.label38);
+            this.tab_LaudoTecnico.Controls.Add(this.comboBox1);
+            this.tab_LaudoTecnico.Controls.Add(this.dateTimePicker1);
+            this.tab_LaudoTecnico.Controls.Add(this.label39);
+            this.tab_LaudoTecnico.Controls.Add(this.label40);
+            this.tab_LaudoTecnico.Controls.Add(this.label41);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox8);
+            this.tab_LaudoTecnico.Controls.Add(this.dateTimePicker2);
+            this.tab_LaudoTecnico.Controls.Add(this.label42);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox9);
+            this.tab_LaudoTecnico.Controls.Add(this.label44);
+            this.tab_LaudoTecnico.Controls.Add(this.label45);
+            this.tab_LaudoTecnico.Controls.Add(this.maskedTextBox2);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox10);
+            this.tab_LaudoTecnico.Controls.Add(this.label46);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox11);
+            this.tab_LaudoTecnico.Controls.Add(this.label48);
+            this.tab_LaudoTecnico.Controls.Add(this.label49);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox12);
+            this.tab_LaudoTecnico.Controls.Add(this.label50);
+            this.tab_LaudoTecnico.Controls.Add(this.textBox13);
+            this.tab_LaudoTecnico.Controls.Add(this.label51);
+            this.tab_LaudoTecnico.Controls.Add(this.label52);
+            this.tab_LaudoTecnico.Controls.Add(this.dateTimePicker3);
+            this.tab_LaudoTecnico.Controls.Add(this.maskedTextBox3);
+            this.tab_LaudoTecnico.Controls.Add(this.label53);
             this.tab_LaudoTecnico.Location = new System.Drawing.Point(4, 22);
             this.tab_LaudoTecnico.Name = "tab_LaudoTecnico";
             this.tab_LaudoTecnico.Padding = new System.Windows.Forms.Padding(3);
@@ -2747,6 +2832,530 @@
             this.tab_LaudoTecnico.TabIndex = 4;
             this.tab_LaudoTecnico.Text = "Laudo Técnico";
             this.tab_LaudoTecnico.UseVisualStyleBackColor = true;
+            // 
+            // cbo_AnalRespLaudoTec
+            // 
+            this.cbo_AnalRespLaudoTec.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_AnalRespLaudoTec.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbo_AnalRespLaudoTec.DataSource = this.tblcolaboradoresBindingSource;
+            this.cbo_AnalRespLaudoTec.DisplayMember = "nome_colab";
+            this.cbo_AnalRespLaudoTec.FormattingEnabled = true;
+            this.cbo_AnalRespLaudoTec.Location = new System.Drawing.Point(84, 268);
+            this.cbo_AnalRespLaudoTec.Name = "cbo_AnalRespLaudoTec";
+            this.cbo_AnalRespLaudoTec.Size = new System.Drawing.Size(341, 21);
+            this.cbo_AnalRespLaudoTec.TabIndex = 965;
+            this.cbo_AnalRespLaudoTec.ValueMember = "nome_colab";
+            // 
+            // button2
+            // 
+            this.button2.Image = global::FormulariosAtos.Properties.Resources.apagar;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(781, 343);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 43);
+            this.button2.TabIndex = 964;
+            this.button2.Text = "Apagar Dados";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(928, 343);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(80, 43);
+            this.button3.TabIndex = 963;
+            this.button3.Text = "Gerar";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(652, 97);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(97, 17);
+            this.radioButton1.TabIndex = 962;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Anexar Arquivo";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(514, 97);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(118, 17);
+            this.radioButton2.TabIndex = 961;
+            this.radioButton2.Text = "Teste não realizado";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(123, 139);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(267, 17);
+            this.checkBox1.TabIndex = 960;
+            this.checkBox1.Text = "Teste de Bateria usando PSA (Diagnóstico da Dell)";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(123, 117);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(148, 17);
+            this.checkBox2.TabIndex = 959;
+            this.checkBox2.Text = "Mantem carga - informar | ";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(123, 94);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(148, 17);
+            this.checkBox3.TabIndex = 958;
+            this.checkBox3.Text = "Não segura carga alguma";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(804, 147);
+            this.textBox1.MaxLength = 8;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(65, 20);
+            this.textBox1.TabIndex = 933;
+            this.textBox1.WordWrap = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(768, 150);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(30, 13);
+            this.label29.TabIndex = 957;
+            this.label29.Text = "Volts";
+            // 
+            // textBox2
+            // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(661, 147);
+            this.textBox2.MaxLength = 8;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(101, 20);
+            this.textBox2.TabIndex = 932;
+            this.textBox2.WordWrap = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(590, 150);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(65, 13);
+            this.label30.TabIndex = 956;
+            this.label30.Text = "Composição";
+            // 
+            // textBox3
+            // 
+            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(514, 146);
+            this.textBox3.MaxLength = 8;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(70, 20);
+            this.textBox3.TabIndex = 931;
+            this.textBox3.WordWrap = false;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(431, 149);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(57, 13);
+            this.label33.TabIndex = 955;
+            this.label33.Text = "Fabricante";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(15, 268);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(62, 13);
+            this.label34.TabIndex = 954;
+            this.label34.Text = "Anal. Resp.";
+            // 
+            // textBox5
+            // 
+            this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox5.Location = new System.Drawing.Point(798, 173);
+            this.textBox5.MaxLength = 500;
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(210, 118);
+            this.textBox5.TabIndex = 935;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(734, 176);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(46, 13);
+            this.label35.TabIndex = 953;
+            this.label35.Text = "Solução";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(431, 99);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(37, 13);
+            this.label36.TabIndex = 952;
+            this.label36.Text = "Laudo";
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(913, 92);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 26);
+            this.button1.TabIndex = 951;
+            this.button1.Text = "Abrir Arquivo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox6.Location = new System.Drawing.Point(755, 95);
+            this.textBox6.MaxLength = 8;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(152, 20);
+            this.textBox6.TabIndex = 928;
+            this.textBox6.WordWrap = false;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Enabled = false;
+            this.checkBox4.Location = new System.Drawing.Point(144, 231);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(198, 17);
+            this.checkBox4.TabIndex = 926;
+            this.checkBox4.Text = "Bateria não mantém carga suficiente";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Enabled = false;
+            this.checkBox5.Location = new System.Drawing.Point(144, 208);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(211, 17);
+            this.checkBox5.TabIndex = 925;
+            this.checkBox5.Text = "Bateria chegou ao final de sua vida últil";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(319, 118);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(35, 13);
+            this.label37.TabIndex = 950;
+            this.label37.Text = "Horas";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(271, 115);
+            this.maskedTextBox1.Mask = "00:00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(42, 20);
+            this.maskedTextBox1.TabIndex = 922;
+            this.maskedTextBox1.Text = "0000";
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Enabled = false;
+            this.checkBox6.Location = new System.Drawing.Point(144, 185);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(263, 17);
+            this.checkBox6.TabIndex = 924;
+            this.checkBox6.Text = "Bateria não localizada usando o diagnóstico (N/A)";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Enabled = false;
+            this.checkBox7.Location = new System.Drawing.Point(144, 162);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(190, 17);
+            this.checkBox7.TabIndex = 923;
+            this.checkBox7.Text = "Bateria não apresentou problemas ";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            this.textBox7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox7.Location = new System.Drawing.Point(514, 120);
+            this.textBox7.MaxLength = 40;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(152, 20);
+            this.textBox7.TabIndex = 929;
+            this.textBox7.WordWrap = false;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(431, 123);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(72, 13);
+            this.label38.TabIndex = 949;
+            this.label38.Text = "Serial Bateria:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.DataSource = this.tblempresasBindingSource1;
+            this.comboBox1.DisplayMember = "nome_empresa";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(779, 42);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(229, 21);
+            this.comboBox1.TabIndex = 917;
+            this.comboBox1.ValueMember = "cidade_empresa";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(843, 68);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker1.TabIndex = 921;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(672, 123);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(157, 13);
+            this.label39.TabIndex = 939;
+            this.label39.Text = "Vencimento Garantia da Bateria";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(3, 94);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(114, 13);
+            this.label40.TabIndex = 948;
+            this.label40.Text = "Problema Apresentado";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(672, 71);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(165, 13);
+            this.label41.TabIndex = 938;
+            this.label41.Text = "Vencimento Garantia da Máquina";
+            // 
+            // textBox8
+            // 
+            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox8.Location = new System.Drawing.Point(514, 68);
+            this.textBox8.MaxLength = 8;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(152, 20);
+            this.textBox8.TabIndex = 920;
+            this.textBox8.WordWrap = false;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(843, 120);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker2.TabIndex = 930;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(431, 71);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(77, 13);
+            this.label42.TabIndex = 947;
+            this.label42.Text = "Serial Maquina";
+            // 
+            // textBox9
+            // 
+            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox9.Location = new System.Drawing.Point(253, 68);
+            this.textBox9.MaxLength = 30;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(172, 20);
+            this.textBox9.TabIndex = 919;
+            this.textBox9.WordWrap = false;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(205, 71);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(42, 13);
+            this.label44.TabIndex = 946;
+            this.label44.Text = "Modelo";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(431, 45);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(37, 13);
+            this.label45.TabIndex = 945;
+            this.label45.Text = "Ramal";
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(514, 42);
+            this.maskedTextBox2.Mask = "0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(35, 20);
+            this.maskedTextBox2.TabIndex = 915;
+            this.maskedTextBox2.ValidatingType = typeof(int);
+            // 
+            // textBox10
+            // 
+            this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox10.Location = new System.Drawing.Point(69, 68);
+            this.textBox10.MaxLength = 20;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(130, 20);
+            this.textBox10.TabIndex = 918;
+            this.textBox10.WordWrap = false;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(6, 71);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(46, 13);
+            this.label46.TabIndex = 944;
+            this.label46.Text = "Etiqueta";
+            // 
+            // textBox11
+            // 
+            this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox11.Location = new System.Drawing.Point(593, 42);
+            this.textBox11.MaxLength = 20;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(107, 20);
+            this.textBox11.TabIndex = 916;
+            this.textBox11.WordWrap = false;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(555, 45);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(32, 13);
+            this.label48.TabIndex = 943;
+            this.label48.Text = "Setor";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(716, 45);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(64, 13);
+            this.label49.TabIndex = 942;
+            this.label49.Text = "Localização";
+            // 
+            // textBox12
+            // 
+            this.textBox12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox12.Location = new System.Drawing.Point(514, 173);
+            this.textBox12.MaxLength = 500;
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(210, 118);
+            this.textBox12.TabIndex = 934;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(430, 176);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(63, 13);
+            this.label50.TabIndex = 941;
+            this.label50.Text = "Diagnóstico";
+            // 
+            // textBox13
+            // 
+            this.textBox13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox13.Location = new System.Drawing.Point(69, 42);
+            this.textBox13.MaxLength = 90;
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(356, 20);
+            this.textBox13.TabIndex = 914;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(6, 45);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(43, 13);
+            this.label51.TabIndex = 940;
+            this.label51.Text = "Usuário";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(306, 19);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(30, 13);
+            this.label52.TabIndex = 937;
+            this.label52.Text = "Data";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker3.Location = new System.Drawing.Point(342, 16);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker3.TabIndex = 913;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(69, 16);
+            this.maskedTextBox3.Mask = "0000000000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(70, 20);
+            this.maskedTextBox3.TabIndex = 912;
+            this.maskedTextBox3.ValidatingType = typeof(int);
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(6, 19);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(52, 13);
+            this.label53.TabIndex = 936;
+            this.label53.Text = "Chamado";
             // 
             // tbl_reparosTableAdapter
             // 
@@ -2759,6 +3368,54 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // tblcolaboradoresBindingSource
+            // 
+            this.tblcolaboradoresBindingSource.DataMember = "tbl_colaboradores";
+            this.tblcolaboradoresBindingSource.DataSource = this.atosDataSet;
+            // 
+            // tbl_colaboradoresTableAdapter
+            // 
+            this.tbl_colaboradoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbo_AnalRespLaudoBat
+            // 
+            this.cbo_AnalRespLaudoBat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_AnalRespLaudoBat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbo_AnalRespLaudoBat.DataSource = this.tblcolaboradoresBindingSource;
+            this.cbo_AnalRespLaudoBat.DisplayMember = "nome_colab";
+            this.cbo_AnalRespLaudoBat.FormattingEnabled = true;
+            this.cbo_AnalRespLaudoBat.Location = new System.Drawing.Point(83, 263);
+            this.cbo_AnalRespLaudoBat.Name = "cbo_AnalRespLaudoBat";
+            this.cbo_AnalRespLaudoBat.Size = new System.Drawing.Size(341, 21);
+            this.cbo_AnalRespLaudoBat.TabIndex = 966;
+            this.cbo_AnalRespLaudoBat.ValueMember = "nome_colab";
+            // 
+            // cbo_AnalRespDev
+            // 
+            this.cbo_AnalRespDev.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_AnalRespDev.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbo_AnalRespDev.DataSource = this.tblcolaboradoresBindingSource;
+            this.cbo_AnalRespDev.DisplayMember = "nome_colab";
+            this.cbo_AnalRespDev.FormattingEnabled = true;
+            this.cbo_AnalRespDev.Location = new System.Drawing.Point(85, 191);
+            this.cbo_AnalRespDev.Name = "cbo_AnalRespDev";
+            this.cbo_AnalRespDev.Size = new System.Drawing.Size(341, 21);
+            this.cbo_AnalRespDev.TabIndex = 967;
+            this.cbo_AnalRespDev.ValueMember = "nome_colab";
+            // 
+            // cbo_AnalRespRoll
+            // 
+            this.cbo_AnalRespRoll.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_AnalRespRoll.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbo_AnalRespRoll.DataSource = this.tblcolaboradoresBindingSource;
+            this.cbo_AnalRespRoll.DisplayMember = "nome_colab";
+            this.cbo_AnalRespRoll.FormattingEnabled = true;
+            this.cbo_AnalRespRoll.Location = new System.Drawing.Point(525, 361);
+            this.cbo_AnalRespRoll.Name = "cbo_AnalRespRoll";
+            this.cbo_AnalRespRoll.Size = new System.Drawing.Size(292, 21);
+            this.cbo_AnalRespRoll.TabIndex = 968;
+            this.cbo_AnalRespRoll.ValueMember = "nome_colab";
             // 
             // frm_Main
             // 
@@ -2789,6 +3446,9 @@
             this.tab_LaudoBat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource1)).EndInit();
+            this.tab_LaudoTecnico.ResumeLayout(false);
+            this.tab_LaudoTecnico.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblcolaboradoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2833,7 +3493,6 @@
         private System.Windows.Forms.Label lbl_ModeloCompRoll;
         private System.Windows.Forms.TextBox txt_FabCompRoll;
         private System.Windows.Forms.Label lbl_FabricanteCompRoll;
-        private System.Windows.Forms.MaskedTextBox txt_AnalRespRoll;
         private System.Windows.Forms.Label lbl_AnalRespRoll;
         private System.Windows.Forms.TextBox txt_EtiquetaDockCompRoll;
         private System.Windows.Forms.Label lbl_EtiquetaDockCompRoll;
@@ -2866,7 +3525,6 @@
         private System.Windows.Forms.Label lbl_ChamadoDev;
         private System.Windows.Forms.Label lbl_DataDev;
         private System.Windows.Forms.DateTimePicker txt_DataDev;
-        private System.Windows.Forms.MaskedTextBox txt_AnalRespDev;
         private System.Windows.Forms.Label lbl_AnalRespDev;
         private System.Windows.Forms.MaskedTextBox txt_AndarLocalEquipDev;
         private System.Windows.Forms.Label lbl_AndarLocalEquipDev;
@@ -3016,7 +3674,6 @@
         private System.Windows.Forms.TextBox txt_SolucaoLaudoBat;
         private System.Windows.Forms.Label lbl_SolucaoLaudoBat;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox txt_AnalRespLaudoBat;
         private System.Windows.Forms.DataVisualization.Charting.Chart grafico_laudobat;
         private System.Windows.Forms.TextBox txt_VoltsLaudoBat;
         private System.Windows.Forms.Label lbl_VoltsLaudoBat;
@@ -3030,6 +3687,64 @@
         private System.Windows.Forms.CheckBox chk_MantemCargaLaudoBat;
         private System.Windows.Forms.RadioButton rdo_AnexaArqLaudoBat;
         private System.Windows.Forms.RadioButton rdo_FalhaTesteLaudoBat;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cbo_AnalRespLaudoTec;
+        private System.Windows.Forms.BindingSource tblcolaboradoresBindingSource;
+        private AtosDataSetTableAdapters.tbl_colaboradoresTableAdapter tbl_colaboradoresTableAdapter;
+        private System.Windows.Forms.ComboBox cbo_AnalRespLaudoBat;
+        private System.Windows.Forms.ComboBox cbo_AnalRespDev;
+        private System.Windows.Forms.ComboBox cbo_AnalRespRoll;
     }
 }
 

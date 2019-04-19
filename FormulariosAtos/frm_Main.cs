@@ -137,7 +137,7 @@ namespace FormulariosAtos
 
                 //Preenchimento Informações Complementares
                 this.FindAndReplace(wordApp, "@datager", date_FillRoll.Text.Trim());
-                this.FindAndReplace(wordApp, "@analresp", txt_AnalRespRoll.Text.ToUpper().Trim());
+                this.FindAndReplace(wordApp, "@analresp", cbo_AnalRespRoll.Text.ToUpper().Trim());
                 this.FindAndReplace(wordApp, "@numchamado", txt_ChamadoRoll.Text.Trim());
                 this.FindAndReplace(wordApp, "@motivoex", txt_MotivoExcRoll.Text.Trim());
 
@@ -256,7 +256,7 @@ namespace FormulariosAtos
                 {
                     //Preenchimento Rollout
                     this.FindAndReplace(wordApp, "@chamado", txt_ChamadoRoll.Text.Trim());
-                    this.FindAndReplace(wordApp, "@analresp", txt_AnalRespRoll.Text.Trim().ToUpper());
+                    this.FindAndReplace(wordApp, "@analresp", cbo_AnalRespRoll.Text.Trim().ToUpper());
                     this.FindAndReplace(wordApp, "@data", date_FillRoll.Text.Trim());
                     this.FindAndReplace(wordApp, "@nome", txt_UsuRespRoll.Text.Trim());
                     this.FindAndReplace(wordApp, "@pn", txt_PnUsuRespRoll.Text.Trim());
@@ -269,7 +269,7 @@ namespace FormulariosAtos
                 {
                     //Preenchimento Devolução
                     this.FindAndReplace(wordApp, "@chamado", txt_ChamadoDev.Text.Trim());
-                    this.FindAndReplace(wordApp, "@analresp", txt_AnalRespDev.Text.Trim().ToUpper());
+                    this.FindAndReplace(wordApp, "@analresp", cbo_AnalRespDev.Text.Trim().ToUpper());
                     this.FindAndReplace(wordApp, "@data", txt_DataDev.Text.Trim());
                     this.FindAndReplace(wordApp, "@nome", txt_UsuRespEquipDev.Text.Trim());
                     this.FindAndReplace(wordApp, "@pn", txt_PnRespEquipDev.Text.Trim());
@@ -415,7 +415,7 @@ namespace FormulariosAtos
                 myWordDoc.Activate();
 
                 //Preenchimento 
-                this.FindAndReplace(wordApp, "@usuarioresp", txt_AnalRespLaudoBat.Text.Trim());
+                this.FindAndReplace(wordApp, "@usuarioresp", cbo_AnalRespLaudoBat.Text.Trim());
                 this.FindAndReplace(wordApp, "@etiqueta", txt_EtiquetaLaudoBat.Text.ToUpper().Trim());
                 this.FindAndReplace(wordApp, "@modelo", txt_ModeloLaudoBat.Text.ToUpper().Trim());
                 this.FindAndReplace(wordApp, "@numserie", txt_SerialMaqLaudoBat.Text.ToUpper().Trim());
@@ -554,7 +554,9 @@ namespace FormulariosAtos
         }       
 
         private void frm_Main_Load(object sender, EventArgs e)
-        {           
+        {
+            // TODO: This line of code loads data into the 'atosDataSet.tbl_colaboradores' table. You can move, or remove it, as needed.
+            this.tbl_colaboradoresTableAdapter.Fill(this.atosDataSet.tbl_colaboradores);
             // TODO: esta linha de código carrega dados na tabela 'atosDataSet.tbl_empresas'. Você pode movê-la ou removê-la conforme necessário.
             this.tbl_empresasTableAdapter.Fill(this.atosDataSet.tbl_empresas);
             // TODO: This line of code loads data into the 'atosDataSet.tbl_reparos' table. You can move, or remove it, as needed.
@@ -598,25 +600,25 @@ namespace FormulariosAtos
         {
             if (rdo_Rollout.Checked == true)
             {
-                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
-                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\FormulariosGerados\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");
-                CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoRoll.Text + ".DOCX", 0);
+                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\CreatedReports\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
+                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\CreatedReports\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");
+                CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO.DOCX", "C:\\Documentos ATOS\\CreatedReports\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoRoll.Text + ".DOCX", 0);
             }
             else
             {
-                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
-                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\FormulariosGerados\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");                
+                CriaFichaInventario("C:\\Documentos ATOS\\Templates\\FICHA INVENTÁRIO.DOCX", "C:\\Documentos ATOS\\CreatedReports\\FICHA INVENTÁRIO " + txt_ChamadoRoll.Text + ".DOCX");
+                CriaTermoResp("C:\\Documentos ATOS\\Templates\\TERMO DE RESPONSABILIDADE.DOC", "C:\\Documentos ATOS\\CreatedReports\\TERMO DE RESPONSABILIDADE " + txt_ChamadoRoll.Text + ".DOC");                
             }
         }
 
         private void btn_GerarDevolucao_Click(object sender, EventArgs e)
         {
-            CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO-2.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoDev.Text + ".DOCX", 1);
+            CriaFormularioDevolucao("C:\\Documentos ATOS\\Templates\\TERMO DEVOLUÇÃO DE EQUIPAMENTO-2.DOCX", "C:\\Documentos ATOS\\CreatedReports\\TERMO DEVOLUÇÃO DE EQUIPAMENTO " + txt_ChamadoDev.Text + ".DOCX", 1);
         }
 
         private void btn_GerarReqPeca_Click(object sender, EventArgs e)
         {
-            CriaReqPecas("C:\\Documentos ATOS\\Templates\\FORMULARIO REPOSIÇÃO DE PEÇAS.DOCX", "C:\\Documentos ATOS\\FormulariosGerados\\FORMULARIO REPOSIÇÃO DE PEÇAS " + txt_ChamadoReqPeca.Text + ".DOCX");
+            CriaReqPecas("C:\\Documentos ATOS\\Templates\\FORMULARIO REPOSIÇÃO DE PEÇAS.DOCX", "C:\\Documentos ATOS\\CreatedReports\\FORMULARIO REPOSIÇÃO DE PEÇAS " + txt_ChamadoReqPeca.Text + ".DOCX");
         }
 
         private void btn_GerarLaudoBat_Click(object sender, EventArgs e)
@@ -696,11 +698,11 @@ namespace FormulariosAtos
 
                 if (rdo_AnexaArqLaudoBat.Checked == true)
                 {
-                    str_InsertTblDadosLaudoBat = "Insert Into tbl_dadoslaudobat(numchamado, usuarioresp, localizacao, etiqueta, numserie, serialbat, ramal, datateste, modeloequip, garantiaequip, garantiabat, naoseguracarga, mantemcarga, tempocarga, dellpsa, bateriaok, baterianloc, bateriafimvida, baterianmantem, diagnostico, solucao, analistaresp, cidade, laudo) values('" + txt_NumChamadoLaudoBat.Text + "', '" + txt_UsuRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.Text + "', '" + txt_EtiquetaLaudoBat.Text + "', '" + txt_SerialMaqLaudoBat.Text + "', '" + txt_SerialBatLaudoBat.Text + "', '" + txt_RamalUsuLaudoBat.Text + "', '" + Convert.ToDateTime(txt_DataLaudoBat.Text) + "', '" + txt_ModeloLaudoBat.Text + "', '" + Convert.ToDateTime(txt_GarantiaEquipLaudoBat.Text) + "', '" + Convert.ToDateTime(txt_GarantiaBatLaudoBat.Text) + "', '" + str_RdoNaoSeguraCarga + "', '" + str_RdoMantemCarga + "', '" + txt_DuracaoBatLaudoBat.Text + "', '" + str_RdoDellPsa + "', '" + str_ChkBatSemProblema + "', '" + str_ChkBatNaoLocalizada + "', '" + str_ChkBatFimVida + "', '" + str_ChkBatCargaInsuf + "', '" + txt_DiagLaudoBat.Text + "', '" + txt_SolucaoLaudoBat.Text + "', '" + txt_AnalRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.SelectedValue.ToString() + "', '')";
+                    str_InsertTblDadosLaudoBat = "Insert Into tbl_dadoslaudobat(numchamado, usuarioresp, localizacao, etiqueta, numserie, serialbat, ramal, datateste, modeloequip, garantiaequip, garantiabat, naoseguracarga, mantemcarga, tempocarga, dellpsa, bateriaok, baterianloc, bateriafimvida, baterianmantem, diagnostico, solucao, analistaresp, cidade, laudo) values('" + txt_NumChamadoLaudoBat.Text + "', '" + txt_UsuRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.Text + "', '" + txt_EtiquetaLaudoBat.Text + "', '" + txt_SerialMaqLaudoBat.Text + "', '" + txt_SerialBatLaudoBat.Text + "', '" + txt_RamalUsuLaudoBat.Text + "', '" + Convert.ToDateTime(txt_DataLaudoBat.Text) + "', '" + txt_ModeloLaudoBat.Text + "', '" + Convert.ToDateTime(txt_GarantiaEquipLaudoBat.Text) + "', '" + Convert.ToDateTime(txt_GarantiaBatLaudoBat.Text) + "', '" + str_RdoNaoSeguraCarga + "', '" + str_RdoMantemCarga + "', '" + txt_DuracaoBatLaudoBat.Text + "', '" + str_RdoDellPsa + "', '" + str_ChkBatSemProblema + "', '" + str_ChkBatNaoLocalizada + "', '" + str_ChkBatFimVida + "', '" + str_ChkBatCargaInsuf + "', '" + txt_DiagLaudoBat.Text + "', '" + txt_SolucaoLaudoBat.Text + "', '" + cbo_AnalRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.SelectedValue.ToString() + "', '')";
                 }
                 else
                 {
-                    str_InsertTblDadosLaudoBat = "Insert Into tbl_dadoslaudobat(numchamado, usuarioresp, localizacao, etiqueta, numserie, serialbat, ramal, datateste, modeloequip, garantiaequip, garantiabat, naoseguracarga, mantemcarga, tempocarga, dellpsa, bateriaok, baterianloc, bateriafimvida, baterianmantem, diagnostico, solucao, analistaresp, cidade, laudo) values('" + txt_NumChamadoLaudoBat.Text + "', '" + txt_UsuRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.Text + "', '" + txt_EtiquetaLaudoBat.Text + "', '" + txt_SerialMaqLaudoBat.Text + "', '" + txt_SerialBatLaudoBat.Text + "', '" + txt_RamalUsuLaudoBat.Text + "', '" + Convert.ToDateTime(txt_DataLaudoBat.Text) + "', '" + txt_ModeloLaudoBat.Text + "', '" + Convert.ToDateTime(txt_GarantiaEquipLaudoBat.Text) + "', '" + Convert.ToDateTime(txt_GarantiaBatLaudoBat.Text) + "', '" + str_RdoNaoSeguraCarga + "', '" + str_RdoMantemCarga + "', '" + txt_DuracaoBatLaudoBat.Text + "', '" + str_RdoDellPsa + "', '" + str_ChkBatSemProblema + "', '" + str_ChkBatNaoLocalizada + "', '" + str_ChkBatFimVida + "', '" + str_ChkBatCargaInsuf + "', '" + txt_DiagLaudoBat.Text + "', '" + txt_SolucaoLaudoBat.Text + "', '" + txt_AnalRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.SelectedValue.ToString() + "', '" + str_msgTesteImpossivel + "')";
+                    str_InsertTblDadosLaudoBat = "Insert Into tbl_dadoslaudobat(numchamado, usuarioresp, localizacao, etiqueta, numserie, serialbat, ramal, datateste, modeloequip, garantiaequip, garantiabat, naoseguracarga, mantemcarga, tempocarga, dellpsa, bateriaok, baterianloc, bateriafimvida, baterianmantem, diagnostico, solucao, analistaresp, cidade, laudo) values('" + txt_NumChamadoLaudoBat.Text + "', '" + txt_UsuRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.Text + "', '" + txt_EtiquetaLaudoBat.Text + "', '" + txt_SerialMaqLaudoBat.Text + "', '" + txt_SerialBatLaudoBat.Text + "', '" + txt_RamalUsuLaudoBat.Text + "', '" + Convert.ToDateTime(txt_DataLaudoBat.Text) + "', '" + txt_ModeloLaudoBat.Text + "', '" + Convert.ToDateTime(txt_GarantiaEquipLaudoBat.Text) + "', '" + Convert.ToDateTime(txt_GarantiaBatLaudoBat.Text) + "', '" + str_RdoNaoSeguraCarga + "', '" + str_RdoMantemCarga + "', '" + txt_DuracaoBatLaudoBat.Text + "', '" + str_RdoDellPsa + "', '" + str_ChkBatSemProblema + "', '" + str_ChkBatNaoLocalizada + "', '" + str_ChkBatFimVida + "', '" + str_ChkBatCargaInsuf + "', '" + txt_DiagLaudoBat.Text + "', '" + txt_SolucaoLaudoBat.Text + "', '" + cbo_AnalRespLaudoBat.Text + "', '" + cbo_LocalLaudoBat.SelectedValue.ToString() + "', '" + str_msgTesteImpossivel + "')";
                 }                
 
                 Classes.DataBaseClass ClasseDB = new Classes.DataBaseClass();
