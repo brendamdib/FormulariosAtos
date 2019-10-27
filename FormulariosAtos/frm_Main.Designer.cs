@@ -35,13 +35,15 @@
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tab_Formularios = new System.Windows.Forms.TabControl();
             this.tab_RollOut = new System.Windows.Forms.TabPage();
+            this.cbo_AnalRespRoll = new System.Windows.Forms.ComboBox();
+            this.tblcolaboradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.atosDataSet = new FormulariosAtos.AtosDataSet();
             this.txt_SetorTercRoll = new System.Windows.Forms.TextBox();
             this.txt_GerTercRoll = new System.Windows.Forms.TextBox();
             this.txt_SetorUsuRespRoll = new System.Windows.Forms.TextBox();
             this.txt_GerUsuRespRoll = new System.Windows.Forms.TextBox();
             this.cbo_EmpresaRoll = new System.Windows.Forms.ComboBox();
             this.tblempresasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.atosDataSet = new FormulariosAtos.AtosDataSet();
             this.txt_SalaLocalEquip = new System.Windows.Forms.TextBox();
             this.txt_PredioLocalEquip = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -115,6 +117,7 @@
             this.txt_EtiquetaCompRoll = new System.Windows.Forms.TextBox();
             this.lbl_EtiquetaCompRoll = new System.Windows.Forms.Label();
             this.tab_RetiraEquip = new System.Windows.Forms.TabPage();
+            this.cbo_AnalRespDev = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txt_SalaLocalEquipDev = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -207,6 +210,7 @@
             this.btn_LimparRep = new System.Windows.Forms.Button();
             this.btn_GerarReqPeca = new System.Windows.Forms.Button();
             this.tab_LaudoBat = new System.Windows.Forms.TabPage();
+            this.cbo_AnalRespLaudoBat = new System.Windows.Forms.ComboBox();
             this.rdo_AnexaArqLaudoBat = new System.Windows.Forms.RadioButton();
             this.rdo_FalhaTesteLaudoBat = new System.Windows.Forms.RadioButton();
             this.chk_TestePsaLaudoBat = new System.Windows.Forms.CheckBox();
@@ -318,15 +322,13 @@
             this.tbl_reparosTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_reparosTableAdapter();
             this.tbl_empresasTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_empresasTableAdapter();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.tblcolaboradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_colaboradoresTableAdapter = new FormulariosAtos.AtosDataSetTableAdapters.tbl_colaboradoresTableAdapter();
-            this.cbo_AnalRespLaudoBat = new System.Windows.Forms.ComboBox();
-            this.cbo_AnalRespDev = new System.Windows.Forms.ComboBox();
-            this.cbo_AnalRespRoll = new System.Windows.Forms.ComboBox();
+            this.tbl_contrato = new System.Windows.Forms.TabPage();
             this.tab_Formularios.SuspendLayout();
             this.tab_RollOut.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblcolaboradoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tab_RetiraEquip.SuspendLayout();
@@ -336,7 +338,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grafico_laudobat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource1)).BeginInit();
             this.tab_LaudoTecnico.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblcolaboradoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_Formularios
@@ -349,6 +350,7 @@
             this.tab_Formularios.Controls.Add(this.tab_RepPeca);
             this.tab_Formularios.Controls.Add(this.tab_LaudoBat);
             this.tab_Formularios.Controls.Add(this.tab_LaudoTecnico);
+            this.tab_Formularios.Controls.Add(this.tbl_contrato);
             this.tab_Formularios.Location = new System.Drawing.Point(12, 12);
             this.tab_Formularios.Name = "tab_Formularios";
             this.tab_Formularios.SelectedIndex = 0;
@@ -439,6 +441,29 @@
             this.tab_RollOut.Text = "Rollout / Novo Ponto / Transferência";
             this.tab_RollOut.UseVisualStyleBackColor = true;
             // 
+            // cbo_AnalRespRoll
+            // 
+            this.cbo_AnalRespRoll.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_AnalRespRoll.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbo_AnalRespRoll.DataSource = this.tblcolaboradoresBindingSource;
+            this.cbo_AnalRespRoll.DisplayMember = "nome_colab";
+            this.cbo_AnalRespRoll.FormattingEnabled = true;
+            this.cbo_AnalRespRoll.Location = new System.Drawing.Point(525, 361);
+            this.cbo_AnalRespRoll.Name = "cbo_AnalRespRoll";
+            this.cbo_AnalRespRoll.Size = new System.Drawing.Size(292, 21);
+            this.cbo_AnalRespRoll.TabIndex = 968;
+            this.cbo_AnalRespRoll.ValueMember = "nome_colab";
+            // 
+            // tblcolaboradoresBindingSource
+            // 
+            this.tblcolaboradoresBindingSource.DataMember = "tbl_colaboradores";
+            this.tblcolaboradoresBindingSource.DataSource = this.atosDataSet;
+            // 
+            // atosDataSet
+            // 
+            this.atosDataSet.DataSetName = "AtosDataSet";
+            this.atosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txt_SetorTercRoll
             // 
             this.txt_SetorTercRoll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -492,11 +517,6 @@
             // 
             this.tblempresasBindingSource.DataMember = "tbl_empresas";
             this.tblempresasBindingSource.DataSource = this.atosDataSet;
-            // 
-            // atosDataSet
-            // 
-            this.atosDataSet.DataSetName = "AtosDataSet";
-            this.atosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txt_SalaLocalEquip
             // 
@@ -1243,6 +1263,19 @@
             this.tab_RetiraEquip.TabIndex = 2;
             this.tab_RetiraEquip.Text = "Retirada de Equipamento";
             this.tab_RetiraEquip.UseVisualStyleBackColor = true;
+            // 
+            // cbo_AnalRespDev
+            // 
+            this.cbo_AnalRespDev.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_AnalRespDev.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbo_AnalRespDev.DataSource = this.tblcolaboradoresBindingSource;
+            this.cbo_AnalRespDev.DisplayMember = "nome_colab";
+            this.cbo_AnalRespDev.FormattingEnabled = true;
+            this.cbo_AnalRespDev.Location = new System.Drawing.Point(85, 191);
+            this.cbo_AnalRespDev.Name = "cbo_AnalRespDev";
+            this.cbo_AnalRespDev.Size = new System.Drawing.Size(341, 21);
+            this.cbo_AnalRespDev.TabIndex = 967;
+            this.cbo_AnalRespDev.ValueMember = "nome_colab";
             // 
             // label26
             // 
@@ -2205,6 +2238,19 @@
             this.tab_LaudoBat.TabIndex = 3;
             this.tab_LaudoBat.Text = "Laudo Bateria";
             this.tab_LaudoBat.UseVisualStyleBackColor = true;
+            // 
+            // cbo_AnalRespLaudoBat
+            // 
+            this.cbo_AnalRespLaudoBat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_AnalRespLaudoBat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbo_AnalRespLaudoBat.DataSource = this.tblcolaboradoresBindingSource;
+            this.cbo_AnalRespLaudoBat.DisplayMember = "nome_colab";
+            this.cbo_AnalRespLaudoBat.FormattingEnabled = true;
+            this.cbo_AnalRespLaudoBat.Location = new System.Drawing.Point(83, 263);
+            this.cbo_AnalRespLaudoBat.Name = "cbo_AnalRespLaudoBat";
+            this.cbo_AnalRespLaudoBat.Size = new System.Drawing.Size(341, 21);
+            this.cbo_AnalRespLaudoBat.TabIndex = 966;
+            this.cbo_AnalRespLaudoBat.ValueMember = "nome_colab";
             // 
             // rdo_AnexaArqLaudoBat
             // 
@@ -3369,53 +3415,19 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // tblcolaboradoresBindingSource
-            // 
-            this.tblcolaboradoresBindingSource.DataMember = "tbl_colaboradores";
-            this.tblcolaboradoresBindingSource.DataSource = this.atosDataSet;
-            // 
             // tbl_colaboradoresTableAdapter
             // 
             this.tbl_colaboradoresTableAdapter.ClearBeforeFill = true;
             // 
-            // cbo_AnalRespLaudoBat
+            // tbl_contrato
             // 
-            this.cbo_AnalRespLaudoBat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbo_AnalRespLaudoBat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbo_AnalRespLaudoBat.DataSource = this.tblcolaboradoresBindingSource;
-            this.cbo_AnalRespLaudoBat.DisplayMember = "nome_colab";
-            this.cbo_AnalRespLaudoBat.FormattingEnabled = true;
-            this.cbo_AnalRespLaudoBat.Location = new System.Drawing.Point(83, 263);
-            this.cbo_AnalRespLaudoBat.Name = "cbo_AnalRespLaudoBat";
-            this.cbo_AnalRespLaudoBat.Size = new System.Drawing.Size(341, 21);
-            this.cbo_AnalRespLaudoBat.TabIndex = 966;
-            this.cbo_AnalRespLaudoBat.ValueMember = "nome_colab";
-            // 
-            // cbo_AnalRespDev
-            // 
-            this.cbo_AnalRespDev.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbo_AnalRespDev.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbo_AnalRespDev.DataSource = this.tblcolaboradoresBindingSource;
-            this.cbo_AnalRespDev.DisplayMember = "nome_colab";
-            this.cbo_AnalRespDev.FormattingEnabled = true;
-            this.cbo_AnalRespDev.Location = new System.Drawing.Point(85, 191);
-            this.cbo_AnalRespDev.Name = "cbo_AnalRespDev";
-            this.cbo_AnalRespDev.Size = new System.Drawing.Size(341, 21);
-            this.cbo_AnalRespDev.TabIndex = 967;
-            this.cbo_AnalRespDev.ValueMember = "nome_colab";
-            // 
-            // cbo_AnalRespRoll
-            // 
-            this.cbo_AnalRespRoll.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbo_AnalRespRoll.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbo_AnalRespRoll.DataSource = this.tblcolaboradoresBindingSource;
-            this.cbo_AnalRespRoll.DisplayMember = "nome_colab";
-            this.cbo_AnalRespRoll.FormattingEnabled = true;
-            this.cbo_AnalRespRoll.Location = new System.Drawing.Point(525, 361);
-            this.cbo_AnalRespRoll.Name = "cbo_AnalRespRoll";
-            this.cbo_AnalRespRoll.Size = new System.Drawing.Size(292, 21);
-            this.cbo_AnalRespRoll.TabIndex = 968;
-            this.cbo_AnalRespRoll.ValueMember = "nome_colab";
+            this.tbl_contrato.Location = new System.Drawing.Point(4, 22);
+            this.tbl_contrato.Name = "tbl_contrato";
+            this.tbl_contrato.Padding = new System.Windows.Forms.Padding(3);
+            this.tbl_contrato.Size = new System.Drawing.Size(1095, 661);
+            this.tbl_contrato.TabIndex = 6;
+            this.tbl_contrato.Text = "Contratos";
+            this.tbl_contrato.UseVisualStyleBackColor = true;
             // 
             // frm_Main
             // 
@@ -3431,8 +3443,9 @@
             this.tab_Formularios.ResumeLayout(false);
             this.tab_RollOut.ResumeLayout(false);
             this.tab_RollOut.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblcolaboradoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -3448,7 +3461,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblempresasBindingSource1)).EndInit();
             this.tab_LaudoTecnico.ResumeLayout(false);
             this.tab_LaudoTecnico.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblcolaboradoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3745,6 +3757,7 @@
         private System.Windows.Forms.ComboBox cbo_AnalRespLaudoBat;
         private System.Windows.Forms.ComboBox cbo_AnalRespDev;
         private System.Windows.Forms.ComboBox cbo_AnalRespRoll;
+        private System.Windows.Forms.TabPage tbl_contrato;
     }
 }
 
